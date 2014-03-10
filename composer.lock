@@ -3,8 +3,50 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "2af270af94aba65dfa0765497a96d658",
+    "hash": "800225de888d536ceae65ad25a2e556c",
     "packages": [
+        {
+            "name": "colymba/gridfield-bulk-editing-tools",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/colymba/GridFieldBulkEditingTools.git",
+                "reference": "cb69f71362b3d375f85c25a4c24cfdfad10ba7a8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/cb69f71362b3d375f85c25a4c24cfdfad10ba7a8",
+                "reference": "cb69f71362b3d375f85c25a4c24cfdfad10ba7a8",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1"
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD Simplified"
+            ],
+            "authors": [
+                {
+                    "name": "Thierry Francois",
+                    "homepage": "http://colymba.com"
+                },
+                {
+                    "name": "GitHub contributors",
+                    "homepage": "https://github.com/colymba/GridFieldBulkEditingTools/contributors"
+                }
+            ],
+            "description": "SilverStripe 3 GridField component to upload images and edit records in bulk",
+            "homepage": "https://github.com/colymba/GridFieldBulkEditingTools",
+            "keywords": [
+                "Image upload",
+                "bulk upload",
+                "gridfield bulk upload",
+                "silverstripe"
+            ],
+            "time": "2014-02-26 13:32:48"
+        },
         {
             "name": "composer/installers",
             "version": "dev-master",
@@ -288,118 +330,44 @@
             "time": "2014-03-02 19:54:18"
         },
         {
-            "name": "silverstripe/recaptcha",
+            "name": "undefinedoffset/sortablegridfield",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/chillu/silverstripe-recaptcha.git",
-                "reference": "ac7db259142dba769a76541fc156ef57b82f2970"
+                "url": "https://github.com/UndefinedOffset/SortableGridField.git",
+                "reference": "32a92e62f1ab0b7db2ea954a0dd9181da7e6aaea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chillu/silverstripe-recaptcha/zipball/ac7db259142dba769a76541fc156ef57b82f2970",
-                "reference": "ac7db259142dba769a76541fc156ef57b82f2970",
+                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/32a92e62f1ab0b7db2ea954a0dd9181da7e6aaea",
+                "reference": "32a92e62f1ab0b7db2ea954a0dd9181da7e6aaea",
                 "shasum": ""
             },
             "require": {
-                "silverstripe/framework": "~3.1",
-                "silverstripe/spamprotection": "*"
+                "composer/installers": "*",
+                "silverstripe/framework": ">=3.0.1,<3.2"
             },
             "type": "silverstripe-module",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "1.2.x-dev"
-                }
+                "installer-name": "sortablegridfield"
             },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Ingo Schommer",
-                    "email": "ingo@silverstripe.com",
-                    "homepage": "http://chillu.com",
-                    "role": "tech-lead"
-                }
-            ],
-            "description": "Provides a form field which allows form to validate for non-bot submissions by giving them a challenge to decrypt an image.",
-            "keywords": [
-                "silverstripe",
-                "spamprotection"
-            ],
-            "time": "2014-02-18 21:11:57"
-        },
-        {
-            "name": "silverstripe/spamprotection",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/silverstripe/silverstripe-spamprotection.git",
-                "reference": "39f7f0be454af5f67f2789c6e7691221896fa313"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-spamprotection/zipball/39f7f0be454af5f67f2789c6e7691221896fa313",
-                "reference": "39f7f0be454af5f67f2789c6e7691221896fa313",
-                "shasum": ""
-            },
-            "require": {
-                "silverstripe/framework": "~3.1"
-            },
-            "type": "silverstripe-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Saophalkun Ponlu",
-                    "email": "phalkunz@silverstripe.com"
-                },
-                {
-                    "name": "Will Rossiter",
-                    "email": "will@fullscreen.io",
-                    "homepage": "http://wilr.github.com"
-                }
-            ],
-            "description": "Spam protection module for SilverStripe.",
-            "keywords": [
-                "silverstripe",
-                "spamprotection"
-            ],
-            "time": "2014-03-07 07:38:25"
-        },
-        {
-            "name": "silverstripe/userforms",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/silverstripe/silverstripe-userforms.git",
-                "reference": "45e4b1c037b9ab1eaab03de4154a16f31856ea9d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/45e4b1c037b9ab1eaab03de4154a16f31856ea9d",
-                "reference": "45e4b1c037b9ab1eaab03de4154a16f31856ea9d",
-                "shasum": ""
-            },
-            "require": {
-                "silverstripe/cms": ">=3.1.0",
-                "silverstripe/framework": ">=3.1.0"
-            },
-            "type": "silverstripe-module",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
             "authors": [
                 {
-                    "name": "Will Rossiter",
-                    "email": "will@fullscreen.io",
-                    "homepage": "http://wilr.github.com"
+                    "name": "Ed Chipman",
+                    "homepage": "http://www.edchipman.ca",
+                    "role": "Developer"
                 }
             ],
-            "description": "UserForms enables CMS users to create dynamic forms via a drag and drop interface and without getting involved in any PHP code",
+            "description": "Adds drag and drop functionality to SilverStripe 3.0's GridField",
             "keywords": [
-                "silverstripe",
-                "userforms"
+                "gridfield",
+                "silverstripe"
             ],
-            "time": "2014-02-27 05:21:31"
+            "time": "2014-03-02 19:11:12"
         }
     ],
     "packages-dev": [
