@@ -3,34 +3,15 @@
       <h1 class="section-title">What's Happening</h1>
       <br>
       <ul class="unstyled justify justify-4">
+      <% loop RSSDisplay(4,"http://afterclass.uiowa.edu/events/feed/rss/") %>
         <li class="justify-item">
-          <p class="event-date">Feb. 3</p>
-          <h2 class="event-title">Stalking Awareness</h2>
+          <p class="event-date">$Dates</p>
+          <h2 class="event-title">$Title</h2>
           <div class="event-desc">
-            <p>"Stalking: Know It. Name. It. Stop It." is the theme of an awareness campaign launched by the University of Iowa Anti-Violence Coalition.</p>
+            $Content.Summary(30)
           </div>
         </li>
-        <li class="justify-item">
-          <p class="event-date">Feb. 3</p>
-          <h2 class="event-title">JPEC Business Model</h2>
-          <div class="event-desc">
-            <p>John Pappajohn Entrepreneurial Center and University of Iowa Research Foundation are pleased to announce the UI Business Model Competition.</p>
-          </div>
-        </li>
-        <li class="justify-item">
-          <p class="event-date">Feb. 3</p>
-          <h2 class="event-title">5 Weeks to Wellness</h2>
-          <div class="event-desc">
-            <p>UI Student Health and Wellness is offering a free motivational challenge that focuses on exercise, nutrition, and wellbeing.</p>
-          </div>
-        </li>
-        <li class="justify-item">
-          <p class="event-date">Feb. 3</p>
-          <h2 class="event-title">Dance Marathon</h2>
-          <div class="event-desc">
-            <p>Dance Marathon is a student-run philanthropy that culminates with a 24 hour long BIG Event this Friday, February 7th.</p>
-          </div>
-        </li>
+        <% end_loop %>
         <li class="justify-item filler"></li>
         <li class="justify-item filler"></li>
       </ul>

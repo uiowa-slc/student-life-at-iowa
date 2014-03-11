@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "800225de888d536ceae65ad25a2e556c",
+    "hash": "9775ccd025943297ad913ca760259074",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
