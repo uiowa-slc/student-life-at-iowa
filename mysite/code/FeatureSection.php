@@ -5,6 +5,7 @@ class FeatureSection extends Section {
 	);
 
 	private static $has_one = array(
+		"BackgroundImage" => "Image"
 
 	);
 	private static $belongs_many_many = array(
@@ -20,7 +21,12 @@ class FeatureSection extends Section {
 		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
 		$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
 		$gridField = new GridField('Features', 'Features', $this->Features(), $gridFieldConfig);
+
+		$uploadField = new UploadField("BackgroundImage", "Background Image (1280 x 1160)");
+		$uploadField->setFolderName('feature-section-bg');
+
 		$f->addFieldToTab("Root.Main", $gridField, "Content");
+		$f->addFieldToTab("Root.Main", $uploadField, "Content");
 		return $f;
 	}
 
