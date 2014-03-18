@@ -2,7 +2,7 @@
     <div class="photo-text" data-bottom-top="background-color:rgba(0,0,0,0);" data-top-bottom="background-color:rgba(0,0,0,1);">
       <div class="inner">
         <h1 class="section-title">$Title</h1>
-        <p class="section-desc">$Content</p>
+        <div class="section-desc">$Content</div>
         <section id="grid" class="grid clearfix">
           <% loop Features.Limit(4) %>
           <a href="$Link" data-path-hover="m 180,54.57627 -180,0 L 0,0 180,0 z">
