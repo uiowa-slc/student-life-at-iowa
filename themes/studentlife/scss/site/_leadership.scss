@@ -1,0 +1,145 @@
+.legacy-hero {
+	margin: 0;
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+.legacy-hero .slides {
+	background: #000;
+
+}
+.legacy-hero .slides li {
+	position: absolute!important;
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+	@media (min-width: $break-small) {
+		xpadding-bottom: 40%;
+	}
+}
+.legacy-hero .slides li.flex-active-slide {
+	z-index: 11;
+}
+.legacy-hero .gradient {
+	background-image: url(../images/herogradient.png);
+	background-repeat: no-repeat;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size: 100% 100%;
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
+}
+.legacy-hero-img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	z-index: 1;
+}
+.legacy-hero .hero-issue {
+	color: #fff;
+	font-size: 14px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	padding-bottom: 25px;
+	margin-bottom: 20px;
+	position: relative;
+	&:after {
+		content: '';
+		background-color: #ffce39;
+		width: 60px;
+		height: 4px;
+		display: block;
+		position: absolute;
+		left: 50%;
+		margin-left: -30px;
+		bottom: 0;
+	}
+}
+.legacy-hero .flexcaption {
+	position: absolute;
+		left: 10%;
+		width: 80%;
+		top: 50%;
+		text-align: center;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		z-index: 10;
+	@media (min-width: $break-small) {
+
+	}
+}
+.legacy-hero .flexcaption a {
+	display: block;
+}
+.legacy-hero .flexcaption a:hover, .legacy-hero .flexcaption a:focus {
+	text-decoration: none;
+}
+.legacy-hero .title {
+	xbackground-color: #000;
+	xbackground-color: rgba(0,0,0,.6);
+	color: #fff;
+	display: inline;
+	font-size: 40px;
+	font-weight: 400;
+	margin: 0;
+	text-transform: uppercase;
+	xbox-shadow: 10px 0 0 rgba(0,0,0,.6), -10px 0 0 rgba(0,0,0,.6);
+	@media (min-width: $break-small) {
+		font-size: 60px;
+	}
+	@media (min-width: $break-medium) {
+		font-size: 75px;
+	}
+}
+.legacy-hero .flex-control-nav {
+	bottom: 10px;
+	z-index: 12;
+}
+.legacy-hero .flex-control-paging li a {
+	background: #999;
+	background: rgba(255, 255, 255, 0.5);
+	transition: background .2s linear;
+	&:hover {
+		background: rgba(255,255,255, .8);
+	}
+}
+.legacy-hero .flex-control-paging li a.flex-active {
+	background: #fff;
+	background: rgba(255, 255, 255, 0.9);
+}
+
+/* Prev/Next Arrows */
+.legacy-hero .flex-direction-nav {
+	display: none;
+	z-index: 12;
+	@media (min-width: 650px) {
+		display: block;
+	}
+}
+.legacy-hero .flex-direction-nav .flex-prev {
+	left: -40px;
+	z-index: 12;
+}
+.legacy-hero:hover .flex-direction-nav .flex-prev {
+	left: 10px;
+}
+.legacy-hero .flex-direction-nav .flex-next {
+	right: -40px;
+	z-index: 12;
+}
+.legacy-hero:hover .flex-direction-nav .flex-next {
+	right: 10px;
+}
