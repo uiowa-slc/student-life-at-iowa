@@ -25,6 +25,9 @@ img.right {margin-left: 1em; margin-bottom: 1em;}
 .text-center  {text-align: center;}
 .text-justify {text-align: justify;}
 .uppercase	{text-transform: uppercase;}
+.block {display: block;}
+.inline {display: inline;}
+.inline-block {display: inline-block;}
 
 .ir { background-color: transparent; border: 0; overflow: hidden; /* IE 6/7 fallback */ *text-indent: -9999px;}
 .ir:before { content: "";display: block;width: 0;height: 100%;}

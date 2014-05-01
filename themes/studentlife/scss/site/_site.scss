@@ -18,14 +18,18 @@ body {
 /* Layout
 ========================================================================== */
 .container {
-	max-width: $break-xlarge;
+	max-width: $break-xxlarge;
 	margin-right: auto;
 	margin-left: auto;
-	padding-left: 3em;
-	padding-right: 3em;
+	padding-left: 1em;
+	padding-right: 1em;
+  @media screen and (min-width: $break-small) {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
 }
 img {
-	width: 100%;
+	xwidth: 100%;
 }
 section {
   background-color: #fff;
@@ -241,20 +245,6 @@ section {
   background-size: cover;
 }
 
-/* NavBar
-========================================================================== */
-.navbar {
-  background-color: #eee;
-  height: 70px;
-}
-/*.navbar.fixed-top {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 200;
-}*/
-
 /* Mission Statement
 ========================================================================== */
 .mission-statement {
@@ -410,6 +400,9 @@ section {
 .masonry .grid-sizer {
   width:  20%;
 }
+.masonry .item img {
+  width: 100%;
+}
 .gutter-sizer {
 	width: 1%;
 }
@@ -429,7 +422,8 @@ section {
 
 /* Campus Living
 ========================================================================== */
-.campus-living {
+.feature-section-alt {
+  background: #eee;
 	padding: 6em 0;
 }
 
@@ -959,10 +953,7 @@ position:  fixed;
 
 /* Leadership Legacy
 ========================================================================== */
-.leadership-legacy {
-  background-color: #eee;
-  box-shadow: 0 5px 5px rgba(0,0,0,.2);
-}
+
 
 /* Map
 ========================================================================== */

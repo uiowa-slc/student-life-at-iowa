@@ -61,6 +61,9 @@ ul ul,ul ol,ol ol,ol ul {
     margin: 0;
     padding: 0;
 }
+ul.inline li, ol.inline li {
+    display: inline;
+}
 dt {
     font-weight: bold;
 }
