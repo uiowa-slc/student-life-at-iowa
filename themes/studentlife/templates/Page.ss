@@ -22,9 +22,20 @@
 
 </head>
 
-<body>
-  <div class="container">
+<body class="$URLSegment">
+
     $Layout
-  </div>
+
+
+
+   <!-- JS -->
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+   <script src="{$ThemeDir}/js/build/production.min.js"></script>
+   <script type="text/javascript">
+      skrollr.init({
+         forceHeight: false
+      });
+   </script>
+
 </body>
 </html>
