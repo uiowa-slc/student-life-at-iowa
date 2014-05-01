@@ -9,7 +9,7 @@
  * Contributing author: Tyler Smith (@mbmufffin)
  */
 
- 
+
 /* Browser Resets */
 .flex-container a:active, .flexslider a:active, .flex-container a:focus, .flexslider a:focus {
 	outline: none;
@@ -18,10 +18,10 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
-} 
+}
 
 /* FlexSlider Necessary Styles
-*********************************/ 
+*********************************/
 .flexslider {
 	margin: 0;
 	padding: 0;
@@ -32,7 +32,7 @@
 	display: none;
 	-webkit-backface-visibility: hidden;
 	position: relative;
-} 
+}
 .flexslider .slides img {
 	width: 100%;
 	display: block;
@@ -49,8 +49,8 @@
 	visibility: hidden;
 	line-height: 0;
 	height: 0;
-} 
-html[xmlns] .slides {display: block;} 
+}
+html[xmlns] .slides {display: block;}
 * html .slides {height: 1%;}
 
 /* No JavaScript Fallback */
@@ -124,7 +124,7 @@ html[xmlns] .slides {display: block;}
 .flex-control-paging li a.flex-active { background: #000; background: rgba(0,0,0,0.9); cursor: default; }
 
 .flex-control-thumbs {margin: 5px 0 0; position: static; overflow: hidden;}
-.flex-control-thumbs li {width: 25%; float: left; margin: 0;}
+.flex-control-thumbs li {width: 25%; margin: 0;}
 .flex-control-thumbs img {width: 100%; display: block; opacity: .7; cursor: pointer;}
 .flex-control-thumbs img:hover {opacity: 1;}
 .flex-control-thumbs .flex-active {opacity: 1; cursor: default;}
