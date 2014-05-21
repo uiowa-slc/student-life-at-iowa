@@ -55,6 +55,23 @@ class LeadershipLegacyBlogEntry_Controller extends BlogEntry_Controller {
 	public function init() {
 		parent::init();
 
+
+	}
+	public function NextPage() {
+		$page = Page::get()->filter( array (
+				'ParentID' => $this->ParentID,
+				'Sort:GreaterThan' => $this->Sort
+			) )->First();
+
+		return $page;
+	}
+	public function PreviousPage() {
+		$page = Page::get()->filter( array (
+				'ParentID' => $this->ParentID,
+				'Sort:LessThan' => $this->Sort
+			) )->Last();
+
+		return $page;
 	}
 
 }

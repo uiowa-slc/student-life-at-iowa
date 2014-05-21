@@ -5,32 +5,37 @@
 		<div class="hero-wrapper">
 			<img src="$EntryPhoto.URL" alt="" class="hero">
 		</div>
-		<a href="#" class="prev link">
-			<div class="background">
-				<img src="http://now.lincoln.com/wp-content/uploads/2013/11/Big-Red-600x337.jpg">
-				<span class="overlay"></span>
-			</div>
-			<span class="label">
-				<span class="inner">
-					<strong>Previous Post</strong> -
-				  Previous Article Title
+		<!-- Previous Article Link -->
+		<% if PreviousPage %>
+			<a href="$PreviousPage.Link" class="prev link">
+				<div class="background">
+					<img src="$PreviousPage.EntryPhoto.URL">
+					<span class="overlay"></span>
+				</div>
+				<span class="label">
+					<span class="inner">
+						<strong>Previous Post</strong> -
+					  $PreviousPage.Title
+					</span>
 				</span>
-			</span>
-			<span class="icon-arrow-left"></span>
-		</a>
-		<a href="#" class="next link">
-			<div class="background">
-				<img src="http://now.lincoln.com/wp-content/uploads/2013/12/CarlosAmorales_ArtBasel_LetsSeeHowItReverberates-600x316.jpg">
-				<span class="overlay"></span>
-			</div>
-			<span class="label">
-				<span class="inner">
-					<strong>Next Post</strong> -
-				  Next Article Title
+				<span class="icon-arrow-left"></span>
+			</a>
+		<% end_if %>
+		<% if NextPage %>
+			<a href="$NextPage.Link" class="next link">
+				<div class="background">
+					<img src="$NextPage.EntryPhoto.URL">
+					<span class="overlay"></span>
+				</div>
+				<span class="label">
+					<span class="inner">
+						<strong>Next Post</strong> -
+					  $NextPage.Title
+					</span>
 				</span>
-			</span>
-			<span class="icon-arrow-right"></span>
-		  </a>
+				<span class="icon-arrow-left"></span>
+			</a>
+		<% end_if %>
 	</div>
 
 	<div class="legacy-wrapper">
@@ -48,12 +53,18 @@
 	</div>
 </article>
 
-
 <aside class="next-story">
-	<a href="#">
-		<h6>read next</h6>
-		<h2>Empowering Women and Minorities: Alejandra Gonzalez</h2>
-	</a>
+	<% if NextPage %>
+		<a href="$NextPage.Link">
+			<h6>read next</h6>
+			<h2>$NextPage.Title</h2>
+		</a>
+	<% else %>
+		<a href="$PreviousPage.Link">
+			<h6>read previous</h6>
+			<h2>$PreviousPage.Title</h2>
+		</a>
+	<% end_if %>
 </aside>
 
 <p>&nbsp;</p>
