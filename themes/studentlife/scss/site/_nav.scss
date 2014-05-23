@@ -1,5 +1,11 @@
+$nav-break: 650px;
 .nav-padding {
 	padding: 5px 0;
+	@media (min-width: $nav-break) {
+		box-shadow: 0 2px 2px rgba(0,0,0,.2);
+		position: relative;
+		z-index: 50;
+	}
 }
 .dosl-logo {
 	display: block;
@@ -17,7 +23,7 @@
 	box-shadow: inherit;
 	margin-bottom: 0;
 	float: right;
-	@media screen and (max-width: 767px) {
+	@media screen and (max-width: $nav-break - 1px) {
 		background: #ffffff; /* Old browsers */
 		background: -moz-linear-gradient(top,  #ffffff 0%, #f2f2f2 100%); /* FF3.6+ */
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f2f2f2)); /* Chrome,Safari4+ */
@@ -57,7 +63,7 @@
 			text-decoration: none;
 		}
 	}
-	@media screen and (min-width: $break-medium) {
+	@media screen and (min-width: $nav-break) {
 		display: none;
 	}
 }
@@ -105,13 +111,13 @@
 	list-style: none;
 	margin: 0 auto;
 	padding: 0;
-	@media screen and (min-width: $break-medium) {
+	@media screen and (min-width: $nav-break) {
 		display: table;
 		line-height: 65px;
 	}
 }
 .nav-main li {
-	@media screen and (min-width: $break-medium) {
+	@media screen and (min-width: $nav-break) {
 		text-rendering: optimizelegibility;
 		display: table-cell;
 	}
@@ -128,12 +134,12 @@
 	@media screen and (max-width: 767px) {
 		text-align: left; /* for internet explorer */
 	}
-	@media screen and (min-width: $break-medium) {
+	@media screen and (min-width: $nav-break) {
 		border-bottom: none;
 		color: #333;
 		font-family: $heading-font;
 		letter-spacing: .05em;
-		padding: .25em .9em .55em;
+		padding: 0 1.2em;
 		text-transform: uppercase;
 		white-space: nowrap;
 	}

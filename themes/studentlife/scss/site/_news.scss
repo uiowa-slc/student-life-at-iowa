@@ -46,21 +46,13 @@
 .latestnews-item {
 	background: #fff;
 	width: 30.666667%;
-	margin: 0 1.333333% 1.333333em;
+	margin: 0 1.333333% 2.333333em;
 }
 .news-clip-heading {
 	color: #333;
-	background: #fff;
-	xfont-family: "proxima-nova",sans-serif;
-	font-size: 30px;
-	font-size: 1.875rem;
-	margin: .4em 0 0;
+	font-size: 28px;
+	margin: 0 0 5px 0;
 	transition: all .1s ease-in-out;
-	width: 90%;
-	margin-top: -20%;
-	position: relative;
-	padding-top: 5px;
-	padding-right: 5px;
 }
 .latestnews-item .rule {
 	background-color: #000;
@@ -80,16 +72,25 @@
 		}
 	}
 }
+.item-img-title {
+	background-color: #fff;
+	position: absolute;
+	padding: 5px;
+	left: 0;
+	bottom: 0;
+	width: 90%;
+}
 .item-img {
 	display: block;
 	overflow: hidden;
+	position: relative;
 }
 .item-img img {
 	width: 100%;
 }
 .latestnews-item .meta {
 	@include rem(12);
-	margin: 0 0 2em;
+	margin: 0;
 	color: #666;
 }
 .latestnews-item .snippit {
@@ -135,6 +136,12 @@
 		}
 	}
 }
+.news-gallery {
+	margin-bottom: 0;
+}
+.news-gallery .flex-control-nav {
+	display: none;
+}
 .video-link {
 	display: block;
 	position: relative;
@@ -162,7 +169,7 @@
 .video-link:hover .play {
 	background-position: left bottom;
 }
-.video-list article p {
+.video-list p {
 	font-size: 13px;
 }
 
