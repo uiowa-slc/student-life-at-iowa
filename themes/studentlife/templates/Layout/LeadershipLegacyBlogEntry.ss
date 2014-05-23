@@ -18,7 +18,7 @@
 					  $PreviousPage.Title
 					</span>
 				</span>
-				<span class="icon-arrow-left"></span>
+				<span class="glyphicon glyphicon-arrow-left icon-arrow-left"></span>
 			</a>
 		<% end_if %>
 		<% if NextPage %>
@@ -33,7 +33,7 @@
 					  $NextPage.Title
 					</span>
 				</span>
-				<span class="icon-arrow-left"></span>
+				<span class="glyphicon glyphicon-arrow-right icon-arrow-left"></span>
 			</a>
 		<% end_if %>
 	</div>
