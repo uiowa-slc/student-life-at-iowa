@@ -56,7 +56,7 @@
 		<h2 class="cat-heading-title">Latest</h2>
 		<div class="rule"></div>
 		<div id="container" class="latestnews-masonry">
-			<% loop $allChildren %>
+			<% loop BlogEntries %>
 			<article class="latestnews-item item">
 				<a href="$Link" class="item-img">
 					<img src="$Photo.SetWidth(360).URL">
