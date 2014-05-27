@@ -7,7 +7,7 @@
 			<ul class="unstyled justify feature-callouts">
 				<% loop Features.Limit(4) %>
 				<li class="callout justify-item">
-					<a href="#">
+					<a href="$Link">
 						<img src="{$Image.CroppedImage(430, 750).URL}" />
 						<button>View</button>
 						<div class="callout-content">
