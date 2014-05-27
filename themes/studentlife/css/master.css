@@ -4460,10 +4460,10 @@ section {
       margin-top: 0; } }
 
 @media screen and (min-width: 480px) {
-  .feature-callouts .callout {
+  .callout {
     width: 48%; } }
 @media screen and (min-width: 980px) {
-  .feature-callouts .callout {
+  .callout {
     width: 23%; } }
 
 .callout a {
