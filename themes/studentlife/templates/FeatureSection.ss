@@ -4,11 +4,11 @@
 		<div class="container">
 			<h1 class="section-title">$Title</h1>
 			<div class="section-desc">$Content</div>
-			<ul class="unstyled justify justify-4 feature-callouts">
+			<ul class="unstyled justify feature-callouts">
 				<% loop Features.Limit(4) %>
 				<li class="callout justify-item">
 					<a href="#">
-						<img src="{$Image.CroppedImage(250, 400).URL}" />
+						<img src="{$Image.CroppedImage(430, 750).URL}" />
 						<button>View</button>
 						<div class="callout-content">
 							<h3>$Title</h3>
@@ -18,20 +18,6 @@
 				</li>
 				<% end_loop %>
 			</ul>
-			<!-- <div id="" class="clearfix">
-				<% loop Features.Limit(4) %>
-				<a href="$Link">
-					<figure>
-						<img src="{$Image.URL}" />
-						<figcaption>
-							<h2>$Title</h2>
-							<p>$Content</p>
-							<button>View</button>
-						</figcaption>
-					</figure>
-				</a>
-				<% end_loop %>
-			</div> -->
 		</div>
 	</div>
 </section>
