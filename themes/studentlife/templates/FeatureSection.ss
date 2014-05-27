@@ -4,20 +4,22 @@
 		<div class="container">
 			<h1 class="section-title">$Title</h1>
 			<div class="section-desc">$Content</div>
-			<ul class="unstyled justify feature-callouts">
-				<% loop Features.Limit(4) %>
-				<li class="callout justify-item">
-					<a href="$Link">
-						<img src="{$Image.CroppedImage(430, 750).URL}" />
-						<button>View</button>
-						<div class="callout-content">
-							<h3>$Title</h3>
-							<p>$Content</p>
-						</div>
-					</a>
-				</li>
-				<% end_loop %>
-			</ul>
+			<div class="home-flexslider">
+				<ul class="unstyled justify feature-callouts slides">
+					<% loop Features.Limit(4) %>
+					<li class="callout justify-item">
+						<a href="$Link">
+							<img src="{$Image.CroppedImage(430, 750).URL}" />
+							<button>View</button>
+							<div class="callout-content">
+								<h3>$Title</h3>
+								<p>$Content</p>
+							</div>
+						</a>
+					</li>
+					<% end_loop %>
+				</ul>
+			</div>
 		</div>
 	</div>
 </section>

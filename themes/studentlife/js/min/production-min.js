@@ -6642,7 +6642,7 @@ $(document).ready(function(){
      Begin global.js
 ********************************************** */
 
-$(window).load(function() {
+$(document).ready(function() {
 	// add js class to body if javascript enabled
 	$('html').removeClass('no-js');
 
@@ -6681,6 +6681,36 @@ $(window).load(function() {
 		slideshow: true,
 		pauseOnHover: true
 	});
+
+
+	// if ($(window).width() < 480){
+	// 	$('.home-flexslider').flexslider({
+	// 		directionNav: false
+	// 	});
+	// }
+	// $(window).resize(function(){
+	// 	if ($(window).width() < 480){
+	// 		$('.home-flexslider').flexslider({
+	// 			directionNav: false
+	// 		});
+	// 	}
+	// });
+
+	if ($(".home-flexslider").css("z-index") == "480" ){
+		$('.home-flexslider').flexslider({
+			directionNav: false
+		});
+	}
+
+	$(window).resize(function() {
+		if ($(".home-flexslider").css("z-index") == "480" ){
+			$('.home-flexslider').flexslider({
+				directionNav: false
+			});
+		}
+	});
+
+
 
 	/* Navigation
 	================================================== */

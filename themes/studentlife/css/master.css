@@ -2517,6 +2517,78 @@ html {
 
 /* Layout
 -------------------------------------------*/
+/* Browser Resets */
+.home-flexslider a:active, .home-flexslider a:focus {
+  outline: none; }
+
+/* FlexSlider Necessary Styles
+*********************************/
+.home-flexslider {
+  margin: 0;
+  padding: 0; }
+
+@media screen and (max-width: 480px) {
+  .home-flexslider {
+    z-index: 480; } }
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+.home-flexslider .slides > li {
+  position: relative; }
+
+.home-flexslider .slides img {
+  width: 100%;
+  display: block; }
+
+/* FlexSlider Default Theme
+*********************************/
+.home-flexslider {
+  margin: 0 0 60px;
+  position: relative;
+  zoom: 1; }
+
+.home-flexslider .slides {
+  zoom: 1; }
+
+.home-flexslider:hover .flex-next:hover, .home-flexslider:hover .flex-prev:hover {
+  opacity: 1; }
+
+/* Control Nav
+*********************************/
+.home-flexslider .flex-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: -40px;
+  text-align: center; }
+
+.home-flexslider .flex-control-nav li {
+  margin: 0 6px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline; }
+
+.home-flexslider .flex-control-paging li a {
+  width: 11px;
+  height: 11px;
+  display: block;
+  background: #ccc;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  text-indent: -9999px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3); }
+
+.home-flexslider .flex-control-paging li a:hover {
+  background: #eee;
+  background: rgba(255, 255, 255, 0.7); }
+
+.home-flexslider .flex-control-paging li a.flex-active {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
+  cursor: default; }
+
 .nav-padding {
   padding: 5px 0; }
   @media (min-width: 650px) {
@@ -4070,7 +4142,10 @@ section {
 /* Sections
 ========================================================================== */
 .feature-section-inner {
-  padding: 200px 0; }
+  padding: 100px 0; }
+  @media (min-width: 480px) {
+    .feature-section-inner {
+      padding: 200px 0; } }
 
 .section-title {
   color: #fff;
@@ -4208,10 +4283,6 @@ section {
   @media (max-width: 980px) {
     .fixed {
       background-attachment: scroll; } }
-
-@media screen and (min-width: 1140px) {
-  .feature-section {
-    xbackground-size: cover; } }
 
 .photo-profile {
   border: 10px solid #fff;
@@ -4443,10 +4514,6 @@ section {
 
 /* LIVING ON CAMPUS
 ========================================================================== */
-.feature-section-alt {
-  background: #eee;
-  padding: 6em 0; }
-
 /* HEALTH AND SAFETY
 ========================================================================== */
 /* New Grid
