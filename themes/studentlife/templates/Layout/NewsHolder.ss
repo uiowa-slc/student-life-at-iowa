@@ -73,79 +73,6 @@
 	</div><!-- end .container -->
 </section>
 
-<!-- <section class="news-list">
-	<div class="container">
-		<h2 class="cat-heading-title">Student Life</h2>
-		<div class="rule"></div>
-		<ul class="unstyled justify justify-3">
-		<li class="justify-item">
-		  <article class="">
-			 <a href="#" class="">
-				<img src="http://lorempixel.com/400/200/people/1">
-			 </a>
-			 <h3 class=""><a href="#">Ultricies Consectetur Vulputate Magna Elit</a></h3>
-			 <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.</p>
-		  </article>
-		</li>
-		<li class="justify-item">
-		  <article class="">
-			 <a href="#" class="">
-				<img src="http://lorempixel.com/400/200/people/2">
-			 </a>
-			 <h3 class=""><a href="#">Ultricies Consectetur Vulputate Magna Elit</a></h3>
-			 <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.</p>
-		  </article>
-		</li>
-		<li class="justify-item">
-		  <article class="">
-			 <a href="#" class="">
-				<img src="http://lorempixel.com/400/200/people/3">
-			 </a>
-			 <h3 class=""><a href="#">Ultricies Consectetur Vulputate Magna Elit</a></h3>
-			 <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.</p>
-		  </article>
-		</li>
-		<li class="justify-item filler"></li>
-		</ul>
-	</div>
-</section> -->
-
-<!--   <section class="news-list">
-	 <div class="container">
-	 <h2 class="cat-heading-title">Health</h2>
-	 <div class="rule"></div>
-	 <ul class="unstyled justify justify-3">
-		<li class="justify-item">
-		  <article class="">
-			 <a href="#" class="">
-				<img src="http://lorempixel.com/400/200/people/4">
-			 </a>
-			 <h3 class=""><a href="#">Ultricies Consectetur Vulputate Magna Elit</a></h3>
-			 <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.</p>
-		  </article>
-		</li>
-		<li class="justify-item">
-		  <article class="">
-			 <a href="#" class="">
-				<img src="http://lorempixel.com/400/200/people/5">
-			 </a>
-			 <h3 class=""><a href="#">Ultricies Consectetur Vulputate Magna Elit</a></h3>
-			 <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.</p>
-		  </article>
-		</li>
-		<li class="justify-item">
-		  <article class="">
-			 <a href="#" class="">
-				<img src="http://lorempixel.com/400/200/people/6">
-			 </a>
-			 <h3 class=""><a href="#">Ultricies Consectetur Vulputate Magna Elit</a></h3>
-			 <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.</p>
-		  </article>
-		</li>
-		<li class="justify-item filler"></li>
-	 </ul>
-	 </div>
-  </section> -->
 
 <section class="video-list">
 
@@ -180,8 +107,3 @@
 	</div>
 </section>
 <br>
-<br>
-<br>
-<br>
-<br>
-<% include Footer %>
