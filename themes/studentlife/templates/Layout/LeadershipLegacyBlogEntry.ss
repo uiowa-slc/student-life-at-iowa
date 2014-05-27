@@ -105,5 +105,4 @@
 	</div><!-- end .container -->
 </section>
 
-<% include Footer %>
 
