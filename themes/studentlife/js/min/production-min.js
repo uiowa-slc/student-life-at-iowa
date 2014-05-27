@@ -6642,7 +6642,7 @@ $(document).ready(function(){
      Begin global.js
 ********************************************** */
 
-$(document).ready(function() {
+$(window).load(function() {
 	// add js class to body if javascript enabled
 	$('html').removeClass('no-js');
 
