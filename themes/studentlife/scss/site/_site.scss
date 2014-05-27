@@ -115,6 +115,10 @@ section {
 	@media (min-width: $break-small) {
 		@include rem(20);
 	}
+	@media (min-width: $break-large) {
+		width: 80%;
+		margin: 0 auto;
+	}
 }
 .scrolldown {
 	position: absolute;
@@ -309,11 +313,17 @@ section {
 .section-desc {
 	color: #fff;
 	font-weight: 300;
-	@include rem(22);
+	@include rem(16);
 	margin: 0 auto 2.5em;
 	text-align: center;
 	width: 80%;
 	font-style: italic;
+	@media (min-width: $break-small) {
+		@include rem(18);
+	}
+	@media (min-width: $break-medium) {
+		@include rem(22);
+	}
 }
 
 /* Photos
@@ -425,13 +435,11 @@ section {
 	position: relative;
 	& li {
 		margin-bottom: 1em;
-		xmax-height: 180px;
 		overflow: hidden;
 		position: relative;
 	}
 	& img {
 		position: relative;
-		xz-index: -1;
 	}
 	& .module-title {
 		@include rem(28);
@@ -464,33 +472,7 @@ section {
 }
 
 
-/* Inverse Styles
-========================================================================== */
-.inverse {
-	background-color: #000;
-}
-.inverse h1, .inverse h2, .inverse h3 .inverse h4 {
-	color: #fff;
-}
-.inverse a {
-	color: #fff;
-}
-.inverse .section-desc {
-	color: #eee;
-}
-
-
-/* Intro
-========================================================================== */
-.intro {
-	height: 560px;
-	overflow: hidden;
-	position: relative;
-	background: url('http://placehold.it/1000x700&text=Student Life') no-repeat top center;
-	background-size: cover;
-}
-
-/* Mission Statement
+/* MISSION STATEMENT
 ========================================================================== */
 .mission-statement {
 	@include rem(18);
@@ -517,11 +499,10 @@ section {
 	top: auto;
 }
 
-/* Upcoming Events
+/* UPCOMING EVENTS
 ========================================================================== */
 .upcoming-events {
 	padding: 4em 0;
-	height: 650px;
 	@media (min-width: $break-small) {
 		padding: 6em 0;
 	}
@@ -547,8 +528,15 @@ section {
 .inverse .event-desc {
 	color: #ddd;
 }
+.email-signup {
+	max-width: 380px;
+	margin: 50px auto 0;
+}
+.email-signup h5 {
+	text-align: center;
+}
 
-/* Justify
+/* JUSTIFY
 ========================================================================== */
 .justify {
 	font-size: 0.1px;
@@ -589,13 +577,13 @@ section {
 	margin: 0 !important;
 }
 
-/* Get Involved
+/* GET INVOLVED
 ========================================================================== */
 .get-involved {
 
 }
 
-/* Student Success
+/* STUDENT SUCCESS
 ========================================================================== */
 .student-success {
 
@@ -604,7 +592,7 @@ section {
 	margin-bottom: 3em;
 }
 
-/* Latest News
+/* LATEST NEWS
 ========================================================================== */
 .latest-news {
 	padding: 6em 0;
@@ -637,13 +625,13 @@ section {
 
 }
 
-/* Receration
+/* RECREATION
 ========================================================================== */
 .recreation {
 
 }
 
-/* Campus Gallery
+/* CAMPUS GALLERY
 ========================================================================== */
 .campus-gallery {
 	background-color: #fff;
@@ -675,142 +663,43 @@ section {
 	display: block;
 }
 
-/* Campus Living
+/* LIVING ON CAMPUS
 ========================================================================== */
 .feature-section-alt {
 	background: #eee;
 	padding: 6em 0;
 }
 
-/* Health and Safety
+/* HEALTH AND SAFETY
 ========================================================================== */
 
 
 
-
-
-
-/* Student Profiles
-========================================================================== */
-.profile {
-	height: 300px;
-	background-color: #eee;
-	position: relative;
-}
-.circle {
-	border-radius: 50%;
-	background-color: #ccc;
-	width: 400px;
-	height: 400px;
-	position: absolute;
-	bottom: -50px;
-	right: 20px;
-}
-.circle img {
-	border-radius: 50%;
-}
-
-
-/* Testing
-========================= */
-#properties {
-width: 100%;
-height: 100%;
-padding-top: 10%;
-position: fixed;
-z-index: 100;
-text-align: center;
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
-box-sizing: border-box;
-}
-
-#easing {
-top: 10%;
-width: 50%;
-z-index: 101;
-position:  fixed;
-}
-
-.animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:1s;-moz-animation-duration:1s;-ms-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;}.animated.hinge{-webkit-animation-duration:1s;-moz-animation-duration:1s;-ms-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;}@-webkit-keyframes fadeInUp {
-	0% {
-		opacity: 0;
-		-webkit-transform: translateY(20px);
-	} 100% {
-		opacity: 1;
-		-webkit-transform: translateY(0);
-	}
-}
-
-@-moz-keyframes fadeInUp {
-	0% {
-		opacity: 0;
-		-moz-transform: translateY(20px);
-	}
-
-	100% {
-		opacity: 1;
-		-moz-transform: translateY(0);
-	}
-}
-
-@-o-keyframes fadeInUp {
-	0% {
-		opacity: 0;
-		-o-transform: translateY(20px);
-	}
-
-	100% {
-		opacity: 1;
-		-o-transform: translateY(0);
-	}
-}
-
-@keyframes fadeInUp {
-	0% {
-		opacity: 0;
-		transform: translateY(20px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
-.fadeInUp {
-	-webkit-animation: fadeInUp 2s ease-in-out;
-	-moz-animation: fadeInUp 2s ease-in-out;
-	-ms-animation: fadeInUp 2s ease-in-out;
-	animation: fadeInUp 2s ease-in-out;
-}
-
-
-/* ===================== */
-.inside-section {
-	height: 500px;
-	background-color: #fff;
-	display: table;
-	& .section-inner {
-		display: table-cell;
-		vertical-align: middle;
-	}
-}
 
 
 /* New Grid
 ========================================================================== */
-.feature-callouts {
 
-}
 .callout {
 	background-color: #333;
 	border: 1px solid rgba(255,255,255,.5);
+	margin-top: 30px;
+	@media (min-width: $break-medium) {
+		margin-top: 0;
+	}
+}
+.feature-callouts .callout {
+	 @media screen and (min-width: $break-small) {
+	 width: 48%;
+	}
+	@media screen and (min-width: $break-large) {
+	 width: 23%;
+	}
 }
 .callout a {
 	display: block;
 	position: relative;
-	height: 400px;
+	xheight: 400px;
 	overflow: hidden;
 }
 .callout img {
@@ -894,22 +783,8 @@ transform: translateY(-50%) translateX(-50%) scale(1);
 
 
 
-/* Leadership Legacy
+/* LEADERSHIP LEGACY
 ========================================================================== */
 
 
 
-
-/* Footer
-========================================================================== */
-.footer {
-	background-color: #333;
-	height: 150px;
-	position: relative;
-	xz-index: 20;
-	box-shadow: inset 0 5px 5px rgba(0,0,0,.2);
-	xheight: 900px;
-}
-.leadership-legacy img {
-	display: block;
-}
