@@ -4469,7 +4469,7 @@ section {
 .callout a {
   display: block;
   position: relative;
-  xheight: 400px;
+  min-height: 400px;
   overflow: hidden; }
 
 .callout img {
