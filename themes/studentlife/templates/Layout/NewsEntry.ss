@@ -2,9 +2,10 @@
 <% include MainNav %>
 <br>
 <div class="container">
+	<% include BreadCrumbs %>
 	<div class="row clearfix">
 		<div class="col-md-8">
-			<% include BreadCrumbs %>
+
 			<div class="blogEntry">
 				<h1 class="postTitle">$Title</h1>
 				<p class="authorDate"><% _t('BlogEntry_ss.POSTEDBY', 'Posted by') %> $Author.XML <% _t('BlogEntry_ss.POSTEDON', 'on') %> $Date.Long <!-- | $Comments.Count <% _t('BlogEntry_ss.COMMENTS', 'Comments') %> --></p>
@@ -21,6 +22,9 @@
 
 				<div class="BlogContent">
 					$Content
+					<div class="BlogRelated">
+
+					</div>
 				</div>
 
 			</div><!-- end .blogEntry -->

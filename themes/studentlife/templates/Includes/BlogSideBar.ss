@@ -1,7 +1,7 @@
 
-<div id="Sidebar" class="">
+<div class="sidebar">
 	<div class="sidebar-item">
-		<h3 class="sidebar-title">Latest News</h3>
+		<h3 class="sidebar-title">Student News</h3>
 		<% with $Page(news) %>
 			<ul class="unstyled">
 			<% loop $AllChildren.Limit(10) %>

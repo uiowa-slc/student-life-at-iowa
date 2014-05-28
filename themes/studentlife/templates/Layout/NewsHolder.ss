@@ -3,7 +3,7 @@
 <br>
 <section>
 	<div class="container">
-		<div class="row">
+		<div class="row blog-featured">
 			<% loop $allChildren %>
 				<% if $IsFeatured %>
 					<div class="col-md-8">
