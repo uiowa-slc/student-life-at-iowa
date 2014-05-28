@@ -319,10 +319,10 @@ section {
 	@include rem(16);
 	margin: 0 auto 2.5em;
 	text-align: center;
-	width: 80%;
 	font-style: italic;
 	@media (min-width: $break-small) {
 		@include rem(18);
+		width: 80%;
 	}
 	@media (min-width: $break-medium) {
 		@include rem(22);
