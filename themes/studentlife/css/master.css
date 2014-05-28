@@ -2970,7 +2970,12 @@ html[xmlns] .slides {
   color: #333;
   font-size: 22px;
   margin: 9px 0 5px 0;
-  transition: all 0.1s ease-in-out; }
+  transition: all 0.1s ease-in-out;
+  width: 90%;
+  background: #fff;
+  margin-top: -25px;
+  padding-top: 10px;
+  padding-right: 10px; }
 
 .latestnews-item .rule {
   background-color: #000; }
@@ -2989,7 +2994,7 @@ html[xmlns] .slides {
       color: #fe0000; }
 
 .item-img-title {
-  background-color: #fff; }
+  position: relative; }
 
 .item-img {
   display: block;

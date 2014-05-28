@@ -5,16 +5,16 @@
 	<div class="container">
 		<div class="row">
 			<% loop $allChildren %>
-			<% if $IsFeatured %>
-				<div class="col-md-8">
-					<img src="$Photo.SetWidth(800).URL">
-				</div>
-				<div class="col-md-4">
-					<h2><a href="$Link">$Title</a></h2>
-					<p>$Content.LimitCharacters(500)</p>
-					<p><a href="$Link" class="btn btn-default">Continue Reading</a></p>
-				</div>
-			<% end_if %>
+				<% if $IsFeatured %>
+					<div class="col-md-8">
+						<img src="$Photo.CroppedImage(800,450).URL">
+					</div>
+					<div class="col-md-4">
+						<h1><a href="$Link">$Title</a></h1>
+						<p>$Content.LimitCharacters(300)</p>
+						<p><a href="$Link" class="btn btn-default">Continue Reading</a></p>
+					</div>
+				<% end_if %>
 			<% end_loop %>
 		</div>
 	</div>
