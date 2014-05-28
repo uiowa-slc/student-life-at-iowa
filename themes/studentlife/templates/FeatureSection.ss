@@ -9,7 +9,7 @@
 					<% loop Features.Limit(4) %>
 					<li class="callout justify-item">
 						<a href="$Link">
-							<img src="{$Image.CroppedImage(430, 750).URL}" />
+							<img src="{$ThemeDir}/images/loader.gif" data-src="{$Image.CroppedImage(430, 750).URL}" class="unveil" />
 							<button>View</button>
 							<div class="callout-content">
 								<h3>$Title</h3>

@@ -54,14 +54,16 @@ $(window).load(function() {
 
 	if ($(".home-flexslider").css("z-index") == "480" ){
 		$('.home-flexslider').flexslider({
-			directionNav: false
+			directionNav: false,
+			slideshow: false
 		});
 	}
 
 	$(window).resize(function() {
 		if ($(".home-flexslider").css("z-index") == "480" ){
 			$('.home-flexslider').flexslider({
-				directionNav: false
+				directionNav: false,
+				slideshow: false
 			});
 		}
 	});
@@ -107,5 +109,9 @@ $(window).load(function() {
 			// });
 	  }
 	});
+
+	/* Lazyload images (http://luis-almeida.github.io/unveil/)
+	================================================== */
+	$(".unveil").unveil();
 
 });
