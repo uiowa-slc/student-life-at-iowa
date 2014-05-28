@@ -10,7 +10,7 @@
 						<img src="$Photo.CroppedImage(160,120).URL" class="sidebar-blog-img">
 						<div class="sidebar-blog-content">
 							<h4 class="sidebar-blog-title">$Title</h4>
-							<p class="sidebar-blog-snippit">$Content.LimitCharacters(120)</p>
+							<p class="sidebar-blog-snippit">$Content.LimitCharacters(100)</p>
 						</div>
 					</a>
 				</li>
