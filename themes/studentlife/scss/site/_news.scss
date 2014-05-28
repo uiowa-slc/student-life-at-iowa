@@ -250,11 +250,11 @@ Post
 }
 .postTitle {
 	@include rem(35);
-	font-weight: 400;
 	margin: 0.5em 0 0.25em;
 	text-transform: none;
 	@media (min-width: $break-small) {
-		@include rem(55);
+		@include rem(50);
+		line-height: 1.1;
 	}
 }
 .BlogContent p:first-of-type {
@@ -294,6 +294,13 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 /* Sidebar Blog */
 .sidebar-item {
 	margin-bottom: 2em;
+}
+.sidebar-title {
+	text-align: center;
+	text-transform: uppercase;
+	border-bottom: 2px solid #333;
+	padding-bottom: 4px;
+	letter-spacing: 1px;
 }
 .sidebar-blog-item {
 	margin: 0;
