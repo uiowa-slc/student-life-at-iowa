@@ -1,8 +1,7 @@
-<% include BlogSideBar %>
-<% include MainNav %>
-<div id="BlogContent" class="blogcontent typography">
 
-	<% include BreadCrumbs %>
+<% include MainNav %>
+
+<div id="BlogContent" class="blogcontent">
 
 	<% if SelectedTag %>
 		<h3><% _t('BlogHolder_ss.VIEWINGTAGGED', 'Viewing entries tagged with') %> '$SelectedTag'</h3>
@@ -19,8 +18,6 @@
 	<% else %>
 		<h2><% _t('BlogHolder_ss.NOENTRIES', 'There are no blog entries') %></h2>
 	<% end_if %>
-
-	<% include BlogPagination %>
 
 </div>
 

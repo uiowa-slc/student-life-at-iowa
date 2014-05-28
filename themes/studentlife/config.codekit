@@ -660,39 +660,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/module-1.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 28815,
-		"inputAbbreviatedPath": "\/images\/module-1.jpg",
-		"outputAbbreviatedPath": "\/images\/module-1.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/module-2.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 36672,
-		"inputAbbreviatedPath": "\/images\/module-2.jpg",
-		"outputAbbreviatedPath": "\/images\/module-2.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/module-3.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 33381,
-		"inputAbbreviatedPath": "\/images\/module-3.jpg",
-		"outputAbbreviatedPath": "\/images\/module-3.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/images\/oniowa-bw.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -781,50 +748,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/pickone.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 35849,
-		"inputAbbreviatedPath": "\/images\/pickone.jpg",
-		"outputAbbreviatedPath": "\/images\/pickone.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/pilates_1.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 145464,
-		"inputAbbreviatedPath": "\/images\/pilates_1.jpg",
-		"outputAbbreviatedPath": "\/images\/pilates_1.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/pilates_1_tall.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 30432,
-		"inputAbbreviatedPath": "\/images\/pilates_1_tall.jpg",
-		"outputAbbreviatedPath": "\/images\/pilates_1_tall.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/pilates_1_wide.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 28788,
-		"inputAbbreviatedPath": "\/images\/pilates_1_wide.jpg",
-		"outputAbbreviatedPath": "\/images\/pilates_1_wide.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/images\/play.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -832,17 +755,6 @@
 		"initialSize": 7395,
 		"inputAbbreviatedPath": "\/images\/play.png",
 		"outputAbbreviatedPath": "\/images\/play.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/post_thumb.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 47369,
-		"inputAbbreviatedPath": "\/images\/post_thumb.jpg",
-		"outputAbbreviatedPath": "\/images\/post_thumb.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -935,83 +847,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/scope.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 29093,
-		"inputAbbreviatedPath": "\/images\/scope.jpg",
-		"outputAbbreviatedPath": "\/images\/scope.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/sec-culture.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 438927,
-		"inputAbbreviatedPath": "\/images\/sec-culture.jpg",
-		"outputAbbreviatedPath": "\/images\/sec-culture.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/sec-get.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 437677,
-		"inputAbbreviatedPath": "\/images\/sec-get.jpg",
-		"outputAbbreviatedPath": "\/images\/sec-get.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/sec-health.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 455440,
-		"inputAbbreviatedPath": "\/images\/sec-health.jpg",
-		"outputAbbreviatedPath": "\/images\/sec-health.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/sec-rec.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 457367,
-		"inputAbbreviatedPath": "\/images\/sec-rec.jpg",
-		"outputAbbreviatedPath": "\/images\/sec-rec.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/sec-student.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 838428,
-		"inputAbbreviatedPath": "\/images\/sec-student.jpg",
-		"outputAbbreviatedPath": "\/images\/sec-student.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/student-profile.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 102756,
-		"inputAbbreviatedPath": "\/images\/student-profile.jpg",
-		"outputAbbreviatedPath": "\/images\/student-profile.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/images\/student-success-earlybird.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1052,61 +887,6 @@
 		"initialSize": 503280,
 		"inputAbbreviatedPath": "\/images\/tom.png",
 		"outputAbbreviatedPath": "\/images\/tom.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/triangle-btm.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 2712,
-		"inputAbbreviatedPath": "\/images\/triangle-btm.png",
-		"outputAbbreviatedPath": "\/images\/triangle-btm.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/triangle-top-inverse.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 2772,
-		"inputAbbreviatedPath": "\/images\/triangle-top-inverse.png",
-		"outputAbbreviatedPath": "\/images\/triangle-top-inverse.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/triangle-top.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 2773,
-		"inputAbbreviatedPath": "\/images\/triangle-top.png",
-		"outputAbbreviatedPath": "\/images\/triangle-top.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/uisg-bw.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 21755,
-		"inputAbbreviatedPath": "\/images\/uisg-bw.jpg",
-		"outputAbbreviatedPath": "\/images\/uisg-bw.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/uisg.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 35242,
-		"inputAbbreviatedPath": "\/images\/uisg.jpg",
-		"outputAbbreviatedPath": "\/images\/uisg.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1282,6 +1062,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/plugins\/skrollr.js",
 		"outputAbbreviatedPath": "\/js\/plugins\/min\/skrollr-ck.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/plugins\/slick.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/plugins\/slick.js",
+		"outputAbbreviatedPath": "\/js\/plugins\/min\/slick-ck.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -1518,7 +1309,7 @@
 		"debugStyle": 0,
 		"decimalPrecision": 5,
 		"fileType": 4,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/scss\/plugins\/_curtain.scss",
 		"outputAbbreviatedPath": "\/scss\/css\/_curtain.css",
@@ -1538,6 +1329,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/scss\/plugins\/_flexslider.scss",
 		"outputAbbreviatedPath": "\/scss\/css\/_flexslider.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/scss\/plugins\/_slick.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/scss\/plugins\/_slick.scss",
+		"outputAbbreviatedPath": "\/scss\/css\/_slick.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -1959,20 +1766,26 @@
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/plugins\/skrollr.js",
+			"linkedFileAbbreviatedPath": "\/js\/plugins\/slick.js",
 			"position": 4,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/divisionbar.js",
+			"linkedFileAbbreviatedPath": "\/js\/plugins\/skrollr.js",
 			"position": 5,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/global.js",
+			"linkedFileAbbreviatedPath": "\/js\/divisionbar.js",
 			"position": 6,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/js\/global.js",
+			"position": 7,
 			"type": 0
 			}
 		]
