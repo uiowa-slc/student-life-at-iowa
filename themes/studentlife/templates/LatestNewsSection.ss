@@ -1,8 +1,8 @@
 <section class="latest-news">
 	<div class="container">
 		<h1 class="section-title">Latest News</h1>
-		<ul class="unstyled justify justify-3">
-				<% loop $BlogEntries(3) %>
+		<ul class="unstyled justify justify-4">
+				<% loop $BlogEntries(4) %>
 					<li class="justify-item">
 						<h2 class="news-title"><a href="$Link">$Title</a></h2>
 						<div class="news-desc">
