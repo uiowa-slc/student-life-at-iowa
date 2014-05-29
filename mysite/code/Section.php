@@ -25,8 +25,7 @@ class Section extends Page {
 	}
 
 	public function RenderedSection(){
-		$controller = Controller::curr();
-		return $controller->renderWith($this->ClassName, "Section");
+		return $this->renderWith($this->ClassName, "Section");
 	}
 
 }
