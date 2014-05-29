@@ -315,7 +315,7 @@ section {
 }
 .section-desc {
 	color: #fff;
-	font-weight: 300;
+	font-weight: 400;
 	@include rem(16);
 	margin: 0 auto 2.5em;
 	text-align: center;
@@ -453,7 +453,7 @@ section {
 		& h3 {
 			border-bottom: 1px solid rgba(255,255,255,.5);
 			color: #fff;
-			font-weight: 300;
+			font-weight: 400;
 			margin: 0;
 			padding-bottom: 20px;
 			text-shadow: 1px 1px 1px rgba(0,0,0,.3);
@@ -602,7 +602,7 @@ section {
 }
 .news-title {
 	@include rem(22);
-	font-weight: 300;
+	font-weight: 400;
 	margin-top: 0;
 }
 .news-date {
@@ -723,7 +723,7 @@ section {
 .callout h3 {
 	font-size: 20px;
 	line-height: 1.2;
-	font-weight: 300;
+	font-weight: 400;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	margin: 0;
