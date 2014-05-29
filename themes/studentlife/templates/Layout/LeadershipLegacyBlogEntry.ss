@@ -3,7 +3,7 @@
 <article>
 	<div class="mod-hero">
 		<div class="hero-wrapper">
-			<img src="$EntryPhoto.URL" alt="" class="hero">
+			<img src="$EntryPhoto.CroppedImage(1100,700).URL" alt="" class="hero">
 		</div>
 		<!-- Previous Article Link -->
 		<% if PreviousPage %>
