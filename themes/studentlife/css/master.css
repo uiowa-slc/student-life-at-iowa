@@ -3398,8 +3398,8 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   text-transform: none; }
   @media (min-width: 481px) {
     .blog-featured h1 {
-      font-size: 45px;
-      font-size: 2.8125rem;
+      font-size: 40px;
+      font-size: 2.5rem;
       line-height: 1; } }
 
 /* -----------------------------------------------------

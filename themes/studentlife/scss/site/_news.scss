@@ -383,7 +383,7 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 	xfont-weight: normal;
 	text-transform: none;
 	@media (min-width: $break-small) {
-		@include rem(45);
+		@include rem(40);
 		line-height: 1;
 	}
 }
