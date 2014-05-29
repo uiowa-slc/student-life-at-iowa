@@ -26,13 +26,12 @@ class Page extends SiteTree {
 		return $f;
 	}
 
-	public function BlogEntries($num = 3){
-		$blog = BlogHolder::get()->First();
+	public function NewsEntries($num = 3){
+		$newsHolder = NewsHolder::get()->First();
+		$entries = $newsHolder->Entries($num);
 
-		$entries = $blog->Entries($num);
 		return $entries;
 	}
-
 	
 }
 class Page_Controller extends ContentController {

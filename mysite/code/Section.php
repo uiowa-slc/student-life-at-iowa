@@ -28,6 +28,7 @@ class Section extends Page {
 		return $this->renderWith($this->ClassName, "Section");
 	}
 
+
 }
 class Section_Controller extends Page_Controller {
 
