@@ -30,7 +30,7 @@
 			</div>
 			<div class="col-md-4">
 				<div class="clearfix">
-					<div class="fb-like-box" data-href="https://www.facebook.com/uistudentlife" data-colorscheme="dark" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false"></div>
+					<div class="fb-like-box" data-href="https://www.facebook.com/uistudentlife" data-height="70px" data-colorscheme="dark" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false"></div>
 				</div>
 				<br>
 				<div>
