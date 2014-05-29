@@ -44,6 +44,21 @@
 	</div>
 </section>
 
+<!-- <div class="container">
+	<div class="row clearfix" style="background-color: #ccc;">
+		<div class="col-md-6">
+			<div class="slider center">
+				<div><h3>1</h3></div>
+				<div><h3>2</h3></div>
+				<div><h3>3</h3></div>
+				<div><h3>4</h3></div>
+				<div><h3>5</h3></div>
+				<div><h3>6</h3></div>
+			</div>
+		</div>
+	</div>
+</div> -->
+
 	<% loop Children %>
 		$RenderedSection
 	<% end_loop %>

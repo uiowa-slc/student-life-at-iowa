@@ -6,8 +6,8 @@
 					<li class="justify-item">
 						<h2 class="news-title"><a href="$Link">$Title</a></h2>
 						<div class="news-desc">
-								$Content.Summary(30)
-							<p class="news-date">$Date.Format("M. n")</p>
+							$Content.Summary(30)
+							<!-- <p class="news-date">$Date.Format("M. n")</p> -->
 						</div>
 					</li>
 				<% end_loop %>

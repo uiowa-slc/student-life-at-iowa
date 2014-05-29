@@ -7,11 +7,11 @@
 			<% loop $allChildren %>
 				<% if $IsFeatured %>
 					<div class="col-md-8">
-						<img src="$Photo.CroppedImage(800,450).URL">
+						<a href="$Link"><img src="$Photo.CroppedImage(800,500).URL"></a>
 					</div>
 					<div class="col-md-4">
 						<h1><a href="$Link">$Title</a></h1>
-						<p>$Content.LimitCharacters(300)</p>
+						<p>$Content.Summary(30)</p>
 						<p><a href="$Link" class="btn btn-default">Continue Reading</a></p>
 					</div>
 				<% end_if %>

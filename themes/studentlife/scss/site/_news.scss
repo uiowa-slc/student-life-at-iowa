@@ -114,7 +114,7 @@
 }
 
 .news-gallery .caption {
-	@include rem(80);
+	@include rem(30);
 	font-weight: 300;
 	margin: 0;
 	& a {
@@ -137,6 +137,12 @@
 			display: block;
 			padding: .5em;
 		}
+	}
+	@media (min-width: $break-small) {
+		@include rem(50);
+	}
+	@media (min-width: $break-medium) {
+		@include rem(80);
 	}
 }
 .news-gallery {
@@ -256,8 +262,8 @@ Post
 	margin: 0.5em 0 0.25em;
 	text-transform: none;
 	@media (min-width: $break-small) {
-		@include rem(50);
-		line-height: 1.1;
+		@include rem(45);
+		line-height: 1;
 	}
 }
 .BlogContent p:first-of-type {
@@ -311,7 +317,7 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 }
 .sidebar-blog-item {
 	margin: 0;
-	border-bottom: 1px dashed #aaa;
+	border-bottom: 1px solid #ddd;
 	position: relative;
 	& a {
 		display: block;
@@ -372,7 +378,12 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 }*/
 
 .blog-featured h1 {
+	@include rem(30);
 	margin-top: .25em;
 	xfont-weight: normal;
 	text-transform: none;
+	@media (min-width: $break-small) {
+		@include rem(45);
+		line-height: 1;
+	}
 }

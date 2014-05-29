@@ -14,22 +14,22 @@ $(window).load(function() {
 
 	/* Masonry
 	================================================== */
-	var $container = $('#container');
-	// initialize
-	$container.masonry({
-		itemSelector: '.item'
-	});
+	// var $container = $('#container');
+	// // initialize
+	// $container.masonry({
+	// 	itemSelector: '.item'
+	// });
 
 
 	/* Latest News Masonry layout
 	================================================== */
-	var $container = $('.latestnews-masonry');
-	// initialize Masonry after all images have loaded
-	$container.imagesLoaded( function() {
-		$container.masonry({
-			itemSelector: '.latestnews-item'
-		});
-	});
+	// var $container = $('.latestnews-masonry');
+	// // initialize Masonry after all images have loaded
+	// $container.imagesLoaded( function() {
+	// 	$container.masonry({
+	// 		itemSelector: '.latestnews-item'
+	// 	});
+	// });
 
 	/* Flexslider
 	================================================== */
@@ -38,19 +38,6 @@ $(window).load(function() {
 		pauseOnHover: true
 	});
 
-
-	// if ($(window).width() < 480){
-	// 	$('.home-flexslider').flexslider({
-	// 		directionNav: false
-	// 	});
-	// }
-	// $(window).resize(function(){
-	// 	if ($(window).width() < 480){
-	// 		$('.home-flexslider').flexslider({
-	// 			directionNav: false
-	// 		});
-	// 	}
-	// });
 
 	if ($(".home-flexslider").css("z-index") == "480" ){
 		$('.home-flexslider').flexslider({
@@ -113,5 +100,30 @@ $(window).load(function() {
 	/* Lazyload images (http://luis-almeida.github.io/unveil/)
 	================================================== */
 	$(".unveil").unveil();
+
+	/* Slick.js
+	================================================= */
+	$('.center').slick({
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 3
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+            }
+        }]
+    });
 
 });

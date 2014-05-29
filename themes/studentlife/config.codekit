@@ -33,6 +33,50 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/bcg_slide-1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/images\/bcg_slide-1.jpg",
+		"outputAbbreviatedPath": "\/images\/bcg_slide-1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/bcg_slide-2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 464094,
+		"inputAbbreviatedPath": "\/images\/bcg_slide-2.jpg",
+		"outputAbbreviatedPath": "\/images\/bcg_slide-2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/bcg_slide-3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/images\/bcg_slide-3.jpg",
+		"outputAbbreviatedPath": "\/images\/bcg_slide-3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/bcg_slide-4.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/images\/bcg_slide-4.jpg",
+		"outputAbbreviatedPath": "\/images\/bcg_slide-4.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/callouts\/oniowa.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -209,6 +253,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/dosl-uiowa.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6198,
+		"inputAbbreviatedPath": "\/images\/dosl-uiowa.png",
+		"outputAbbreviatedPath": "\/images\/dosl-uiowa.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/event.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -216,6 +271,17 @@
 		"initialSize": 42220,
 		"inputAbbreviatedPath": "\/images\/event.jpg",
 		"outputAbbreviatedPath": "\/images\/event.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/feature-get-involved.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 122617,
+		"inputAbbreviatedPath": "\/images\/feature-get-involved.jpg",
+		"outputAbbreviatedPath": "\/images\/feature-get-involved.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -627,6 +693,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/leadership-legacy-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/images\/leadership-legacy-logo.png",
+		"outputAbbreviatedPath": "\/images\/leadership-legacy-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/leadershiplegacy_small.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -880,6 +957,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/test1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 100006,
+		"inputAbbreviatedPath": "\/images\/test1.jpg",
+		"outputAbbreviatedPath": "\/images\/test1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/tom-rocklin.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 66718,
+		"inputAbbreviatedPath": "\/images\/tom-rocklin.jpg",
+		"outputAbbreviatedPath": "\/images\/tom-rocklin.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/tom.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -890,6 +989,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
+		},
+	"\/js\/_main.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/_main.js",
+		"outputAbbreviatedPath": "\/js\/min\/_main-ck.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
 		},
 	"\/js\/build\/production.js": {
 		"fileType": 64,
@@ -957,12 +1067,34 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/js\/imagesloaded.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/imagesloaded.js",
+		"outputAbbreviatedPath": "\/js\/min\/imagesloaded-ck.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/js\/min\/production-min.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/min\/production-min.js",
 		"outputAbbreviatedPath": "\/js\/min\/min\/production-min-ck.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/plugins\/imagesloaded.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/plugins\/imagesloaded.js",
+		"outputAbbreviatedPath": "\/js\/plugins\/min\/imagesloaded-ck.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -1056,6 +1188,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/js\/plugins\/modernizr-2.7.1.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/plugins\/modernizr-2.7.1.min.js",
+		"outputAbbreviatedPath": "\/js\/plugins\/min\/modernizr-2.7.1.min-ck.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/js\/plugins\/skrollr.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -1098,6 +1241,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 0,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/skrollr.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/skrollr.js",
+		"outputAbbreviatedPath": "\/js\/min\/skrollr-ck.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
 	"\/README.md": {
@@ -1776,20 +1930,26 @@
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/plugins\/skrollr.js",
+			"linkedFileAbbreviatedPath": "\/js\/plugins\/imagesloaded.js",
 			"position": 3,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/divisionbar.js",
+			"linkedFileAbbreviatedPath": "\/js\/plugins\/skrollr.js",
 			"position": 4,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/global.js",
+			"linkedFileAbbreviatedPath": "\/js\/divisionbar.js",
 			"position": 5,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/js\/global.js",
+			"position": 6,
 			"type": 0
 			}
 		]
