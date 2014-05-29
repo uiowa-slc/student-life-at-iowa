@@ -67,13 +67,13 @@
 }
 
 
-.leadership-legacy {
+.leadership-legacy-section {
 	background-image: url(../images/tom-rocklin.jpg);
 	background-size: cover;
 	height: 520px;
 	position: relative;
 }
-.leadership-legacy .wrapper {
+.leadership-legacy-section .wrapper {
 	position: absolute;
 	top: 10%;
 	left: 10%;
@@ -82,7 +82,7 @@
 		width: 400px;
 	}
 }
-.leadership-legacy .link {
+.leadership-legacy-section .link {
 	background-color: #222;
 	border-radius: 5px;
 	box-shadow: 3px 3px 3px rgba(0,0,0,.5);
