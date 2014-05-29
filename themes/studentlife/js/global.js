@@ -72,7 +72,7 @@ $(window).load(function() {
 			url = this.link[0].href;
 			url_thumbnail = this.media$group.media$thumbnail[0].url;
 			title = this.media$group.media$title.$t;
-			html.push('<div class="col-xs-6 col-md-3"><a href="'+url+'" class="video-link">');
+			html.push('<div class="col-xs-6 col-md-3"><a href="'+url+'" class="video-link fancybox-media">');
 			html.push('<img src="'+url_thumbnail+'" alt="'+title+'"><div class="play"></div>');
 			html.push('</a><p>'+title+'</p></div>');
 		});
@@ -97,33 +97,51 @@ $(window).load(function() {
 	  }
 	});
 
+	/* FancyBox
+	================================================== */
+	$('.fancybox-media')
+		.attr('rel', 'media-gallery')
+		.fancybox({
+			openEffect : 'none',
+			closeEffect : 'none',
+			prevEffect : 'none',
+			nextEffect : 'none',
+
+			arrows : false,
+			helpers : {
+				media : {},
+				buttons : {}
+			}
+		});
+
+
 	/* Lazyload images (http://luis-almeida.github.io/unveil/)
 	================================================== */
-	$(".unveil").unveil();
+	// $(".unveil").unveil();
 
 	/* Slick.js
 	================================================= */
-	$('.center').slick({
-        centerMode: true,
-        centerPadding: '60px',
-        slidesToShow: 3,
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-                arrows: false,
-                centerMode: true,
-                centerPadding: '40px',
-                slidesToShow: 3
-            }
-        }, {
-            breakpoint: 480,
-            settings: {
-                arrows: false,
-                centerMode: true,
-                centerPadding: '40px',
-                slidesToShow: 1
-            }
-        }]
-    });
+	// $('.center').slick({
+ //        centerMode: true,
+ //        centerPadding: '60px',
+ //        slidesToShow: 3,
+ //        responsive: [{
+ //            breakpoint: 768,
+ //            settings: {
+ //                arrows: false,
+ //                centerMode: true,
+ //                centerPadding: '40px',
+ //                slidesToShow: 3
+ //            }
+ //        }, {
+ //            breakpoint: 480,
+ //            settings: {
+ //                arrows: false,
+ //                centerMode: true,
+ //                centerPadding: '40px',
+ //                slidesToShow: 1
+ //            }
+ //        }]
+ //    });
 
 });
