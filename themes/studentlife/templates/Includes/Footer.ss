@@ -29,8 +29,9 @@
 				</div>
 			</div>
 			<div class="col-md-4">
-
-
+				<div class="fb-like-box" data-href="https://www.facebook.com/uistudentlife" data-colorscheme="dark" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false"></div>
+				<hr>
+				<a href="https://twitter.com/imubuddy" class="twitter-follow-button" data-show-count="true" data-lang="en" data-size="medium">Follow @twitterapi</a>
 			</div>
 		</div>
 		<hr>
