@@ -1,6 +1,6 @@
 
 
-<section class="homeSlide">
+<section class="homeSlide feature-$ID">
 
 	<div id="$Title" class="fixed" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -150px;" data-bottom-top="background-position: 50% 50px;" style="background-image: url('$BackgroundImage.URL');">
 
