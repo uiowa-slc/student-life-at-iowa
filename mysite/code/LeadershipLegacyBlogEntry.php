@@ -25,7 +25,7 @@ class LeadershipLegacyBlogEntry extends BlogEntry {
 	public function getCMSFields(){
 		$f = parent::getCMSFields();
 
-		$f->addFieldToTab("Root.Main", new UploadField("EntryPhoto", "Photo"));
+		$f->addFieldToTab("Root.Main", new UploadField("EntryPhoto", "Photo - 1100x700 preferred"));
 
 		return $f;
 	}
