@@ -3963,16 +3963,16 @@ Article
 .next-story a:hover h2, .next-story a:focus h2 {
   color: #fff; }
 
-.legacy-wrapper .content .body p:first-of-type:first-letter {
-  width: 50px;
-  text-align: center;
-  color: #333;
-  font-size: 62px;
-  line-height: 57px;
-  margin-right: 15px;
-  float: left;
-  position: relative; }
-
+/*.legacy-wrapper .content .body p:first-of-type:first-letter {
+	width: 50px;
+	text-align: center;
+	color: #333;
+	font-size: 62px;
+	line-height: 57px;
+	margin-right: 15px;
+	float: left;
+	position: relative;
+}*/
 /* Site specific styles
 -------------------------------------------*/
 /* Resets */
