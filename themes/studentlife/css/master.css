@@ -3316,11 +3316,11 @@ Post
       font-size: 2.8125rem;
       line-height: 1; } }
 
-@media (min-width: 481px) {
-  .BlogContent > p:first-of-type {
-    font-size: 19.2px;
-    font-size: 1.2rem; } }
-
+/*.BlogContent > p:first-of-type {
+	@media (min-width: $break-small) {
+		@include rem($base-font * 1.2);
+	}
+}*/
 /*.BlogContent p:first-of-type:first-letter {
 	font-weight: 400;
 	font-style: normal;
@@ -3406,18 +3406,17 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
     .sidebar-blog-snippit {
       display: none; } }
 
-/*.BlogContent p {
-	padding-left: 40px;
-	@media (min-width: $break-medium) {
-		padding-left: 0;
-	}
-}
+.BlogContent p {
+  font-size: 17px;
+  font-size: 1.0625rem;
+  margin: 1em 0; }
+
 .BlogContent img.leftAlone {
-	margin-left: -60px;
-	@media (min-width: $break-medium) {
-		margin-left: 0;
-	}
-}*/
+  margin-left: -60px; }
+  @media (min-width: 769px) {
+    .BlogContent img.leftAlone {
+      margin-left: 0; } }
+
 .blog-featured h1 {
   font-size: 30px;
   font-size: 1.875rem;
@@ -3902,8 +3901,10 @@ Article
 
 @media screen and (min-width: 769px) {
   .content .body {
-    font-size: 18px;
-    line-height: 1.6; } }
+    font-size: 17px;
+    line-height: 1.5; }
+    .content .body p {
+      margin: 1em 0; } }
 
 @media screen and (min-width: 769px) {
   .legacy-article-share {

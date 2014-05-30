@@ -502,8 +502,11 @@ Article
 }
 .content .body {
 	@media screen and (min-width: $break-medium) {
-		font-size: 18px;
-		line-height: 1.6;
+		font-size: 17px;
+		line-height: 1.5;
+		& p {
+			margin: 1em 0;
+		}
 	}
 }
 .legacy-article-share {

@@ -266,11 +266,11 @@ Post
 		line-height: 1;
 	}
 }
-.BlogContent > p:first-of-type {
+/*.BlogContent > p:first-of-type {
 	@media (min-width: $break-small) {
 		@include rem($base-font * 1.2);
 	}
-}
+}*/
 /*.BlogContent p:first-of-type:first-letter {
 	font-weight: 400;
 	font-style: normal;
@@ -364,18 +364,16 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 }
 
 
-/*.BlogContent p {
-	padding-left: 40px;
-	@media (min-width: $break-medium) {
-		padding-left: 0;
-	}
+.BlogContent p {
+	@include rem(17);
+	margin: 1em 0;
 }
 .BlogContent img.leftAlone {
 	margin-left: -60px;
 	@media (min-width: $break-medium) {
 		margin-left: 0;
 	}
-}*/
+}
 
 .blog-featured h1 {
 	@include rem(30);
