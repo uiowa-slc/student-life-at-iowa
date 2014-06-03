@@ -9,7 +9,7 @@
 		<% if PreviousPage %>
 			<a href="$PreviousPage.Link" class="prev link">
 				<div class="background">
-					<img src="$PreviousPage.EntryPhoto.URL">
+					<img src="$PreviousPage.EntryPhoto.URL" alt="$PreviousPage.Title">
 					<span class="overlay"></span>
 				</div>
 				<span class="label">
@@ -24,7 +24,7 @@
 		<% if NextPage %>
 			<a href="$NextPage.Link" class="next link">
 				<div class="background">
-					<img src="$NextPage.EntryPhoto.URL">
+					<img src="$NextPage.EntryPhoto.URL" alt="$NextPage.Title">
 					<span class="overlay"></span>
 				</div>
 				<span class="label">
