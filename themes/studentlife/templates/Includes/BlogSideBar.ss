@@ -4,7 +4,7 @@
 		<h3 class="sidebar-title">Student News</h3>
 		<% with $Page(news) %>
 			<ul class="unstyled">
-			<% loop $AllChildren.Limit(10) %>
+			<% loop $NewsEntries(10) %>
 				<li class="clearfix sidebar-blog-item $FirstLast">
 					<a href="$Link" class="clearfix">
 						<img src="$Photo.CroppedImage(160,120).URL" class="sidebar-blog-img" alt="$Title">
