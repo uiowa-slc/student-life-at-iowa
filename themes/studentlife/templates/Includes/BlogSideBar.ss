@@ -7,7 +7,7 @@
 			<% loop $AllChildren.Limit(10) %>
 				<li class="clearfix sidebar-blog-item $FirstLast">
 					<a href="$Link" class="clearfix">
-						<img src="$Photo.CroppedImage(160,120).URL" class="sidebar-blog-img">
+						<img src="$Photo.CroppedImage(160,120).URL" class="sidebar-blog-img" alt="$Title">
 						<div class="sidebar-blog-content">
 							<h4 class="sidebar-blog-title">$Title</h4>
 							<p class="sidebar-blog-snippit">$Content.LimitCharacters(100)</p>
