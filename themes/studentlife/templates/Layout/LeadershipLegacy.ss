@@ -24,7 +24,7 @@
 <div class="container">
 	<div class="row legacy-holder-content clearfix">
 		<div class="col-md-6">
-			<h2><img src="{$ThemeDir}/images/leadershiplegacy_small.png" class="block"></h2>
+			<h2><img src="{$ThemeDir}/images/leadershiplegacy_small.png" class="block" alt="Leadership Legacy Logo"></h2>
 			$Content
 		</div>
 		<div class="col-md-6">
