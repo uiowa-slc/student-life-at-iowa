@@ -7,7 +7,7 @@
 			<% loop $allChildren %>
 				<% if $IsFeatured %>
 					<div class="col-md-8">
-						<a href="$Link"><img src="$Photo.CroppedImage(800,500).URL"></a>
+						<a href="$Link"><img src="$Photo.CroppedImage(800,500).URL" alt="$Title"></a>
 					</div>
 					<div class="col-md-4">
 						<h1><a href="$Link">$Title</a></h1>
@@ -29,7 +29,7 @@
 
 				<article class="latestnews-item justify-item">
 					<a href="$Link" class="item-img">
-						<img src="$Photo.CroppedImage(360,200).URL">
+						<img src="$Photo.CroppedImage(360,200).URL" alt="$Title">
 						<div class="item-img-title">
 							<h3 class="news-clip-heading">$Title</h3>
 							<p class="meta">$Date.Long <% if $Author %>by <em>$Author</em><% end_if %></p>
@@ -58,19 +58,19 @@
 			<ul class="slides">
 				<% if $PhotoGalleryTitleOne %>
 					<li>
-				 		<img src="$PhotoGalleryImageOne.SetWidth(1024).URL" alt="" />
+				 		<img src="$PhotoGalleryImageOne.SetWidth(1024).URL" alt="$PhotoGalleryTitleOne" />
 				 		<h3 class="caption"><a href="$PhotoGalleryURLOne"><span>$PhotoGalleryTitleOne</span></a></h3>
 					</li>
 				<% end_if %>
 				<% if $PhotoGalleryTitleTwo %>
 					<li>
-				 		<img src="$PhotoGalleryImageTwo.SetWidth(1024).URL" alt="" />
+				 		<img src="$PhotoGalleryImageTwo.SetWidth(1024).URL" alt="$PhotoGalleryTitleTwo" />
 				 		<h3 class="caption"><a href="$PhotoGalleryURLTwo"><span>$PhotoGalleryTitleTwo</span></a></h3>
 					</li>
 				<% end_if %>
 				<% if $PhotoGalleryTitleTwo %>
 					<li>
-				 		<img src="$PhotoGalleryImageThree.SetWidth(1024).URL" alt="" />
+				 		<img src="$PhotoGalleryImageThree.SetWidth(1024).URL" alt="$PhotoGalleryTitleThree" />
 				 		<h3 class="caption"><a href="$PhotoGalleryURLThree"><span>$PhotoGalleryTitleThree</span></a></h3>
 					</li>
 				<% end_if %>
