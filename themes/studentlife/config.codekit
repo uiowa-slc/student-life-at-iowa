@@ -165,6 +165,50 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/collagepanel-1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 60698,
+		"inputAbbreviatedPath": "\/images\/collagepanel-1.jpg",
+		"outputAbbreviatedPath": "\/images\/collagepanel-1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/collagepanel-2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 58548,
+		"inputAbbreviatedPath": "\/images\/collagepanel-2.jpg",
+		"outputAbbreviatedPath": "\/images\/collagepanel-2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/collagepanel-3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 67848,
+		"inputAbbreviatedPath": "\/images\/collagepanel-3.jpg",
+		"outputAbbreviatedPath": "\/images\/collagepanel-3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/collagepanel-4.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 58725,
+		"inputAbbreviatedPath": "\/images\/collagepanel-4.jpg",
+		"outputAbbreviatedPath": "\/images\/collagepanel-4.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/content-flat.png": {
 		"fileType": 32768,
 		"ignore": 0,

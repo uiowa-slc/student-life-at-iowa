@@ -677,16 +677,19 @@ section {
 /* New Grid
 ========================================================================== */
 .callout:nth-child(odd) {
-	@media (min-width: $break-medium) {
+	@media (min-width: $break-large) {
 		margin-top: 30px;
 	}
 }
 .callout-margin {
-	margin: 0 10%;
+	margin: 0 5%;
 	background: #ddd;
 	@media (min-width: $break-small) {
 		margin: 0 5%;
 	}
+}
+.callout img {
+	width: 100%;
 }
 /* prev/next arrow */
 .feature-section-inner .slick-prev {

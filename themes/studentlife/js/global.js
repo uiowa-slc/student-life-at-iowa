@@ -122,6 +122,7 @@ $(window).load(function() {
 
 	/* Slick.js
 	================================================= */
+
 	$('.responsive').slick({
 		infinite: false,
 		speed: 300,
@@ -134,15 +135,18 @@ $(window).load(function() {
 				infinite: false,
 				slidesToShow: 3,
 				slidesToScroll: 1,
+				arrows: false,
+				dots: true
 			}
 		 },
 		 {
 			breakpoint: 750,
 			settings: {
-				dots: true,
 				infinite: false,
 				slidesToShow: 2,
-				slidesToScroll: 2
+				slidesToScroll: 2,
+				arrows: false,
+				dots: true
 			}
 		 },
 		 {
@@ -150,7 +154,9 @@ $(window).load(function() {
 			settings: {
 				infinite: false,
 				slidesToShow: 1,
-				slidesToScroll: 1
+				slidesToScroll: 1,
+				arrows: false,
+				dots: true
 			}
 		 }
 	  ]
