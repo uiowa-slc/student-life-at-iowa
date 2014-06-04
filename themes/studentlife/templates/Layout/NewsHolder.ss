@@ -25,7 +25,7 @@
 		<h2 class="cat-heading-title">Latest News</h2>
 		<div class="rule"></div>
 		<div id="" class="justify justify-3">
-			<% loop BlogEntries.Limit(12) %>
+			<% loop BlogEntries %>
 
 				<article class="latestnews-item justify-item">
 					<a href="$Link" class="item-img">
@@ -42,6 +42,7 @@
 
 			<% end_loop %>
 		</div>
+		<% include BlogPagination %>
 	</div><!-- end .container -->
 </section>
 
