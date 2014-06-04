@@ -3,57 +3,12 @@ $(window).load(function() {
 	$('html').removeClass('no-js');
 
 
-	// /* FitVids */
-	// $(".media").fitVids();
-
-	// Lazyload
-	// $("img.lazy").show().lazyload({
-	//   effect : "fadeIn"
-	// });
-
-
-	/* Masonry
-	================================================== */
-	// var $container = $('#container');
-	// // initialize
-	// $container.masonry({
-	// 	itemSelector: '.item'
-	// });
-
-
-	/* Latest News Masonry layout
-	================================================== */
-	// var $container = $('.latestnews-masonry');
-	// // initialize Masonry after all images have loaded
-	// $container.imagesLoaded( function() {
-	// 	$container.masonry({
-	// 		itemSelector: '.latestnews-item'
-	// 	});
-	// });
-
 	/* Flexslider
 	================================================== */
 	$('.flexslider').flexslider({
 		slideshow: true,
 		pauseOnHover: true
 	});
-
-
-	// if ($(".home-flexslider").css("z-index") == "480" ){
-	// 	$('.home-flexslider').flexslider({
-	// 		directionNav: false,
-	// 		slideshow: false
-	// 	});
-	// }
-
-	// $(window).resize(function() {
-	// 	if ($(".home-flexslider").css("z-index") == "480" ){
-	// 		$('.home-flexslider').flexslider({
-	// 			directionNav: false,
-	// 			slideshow: false
-	// 		});
-	// 	}
-	// });
 
 
 
@@ -86,14 +41,7 @@ $(window).load(function() {
 		dataType:'jsonp',
 		success: function(data){
 			show_my_videos(data);
-			// If you want to see in console...
-			// console.log(data);
-			// console.log(data.feed.entry);
-			// $(data.feed.entry).each(function(){
-			// 	console.log(this.link[0].href);
-			// 	console.log(this.media$group.media$thumbnail[3].url);
-			// 	console.log(this.media$group.media$description.$t);
-			// });
+
 	  }
 	});
 
@@ -115,14 +63,10 @@ $(window).load(function() {
 		});
 
 
-	/* Lazyload images (http://luis-almeida.github.io/unveil/)
-	================================================== */
-	// $(".unveil").unveil();
 
 
 	/* Slick.js
 	================================================= */
-
 	$('.responsive').slick({
 		infinite: false,
 		speed: 300,
@@ -161,5 +105,41 @@ $(window).load(function() {
 		 }
 	  ]
 	});
+
+
+	// Setup variables
+	$window = $(window);
+	$slide = $('.homeSlide');
+	$body = $('body');
+
+    //FadeIn all sections
+	$body.imagesLoaded( function() {
+		setTimeout(function() {
+
+		      // Resize sections
+		      adjustWindow();
+
+		      // Fade in sections
+			  $body.removeClass('loading').addClass('loaded');
+
+		}, 800);
+	});
+
+	function adjustWindow(){
+
+		// Init Skrollr
+		var s = skrollr.init({
+		    forceHeight: false,
+		    render: function(data) {
+
+		        //Debugging - Log the current scroll position.
+		        //console.log(data.curTop);
+		    }
+		});
+
+	    // Refresh Skrollr after resizing our sections
+	    s.refresh($('.homeSlide'));
+
+	}
 
 });

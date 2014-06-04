@@ -19,10 +19,10 @@
 					</div>
 					<div class="col-xs-6">
 						<ul class="footer-nav">
-							<li><a href="https://www.facebook.com/uistudentlife">Facebook</a></li>
-							<li><a href="https://twitter.com/uistudentlife">Twitter</a></li>
-							<li><a href="https://www.youtube.com/user/uistudentlife">Youtube</a></li>
-							<li><a href="https://www.flickr.com/photos/imubuddy">Flickr
+							<li><a href="https://www.facebook.com/uistudentlife"><span class="icon-facebook"></span> Facebook</a></li>
+							<li><a href="https://twitter.com/uistudentlife"><span class="icon-twitter"></span> Twitter</a></li>
+							<li><a href="https://www.youtube.com/user/uistudentlife"><span class="icon-youtube"></span> Youtube</a></li>
+							<li><a href="https://www.flickr.com/photos/imubuddy"><span class="icon-flickr"></span> Flickr</a></li>
 						</ul>
 					</div>
 				</div>

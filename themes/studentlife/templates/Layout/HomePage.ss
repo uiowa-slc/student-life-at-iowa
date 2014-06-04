@@ -34,18 +34,15 @@
 						<div class="response" id="mce-success-response" style="display:none"></div>
 					</div>
 					<div style="position: absolute; left: -5000px;"><input type="text" name="b_c61b1cddac92babd42d7d628e_8e3635391c" tabindex="-1" value=""></div>
-					<div class="col-sm-4">
+					<div class="col-sm-4 form-group">
 						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-default btn-block">
 					</div>
 				</div>
 			</form>
 			<div class="row">
-				<div class="col-md-6">
-					<span style="display:block;height:5px;"></span>
-					<a href="https://twitter.com/imubuddy" class="twitter-follow-button" data-show-count="true" data-lang="en">Follow @twitterapi</a>
-				</div>
-				<div class="col-md-6">
-					<div class="fb-like" data-href="https://www.facebook.com/uistudentlife" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
+				<div class="col-xs-12 clearfix social-wrapper">
+					<a href="https://www.facebook.com/uistudentlife" class="social-links"><span class="icon-facebook"></span> Facebook</a>&nbsp;
+					<a href="https://twitter.com/uistudentlife" class="social-links"><span class="icon-twitter"></span> Twitter</a>
 				</div>
 			</div>
 		</div>
