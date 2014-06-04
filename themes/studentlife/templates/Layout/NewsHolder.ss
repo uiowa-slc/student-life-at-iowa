@@ -25,9 +25,9 @@
 		<h2 class="cat-heading-title">Latest News</h2>
 		<div class="rule"></div>
 		<div id="" class="justify justify-3">
-			<% loop PaginatedNewsEntries %>
 
-				<article class="latestnews-item justify-item">
+		<% loop PaginatedNewsEntries %>
+			<article class="latestnews-item justify-item">
 					<a href="$Link" class="item-img">
 						<img src="$Photo.CroppedImage(360,200).URL" alt="$Title">
 						<div class="item-img-title">
@@ -39,7 +39,6 @@
 					<!-- <p class="snippit">$Content.LimitCharacters(220)</p> -->
 					<!-- <div class="rule"></div> -->
 				</article>
-
 			<% end_loop %>
 		</div>
 		<% include NewsPagination %>
