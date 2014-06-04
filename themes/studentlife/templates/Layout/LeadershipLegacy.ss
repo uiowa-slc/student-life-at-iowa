@@ -23,13 +23,13 @@
 
 <div class="container">
 	<div class="leader-heading">
-			<h1><em>"Impacting Tomorrow's Leaders"</em></h1>
+		<h3><img src="{$ThemeDir}/images/leadershiplegacy_small.png" class="block" alt="Leadership Legacy Logo"></h3>
 	</div>
 
 	<div class="row legacy-holder-content clearfix">
 		<div class="col-md-8">
 			<div class="legacy-col">
-				<h3><img src="{$ThemeDir}/images/leadershiplegacy_small.png" class="block" alt="Leadership Legacy Logo"></h3>
+				<h2><em>"Impacting Tomorrow's Leaders"</em></h2>
 				$Content
 			</div>
 		</div>
