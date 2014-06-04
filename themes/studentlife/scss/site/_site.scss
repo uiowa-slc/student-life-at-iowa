@@ -409,8 +409,9 @@ section {
 	background-size: cover;
 	height: 100%;
 	width: 100%;
-	@media (max-width:$break-large) {
+	@media (max-width:1024px) {
 		background-attachment: scroll;
+		background-position: center center !important;
 	}
 }
 
@@ -705,14 +706,14 @@ section {
 /* Dots navigation */
 .feature-section-inner .slick-dots li button:before {
 	color: #fff;
-	font-size: 30px;
+	font-size: 40px;
 	opacity: .5;
 }
 .feature-section-inner .slick-dots li.slick-active button:before {
 	opacity: 1;
 }
 .feature-section-inner .slick-dots {
-	@media (max-width: $break-small) {
+	@media (max-width: $break-large) {
 		margin: 0;
 	}
 }

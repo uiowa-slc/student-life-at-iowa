@@ -45,7 +45,7 @@
 					<a href="https://twitter.com/imubuddy" class="twitter-follow-button" data-show-count="true" data-lang="en">Follow @twitterapi</a>
 				</div>
 				<div class="col-md-6">
-					<div class="fb-like" data-href="https://www.facebook.com/uistudentlife" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+					<div class="fb-like" data-href="https://www.facebook.com/uistudentlife" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
 				</div>
 			</div>
 		</div>
