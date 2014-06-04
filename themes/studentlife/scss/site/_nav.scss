@@ -161,3 +161,22 @@ $nav-break: 650px;
 .nav-main .active a {
 
 }
+.currentbar {
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	background-color: $yellow;
+	top: -5px;
+	left: 0;
+}
+.nav-main .current:after, .nav-main .section:after {
+	@media (min-width: 651px) {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 5px;
+		background-color: $yellow;
+		bottom: -5px;
+		left: 0;
+	}
+}
