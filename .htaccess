@@ -21,9 +21,26 @@ ErrorDocument 500 /assets/error-500.html
 	SetEnv HTTP_MOD_REWRITE On
 	RewriteEngine On
 
+  RewriteRule ^greeting$ - [L]
+  RewriteRule ^greeting/.* - [L]
+
+  RewriteRule ^report12$ - [L]
+  RewriteRule ^report12/.* - [L]
+
+  RewriteRule ^pickone$ - [L]
+  RewriteRule ^pickone/.* - [L]
+
+  RewriteRule ^md$ - [L]
+  RewriteRule ^md/.* - [L]
+
+  RewriteRule ^snowflake$ - [L]
+  RewriteRule ^snowflake/.* - [L]
+
 	RewriteCond %{REQUEST_URI} ^(.*)$
 	RewriteCond %{REQUEST_FILENAME} !-f
+
 	RewriteRule .* framework/main.php?url=%1&%{QUERY_STRING} [L]
+
 </IfModule>
 ### SILVERSTRIPE END ###
 
