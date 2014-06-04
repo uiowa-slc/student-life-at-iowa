@@ -78,7 +78,7 @@ class NewsHolder_Controller extends BlogHolder_Controller {
 
 	}
 
-	public function PaginatedNewsEntries($pageLength = 10){
+	public function PaginatedNewsEntries($pageLength = 12){
 		$entries = $this->BlogEntries();
 		return $entries->setPageLength($pageLength);
 	}
