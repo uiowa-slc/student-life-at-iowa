@@ -25,7 +25,7 @@
 		<h2 class="cat-heading-title">Latest News</h2>
 		<div class="rule"></div>
 		<div id="" class="justify justify-3">
-			<% loop BlogEntries %>
+			<% loop BlogEntries.Limit(12) %>
 
 				<article class="latestnews-item justify-item">
 					<a href="$Link" class="item-img">
