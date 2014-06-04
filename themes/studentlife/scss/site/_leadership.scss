@@ -311,7 +311,9 @@ Article
 .mod-hero .prev.link, .mod-hero .next.link {
 	color: #e2e2e2;
 	&:hover {
-		padding: 0 50px;
+		@media (min-width: $break-medium) {
+			padding: 0 50px;
+		}
 	}
 }
 .mod-hero .next {
@@ -396,6 +398,13 @@ Article
 		right: 50%;
 	}
 }
+.mod-hero .prev .label {
+	@media screen and (min-width: $break-medium) {
+		margin-left: -30px;
+		padding-left: 65px;
+		left: 50%;
+	}
+}
 .prev.link:hover .label, .next.link:hover .label {
 	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
 	opacity: 1;
@@ -415,7 +424,7 @@ Article
 	text-align: right;
 }
 .icon-arrow-left {
-	color: #fff;
+	color: #333;
 	display: block;
 	height: 60px;
 	line-height: 60px;
@@ -427,8 +436,13 @@ Article
 	z-index: 3;
 	margin-left: -10px;
 	left: 50%;
+	@media (min-width: $break-medium) {
+		color: #fff;
+	}
 }
-
+.prev.link:hover .icon-arrow-left, .next.link:hover .icon-arrow-left, {
+	color: #333;
+}
 
 
 
