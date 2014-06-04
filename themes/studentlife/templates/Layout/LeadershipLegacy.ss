@@ -27,11 +27,11 @@
 	</div>
 
 	<div class="row legacy-holder-content clearfix">
-		<div class="col-md-7">
+		<div class="col-md-8">
 			<h2><img src="{$ThemeDir}/images/leadershiplegacy_small.png" class="block" alt="Leadership Legacy Logo"></h2>
 			$Content
 		</div>
-		<div class="col-md-5">
+		<div class="col-md-4">
 			<h2></h2>
 			<p>Join our list to ensure your subscription and stay up-to-date on all the latest Leadership Legacy news and information.</p>
 			<!-- Begin MailChimp Signup Form -->
