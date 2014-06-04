@@ -139,8 +139,8 @@ $nav-break: 650px;
 		color: #333;
 		font-family: $heading-font;
 		letter-spacing: .05em;
-		padding: 0 1.2em;
-		text-transform: uppercase;
+		padding: 0 .45em;
+		xtext-transform: uppercase;
 		white-space: nowrap;
 	}
 	@media screen and (min-width: $break-large) {
