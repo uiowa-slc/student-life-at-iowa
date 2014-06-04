@@ -148,7 +148,7 @@ Homepage
 .legacy-holder-content {
 	margin-top: 1em;
 	@media (min-width: $break-small) {
-		margin-top: 4em;
+		margin-top: 1em;
 		margin-bottom: 2em;
 	}
 }
@@ -570,13 +570,16 @@ Article
 	color: #fff;
 }
 
-/*.legacy-wrapper .content .body p:first-of-type:first-letter {
-	width: 50px;
-	text-align: center;
-	color: #333;
-	font-size: 62px;
-	line-height: 57px;
-	margin-right: 15px;
-	float: left;
-	position: relative;
-}*/
+.leader-heading {
+	padding: 2em 0 0;
+	& img {
+		display: block;
+		margin: 0 auto;
+	}
+	& h1 {
+		font-weight:400;
+		text-transform:uppercase;
+		text-align:center;
+		margin: .25em 0 0;
+	}
+}
