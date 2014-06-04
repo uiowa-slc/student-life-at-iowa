@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "800225de888d536ceae65ad25a2e556c",
+    "hash": "db862c0493de9e2cdfabe7d000980b6d",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
@@ -243,16 +243,16 @@
         },
         {
             "name": "silverstripe/cms",
-            "version": "3.1.3",
+            "version": "3.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-cms.git",
-                "reference": "118776672a0f0fb3715c991a453cb5793bb445b1"
+                "reference": "3033d454982c5fac5a2089842e767e8866f05737"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/118776672a0f0fb3715c991a453cb5793bb445b1",
-                "reference": "118776672a0f0fb3715c991a453cb5793bb445b1",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/3033d454982c5fac5a2089842e767e8866f05737",
+                "reference": "3033d454982c5fac5a2089842e767e8866f05737",
                 "shasum": ""
             },
             "require": {
@@ -286,25 +286,28 @@
                 "cms",
                 "silverstripe"
             ],
-            "time": "2014-02-18 02:38:36"
+            "time": "2014-05-12 23:13:44"
         },
         {
             "name": "silverstripe/framework",
-            "version": "3.1.3",
+            "version": "3.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-framework.git",
-                "reference": "ead3e263786e85ef00ffa76d8d740a62526c5414"
+                "reference": "830c10704c98862609dea94400ff48524dffa676"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/ead3e263786e85ef00ffa76d8d740a62526c5414",
-                "reference": "ead3e263786e85ef00ffa76d8d740a62526c5414",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/830c10704c98862609dea94400ff48524dffa676",
+                "reference": "830c10704c98862609dea94400ff48524dffa676",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "*",
                 "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7@stable"
             },
             "type": "silverstripe-module",
             "autoload": {
@@ -332,7 +335,7 @@
                 "framework",
                 "silverstripe"
             ],
-            "time": "2014-03-02 19:54:18"
+            "time": "2014-05-13 03:06:43"
         },
         {
             "name": "undefinedoffset/sortablegridfield",
