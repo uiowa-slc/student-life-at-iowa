@@ -6,7 +6,7 @@
 <meta name="description" content="">
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home | Student Life Marketing &amp; Design.</title>
+<title>Home | Student Life at Iowa | The University of Iowa</title>
 <% base_tag %>
 <% include Ascii %>
 <!-- Typekit -->

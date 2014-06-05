@@ -30,9 +30,6 @@ ErrorDocument 500 /assets/error-500.html
   RewriteRule ^pickone$ - [L]
   RewriteRule ^pickone/.* - [L]
 
-  RewriteRule ^md$ - [L]
-  RewriteRule ^md/.* - [L]
-
   RewriteRule ^snowflake$ - [L]
   RewriteRule ^snowflake/.* - [L]
 
