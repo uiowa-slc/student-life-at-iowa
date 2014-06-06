@@ -1,0 +1,280 @@
+.student-life-bar{
+	width: 100%;
+	height: 42px;
+}
+/* chrome phone number color */
+span.gc-cs-link {
+color: #E9F0E1;
+}
+body {
+	background: url('dsl-back.png');
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+p{
+	margin: 1em 0;
+}
+
+
+
+.external-link {
+    background: url(external.png);
+    background-position: center right;
+    background-repeat: no-repeat;
+    padding-right: 13px;
+    color: #ABCA83;
+}
+
+.md-body{
+	background: url('light_to.png');	
+	min-height:1000px;
+}
+
+.md-logo{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;	
+}
+
+.m {
+	color: #A3D4D1;
+	
+	
+}
+
+.d {
+	color: #C8B642;
+}
+
+.header {
+	background: rgba(240,243,246,.35);
+	min-height: 275px;
+	padding: 35px 0;
+}
+
+.header h2 {
+	font-size: 46px;
+	text-align: center;
+	margin-top: 25px;
+	color: #333333;
+	
+}
+.header img {
+	max-width: 90%;
+}
+
+.tagline {
+	margin: auto;
+	display: block;
+	margin-top: 25px;
+}
+
+.mission {
+	font-size: 2em;
+	margin-bottom: 1em;
+}
+
+.work-examples .content-container .mission a {
+	color: #A3D4D0;
+}
+
+.work-examples .content-container {
+	text-shadow: 0 2px 0 #1D3331;
+	color: white;
+	font-size: 1.3em;
+	text-align: center;
+	
+}
+
+.work-examples .content-container a{
+	color: #B0E26E;
+}
+
+.work-examples .content-container a.external-link {
+	color: #E9F0E1;
+}
+
+.work-examples {
+	background: url('dsl-back.png');
+	padding: 80px 0;
+	-moz-box-shadow: inset 0 14px 19px -7px #333;
+	-webkit-box-shadow: inset 0 14px 19px -7px #333;
+	box-shadow: inset 0 14px 19px -7px #333;	
+}
+
+.work-examples ul {
+	text-align: left;
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
+	-webkit-column-gap: 1em;
+	-moz-column-gap: 1em;
+	column-gap: 1em;
+	margin: 30px 0;
+
+}
+
+.work-examples ul li {
+	list-style-type: square;	
+}
+.work-examples hr {
+	height: 1px;
+	border: 0;
+	border-bottom: 1px solid #333;
+	box-shadow: 0px 1px 0px #777;
+}
+
+.work-examples h2 {
+	font-size:  52px;
+	color: #86DFD7;
+}
+
+.work-grid {
+	-moz-box-shadow: 0 0 10px 2px #444;
+	-webkit-box-shadow: 0 0 10px 2px #444;
+	box-shadow: 0 0 10px 2px #444;
+	height: 640px;
+	/*margin: 60px auto;*/
+	background: #eee;
+	overflow: hidden;
+	background-image: url(tiled.jpg);
+}
+
+.work-grid-row1 ul {
+	list-style-type: none;
+}
+
+.work-grid-row1 ul li {
+	display: inline;
+}
+
+.work-grid-row1 img {
+	height:215px;
+	width:215px;
+	
+}
+
+.content-container .contact-content {
+	color: #333;
+}
+
+.contact {
+	background: rgba(240,243,246,.35);
+	-moz-box-shadow: inset 0 14px 19px -7px #b4b4b4;
+	-webkit-box-shadow: inset 0 14px 19px -7px #b4b4b4;
+	box-shadow: inset 0 14px 19px -7px #b4b4b4;
+	min-height: 300px;
+	padding: 80px 0;
+}
+
+.contact h2 {
+	font-size: 68px;
+	color: #3d5257;
+	text-align: center;}
+
+.contact h3 {
+	color: #579994;
+	font-size: 52px;
+	
+}
+
+.contact-content {
+	margin-top: 25px;
+	font-size: 24px;
+}
+
+.contact-content p {
+	
+	margin: 20px 0;
+	
+}
+
+.contact-content ul{
+	list-style-type: square;
+
+}
+
+.contact-content a {
+	text-decoration: none;
+	color: #436DB3;
+}
+
+.contact-content h4 {
+	font-size: 1.3em;
+}
+.contact-content ul {
+	margin: 10px 0;
+	text-align: left;
+	
+}
+
+.contact-content ul li {
+	border-bottom: 1px solid #ccc;
+	margin: 1em 0;
+}
+
+.work-for-us {
+
+}
+
+.hire-us {
+
+
+}
+
+.footer {
+	background-color: #363636;
+	padding: 30px 0;
+-moz-box-shadow: inset 0 14px 19px -7px #333;
+	-webkit-box-shadow: inset 0 14px 19px -7px #333;
+	box-shadow: inset 0 14px 19px -7px #333;	
+	
+}
+
+.footer .content-container {
+	color: white;
+	text-shadow: none;
+	font-size: 1.3em;
+	text-align: left;
+}
+
+.contact-details {
+	float: left;
+	font-size: 16px;
+}
+.contact-details p{
+	margin-left: 85px;
+	margin-top: 10px;
+}
+.social-media{
+	float: right
+}
+
+/* fb footer thing */
+.pluginBoxDivider {
+	border-color: #555 !important;
+}
+
+.content-container{
+	width: 1000px;
+	margin: auto;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.7);
+	text-align: center;
+}
+
+
+.clear{
+	clear: both;
+}
+
+.content-container p{
+	
+	
+}
+
+.jobs-hero-text {
+	font-size: 3em;
+}
