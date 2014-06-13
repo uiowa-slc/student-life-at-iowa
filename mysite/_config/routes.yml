@@ -1,0 +1,7 @@
+---
+Name: authorroutes
+After: framework/routes#coreroutes
+---
+Director:
+  rules:
+    'authors//$Action/$ID' : 'MemberHolderController'

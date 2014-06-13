@@ -8,6 +8,7 @@ class LeadershipLegacyBlogEntry extends BlogEntry {
 
 	private static $has_one = array(
 		"EntryPhoto" => "Image",
+		"Member" => "Member"
 	);
 	private static $belongs_many_many = array (
 	);
