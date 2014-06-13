@@ -45,7 +45,7 @@
 			</header>
 			<div class="content">
 				<div class="body">
-					<% if Author %><p>By <em>$Author.getName</em></p><% end_if %>
+					<% if Member %><% with Member %><p>By <em><a href="$Link">$FirstName $Surname</em></a></p><% end_with %><% end_if %>
 					$Content
 				</div>
 			</div>

@@ -25,7 +25,9 @@ class LeadershipLegacyBlogEntry extends BlogEntry {
 
 	public function getCMSFields(){
 		$f = parent::getCMSFields();
-
+		//$f->removeByName("Author");
+		$f->renameField( "Author", "Author Name (if not a member of the site)" );
+		$f->addFieldToTab( "Root.Main", new DropdownField( "MemberID", "Author (overrides above)", Member::get()->map( "ID", "getName" ) ), "Content" );
 		$f->addFieldToTab("Root.Main", new UploadField("EntryPhoto", "Photo - 1100x700 preferred"));
 
 		return $f;

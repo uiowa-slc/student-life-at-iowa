@@ -22,13 +22,13 @@ class NewsEntry extends BlogEntry {
 
 	private static $plural_name = "News Blog Entries";
 
-	public function getCMSFields(){
+	public function getCMSFields() {
 
 		$f = parent::getCMSFields();
-		$f->removeByName("Author");
-		$f->addFieldToTab("Root.Main", new DropdownField("MemberID", "Author", Member::get()->map("ID", "getName")), "Content");
-		$f->addFieldToTab("Root.Main", new UploadField("Photo", "Photo"));
-		$f->addFieldToTab("Root.Main", new CheckboxField("IsFeatured","Feature this Article? (Yes)"));
+		$f->renameField( "Author", "Author Name (if not a member of the site)" );
+		$f->addFieldToTab( "Root.Main", new DropdownField( "MemberID", "Author (overrides above)", Member::get()->map( "ID", "getName" ) ), "Content" );
+		$f->addFieldToTab( "Root.Main", new UploadField( "Photo", "Photo" ) );
+		$f->addFieldToTab( "Root.Main", new CheckboxField( "IsFeatured", "Feature this Article? (Yes)" ) );
 
 		return $f;
 	}
