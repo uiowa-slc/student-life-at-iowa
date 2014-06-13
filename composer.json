@@ -9,7 +9,8 @@
         "undefinedoffset/sortablegridfield": "*",
         "colymba/gridfield-bulk-editing-tools": "*",
 		"silverstripe/blog" : "*",
-		"md/rss-display" : "*"
+		"md/rss-display" : "*",
+		"silverstripe/staticpublishqueue" : "*"
 	},
 	"config": {
 		"process-timeout": 600	

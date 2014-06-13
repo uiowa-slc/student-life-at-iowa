@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "db862c0493de9e2cdfabe7d000980b6d",
+    "hash": "7ff4e7ae48ec16a510316217552258fd",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
@@ -142,12 +142,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-bar.git",
-                "reference": "a5845dfa6c766ed9fce8d19e7302c5404af70cd3"
+                "reference": "54d310c04df438f65954cef1e71ef11e22757fea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-bar/zipball/a5845dfa6c766ed9fce8d19e7302c5404af70cd3",
-                "reference": "a5845dfa6c766ed9fce8d19e7302c5404af70cd3",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-bar/zipball/54d310c04df438f65954cef1e71ef11e22757fea",
+                "reference": "54d310c04df438f65954cef1e71ef11e22757fea",
                 "shasum": ""
             },
             "require": {
@@ -166,7 +166,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-bar/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-bar/issues"
             },
-            "time": "2014-04-17 14:30:01"
+            "time": "2014-06-06 17:39:37"
         },
         {
             "name": "md/rss-display",
@@ -336,6 +336,83 @@
                 "silverstripe"
             ],
             "time": "2014-05-13 03:06:43"
+        },
+        {
+            "name": "silverstripe/gridfieldajaxrefresh",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe-labs/silverstripe-gridfieldajaxrefresh.git",
+                "reference": "38ebcd514ccbfab53cfc181f616ff711ef12e893"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe-labs/silverstripe-gridfieldajaxrefresh/zipball/38ebcd514ccbfab53cfc181f616ff711ef12e893",
+                "reference": "38ebcd514ccbfab53cfc181f616ff711ef12e893",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.0"
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Julian Seidenberg",
+                    "email": "julian@silverstripe.com"
+                }
+            ],
+            "description": "Adds the ability to either automatically or manually refresh a SilverStripe GridField",
+            "keywords": [
+                "ajax",
+                "auto-refresh",
+                "automatic",
+                "gridfield",
+                "refresh",
+                "silverstripe"
+            ],
+            "time": "2013-08-14 10:00:55"
+        },
+        {
+            "name": "silverstripe/staticpublishqueue",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe-labs/silverstripe-staticpublishqueue.git",
+                "reference": "46ef4e3ba8edc799fc477f788fce4aca423a0444"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe-labs/silverstripe-staticpublishqueue/zipball/46ef4e3ba8edc799fc477f788fce4aca423a0444",
+                "reference": "46ef4e3ba8edc799fc477f788fce4aca423a0444",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/cms": "3.1.*",
+                "silverstripe/framework": "3.1.*",
+                "silverstripe/gridfieldajaxrefresh": "dev-master"
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Static publishing queue to create static versions of pages for enhanced performance and security",
+            "keywords": [
+                "cache",
+                "caching",
+                "html",
+                "performance",
+                "publishing",
+                "queue",
+                "security",
+                "silverstripe",
+                "static",
+                "static-cache",
+                "static-caching",
+                "static-publishing"
+            ],
+            "time": "2014-05-29 04:56:49"
         },
         {
             "name": "undefinedoffset/sortablegridfield",
