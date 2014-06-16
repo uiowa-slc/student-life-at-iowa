@@ -1,0 +1,6 @@
+Member:
+  extensions:
+    - MemberExtension
+BlogEntry:
+  extensions:
+    - BlogEntryMemberExtension
