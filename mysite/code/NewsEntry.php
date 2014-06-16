@@ -2,8 +2,7 @@
 class NewsEntry extends BlogEntry {
 
 	private static $db = array(
-
-		'IsFeatured' => 'Boolean',
+		"IsFeatured" => "Boolean",
 	);
 
 	private static $has_one = array(
@@ -18,15 +17,16 @@ class NewsEntry extends BlogEntry {
 
 	);
 
-	private static $singular_name = 'News Blog Entry';
+	private static $singular_name = "News Blog Entry";
 
-	private static $plural_name = 'News Blog Entries';
+	private static $plural_name = "News Blog Entries";
 
-	public function getCMSFields(){
+	public function getCMSFields() {
+
 		$f = parent::getCMSFields();
-
-		$f->addFieldToTab("Root.Main", new UploadField("Photo", "Photo"));
-		$f->addFieldToTab('Root.Main', new CheckboxField('IsFeatured','Feature this Article? (Yes)'));
+		$f->renameField( "Author", "Author Name (if not a member of the site)" );
+		$f->addFieldToTab( "Root.Main", new UploadField( "Photo", "Photo" ) );
+		$f->addFieldToTab( "Root.Main", new CheckboxField( "IsFeatured", "Feature this Article? (Yes)" ) );
 
 		return $f;
 	}
@@ -41,10 +41,10 @@ class NewsEntry_Controller extends BlogEntry_Controller {
 	 *
 	 * <code>
 	 * array (
-	 *     'action', // anyone can access this action
-	 *     'action' => true, // same as above
-	 *     'action' => 'ADMIN', // you must have ADMIN permissions to access this action
-	 *     'action' => '->checkAction' // you can only access this action if $this->checkAction() returns true
+	 *     "action", // anyone can access this action
+	 *     "action" => true, // same as above
+	 *     "action" => "ADMIN", // you must have ADMIN permissions to access this action
+	 *     "action" => "->checkAction" // you can only access this action if $this->checkAction() returns true
 	 * );
 	 * </code>
 	 *
