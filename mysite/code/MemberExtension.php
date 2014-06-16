@@ -18,15 +18,30 @@ class MemberExtension extends DataExtension {
 
 	private static $has_many = array(
 
-		"NewsEntries" => "NewsEntry",
-		"LeadershipLegacyBlogEntries" => "LeadershipLegacyBlogEntry"
+		"BlogEntries" => "BlogEntry"
 
 	);
 
 	
 	public function updateCMSFields(FieldList $fields) {
+		$baseLink = Director::absoluteBaseURL();
+
+		$fields->removeByName("URLSegment");
+
+		$urlsegment = new SiteTreeURLSegmentField("URLSegment", $this->owner->fieldLabel('URLSegment'));
+	    $urlsegment->setURLPrefix($baseLink.'authors/view/');
+
+		$fields->addFieldToTab("Root.Main", $urlsegment, "Password");
 		
 		
+	}
+
+	public function NewsEntries(){
+		return $this->owner->BlogEntries()->filter(array("ClassName" => "NewsEntry"));
+	}
+
+	public function LeadershipLegacyBlogEntries(){
+		return $this->owner->BlogEntries()->filter(array("ClassName" => "LeadershipLegacyBlogEntry"));
 	}
 
 	public function Link(){

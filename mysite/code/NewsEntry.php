@@ -7,7 +7,6 @@ class NewsEntry extends BlogEntry {
 
 	private static $has_one = array(
 		"Photo" => "Image",
-		"Member" => "Member"
 	);
 	private static $belongs_many_many = array (
 	);
@@ -26,7 +25,6 @@ class NewsEntry extends BlogEntry {
 
 		$f = parent::getCMSFields();
 		$f->renameField( "Author", "Author Name (if not a member of the site)" );
-		$f->addFieldToTab( "Root.Main", new DropdownField( "MemberID", "Author (overrides above)", Member::get()->map( "ID", "getName" ) ), "Content" );
 		$f->addFieldToTab( "Root.Main", new UploadField( "Photo", "Photo" ) );
 		$f->addFieldToTab( "Root.Main", new CheckboxField( "IsFeatured", "Feature this Article? (Yes)" ) );
 

@@ -18,29 +18,39 @@ class MemberHolderController extends Page_Controller {
 	 * @var array
 	 */
 	private static $allowed_actions = array (
-		'view'
+		'view',
+		'handleAction',
+    	'handleIndex',
 	);
 
-   	public function view(SS_HTTPRequest $request) {
+	public function view( SS_HTTPRequest $request ) {
 
-   		$requestedName = Convert::raw2sql($request->param('ID'));
+		$requestedName = Convert::raw2sql( $request->param( 'ID' ) );
+		if ( is_numeric( $requestedName ) ) {
+			$member = Member::get()->filter( array( "ID" => $requestedName ) )->First();
+		}else {
+			$member = Member::get()->filter( array( "URLSegment" => $requestedName ) )->First();
+		}
+		if ( $member ) {
+			$Data = array(
+				"Title" => $member->getName(),
+				"Member" => $member
+			);
+			return $this->customise( $Data )->renderWith( array( 'MemberPage', 'Page' ) );
+		}else {
+			return $this->httpError( 404 );
+		}
+	}
 
-   		if(is_numeric($requestedName)){
-   			$member = Member::get()->filter(array("ID" => $requestedName))->First();
-   		}else{
-   			$member = Member::get()->filter(array("URLSegment" => $requestedName))->First();
-   		}
-   		if($member){
-   			$Data = array(
-   				"Title" => $member->getName(),
-   				"Member" => $member
-   			);
-   			return $this->customise($Data)->renderWith(array('MemberPage', 'Page'));
-   		}else{
-   			return $this->httpError(404);
-   		}
-    }
+	public function index( SS_HTTPRequest $request ) {
+		$members = Member::get();
+		$Data = array(
+			"Title" => "Authors",
+			"Members" => $members
+		);
+		return $this->customise( $Data )->renderWith( array( 'MemberListPage', 'Page' ) );
 
+	}
 
 	public function init() {
 		parent::init();
