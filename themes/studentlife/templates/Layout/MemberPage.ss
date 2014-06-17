@@ -3,25 +3,49 @@
 <div class="container">
 	<% include BreadCrumbs %>
 	<div class="row clearfix">
-		<div class="col-md-8">
+		<div class="col-md-8 memberpage">
 			<% with Member %>
-				<p>First Name: $FirstName <br />
-					Last Name: $Surname <br />
-					Bio: $Bio <br />
-					Photo: $Photo <br />
-				</p>
-				<p>News Entries written by $FirstName:</p>
-				<ul>
-					<% loop NewsEntries %>
-						<li><a href="$Link">$Title</a></li>
-					<% end_loop %>
-				</ul>
-				<p>Leadership Legacy Entries written by $FirstName:</p>
-				<ul>
+				<div class="clearfix profile">
+					<img src="$Photo.CroppedImage(150,150).URL" alt="$FirstName $Surname" class="left">
+					<h2>$FirstName $Surname</h2>
+					<div>
+						$Bio
+					</div>
+				</div>
+				<br>
+				<p><strong>News Entries</strong> written by $FirstName:</p>
+				<% loop NewsEntries %>
+					<article class="clearfix">
+						<a href="$Link" class="memberpage-img">
+							<img src="$Photo.CroppedImage(230,150).URL" alt="$Title">
+						</a>
+						<div class="memberpage-content">
+							<h3><a href="$Link">$Title</a></h3>
+							<p class="date"><em>$Date.Long</em></p>
+							<p>$Content.LimitCharacters(160)</p>
+						</div>
+					</article>
+					<% if not Last %><hr><% end_if %>
+				<% end_loop %>
+				<% if $LeadershipLegacyBlogEntries %>
+					<br>
+					<br>
+					<br>
+					<p><strong>Leadership Legacy entries</strong> written by $FirstName:</p>
 					<% loop LeadershipLegacyBlogEntries %>
-						<li><a href="$Link">$Title</a></li>
+						<article class="clearfix">
+							<a href="$Link" class="memberpage-img">
+								<img src="$Photo.CroppedImage(230,150).URL" alt="$Title">
+							</a>
+							<div class="memberpage-content">
+								<h3 class=""><a href="$Link">$Title</a></h3>
+								<p class="date"><em>$Date.Long</em></p>
+								<p class="">$Content.LimitCharacters(160)</p>
+							</div>
+							</a>
+						</article>
 					<% end_loop %>
-				</ul>
+				<% end_if %>
 			<% end_with %>
 		</div><!-- end .col-md-8 -->
   		<div class="col-md-4">
