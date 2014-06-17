@@ -53,6 +53,19 @@ class NewsEntry_Controller extends BlogEntry_Controller {
 	private static $allowed_actions = array (
 	);
 
+	public function RelatedNewsEntries(){
+		$holder = NewsHolder::get()->First();
+		$tags = $this->TagsCollection()->sort("RAND()")->limit(6);
+		$entries = new ArrayList();
+
+		foreach($tags as $tag){
+			$entries->push($holder->Entries(5, $tag->Tag)->sort("RAND()")->First());
+		}
+
+		$entries->removeDuplicates();
+		return $entries;
+	}
+
 	public function init() {
 		parent::init();
 

@@ -25,7 +25,10 @@
 				<div class="BlogContent">
 					$Content
 					<div class="BlogRelated">
-
+						<h2>Related</h2>
+						<% loop $RelatedNewsEntries %>
+							<li><a href="$Link">$Title</a></li>
+						<% end_loop %>
 					</div>
 				</div>
 
