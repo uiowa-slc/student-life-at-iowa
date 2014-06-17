@@ -185,6 +185,9 @@
 /* ==================================================
 	Blog
 ===================================================== */
+.blogentry {
+	margin-bottom: 3em;
+}
 .blog-footer {
 	background-color: #111;
 	color: #999;
@@ -253,9 +256,7 @@ Post
 
 */
 .BlogContent {
-	border-bottom: 1px solid #eee;
 	margin-bottom: 3em;
-	padding-bottom: 2em;
 }
 .postTitle {
 	@include rem(35);
@@ -266,26 +267,32 @@ Post
 		line-height: 1;
 	}
 }
-/*.BlogContent > p:first-of-type {
-	@media (min-width: $break-small) {
-		@include rem($base-font * 1.2);
+.BlogContent blockquote {
+	border-left: 5px solid $yellow;
+	& p {
+		font-size: 18px;
 	}
-}*/
-/*.BlogContent p:first-of-type:first-letter {
-	font-weight: 400;
-	font-style: normal;
-	font-size: inherit;
-	float: left;
-	@include rem(60);
-	line-height: .875em;
-	padding: 2px .125em 0 0;
-	margin-left: -5px;
-	color: #333;
 	@media (min-width: $break-small) {
-		@include rem(90);
+		margin-left: 1em;
+		margin-right: 1em;
+		& p {
+			font-size: 20px;
+		}
 	}
-}*/
-
+}
+.captionImage {
+	max-width: 100%;
+	& img {
+		display: block;
+	}
+	& .caption {
+		background: #eee;
+		box-shadow: 0 1px 0 rgba(0,0,0,.1);
+		font-size: 14px;
+		margin: 0;
+		padding: 8px 10px;
+	}
+}
 
 
 /*
@@ -341,7 +348,7 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 }
 .sidebar-blog-title {
 	color: $link;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: normal;
 	line-height: 1.2;
 	margin: 0 0 3px;
@@ -358,7 +365,10 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 	font-size: 13px;
 	line-height: 1.3;
 	margin: 0;
-	@media (min-width: 769px) and (max-width: 900px) {
+	@media (max-width: $break-small) {
+		display: none;
+	}
+	@media (min-width: 769px) and (max-width: 1040px) {
 		display: none;
 	}
 }
@@ -411,4 +421,134 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 }
 .PageNumbers li.active a {
 	border: 1px solid $yellow;
+}
+
+
+/* Tags */
+.tags {
+	border-top: 1px solid #ddd;
+	padding: 1em 0;
+	& p {
+		font-size: 13px;
+		margin: 5px 0;
+	}
+	& a {
+		background-color: #000;
+		border-radius: 3px;
+		color: #fff;
+		font-size: 12px;
+		padding: 2px 5px;
+	}
+}
+
+/* Byline */
+.byline-top {
+	font-size: 14px;
+}
+.byline {
+	background-color: #fafafa;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 1em;
+}
+.byline-img {
+	border-bottom: 4px double #ddd;
+	display: block;
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+	@media (min-width: $break-small) {
+		float: left;
+		border-bottom: none;
+		border-right: 4px double #ddd;
+		margin-bottom: 0;
+		padding-right: 4%;
+		width: 30%;
+	}
+	@media (min-width: $break-large) {
+		padding-right: 20px;
+		width: auto;
+	}
+	& img {
+		border-radius: 50%;
+		display: block;
+		margin: 0 auto;
+	}
+}
+.byline-bio {
+	text-align: center;
+	& h4 {
+		font-family: $body-font;
+		font-size: 16px;
+		font-weight: normal;
+		letter-spacing: 1px;
+		margin: 0 0 8px 0;
+		text-transform: uppercase;
+		& em {
+			font-size: 13px;
+			text-transform: none;
+		}
+	}
+	& p {
+		font-size: 14px;
+		line-height: 1.4;
+		margin: 0;
+	}
+	& .byline-buttons {
+		margin-top: 10px;
+	}
+	@media (min-width: $break-small) {
+		margin-left: 35%;
+		text-align: left;
+	}
+	@media (min-width: $break-large) {
+		margin-left: 175px;
+	}
+}
+
+/* Member Page */
+.memberpage .profile {
+	border-bottom: 3px solid #000;
+	padding-bottom: 1em;
+	& h2 {
+		margin: 0 0 5px 0;
+	}
+	& p {
+		margin: 0;
+	}
+	& img {
+		border-radius: 50%;
+		margin-bottom: 0;
+	}
+}
+.memberpage-img {
+	@media (min-width: $break-small) {
+		float: left;
+		margin: 0 1em 0 0;
+		width: 33%;
+	}
+	& img {
+		width: 100%;
+	}
+}
+.memberpage-content {
+	& h3 {
+		margin: 0 0 5px;
+	}
+	& p {
+		line-height: 1.3;
+		margin: 5px 0;
+	}
+	& .date {
+		color: #777;
+		font-size: 13px;
+	}
+	@media (min-width: $break-small) {
+		float: right;
+		width: 63%;
+	}
+}
+
+/* Related posts */
+.blog-related h5{
+	margin: 5px 0 0;
 }
