@@ -1,6 +1,34 @@
 
 <% include MainNav %>
 <br>
+
+<% if SelectedTag %>
+	<!-- ========= BEGIN SELECTED TAG CONTENT ========= -->
+	<section class="latestnews">
+		<div class="container">
+			<h2 class="cat-heading-title"><% _t('BlogHolder_ss.VIEWINGTAGGED', 'Viewing entries tagged with') %> '$SelectedTag'</h2>
+			<div class="rule"></div>
+			<div id="" class="justify justify-3">
+			<% loop PaginatedNewsEntries %>
+				<article class="latestnews-item justify-item">
+					<a href="$Link" class="item-img">
+						<img src="$Photo.CroppedImage(360,200).URL" alt="$Title">
+						<div class="item-img-title">
+							<h3 class="news-clip-heading">$Title</h3>
+							<p class="snippit">$Content.LimitCharacters(160)</p>
+						</div>
+					</a>
+				</article>
+			<% end_loop %>
+			<article class="justify-item filler"></article>
+		</div>
+		<% include NewsPagination %>
+	</div><!-- end .container -->
+</section>
+
+<% else %>
+
+<!-- ========= BEGIN MAIN CONTENT ========= -->
 <section>
 	<div class="container">
 		<div class="row blog-featured">
@@ -32,24 +60,17 @@
 						<img src="$Photo.CroppedImage(360,200).URL" alt="$Title">
 						<div class="item-img-title">
 							<h3 class="news-clip-heading">$Title</h3>
-							<p class="meta">$Date.Long <% if $Author %>by <em>$Author</em><% end_if %></p>
 							<p class="snippit">$Content.LimitCharacters(160)</p>
 						</div>
 					</a>
-					<!-- <p class="snippit">$Content.LimitCharacters(220)</p> -->
-					<!-- <div class="rule"></div> -->
 				</article>
 			<% end_loop %>
+			<article class="justify-item filler"></article>
 		</div>
 		<% include NewsPagination %>
-	</div><!-- end .container -->
+	</div>
 </section>
-
-
-<section class="video-list">
-
-</section>
-
+<section class="video-list"></section>
 <section>
 	<div class="container">
 		<h2 class="cat-heading-title">Photo Galleries</h2>
@@ -79,3 +100,5 @@
 	</div>
 </section>
 <br>
+
+<% end_if %>
