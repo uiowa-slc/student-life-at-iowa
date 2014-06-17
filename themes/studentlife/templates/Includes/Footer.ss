@@ -31,14 +31,7 @@
 				<h4>Support The Division</h4>
 				<p>Gifts through the Vice President for Student Life Development Fund allow us to continue and enhance our efforts to prepare students for a successful life in school and beyond.</p>
 				<a href="https://www.givetoiowa.org/GiveToIowa/WebObjects/GiveToIowa.woa/wa/goTo?area=studentlife" class="appt-btn">Give Online Now</a>
-				<!-- <div class="clearfix">
-					<div class="fb-like-box" data-href="https://www.facebook.com/uistudentlife" data-height="70px" data-colorscheme="dark" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false"></div>
-				</div>
-				<br>
-				<div>
-					<a href="https://twitter.com/imubuddy" class="twitter-follow-button" data-show-count="true" data-lang="en" data-size="medium">Follow @twitterapi</a>
-				</div>
-			</div> -->
+			</div>
 		</div>
 		<hr>
 		<p>&copy; $Now.Year <a href="http://www.uiowa.edu/" target="_blank">The University of Iowa</a>. All Rights Reserved.</p>
