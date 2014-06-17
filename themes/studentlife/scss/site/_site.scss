@@ -15,9 +15,19 @@ body {
 	height: 100%;
 }
 
+/* Division Bar Overrides */
+.division-search{
+	@media screen and (min-width: $break-small) {
+		right: 290px;
+	}
+	@media screen and (min-width: $break-large) {
+		right: 310px;
+	}
+}
+
 /* Layout
 ========================================================================== */
-.container {
+.container, .division-topbar .wrapper {
 	max-width: $break-xxlarge;
 	margin-right: auto;
 	margin-left: auto;

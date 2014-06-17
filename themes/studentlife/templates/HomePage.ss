@@ -21,6 +21,9 @@
 		<script src="{$ThemeDir}/js/ie/respond.min.js"></script>
 <![endif]-->
 
+<!-- Analytics -->
+<% include Analytics %>
+
 </head>
 
 <body>
@@ -52,10 +55,10 @@
 	<% include Footer %>
 
 </div>
+
 	<!-- JS -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="{$ThemeDir}/js/min/production-min.js"></script>
 	<script src="{$ThemeDir}/js/home.js"></script>
-	<% include Analytics %>
 </body>
 </html>

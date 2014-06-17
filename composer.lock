@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/colymba/GridFieldBulkEditingTools.git",
-                "reference": "b9d8cd9b2233a6bc60a2b3c51f61bfb56bfd4a94"
+                "reference": "e41282b3d20101bcd08ce5afb15749302db3227e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/b9d8cd9b2233a6bc60a2b3c51f61bfb56bfd4a94",
-                "reference": "b9d8cd9b2233a6bc60a2b3c51f61bfb56bfd4a94",
+                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/e41282b3d20101bcd08ce5afb15749302db3227e",
+                "reference": "e41282b3d20101bcd08ce5afb15749302db3227e",
                 "shasum": ""
             },
             "require": {
@@ -45,7 +45,7 @@
                 "gridfield bulk upload",
                 "silverstripe"
             ],
-            "time": "2014-05-28 09:37:23"
+            "time": "2014-06-17 10:08:07"
         },
         {
             "name": "composer/installers",
