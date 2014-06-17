@@ -1,6 +1,6 @@
 <% if $Member %>
 	<% with $Member %>
-		By <em><a href="$Link">$FirstName $Surname</em></a>
+		Posted by <a href="$Link" class="byline-author" rel="author">$FirstName $Surname</a>
 	<% end_with %>
 <% else_if $Author %>
 	By $Author
