@@ -4,7 +4,7 @@
 	<% include BreadCrumbs %>
 	<div class="row clearfix">
 		<div class="col-md-8">
-			<section class="blogEntry">
+			<section class="blogentry">
 				<article itemscope="" itemtype="http://schema.org/Article" class="BlogContent">
 					<header>
 						<h1 class="postTitle" itemprop="name headline">$Title</h1>
@@ -26,7 +26,7 @@
 								<p>
 								<span class="glyphicon glyphicon-tag"></span> <% _t('BlogEntry_ss.TAGS', 'Tags:') %>
 								<% loop TagsCollection %>
-									<a href="$Link" title="<% _t('BlogEntry_ss.VIEWALLPOSTTAGGED', 'View all posts tagged') %> '$Tag'" rel="tag">$Tag</a><% if not Last %>,<% end_if %>
+									<a href="$Link" title="<% _t('BlogEntry_ss.VIEWALLPOSTTAGGED', 'View all posts tagged') %> '$Tag'" rel="tag">$Tag</a>
 								<% end_loop %>
 								</p>
 							</div>
@@ -47,11 +47,19 @@
 						<% end_if %>
 					</footer>
 				</article>
-				<aside class="BlogRelated">
-					<h2>Related</h2>
-					<% loop $RelatedNewsEntries %>
-						<li><a href="$Link">$Title</a></li>
-					<% end_loop %>
+				<aside class="blog-related">
+					<h3>Related Articles</h3>
+					<ul class="unstyled justify justify-3">
+						<% loop $RelatedNewsEntries(3) %>
+							<li class="justify-item">
+								<a href="$Link">
+									<img src="$Photo.CroppedImage(240,160).URL" alt="$Title">
+								</a>
+								<h5><a href="$Link">$Title</a></h5>
+							</li>
+						<% end_loop %>
+						<li class="justify-item filler"></li>
+					</ul>
 				</aside>
 			</section>
 		</div>
