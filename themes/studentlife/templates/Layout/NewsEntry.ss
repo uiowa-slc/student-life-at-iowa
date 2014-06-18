@@ -19,6 +19,8 @@
 
 					<a href="https://twitter.com/intent/tweet?text=$AbsoluteLink" title="Share on Twitter" target="_blank"><span class="social-icon icon-twitter"></span><span class="count">Tweet</span></a>
 
+					<a href="https://plus.google.com/share?url=$AbsoluteLink" title="Share on Google Plus" target="_blank"><span class="social-icon icon-googleplus"></span><span class="count">Google+</span></a>
+
 					$Content
 					<footer>
 						<% if TagsCollection %>
