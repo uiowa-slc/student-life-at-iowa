@@ -59,14 +59,21 @@ class NewsEntry_Controller extends BlogEntry_Controller {
 		$entries = new ArrayList();
 
 		foreach($tags as $tag){
-			$entries->push($holder->Entries(5, $tag->Tag)->exclude(array("ID"=>$this->ID))->sort("RAND()")->First());
+			$taggedEntries = $holder->Entries(5, $tag->Tag)->exclude(array("ID"=>$this->ID))->sort("RAND()")->First();
+			if($taggedEntries){
+				foreach($taggedEntries as $taggedEntry){
+					if($taggedEntry->ID){
+						$entries->push($taggedEntry);
+					}
+				}
+			}	
+			
 		}
-		if($entries){
+
+		if($entries->count() > 1){
 			$entries->removeDuplicates();
-			return $entries;
-		}else{
-			return false;
 		}
+		return $entries;
 	}
 
 	public function init() {
