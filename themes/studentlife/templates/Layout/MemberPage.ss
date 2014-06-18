@@ -6,7 +6,7 @@
 		<div class="col-md-8 memberpage">
 			<% with Member %>
 				<div class="clearfix profile">
-					<img src="$Photo.CroppedImage(150,150).URL" alt="$FirstName $Surname">
+					<% if $Photo %><img src="$Photo.CroppedImage(150,150).URL" alt="$FirstName $Surname"><% end_if %>
 					<h2>$FirstName $Surname</h2>
 					<div>
 						$Bio
