@@ -1,0 +1,7 @@
+---
+Name: mysiteconfig_redirector
+After: 'staticpublishqueue/*'
+---
+RedirectorPage:
+  extensions:
+    - PublishableRedirectorPage

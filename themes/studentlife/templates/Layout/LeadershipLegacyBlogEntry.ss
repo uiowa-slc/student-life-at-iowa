@@ -45,9 +45,7 @@
 			</header>
 			<div class="content">
 				<div class="body">
-					<% if $Member || $Author %>
-						<p><% include Byline %></p>
-					<% end_if %>
+					<% if Author %><p>By <em>$Author</em></p><% end_if %>
 					$Content
 				</div>
 			</div>
