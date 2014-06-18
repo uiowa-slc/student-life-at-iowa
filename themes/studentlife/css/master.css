@@ -3176,26 +3176,20 @@ html[xmlns] .slides {
   content: "\e603"; }
 
 /* ==================================================
-	Header
+	News Holder
 ===================================================== */
-.news-header {
-  background-color: #fff;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100; }
+.blog-featured h1 {
+  font-size: 30px;
+  font-size: 1.875rem;
+  margin-top: 0.25em;
+  xfont-weight: normal;
+  text-transform: none; }
+  @media (min-width: 481px) {
+    .blog-featured h1 {
+      font-size: 40px;
+      font-size: 2.5rem;
+      line-height: 1; } }
 
-.news-header.test {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); }
-
-.news-header .inner {
-  padding: 4em 0;
-  transition: all 1s ease; }
-
-.news-header.test .inner {
-  padding: 2em 0; }
-
-/* Category Headings */
 .cat-heading-title {
   font-size: 24px;
   font-size: 1.5rem;
@@ -3208,9 +3202,6 @@ html[xmlns] .slides {
   margin-top: 1.2em;
   margin-bottom: 1.2em; }
 
-/* ==================================================
-	Latest News
-===================================================== */
 .latestnews-item {
   background: #fff;
   margin-bottom: 3em; }
@@ -3324,6 +3315,9 @@ html[xmlns] .slides {
   .video-link img {
     display: block; }
 
+/* ==================================================
+	News Holder Videos
+===================================================== */
 .video-list {
   background-color: #111;
   color: #fff;
@@ -3347,85 +3341,33 @@ html[xmlns] .slides {
   font-size: 13px; }
 
 /* ==================================================
-	Blog
+	News Entry Post
 ===================================================== */
-.blog-footer {
-  background-color: #111;
-  color: #999;
-  padding: 1em 0; }
-
-.blog-footer a {
-  color: #999; }
-  .blog-footer a:hover {
-    color: #fff; }
-
-.blog-footer h3 {
-  color: #ffce39;
-  font-size: 21px;
-  font-weight: 300;
-  letter-spacing: 2px;
-  margin: 1em 0;
-  text-align: center;
-  text-transform: uppercase; }
-
-@media (min-width: 981px) {
-  .footer-latest-posts li {
-    margin-bottom: 1em; } }
-
-.footer-latest-posts .title {
-  color: #999;
-  line-height: 1.3;
-  margin-top: 0; }
-
-@media (min-width: 981px) { }
-
-@media (min-width: 981px) {
-  .blog-footer-col2 {
-    border-left: 1px solid #333;
-    border-right: 1px solid #333; } }
-
-@media (min-width: 769px) and (max-width: 981px) {
-  .blog-footer-col3 {
-    border-top: 1px solid #333;
-    margin-top: 2em;
-    padding-top: 1em; } }
-
-.blog-footer hr {
-  border-top: 1px solid #111;
-  border-bottom: 1px solid #333; }
-
-.footer-recent-posts li {
-  font-size: 13px;
-  margin-bottom: 8px; }
-  .footer-recent-posts li a {
-    display: block;
-    font-size: 16px; }
-
-/*
-
-Post
-
-*/
-.postTitle {
+/* Post */
+.post-title {
   font-size: 35px;
   font-size: 2.1875rem;
   margin: 0.5em 0 0.25em;
   text-transform: none; }
   @media (min-width: 481px) {
-    .postTitle {
+    .post-title {
       font-size: 45px;
       font-size: 2.8125rem;
       line-height: 1; } }
 
-.BlogContent blockquote {
+.blog-content p {
+  font-size: 17px;
+  margin: 1em 0; }
+
+.blog-content blockquote {
   border-left: 5px solid #ffce39; }
-  .BlogContent blockquote p {
+  .blog-content blockquote p {
     font-size: 18px; }
   @media (min-width: 481px) {
-    .BlogContent blockquote {
+    .blog-content blockquote {
       margin-left: 1em;
       margin-right: 1em; }
-      .BlogContent blockquote p {
+      .blog-content blockquote p {
         font-size: 20px; } }
 
 .captionImage {
@@ -3439,102 +3381,25 @@ Post
     margin: 0;
     padding: 8px 10px; }
 
-/*
-Make the Facebook Like box responsive (fluid width)
-https://developers.facebook.com/docs/reference/plugins/like-box/
-*/
-#fb-root {
-  display: none; }
-
-/* To fill the container and nothing else */
-.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
-  width: 100% !important; }
-
-/* Sidebar Blog */
-.sidebar {
-  border-left: 1px solid #eee;
-  padding: 1px 0 0 20px; }
-
-.sidebar-item {
+.blog-content footer {
   margin-bottom: 2em; }
 
-.sidebar-title {
-  text-align: center;
-  text-transform: uppercase;
-  border-bottom: 3px solid #333;
-  padding-bottom: 4px;
-  letter-spacing: 1px; }
-
-.sidebar-blog-item {
-  margin: 0;
-  border-bottom: 1px solid #ddd;
-  position: relative; }
-  .sidebar-blog-item a {
-    display: block; }
-
-.sidebar-blog-item a {
-  padding: 10px 0; }
-
-.sidebar-blog-item.last {
-  border: none; }
-
-.sidebar-blog-img {
-  display: block;
-  float: right;
-  width: 32%; }
-
-.sidebar-blog-content {
-  float: left;
-  width: 63%; }
-
-.sidebar-blog-title {
-  color: #0088cc;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.3;
-  margin: 0 0 3px;
-  padding-bottom: 1px !important; }
-
-.sidebar-blog-item a:hover .sidebar-blog-title {
-  text-decoration: underline; }
-
-.sidebar-blog-snippit {
-  color: #555;
-  font-size: 13px;
-  line-height: 1.3;
-  margin: 0; }
-  @media (max-width: 481px) {
-    .sidebar-blog-snippit {
-      display: none; } }
-  @media (min-width: 769px) and (max-width: 1040px) {
-    .sidebar-blog-snippit {
-      display: none; } }
-
-.BlogContent p {
-  font-size: 17px;
-  font-size: 1.0625rem;
-  margin: 1em 0; }
-
-.BlogContent img.leftAlone {
-  margin-left: -60px; }
-  @media (min-width: 769px) {
-    .BlogContent img.leftAlone {
-      margin-left: 0; } }
-
-.blog-featured h1 {
-  font-size: 30px;
-  font-size: 1.875rem;
-  margin-top: 0.25em;
-  xfont-weight: normal;
-  text-transform: none; }
-  @media (min-width: 481px) {
-    .blog-featured h1 {
-      font-size: 40px;
-      font-size: 2.5rem;
-      line-height: 1; } }
+/* Tags */
+.tags {
+  border-top: 1px solid #ddd;
+  padding: 1em 0; }
+  .tags p {
+    font-size: 13px;
+    margin: 5px 0; }
+  .tags a {
+    background-color: #ffce39;
+    border-radius: 3px;
+    color: #000;
+    font-size: 12px;
+    padding: 4px 6px; }
 
 /* ==================================================
-	Pagination
+	News Holder Pagination
 ===================================================== */
 .pagination {
   text-align: center; }
@@ -3557,21 +3422,9 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 .PageNumbers li.active a {
   border: 1px solid #ffce39; }
 
-/* Tags */
-.tags {
-  border-top: 1px solid #ddd;
-  padding: 1em 0; }
-  .tags p {
-    font-size: 13px;
-    margin: 5px 0; }
-  .tags a {
-    background-color: #ffce39;
-    border-radius: 3px;
-    color: #000;
-    font-size: 12px;
-    padding: 4px 6px; }
-
-/* Byline */
+/* ==================================================
+	Author Byline
+===================================================== */
 .byline-top {
   font-size: 14px; }
 
@@ -3629,7 +3482,9 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
     .byline-bio {
       margin-left: 175px; } }
 
-/* Member Page */
+/* ==================================================
+	Member Page
+===================================================== */
 .memberpage .profile {
   border-bottom: 3px solid #000;
   padding: 1em 0; }
@@ -3654,20 +3509,9 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 .memberpage-img img {
   width: 100%; }
 
-.memberpage-content h3 {
-  margin: 0 0 5px; }
-.memberpage-content p {
-  line-height: 1.3;
-  margin: 5px 0; }
-.memberpage-content .date {
-  color: #777;
-  font-size: 13px; }
-@media (min-width: 481px) {
-  .memberpage-content {
-    float: right;
-    width: 63%; } }
-
-/* Related posts */
+/* ==================================================
+	Related Posts
+===================================================== */
 .blog-related {
   border-top: 3px solid #000;
   margin: 1em 0 2em; }
@@ -3703,6 +3547,75 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
         width: 80px; }
       .blog-social a {
         padding: 7px 0 5px; } }
+
+/* ==================================================
+	News Sidebar
+===================================================== */
+.sidebar {
+  border-left: 1px solid #eee;
+  padding: 1px 0 0 20px; }
+
+.sidebar-item {
+  margin-bottom: 2em; }
+
+.sidebar-title {
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 3px solid #333;
+  padding-bottom: 4px;
+  letter-spacing: 1px; }
+
+.sidebar-blog-item {
+  margin: 0;
+  border-bottom: 1px solid #ddd;
+  position: relative; }
+  .sidebar-blog-item a {
+    display: block; }
+
+.sidebar-blog-item a {
+  padding: 10px 0; }
+
+.sidebar-blog-item.last {
+  border: none; }
+
+.sidebar-blog-img {
+  display: block;
+  float: right;
+  width: 35%; }
+
+.sidebar-blog-content {
+  float: left;
+  width: 60%; }
+
+.sidebar-blog-title {
+  color: #0088cc;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.3;
+  margin: 0 0 3px;
+  padding-bottom: 1px !important; }
+
+.sidebar-blog-item a:hover .sidebar-blog-title {
+  text-decoration: underline; }
+
+.sidebar-blog-snippit {
+  color: #555;
+  font-size: 13px;
+  line-height: 1.3;
+  margin: 0; }
+  @media (max-width: 481px) {
+    .sidebar-blog-snippit {
+      display: none; } }
+  @media (min-width: 769px) and (max-width: 1040px) {
+    .sidebar-blog-snippit {
+      display: none; } }
+
+/* Make the Facebook Like box responsive (fluid width) */
+#fb-root {
+  display: none; }
+
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+  width: 100% !important; }
 
 /* -----------------------------------------------------
 Hero Slider

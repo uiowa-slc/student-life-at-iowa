@@ -5,9 +5,9 @@
 	<div class="row clearfix">
 		<div class="col-md-8">
 			<section>
-				<article itemscope="" itemtype="http://schema.org/Article" class="BlogContent">
+				<article itemscope="" itemtype="http://schema.org/Article" class="blog-content">
 					<header>
-						<h1 class="postTitle" itemprop="name headline">$Title</h1>
+						<h1 class="post-title" itemprop="name headline">$Title</h1>
 						<div class="byline-top">
 							<% include Byline %> on <time datetime="$Date.format(c)" itemprop="datePublished">$Date.format(F d Y)</time>
 						</div>
