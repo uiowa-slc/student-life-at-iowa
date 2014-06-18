@@ -15,6 +15,7 @@ body {
 	height: 100%;
 }
 
+
 /* Layout
 ========================================================================== */
 .container {
@@ -30,6 +31,19 @@ body {
 	@media screen and (min-width: $break-large) {
 		padding-left: 3em;
 		padding-right: 3em;
+	}
+}
+
+/* Division Topbar Overrides
+========================================================================== */
+.division-topbar .wrapper{
+	@extend .container;
+}
+
+.division-search {
+	right: 285px;
+	@media screen and (min-width: $break-large) {
+		right: 295px;
 	}
 }
 img {

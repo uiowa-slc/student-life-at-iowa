@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/colymba/GridFieldBulkEditingTools.git",
-                "reference": "b9d8cd9b2233a6bc60a2b3c51f61bfb56bfd4a94"
+                "reference": "e41282b3d20101bcd08ce5afb15749302db3227e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/b9d8cd9b2233a6bc60a2b3c51f61bfb56bfd4a94",
-                "reference": "b9d8cd9b2233a6bc60a2b3c51f61bfb56bfd4a94",
+                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/e41282b3d20101bcd08ce5afb15749302db3227e",
+                "reference": "e41282b3d20101bcd08ce5afb15749302db3227e",
                 "shasum": ""
             },
             "require": {
@@ -45,7 +45,7 @@
                 "gridfield bulk upload",
                 "silverstripe"
             ],
-            "time": "2014-05-28 09:37:23"
+            "time": "2014-06-17 10:08:07"
         },
         {
             "name": "composer/installers",
@@ -53,12 +53,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "11f7f8e82cbe1538721b72aa14bbd8007dde96e1"
+                "reference": "8281faa96186b18db9d53e8dbeb2d549c66d9cdc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/11f7f8e82cbe1538721b72aa14bbd8007dde96e1",
-                "reference": "11f7f8e82cbe1538721b72aa14bbd8007dde96e1",
+                "url": "https://api.github.com/repos/composer/installers/zipball/8281faa96186b18db9d53e8dbeb2d549c66d9cdc",
+                "reference": "8281faa96186b18db9d53e8dbeb2d549c66d9cdc",
                 "shasum": ""
             },
             "replace": {
@@ -134,7 +134,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2014-06-04 16:59:54"
+            "time": "2014-06-18 15:29:19"
         },
         {
             "name": "md/division-bar",
@@ -142,12 +142,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-bar.git",
-                "reference": "54d310c04df438f65954cef1e71ef11e22757fea"
+                "reference": "40b10008641a727d6ad05c2005e17a7b50e07393"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-bar/zipball/54d310c04df438f65954cef1e71ef11e22757fea",
-                "reference": "54d310c04df438f65954cef1e71ef11e22757fea",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-bar/zipball/40b10008641a727d6ad05c2005e17a7b50e07393",
+                "reference": "40b10008641a727d6ad05c2005e17a7b50e07393",
                 "shasum": ""
             },
             "require": {
@@ -166,7 +166,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-bar/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-bar/issues"
             },
-            "time": "2014-06-06 17:39:37"
+            "time": "2014-06-18 14:30:05"
         },
         {
             "name": "md/rss-display",
