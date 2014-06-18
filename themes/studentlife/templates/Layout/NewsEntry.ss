@@ -9,16 +9,16 @@
 					<header>
 						<h1 class="postTitle" itemprop="name headline">$Title</h1>
 						<div class="byline-top">
-							<time datetime="$Date.format(c)" itemprop="datePublished">$Date.Long</time> - <% include Byline %>
-							<% if TagsCollection %>
-								to
-								<% loop TagsCollection %>
-									<a href="$Link" title="<% _t('BlogEntry_ss.VIEWALLPOSTTAGGED', 'View all posts tagged') %> '$Tag'" rel="tag">$Tag</a><% if not Last %>,<% end_if %>
-								<% end_loop %>
-							<% end_if %>
+							<% include Byline %> on <time datetime="$Date.format(c)" itemprop="datePublished">$Date.format(F d Y)</time>
 						</div>
 					</header>
 					<p><img src="$Photo.SetWidth(800).URL" alt=""></p>
+
+					<a href="javascript:window.open('http://www.facebook.com/sharer/sharer.php?u=$AbsoluteLink', '_blank', 'width=400,height=500');void(0);"  title="Share on Facebook"><span class="social-icon icon-facebook"></span><span class="count">Like</span>
+					</a>
+
+					<a href="https://twitter.com/intent/tweet?text=$AbsoluteLink" title="Share on Twitter" target="_blank"><span class="social-icon icon-twitter"></span><span class="count">Tweet</span></a>
+
 					$Content
 					<footer>
 						<% if TagsCollection %>
@@ -47,20 +47,23 @@
 						<% end_if %>
 					</footer>
 				</article>
-				<aside class="blog-related">
-					<h3>Related Articles</h3>
-					<ul class="unstyled justify justify-3">
-						<% loop $RelatedNewsEntries(3) %>
-							<li class="justify-item">
-								<a href="$Link">
-									<img src="$Photo.CroppedImage(240,160).URL" alt="$Title">
-								</a>
-								<h5><a href="$Link">$Title</a></h5>
-							</li>
-						<% end_loop %>
-						<li class="justify-item filler"></li>
-					</ul>
-				</aside>
+				<% if $RelatedNewsEntries %>
+					<aside class="blog-related">
+						<h3>Related Articles</h3>
+						<ul class="unstyled justify justify-3">
+							<% loop $RelatedNewsEntries(3) %>
+								<li class="justify-item">
+									<a href="$Link">
+										<img src="$Photo.CroppedImage(240,160).URL" alt="$Title">
+									</a>
+									<h5><a href="$Link">$Title</a></h5>
+								</li>
+							<% end_loop %>
+							<li class="justify-item filler"></li>
+							<li class="justify-item filler"></li>
+						</ul>
+					</aside>
+				<% end_if %>
 			</section>
 		</div>
   		<div class="col-md-4">
