@@ -11,6 +11,14 @@
 <!-- Typekit -->
 <% include TypeKit %>
 
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:url"	content="$AbsoluteLink">
+<meta property="og:site_name" content="Student Life at Iowa">
+<meta property="og:image" content="$Photo.AbsoluteURL">
+<meta property="og:title" content="$Title">
+<meta property="og:description" content="$Content.LimitCharacters(160)" />
+
 <!-- CSS -->
 <link rel="stylesheet" href="{$ThemeDir}/css/master.css">
 
