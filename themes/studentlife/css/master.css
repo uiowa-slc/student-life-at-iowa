@@ -3349,9 +3349,6 @@ html[xmlns] .slides {
 /* ==================================================
 	Blog
 ===================================================== */
-.blogentry {
-  margin-bottom: 3em; }
-
 .blog-footer {
   background-color: #111;
   color: #999;
@@ -3409,9 +3406,6 @@ html[xmlns] .slides {
 Post
 
 */
-.BlogContent {
-  margin-bottom: 3em; }
-
 .postTitle {
   font-size: 35px;
   font-size: 2.1875rem;
@@ -3497,12 +3491,9 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
   color: #0088cc;
   font-size: 16px;
   font-weight: normal;
-  line-height: 1.2;
+  line-height: 1.3;
   margin: 0 0 3px;
   padding-bottom: 1px !important; }
-  @media (min-width: 769px) {
-    .sidebar-blog-title {
-      font-size: 17px; } }
 
 .sidebar-blog-item a:hover .sidebar-blog-title {
   text-decoration: underline; }
@@ -3574,11 +3565,11 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
     font-size: 13px;
     margin: 5px 0; }
   .tags a {
-    background-color: #000;
+    background-color: #ffce39;
     border-radius: 3px;
-    color: #fff;
+    color: #000;
     font-size: 12px;
-    padding: 2px 5px; }
+    padding: 4px 6px; }
 
 /* Byline */
 .byline-top {
@@ -3641,14 +3632,19 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
 /* Member Page */
 .memberpage .profile {
   border-bottom: 3px solid #000;
-  padding-bottom: 1em; }
+  padding: 1em 0; }
   .memberpage .profile h2 {
     margin: 0 0 5px 0; }
   .memberpage .profile p {
     margin: 0; }
   .memberpage .profile img {
     border-radius: 50%;
-    margin-bottom: 0; }
+    display: block;
+    margin: 0 auto 10px; }
+    @media (min-width: 481px) {
+      .memberpage .profile img {
+        float: left;
+        margin: 0 1em 0 0; } }
 
 @media (min-width: 481px) {
   .memberpage-img {
@@ -3672,8 +3668,41 @@ https://developers.facebook.com/docs/reference/plugins/like-box/
     width: 63%; } }
 
 /* Related posts */
-.blog-related h5 {
-  margin: 5px 0 0; }
+.blog-related {
+  border-top: 3px solid #000;
+  margin: 1em 0 2em; }
+  .blog-related h3 {
+    margin: 1em 0;
+    text-align: center;
+    text-transform: uppercase; }
+  .blog-related h5 {
+    font-weight: normal;
+    margin: 5px 0 0; }
+
+@media (min-width: 1141px) {
+  .blog-entry {
+    margin-left: 110px; } }
+
+.blog-social {
+  list-style: none;
+  margin: 0;
+  font-size: 13px; }
+  .blog-social li {
+    display: inline-block;
+    margin-right: 1em; }
+  .blog-social a {
+    color: #444;
+    display: block; }
+  @media (min-width: 1141px) {
+    .blog-social {
+      float: left; }
+      .blog-social li {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        margin-right: 0;
+        width: 80px; }
+      .blog-social a {
+        padding: 7px 0 5px; } }
 
 /* -----------------------------------------------------
 Hero Slider

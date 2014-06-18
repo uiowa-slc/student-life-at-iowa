@@ -15,7 +15,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@uistudentlife">
 <meta name="twitter:title" content="$Title">
-<meta name="twitter:description" content="$Content.LimitCharacters(90)">
+<meta name="twitter:description" content="$Content.LimitCharacters(120)">
 <meta name="twitter:image" content="$Photo.AbsoluteURL">
 
 <!-- Open Graph data -->
@@ -23,7 +23,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="$AbsoluteLink" />
 <meta property="og:image" content="$Photo.AbsoluteURL" />
-<meta property="og:description" content="$Content.LimitCharacters(90)" />
+<meta property="og:description" content="$Content.LimitCharacters(120)" />
 <meta property="og:site_name" content="Student Life at Iowa" />
 <meta property="fb:admins" content="64131067165" />
 
