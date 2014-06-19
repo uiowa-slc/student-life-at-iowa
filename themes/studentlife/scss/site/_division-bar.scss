@@ -1,9 +1,10 @@
 /* Division Topbar Overrides
 ========================================================================== */
 .division-topbar .wrapper{
-    @extend .container;
+    
     padding-left: 0;
     padding-right:0;
+    @extend .container;
 }
 .directory-toggle {
     @media screen and (min-width: $break-large) {
