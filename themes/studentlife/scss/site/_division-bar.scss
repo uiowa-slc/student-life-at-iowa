@@ -9,5 +9,8 @@
     }
 }
 .division-search {
-    right: 299px;
+    right: 280px;
+    @media screen and (min-width: $break-large) {
+        right: 299px;
+    }
 }
