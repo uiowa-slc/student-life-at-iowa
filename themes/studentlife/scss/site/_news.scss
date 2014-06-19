@@ -4,7 +4,6 @@
 .blog-featured h1 {
 	@include rem(30);
 	margin-top: .25em;
-	xfont-weight: normal;
 	text-transform: none;
 	@media (min-width: $break-small) {
 		@include rem(40);
@@ -221,8 +220,10 @@
 		background-color: $yellow;
 		border-radius: 3px;
 		color: #000;
+		display: inline-block;
 		font-size: 12px;
-		padding: 4px 6px;
+		margin-bottom: 3px;
+		padding: 5px 6px 4px;
 	}
 }
 
