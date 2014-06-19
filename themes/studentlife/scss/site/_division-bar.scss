@@ -2,8 +2,6 @@
 ========================================================================== */
 .division-topbar .wrapper{
     @extend .container;
-    padding-left: 0;
-    padding-right:0;
 }
 .directory-toggle {
     @media screen and (min-width: $break-large) {
@@ -11,8 +9,5 @@
     }
 }
 .division-search {
-    right: 250px;
-    @media screen and (min-width: $break-large) {
-        right: 250px;
-    }
+    right: 299px;
 }
