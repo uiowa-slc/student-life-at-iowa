@@ -55,9 +55,11 @@
 						<ul class="unstyled justify justify-3">
 							<% loop $RelatedNewsEntries(3) %>
 								<li class="justify-item">
-									<a href="$Link">
-										<img src="$Photo.CroppedImage(240,160).URL" alt="$Title">
-									</a>
+									<% if $Photo %>
+										<a href="$Link">
+											<img src="$Photo.CroppedImage(240,160).URL" alt="$Title">
+										</a>
+									<% end_if %>
 									<h5><a href="$Link">$Title</a></h5>
 								</li>
 							<% end_loop %>
