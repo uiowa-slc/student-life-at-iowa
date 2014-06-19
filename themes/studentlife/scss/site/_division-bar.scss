@@ -2,13 +2,17 @@
 ========================================================================== */
 .division-topbar .wrapper{
     @extend .container;
+    padding-left: 0;
+    padding-right:0;
 }
 .directory-toggle {
-    width: 240px;
+    @media screen and (min-width: $break-large) {
+        width: 240px;
+    }
 }
 .division-search {
-    right: 285px;
+    right: 250px;
     @media screen and (min-width: $break-large) {
-        right: 295px;
+        right: 250px;
     }
 }
