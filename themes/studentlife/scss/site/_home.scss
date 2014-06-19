@@ -1,18 +1,7 @@
 
-.homeSlide {
-	opacity: 0;
-}
 .loading {
 	background: url('../images/ico_loading.gif') no-repeat center center;
 }
-.loaded .homeSlide, .no-js section {
-	opacity: 1;
-	-webkit-transition: opacity 300ms ease-out;
-	-moz-transition: opacity 300ms ease-out;
-	transition: opacity 300ms ease-out;
-}
-
-
 .leadership-legacy-section {
 	background-image: url(../images/tom-rocklin.jpg);
 	background-size: cover;

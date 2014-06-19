@@ -682,6 +682,10 @@ section {
 
 /* New Grid
 ========================================================================== */
+.callout {
+	float: left;
+	width: 231px;
+}
 .callout:nth-child(odd) {
 	@media (min-width: $break-large) {
 		margin-top: 30px;
@@ -729,16 +733,6 @@ section {
 	min-height: 400px;
 	overflow: hidden;
 }
-/*.callout img {
-	display: block;
-	width: 100%;
-	opacity: .7;
-	-webkit-transition: opacity 0.3s;
-	transition: opacity 0.3s;
-}
-.callout a:hover img {
-	opacity: 1;
-}*/
 .callout-content {
 	background-color: #fff;
 	padding: 15px 10px;
