@@ -1,10 +1,14 @@
 /* Division Topbar Overrides
 ========================================================================== */
 .division-topbar .wrapper{
-    
+    @extend .container;
     padding-left: 0;
     padding-right:0;
-    @extend .container;
+
+    @media screen and (min-width: $break-small) {
+        padding-left: 1em;
+        padding-right: 1em
+    }
 }
 .directory-toggle {
     @media screen and (min-width: $break-large) {
@@ -12,8 +16,5 @@
     }
 }
 .division-search {
-    right: 250px;
-    @media screen and (min-width: $break-large) {
-        right: 250px;
-    }
+    right: 265px;
 }
