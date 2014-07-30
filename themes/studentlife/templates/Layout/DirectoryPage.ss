@@ -11,6 +11,9 @@
 				<li>
 					<h2>$Title</h2>
 					<p class="more-social">
+						<% if $WebsiteLink %>
+						<a href="{$WebsiteLink}" class="btn" target="_blank">Website</a>
+						<% end_if %>
 						<% if $TwitterUsername %>
 						<a href="http://twitter.com/{$TwitterUsername}" target="_blank" class="btn twitter">@$TwitterUsername</a>
 						<% end_if %>
