@@ -25,10 +25,11 @@ class DirectoryEntry extends DataObject {
 	);
 
 	public function getCMSFields(){
-		$f = parent::getCMSFields();
-		$f->removeByName("FacebookEmbed");
-		$f->renameField("TwitterUsername", "Twitter Username (without @ symbol)");
-		$f->addFieldToTab("Root.Main", new TextField("FacebookEmbed"), "Content");
+		$f = new FieldList();
+		$f->push(new TextField("Title"));
+		$f->push(new TextField("FacebookEmbed", "Full Facebook Iframe Embed Code"));
+		$f->push(new TextField("TwitterUsername", "Twitter Username (without @ symbol)"));
+		$f->push(new TextField("InstagramLink", "Instagram Link"));
 		return $f;
 	}
 

@@ -10,7 +10,8 @@
         "colymba/gridfield-bulk-editing-tools": "*",
 		"silverstripe/blog" : "*",
 		"md/rss-display" : "*",
-		"silverstripe/staticpublishqueue" : "*"
+		"silverstripe/staticpublishqueue" : "*",
+		"unclecheese/betterbuttons" : "*"
 	},
 	"config": {
 		"process-timeout": 600	
