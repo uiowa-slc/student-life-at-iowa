@@ -3,7 +3,7 @@
  * Adds additional fields to the Member object
  *
  */
-class MemberExtension extends DataExtension {
+class MemberExtension extends DataExtension{
 
 	private static $db = array(
 		"URLSegment" => "Varchar(255)",

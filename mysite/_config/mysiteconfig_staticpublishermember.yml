@@ -1,0 +1,7 @@
+---
+Name: mysiteconfig_staticpublishermember
+After: 'staticpublishqueue/*'
+---
+Member:
+  extensions:
+    - StaticPublisherMemberExtension

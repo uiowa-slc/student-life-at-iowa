@@ -5,3 +5,4 @@ After: 'staticpublishqueue/*'
 RedirectorPage:
   extensions:
     - PublishableRedirectorPage
+    - FilesystemPublisher('cache', 'html')
