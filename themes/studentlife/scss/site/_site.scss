@@ -806,7 +806,19 @@ transform: translateY(-50%) translateX(-50%) scale(1);
 }
 
 
+/* Search Results and pagination
+========================================================================== */
 
+#SearchResults {
+	list-style-type: none;
+	margin: 0;
+
+}
+
+
+.go-to-page{
+	margin: 0 1em;
+}
 
 /* LEADERSHIP LEGACY
 ========================================================================== */
