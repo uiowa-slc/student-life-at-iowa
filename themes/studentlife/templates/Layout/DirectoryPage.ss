@@ -4,6 +4,7 @@
 	<% include BreadCrumbs %>
 	<div class="row clearfix">
 		<div class="col-md-8">
+			<h1>Directory</h1>
 			<% if $Content %>
 				$Content
 				<hr />
