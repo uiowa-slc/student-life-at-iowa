@@ -11,7 +11,8 @@
 		"silverstripe/blog" : "*",
 		"md/rss-display" : "*",
 		"silverstripe/staticpublishqueue" : "*",
-		"unclecheese/betterbuttons" : "*"
+		"unclecheese/betterbuttons" : "*",
+		"md/ac-json-events": "dev-master"
 	},
 	"config": {
 		"process-timeout": 600	
@@ -26,7 +27,12 @@
         {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/rss-display"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events"       
         }
+
 
     ]
 }

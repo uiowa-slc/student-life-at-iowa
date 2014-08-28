@@ -3,15 +3,19 @@
 		<h1 class="section-title">What's Happening</h1>
 		<br>
 		<ul class="unstyled justify justify-4">
-		<% loop RSSDisplay(4,"http://afterclass.uiowa.edu/events/feed/rss/") %>
+		<% with Page("Calendar") %>
+			<% loop $EventList.limit(4) %>
 			<li class="justify-item">
-				<p class="event-date">$Dates</p>
-				<h2 class="event-title"><a href="$Link">$Title</a></h2>
+				<% loop $Dates %>
+				<p class="event-date"> $Format("F j") </p>
+				<% end_loop %>
+				<h2 class="event-title"><a href="$LocalistLink">$Title</a></h2>
 				<div class="event-desc">
-					$Description.Summary(30)
+					$SummaryContent.BigSummary(30)
 				</div>
 			</li>
 			<% end_loop %>
+		<% end_with %>
 			<li class="justify-item filler"></li>
 			<li class="justify-item filler"></li>
 		</ul>
