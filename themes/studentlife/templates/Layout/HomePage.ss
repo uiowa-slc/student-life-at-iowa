@@ -9,7 +9,7 @@
 				<% loop $Dates %>
 				<p class="event-date"> $Format("F j") </p>
 				<% end_loop %>
-				<h2 class="event-title"><a href="$LocalistLink" target="_blank">$Title</a></h2>
+				<h2 class="event-title"><a href="$AfterClassLink" target="_blank">$Title</a></h2>
 				<div class="event-desc">
 					$SummaryContent.BigSummary(30)
 				</div>
