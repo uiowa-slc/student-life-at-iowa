@@ -3,13 +3,13 @@
 		<h1 class="section-title">What's Happening</h1>
 		<br>
 		<ul class="unstyled justify justify-4">
-		<% with Page("Calendar") %>
+		<% with $LocalistCalendar %>
 			<% loop $EventList.limit(4) %>
 			<li class="justify-item">
 				<% loop $Dates %>
 				<p class="event-date"> $Format("F j") </p>
 				<% end_loop %>
-				<h2 class="event-title"><a href="$LocalistLink">$Title</a></h2>
+				<h2 class="event-title"><a href="$LocalistLink" target="_blank">$Title</a></h2>
 				<div class="event-desc">
 					$SummaryContent.BigSummary(30)
 				</div>
