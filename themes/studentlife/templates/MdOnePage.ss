@@ -125,14 +125,13 @@
                             </ul>
                         </div> -->
                         
-                        <div class="hire-us"
-                             id="hire">
+                        <div class="hire-us" id="hire">
                             <h3>
                                 hire us
                             </h3>
                             <p>
-                                We develop communication pieces including posters, signage, marketing campaigns, and websites for UI and student-related organizations on campus. Give us a shout!
-                            </p><a href="mailto:imu-web@uiowa.edu">contact us</a>
+                                We develop communication pieces including posters, signage, marketing campaigns, photos and video, social media, and websites for UI and student-related organizations on campus. Give us a shout!
+                            </p><a href="mailto:studentlife-marketing@uiowa.edu">email us</a> or call us at 319-335-3117
                         </div>
                         <div class="clear"></div>
                     </div>
