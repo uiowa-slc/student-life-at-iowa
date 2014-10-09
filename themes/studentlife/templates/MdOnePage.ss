@@ -53,29 +53,27 @@
                     <img src="{$ThemeDir}/md/md-logo0.png"
                          class="md-logo"
                          alt="MD Logo Image">
-                    <h2>
-                        crazy-good design and communication.
-                    </h2>
                 </div>
             </div>
             <div class="work-examples">
                 <div class="content-container">
 
                     <p class="mission">
-                        M+D is a student-driven organization and offers <a href="#jobs">amazing opportunities</a> for students in these fields.
+                        A student-powered agency providing innovative design and communication solutions.
                     </p>
                     <p>
-                        <a href="#jobs" class="jobs-hero-text">We are hiring marketing, graphic design, and web students this fall!</a>
+                        <!-- <a href="#jobs" class="jobs-hero-text">We are hiring marketing, graphic design, and web students this fall!</a>
                     </p>
                     <p>
                         <a href="#jobs">See the jobs below</a>
-                    </p>
+                    </p> -->
+
                     <hr>
                     <p class="mission">
                         We provide marketing, print, and web design for the <a href="http://studentlife.uiowa.edu/">Division of Student Life</a>.
                     </p>
                     <p>
-                    <a href="#hire" class="jobs-hero-text">Hire Us &raquo;</a>
+                    <a href="#hire" class="jobs-hero-text">hire us &raquo;</a>
    
                     </p>
                     
@@ -88,7 +86,7 @@
                         we want to hear from you!
                     </h2>
                     <div class="contact-content">
-                        <div class="work-for-us" id="jobs">
+                        <!-- <div class="work-for-us" id="jobs">
                             <h3>
                                 work for us
                             </h3>
@@ -125,7 +123,7 @@
                                         
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                         
                         <div class="hire-us"
                              id="hire">
