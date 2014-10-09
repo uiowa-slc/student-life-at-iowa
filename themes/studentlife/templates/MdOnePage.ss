@@ -14,6 +14,7 @@
         <meta charset="utf-8"><% base_tag %><!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+        <% include TypeKit %>
         <link rel="shortcut icon"
               href="{$ThemeDir}/md/favicon0.htm">
         <link href="{$ThemeDir}/md/css00000.css"
@@ -62,19 +63,7 @@
                         A student-powered agency providing innovative design and communication solutions.
                     </p>
                     <p>
-                        <!-- <a href="#jobs" class="jobs-hero-text">We are hiring marketing, graphic design, and web students this fall!</a>
-                    </p>
-                    <p>
-                        <a href="#jobs">See the jobs below</a>
-                    </p> -->
-
-                    <hr>
-                    <p class="mission">
-                        We provide marketing, print, and web design for the <a href="http://studentlife.uiowa.edu/">Division of Student Life</a>.
-                    </p>
-                    <p>
                     <a href="#hire" class="jobs-hero-text">hire us &raquo;</a>
-   
                     </p>
                     
                 </div>
