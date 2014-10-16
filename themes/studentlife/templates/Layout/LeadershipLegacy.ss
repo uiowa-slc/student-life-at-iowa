@@ -35,10 +35,8 @@
 		</div>
 		<div class="col-md-6">
 			<div class="legacy-col">
-			<h3>Keep us updated</h3>
+			<h2>Stay connected to Iowa</h2>
 				To continue receiving the Leadership Legacy newsletter by email, update your record online at <a href="http://iowalum.com/update">iowalum.com/update</a>. We look forward to keeping in touch with you through Leadership Legacy!
-
-<h3>Just the emails, please</h3>
 				<p>If you're not an alum, but would like to receive Leadership Legacy email newsletter, submit your email address below.</p>
 				<!-- Begin MailChimp Signup Form -->
 				<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
