@@ -27,16 +27,19 @@
 	</div>
 
 	<div class="row legacy-holder-content clearfix">
-		<div class="col-md-8">
+		<div class="col-md-6">
 			<div class="legacy-col">
-				<h2><em>"Impacting Tomorrow's Leaders"</em></h2>
+				<h2>Impacting Tomorrow's Leaders</h2>
 				$Content
 			</div>
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-6">
 			<div class="legacy-col">
-				<br>
-				<p>Join our list to ensure your subscription and stay up-to-date on all the latest Leadership Legacy news and information.</p>
+			<h3>Keep us updated</h3>
+				To continue receiving the Leadership Legacy newsletter by email, update your record online at <a href="http://iowalum.com/update">iowalum.com/update</a>. We look forward to keeping in touch with you through Leadership Legacy!
+
+<h3>Just the emails, please</h3>
+				<p>If you're not an alum, but would like to receive Leadership Legacy email newsletter, submit your email address below.</p>
 				<!-- Begin MailChimp Signup Form -->
 				<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
 				<style type="text/css">
@@ -45,7 +48,7 @@
 				</style>
 				<div id="mc_embed_signup">
 					<form action="http://uiowa.us2.list-manage1.com/subscribe/post?u=c61b1cddac92babd42d7d628e&amp;id=5610779be6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-						<label for="mce-EMAIL">Subscribe to our mailing list</label>
+						<label for="mce-EMAIL" class="visuallyhidden">Subscribe to our mailing list</label>
 						<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
 					    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 					    <div style="position: absolute; left: -5000px;"><input type="text" name="b_c61b1cddac92babd42d7d628e_5610779be6" tabindex="-1" value=""></div>
