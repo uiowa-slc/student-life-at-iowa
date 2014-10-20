@@ -3,6 +3,7 @@
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js demo-1"> <!--<![endif]-->
 <head>
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>$Title | Student Life at Iowa | The University of Iowa</title>
