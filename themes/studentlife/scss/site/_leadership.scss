@@ -30,6 +30,10 @@ Hero Slider
 	right: 0;
 	z-index: 5;
 }
+.lt-ie9 .legacy-hero .gradient {
+	background-color: #000;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
 .legacy-hero-img {
 	position: absolute;
 	top: 0;
@@ -56,6 +60,9 @@ Hero Slider
 	@media (min-width: $break-small) {
 
 	}
+}
+.lt-ie9 .legacy-hero .flexcaption {
+	top: 33%;
 }
 .legacy-hero .flexcaption a {
 	display: block;
@@ -218,6 +225,7 @@ Issue Section
 	-ms-text-overflow: ellipsis;
 	-o-text-overflow: ellipsis;
 	text-overflow: ellipsis;
+	background: #444;
 	background: rgba(0,0,0,0.5);
 	-webkit-transition: background-color 300ms,color 300ms;
 	-moz-transition: background-color 300ms,color 300ms;

@@ -85,8 +85,14 @@ section {
 	position: absolute;
 	bottom: 0;
 }
+.lt-ie9 .collage-desc {
+	background: url(../images/collage-gradient.png) repeat-x left bottom;
+}
 .collage-desc .inner {
 	@include vertical-align;
+}
+.lt-ie9 .collage-desc .inner {
+	top: 25%;
 }
 .collage-desc .inner h1 {
 /*  @include vertical-align;*/
@@ -798,6 +804,10 @@ color: #fff;
 opacity: 0;
 -webkit-transform: translateY(-50%) translateX(-50%) scale(0.25);
 transform: translateY(-50%) translateX(-50%) scale(0.25);
+}
+.lt-ie9 .callout button {
+	background: #555;
+	left: 33%;
 }
 .callout a:hover  button {
 opacity: 1;
