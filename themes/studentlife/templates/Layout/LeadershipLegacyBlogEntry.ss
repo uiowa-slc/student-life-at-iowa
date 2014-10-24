@@ -45,7 +45,14 @@
 			</header>
 			<div class="content">
 				<div class="body">
-					<% if Author %><p>By <em>$Author</em></p><% end_if %>
+					<% if $Member %>
+						<% with $Member %>
+							Posted by <a href="$Link" class="byline-author" rel="author"><em>$FirstName $Surname</em></a>
+						<% end_with %>
+					<% else_if $Author %>
+						Posted by <em>$Author</em>
+					<% end_if %>
+					 on <time datetime="$Date.format(c)" itemprop="datePublished">$Date.format(F d Y)</time>
 					$Content
 				</div>
 			</div>
