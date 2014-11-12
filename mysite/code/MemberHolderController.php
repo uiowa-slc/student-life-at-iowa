@@ -20,7 +20,8 @@ class MemberHolderController extends Page_Controller {
 	private static $allowed_actions = array (
 		'view',
 		'handleAction',
-    	'handleIndex',
+    		'handleIndex',
+    		'index'
 	);
 
 	public function view( SS_HTTPRequest $request ) {
