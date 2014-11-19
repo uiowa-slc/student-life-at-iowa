@@ -21,7 +21,8 @@ class BlogEntryMemberExtension extends DataExtension {
 
 	
 	public function updateCMSFields(FieldList $fields) {
-		$memberDropdown = new DropdownField( "MemberID", "Author (overrides above)", Member::get()->map( "ID", "getName" ) );
+		$memberDropdown = new DropdownField( "MemberID", "Author (overrides any guest author name)", Member::get()->map( "ID", "getName" ) );
+		$fields->renameField("Author", "Guest Author Name");
 		$memberDropdown->setEmptyString("None");
 
 		$fields->addFieldToTab( "Root.Main", $memberDropdown, "Tags" );		
