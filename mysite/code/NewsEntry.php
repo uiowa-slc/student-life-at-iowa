@@ -21,6 +21,7 @@ class NewsEntry extends BlogEntry {
 	private static $singular_name = 'News Entry';
 
 	private static $summary_fields = array(
+		'Photo.CMSThumbnail' => 'Photo',
 		'Title' => 'Title', 
 		'Date.NiceUS' => 'Date', 
 		'Member' => 'Associated Author', 
