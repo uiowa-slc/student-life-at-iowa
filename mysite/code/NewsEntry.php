@@ -31,9 +31,13 @@ class NewsEntry extends BlogEntry {
 	public function getCMSFields(){
 		$f = parent::getCMSFields();
 
-		$f->addFieldToTab("Root.Main", new UploadField("Photo", "Photo"));
-		$f->addFieldToTab('Root.Main', new CheckboxField('IsFeatured','Feature this Article? (Yes)'));
+		$f->addFieldToTab("Root.Main", new UploadField("Photo", "Photo"), "Content");
+		$f->addFieldToTab('Root.Main', new CheckboxField('IsFeatured','Feature this Article? (Yes)'), "Content");
+		$f->removeByName('Content');
+		$biggerContentField = new HTMLEditorField('Content', 'Content' );
+		$biggerContentField->setRows(60);
 
+		$f->addFieldToTab('Root.Main', $biggerContentField);
 		return $f;
 	}
 
