@@ -31,6 +31,12 @@ class NewsHolder extends BlogHolder {
 
 	private static $plural_name = 'News Holders';
 
+	private static $extensions = array(
+       'PageHolderExtension'
+    );
+
+    private static $excluded_children = array('NewsEntry');
+
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();
 		$fields->removeByName("Content");

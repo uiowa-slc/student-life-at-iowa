@@ -22,6 +22,9 @@ class MemberExtension extends DataExtension{
 
 	);
 
+	public function forTemplate(){
+		return $this->owner->FirstName.' '.$this->owner->Surname;
+	}
 	
 	public function updateCMSFields(FieldList $fields) {
 		$baseLink = Director::absoluteBaseURL();
@@ -32,7 +35,6 @@ class MemberExtension extends DataExtension{
 	    $urlsegment->setURLPrefix($baseLink.'authors/view/');
 
 		$fields->addFieldToTab("Root.Main", $urlsegment, "Password");
-		
 		
 	}
 

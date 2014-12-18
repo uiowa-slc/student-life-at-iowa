@@ -20,13 +20,7 @@
 <meta name="twitter:image" content="$Photo.AbsoluteURL">
 
 <!-- Open Graph data -->
-<meta property="og:title" content="$Title" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="$AbsoluteLink" />
-<meta property="og:image" content="$Photo.AbsoluteURL" />
-<meta property="og:description" content="$Content.LimitCharacters(120)" />
-<meta property="og:site_name" content="Student Life at Iowa" />
-<meta property="fb:admins" content="64131067165" />
+<% include OpenGraph %>
 
 <!-- CSS -->
 <link rel="stylesheet" href="{$ThemeDir}/css/master.css">

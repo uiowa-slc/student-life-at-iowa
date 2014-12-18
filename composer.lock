@@ -4,24 +4,75 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5a5380537217f9c425b6d67387f22a1a",
+    "hash": "23e5efcd2ea446f7870f18e1bc23778f",
     "packages": [
+        {
+            "name": "briceburg/silverstripe-pageholder",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/briceburg/silverstripe-pageholder.git",
+                "reference": "25f25234c1df4bc8b2e4ed404995ea181db94f94"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/briceburg/silverstripe-pageholder/zipball/25f25234c1df4bc8b2e4ed404995ea181db94f94",
+                "reference": "25f25234c1df4bc8b2e4ed404995ea181db94f94",
+                "shasum": ""
+            },
+            "require": {
+                "micschk/silverstripe-excludechildren": "*",
+                "silverstripe/framework": "~3.0"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "pageholder",
+                "screenshots": [
+                    "docs/screenshots/pageholder.png",
+                    "docs/screenshots/pageholder_edit.png"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Brice Burgess",
+                    "email": "briceburg@gmail.com"
+                }
+            ],
+            "description": "Hide children from the CMS sitetree and allow management through a Versioned GridField. Think _BlogHolder_ but flexible and for any page type.",
+            "homepage": "https://github.com/briceburg/silverstripe-pageholder",
+            "keywords": [
+                "children",
+                "cms",
+                "gridfield",
+                "hide",
+                "manage",
+                "silverstripe",
+                "sitetree",
+                "subpages",
+                "versioned"
+            ],
+            "time": "2014-12-05 19:44:47"
+        },
         {
             "name": "colymba/gridfield-bulk-editing-tools",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/colymba/GridFieldBulkEditingTools.git",
-                "reference": "3335105ee27c8463abe1912fc341946414f13d09"
+                "reference": "9592fa05615b0f3de8e093573690674469a67a86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/3335105ee27c8463abe1912fc341946414f13d09",
-                "reference": "3335105ee27c8463abe1912fc341946414f13d09",
+                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/9592fa05615b0f3de8e093573690674469a67a86",
+                "reference": "9592fa05615b0f3de8e093573690674469a67a86",
                 "shasum": ""
             },
             "require": {
-                "silverstripe/framework": "~3.1"
+                "silverstripe/framework": ">=3.1"
             },
             "type": "silverstripe-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -46,7 +97,7 @@
                 "gridfield bulk upload",
                 "silverstripe"
             ],
-            "time": "2014-11-02 18:06:58"
+            "time": "2014-11-21 09:01:02"
         },
         {
             "name": "composer/installers",
@@ -54,12 +105,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "8024be9aa3ee446272937f46a8807fa52b337767"
+                "reference": "89d77bfbee79e16653f7162c86e602cc188471db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/8024be9aa3ee446272937f46a8807fa52b337767",
-                "reference": "8024be9aa3ee446272937f46a8807fa52b337767",
+                "url": "https://api.github.com/repos/composer/installers/zipball/89d77bfbee79e16653f7162c86e602cc188471db",
+                "reference": "89d77bfbee79e16653f7162c86e602cc188471db",
                 "shasum": ""
             },
             "replace": {
@@ -111,6 +162,7 @@
                 "codeigniter",
                 "concrete5",
                 "croogo",
+                "dokuwiki",
                 "drupal",
                 "elgg",
                 "fuelphp",
@@ -138,7 +190,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2014-11-01 17:51:50"
+            "time": "2014-11-29 01:29:17"
         },
         {
             "name": "md/ac-json-events",
@@ -178,12 +230,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-bar.git",
-                "reference": "3f07eea2e1a31bf61e2d28f62e6d8c84232f724b"
+                "reference": "bea5d3716a1cf7329fdfe6936df5cbccf328d178"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-bar/zipball/3f07eea2e1a31bf61e2d28f62e6d8c84232f724b",
-                "reference": "3f07eea2e1a31bf61e2d28f62e6d8c84232f724b",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-bar/zipball/bea5d3716a1cf7329fdfe6936df5cbccf328d178",
+                "reference": "bea5d3716a1cf7329fdfe6936df5cbccf328d178",
                 "shasum": ""
             },
             "require": {
@@ -202,7 +254,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-bar/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-bar/issues"
             },
-            "time": "2014-10-31 17:52:50"
+            "time": "2014-12-08 20:07:09"
         },
         {
             "name": "md/rss-display",
@@ -237,17 +289,52 @@
             "time": "2014-03-21 15:04:28"
         },
         {
+            "name": "micschk/silverstripe-excludechildren",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/micschk/silverstripe-excludechildren.git",
+                "reference": "75a1b053c91612a0dddec5349e3b7dc8026500cb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/micschk/silverstripe-excludechildren/zipball/75a1b053c91612a0dddec5349e3b7dc8026500cb",
+                "reference": "75a1b053c91612a0dddec5349e3b7dc8026500cb",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.0"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "excludechildren"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "micschk"
+                }
+            ],
+            "description": "Provides an extension to limit subpages shown in sitetree",
+            "keywords": [
+                "excludechildren",
+                "silverstripe",
+                "sitetree"
+            ],
+            "time": "2014-05-19 08:21:08"
+        },
+        {
             "name": "silverstripe/blog",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-blog.git",
-                "reference": "1bd26052c92b7f7a36e9c9b083ec7840fe6820c5"
+                "reference": "9a56f5aabf81be7a4d89148141d475df8846ec55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/1bd26052c92b7f7a36e9c9b083ec7840fe6820c5",
-                "reference": "1bd26052c92b7f7a36e9c9b083ec7840fe6820c5",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/9a56f5aabf81be7a4d89148141d475df8846ec55",
+                "reference": "9a56f5aabf81be7a4d89148141d475df8846ec55",
                 "shasum": ""
             },
             "require": {
@@ -275,7 +362,7 @@
                 "blog",
                 "silverstripe"
             ],
-            "time": "2014-11-03 01:09:18"
+            "time": "2014-12-05 02:18:04"
         },
         {
             "name": "silverstripe/cms",
@@ -456,12 +543,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unclecheese/silverstripe-gridfield-betterbuttons.git",
-                "reference": "c364d1fbc11a0438551499e12f8f7412013225b6"
+                "reference": "595dffde1ba402e802cd7786512f788d1c661627"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/unclecheese/silverstripe-gridfield-betterbuttons/zipball/c364d1fbc11a0438551499e12f8f7412013225b6",
-                "reference": "c364d1fbc11a0438551499e12f8f7412013225b6",
+                "url": "https://api.github.com/repos/unclecheese/silverstripe-gridfield-betterbuttons/zipball/595dffde1ba402e802cd7786512f788d1c661627",
+                "reference": "595dffde1ba402e802cd7786512f788d1c661627",
                 "shasum": ""
             },
             "require": {
@@ -484,7 +571,7 @@
                 "gridfield",
                 "silverstripe"
             ],
-            "time": "2014-11-12 22:05:24"
+            "time": "2014-11-22 10:29:29"
         },
         {
             "name": "undefinedoffset/sortablegridfield",
@@ -531,7 +618,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "md/ac-json-events": 20
+        "md/ac-json-events": 20,
+        "briceburg/silverstripe-pageholder": 20
     },
     "prefer-stable": false,
     "platform": {

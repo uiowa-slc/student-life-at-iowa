@@ -12,7 +12,8 @@
 		"md/rss-display" : "*",
 		"silverstripe/staticpublishqueue" : "*",
 		"unclecheese/betterbuttons" : "*",
-		"md/ac-json-events": "dev-master"
+		"md/ac-json-events": "dev-master",
+		"briceburg/silverstripe-pageholder" : "dev-master"
 	},
 	"config": {
 		"process-timeout": 600	
