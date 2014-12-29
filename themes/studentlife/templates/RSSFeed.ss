@@ -10,7 +10,7 @@
 			<title>$Title.XML</title>
 			<link>$AbsoluteLink</link>
 			<% if Photo %>
-				<media:thumbnail url="$Photo.CroppedImage(360, 200).AbsoluteURL" height="$Photo.CroppedImage(360, 200).Height" width="360" />
+				<media:thumbnail url='$Photo.CroppedImage(360, 200).AbsoluteURL' height='$Photo.CroppedImage(360, 200).Height' width='360' />
 			<% end_if %>
 			<% if $Description %><description>$Description.AbsoluteLinks.XML</description><% end_if %>
 			<% if $Date %><pubDate>$Date.Rfc822</pubDate>
