@@ -36,9 +36,11 @@
 						<% if $Member %>
 							<% with $Member %>
 								<div class="byline clearfix">
+									<% if $Photo %>
 									<a href="$Link" class="byline-img">
 										<img src="$Photo.CroppedImage(130,130).URL" alt="Read all articles by $FirstName $Surname">
 									</a>
+									<% end_if %>
 									<div class="byline-bio">
 										<h4><em>By</em> <a href="$Link" class="byline-author">$FirstName $Surname</a></h4>
 										<% if $Bio %>$Bio<% end_if %>
