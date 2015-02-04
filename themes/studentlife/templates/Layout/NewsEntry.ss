@@ -9,7 +9,7 @@
 					<header>
 						<h1 class="post-title" itemprop="name headline">$Title</h1>
 						<div class="byline-top">
-							<% include Byline %> on <time datetime="$Date.format(c)" itemprop="datePublished">$Date.format(F d Y)</time>
+							<% include Byline %> on <time datetime="$Date.format(c)" itemprop="datePublished">$Date.format("F j, Y")</time>
 						</div>
 					</header>
 					<p><img src="$Photo.SetWidth(800).URL" alt="Image representing the post $Title"></p>
