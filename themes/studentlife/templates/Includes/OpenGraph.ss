@@ -1,7 +1,9 @@
 <meta property="og:title" content="$Title" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="$AbsoluteLink" />
-<% if $Photo %>
+<% if $ListingPhoto %>
+	<meta property="og:image" content="$ListingPhoto.AbsoluteURL" />
+<% else_if $Photo %>
 	<meta property="og:image" content="$Photo.AbsoluteURL" />
 <% else %>
 	<meta property="og:image" content="{$BaseHref}{$ThemeDir}/images/og-poster.jpg" />

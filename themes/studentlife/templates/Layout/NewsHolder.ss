@@ -12,7 +12,11 @@
 			<% loop PaginatedNewsEntries %>
 				<article class="latestnews-item justify-item">
 					<a href="$Link" class="item-img">
-						<img src="$Photo.CroppedImage(360,200).URL" alt="$Title">
+						<% if $ListingPhoto %>
+							<img src="$ListingPhoto.CroppedImage(360,200).URL" alt="$Title">
+						<% else_if $Photo %>
+							<img src="$Photo.CroppedImage(360,200).URL" alt="$Title">
+						<% end_if %>
 						<div class="item-img-title">
 							<h3 class="news-clip-heading">$Title</h3>
 							<p class="snippit">$Content.LimitCharacters(160)</p>
@@ -35,7 +39,13 @@
 			<% loop $allChildren %>
 				<% if $IsFeatured %>
 					<div class="col-md-8">
-						<a href="$Link"><img src="$Photo.CroppedImage(800,500).URL" alt="$Title"></a>
+						<a href="$Link">
+							<% if $ListingPhoto %>
+								<img src="$ListingPhoto.CroppedImage(800,500).URL" alt="$Title">
+							<% else_if $Photo %>
+								<img src="$Photo.CroppedImage(800,500).URL" alt="$Title">
+							<% end_if %>
+						</a>
 					</div>
 					<div class="col-md-4">
 						<h1><a href="$Link">$Title</a></h1>
@@ -57,7 +67,11 @@
 		<% loop PaginatedNewsEntries %>
 			<article class="latestnews-item justify-item">
 					<a href="$Link" class="item-img">
-						<img src="$Photo.CroppedImage(360,200).URL" alt="$Title">
+						<% if $ListingPhoto %>
+							<img src="$ListingPhoto.CroppedImage(360,200).URL" alt="$Title">
+						<% else_if $Photo %>
+							<img src="$Photo.CroppedImage(360,200).URL" alt="$Title">
+						<% end_if %>
 						<div class="item-img-title">
 							<h3 class="news-clip-heading">$Title</h3>
 							<p class="snippit">$Content.LimitCharacters(160)</p>

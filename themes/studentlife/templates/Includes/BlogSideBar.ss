@@ -7,7 +7,11 @@
 			<% loop $NewsEntries(10) %>
 				<li class="clearfix sidebar-blog-item $FirstLast">
 					<a href="$Link" class="clearfix">
-						<img src="$Photo.CroppedImage(130,105).URL" class="sidebar-blog-img" alt="$Title">
+						<% if $ListingPhoto %>
+							<img src="$ListingPhoto.CroppedImage(130,105).URL" class="sidebar-blog-img" alt="$Title">
+						<% else_if $Photo %>
+							<img src="$Photo.CroppedImage(130,105).URL" class="sidebar-blog-img" alt="$Title">
+						<% end_if %>
 						<div class="sidebar-blog-content">
 							<h4 class="sidebar-blog-title">$Title</h4>
 							<p class="sidebar-blog-snippit">$Content.LimitCharacters(90)</p>

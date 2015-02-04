@@ -17,7 +17,11 @@
 <meta name="twitter:site" content="@uistudentlife">
 <meta name="twitter:title" content="$Title">
 <meta name="twitter:description" content="$Content.LimitCharacters(120)">
-<meta name="twitter:image" content="$Photo.AbsoluteURL">
+<% if $ListingPhoto %>
+	<meta name="twitter:image" content="$ListingPhoto.AbsoluteURL">
+<% else_if $Photo %>
+	<meta name="twitter:image" content="$Photo.AbsoluteURL">
+<% end_if %>
 
 <!-- Open Graph data -->
 <% include OpenGraph %>

@@ -8,8 +8,9 @@ class NewsEntry extends BlogEntry {
 
 	private static $has_one = array(
 		"Photo" => "Image",
+		'ListingPhoto' => 'Image',
 	);
-	private static $belongs_many_many = array (
+	private static $belongs_many_many = array(
 	);
 	private static $has_many = array(
 	);
@@ -22,26 +23,27 @@ class NewsEntry extends BlogEntry {
 
 	private static $summary_fields = array(
 		'Photo.CMSThumbnail' => 'Photo',
-		'Title' => 'Title', 
-		'Date.NiceUS' => 'Date', 
-		'Member' => 'Associated Author', 
-		'Author' =>'Guest Author Name'
+		'Title' => 'Title',
+		'Date.NiceUS' => 'Date',
+		'Member' => 'Associated Author',
+		'Author' => 'Guest Author Name',
 	);
 	private static $plural_name = 'News Entries';
 
-	public function getCMSFields(){
+	public function getCMSFields() {
 		$f = parent::getCMSFields();
 
 		$f->addFieldToTab("Root.Main", new UploadField("Photo", "Photo"), "Content");
-		$f->addFieldToTab('Root.Main', new CheckboxField('IsFeatured','Feature this Article? (Yes)'), "Content");
+		$f->addFieldToTab("Root.Main", new UploadField("ListingPhoto", "Alternate Photo for Facebook, Twitter, and news listing pages (takes precedence over the Photo field)"), "Content");
+		$f->addFieldToTab('Root.Main', new CheckboxField('IsFeatured', 'Feature this Article? (Yes)'), "Content");
 		$f->removeByName('Content');
-		$biggerContentField = new HTMLEditorField('Content', 'Content' );
+		$f->removeByName('Metadata');
+		$biggerContentField = new HTMLEditorField('Content', 'Content');
 		$biggerContentField->setRows(60);
 
 		$f->addFieldToTab('Root.Main', $biggerContentField);
 		return $f;
 	}
-
 
 }
 class NewsEntry_Controller extends BlogEntry_Controller {
@@ -61,27 +63,27 @@ class NewsEntry_Controller extends BlogEntry_Controller {
 	 *
 	 * @var array
 	 */
-	private static $allowed_actions = array (
+	private static $allowed_actions = array(
 	);
 
-	public function RelatedNewsEntries(){
+	public function RelatedNewsEntries() {
 		$holder = NewsHolder::get()->First();
 		$tags = $this->TagsCollection()->sort("RAND()")->limit(6);
 		$entries = new ArrayList();
 
-		foreach($tags as $tag){
-			$taggedEntries = $holder->Entries(5, $tag->Tag)->exclude(array("ID"=>$this->ID))->sort("RAND()")->First();
-			if($taggedEntries){
-				foreach($taggedEntries as $taggedEntry){
-					if($taggedEntry->ID){
+		foreach ($tags as $tag) {
+			$taggedEntries = $holder->Entries(5, $tag->Tag)->exclude(array("ID" => $this->ID))->sort("RAND()")->First();
+			if ($taggedEntries) {
+				foreach ($taggedEntries as $taggedEntry) {
+					if ($taggedEntry->ID) {
 						$entries->push($taggedEntry);
 					}
 				}
-			}	
-			
+			}
+
 		}
 
-		if($entries->count() > 1){
+		if ($entries->count() > 1) {
 			$entries->removeDuplicates();
 		}
 		return $entries;
@@ -89,7 +91,6 @@ class NewsEntry_Controller extends BlogEntry_Controller {
 
 	public function init() {
 		parent::init();
-
 
 	}
 
