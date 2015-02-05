@@ -61,27 +61,40 @@ class NewsHolder extends BlogHolder {
 }
 class NewsHolder_Controller extends BlogHolder_Controller {
 
-	/**
-	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
-	 * permissions or conditions required to allow the user to access it.
-	 *
-	 * <code>
-	 * array (
-	 *     'action', // anyone can access this action
-	 *     'action' => true, // same as above
-	 *     'action' => 'ADMIN', // you must have ADMIN permissions to access this action
-	 *     'action' => '->checkAction' // you can only access this action if $this->checkAction() returns true
-	 * );
-	 * </code>
-	 *
-	 * @var array
-	 */
-	private static $allowed_actions = array (
+	private static $allowed_actions = array(
+		'index',
+		'tag',
+		'rss',
+		'date',
+		'metaweblog',
+		'postblog' => 'BLOGMANAGEMENT',
+		'post',
+		'BlogEntryForm' => 'BLOGMANAGEMENT',
 	);
 
 	public function init() {
 		parent::init();
 
+	}
+
+	public function rss(){
+		global $project_name;
+
+		$blogName = $this->Title;
+		$altBlogName = $project_name . ' blog';
+		$filters = array();
+		if(isset($this->request->getVars()['member'])){
+			$memberId = $this->request->getVars()['member'];
+			$filters['Member.Email'] = $memberId;
+		}
+
+		$entries = $this->Entries(20)->filter($filters);
+
+
+		if($entries) {
+			$rss = new RSSFeed($entries, $this->Link('rss'), ($blogName ? $blogName : $altBlogName), "", "Title", "RSSContent");
+			return $rss->outputToBrowser();
+		}
 	}
 
 	public function PaginatedNewsEntries($pageLength = 12){
