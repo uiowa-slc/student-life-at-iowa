@@ -83,7 +83,9 @@ class NewsHolder_Controller extends BlogHolder_Controller {
 		$blogName = $this->Title;
 		$altBlogName = $project_name . ' blog';
 		$filters = array();
-		if(isset($this->request->getVars()['member'])){
+		$getVars = $this->request->getVars();
+
+		if(isset($getVars['member'])){
 			$memberId = $this->request->getVars()['member'];
 			$filters['Member.Email'] = $memberId;
 		}
