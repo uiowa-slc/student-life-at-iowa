@@ -24,6 +24,11 @@ class MemberHolderController extends Page_Controller {
     		'index'
 	);
 
+	private static $url_handlers = array (
+		'authors//' => 'index',
+		'authors//$ID' => 'view'
+	);
+
 	public function view( SS_HTTPRequest $request ) {
 
 		$requestedName = Convert::raw2sql( $request->param( 'ID' ) );
@@ -49,6 +54,7 @@ class MemberHolderController extends Page_Controller {
 			"Title" => "Authors",
 			"Members" => $members
 		);
+
 		return $this->customise( $Data )->renderWith( array( 'MemberListPage', 'Page' ) );
 
 	}
