@@ -552,7 +552,8 @@ section {
 ========================================================================== */
 .justify {
 	font-size: 0.1px;
-	overflow: hidden;
+	/*
+	overflow: hidden;*/
 	text-align: justify;
 }
 .justify:after {
@@ -582,6 +583,14 @@ section {
 	}
 	@media screen and (min-width: $break-medium) {
 	 width: 23%;
+	}
+}
+.justify-2 .justify-item {
+	 @media screen and (min-width: $break-small) {
+	 width: 48%;
+	}
+	@media screen and (min-width: $break-medium) {
+	 width: 48%;
 	}
 }
 .justify .filler {
@@ -833,5 +842,51 @@ transform: translateY(-50%) translateX(-50%) scale(1);
 /* LEADERSHIP LEGACY
 ========================================================================== */
 
+.one{
+	
+	float: left;
+}
+
+.two{
+
+	float: left;
+	margin-left: 60px;
+}
+
+.three{
+
+	float: left;
+}
+
+.four{
+
+	float: left;
+	margin-left: 60px;
+}
+
+.row{
+	
+}
+
+.col-md-6{
+
+}
+
+.new-title{
+	font-size: 80px;
+	margin-left: 40px;
+}
+
+.blueheader{
+	color:#0087d5;
+}
+
+.list{
+	list-style-type: none;
 
 
+}
+.col-padding{
+
+	padding: 5px;
+}
