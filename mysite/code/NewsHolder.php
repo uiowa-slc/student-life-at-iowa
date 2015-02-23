@@ -24,8 +24,7 @@ class NewsHolder extends BlogHolder {
 	);
 
 	private static $allowed_children = array(
-		'NewsEntry',
-		'ExternalNewsEntry'
+		'NewsEntry'
 	);
 
 	private static $singular_name = 'News Holder';
@@ -36,7 +35,7 @@ class NewsHolder extends BlogHolder {
        'PageHolderExtension'
     );
 
-    private static $excluded_children = array('NewsEntry', 'ExternalNewsEntry');
+    private static $excluded_children = array('NewsEntry');
 
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();

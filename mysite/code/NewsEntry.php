@@ -3,7 +3,8 @@ class NewsEntry extends BlogEntry {
 
 	private static $db = array(
 
-		'IsFeatured' => 'Boolean'
+		'IsFeatured' => 'Boolean',
+		'ExternalURL' => 'varchar(44)'
 	);
 
 	private static $has_one = array(
@@ -33,6 +34,7 @@ class NewsEntry extends BlogEntry {
 	public function getCMSFields() {
 		$f = parent::getCMSFields();
 		
+		$f->addFieldToTab('Root.Main', new TextField('ExternalURL', 'External URL', 'HTTP:// (Entries w/ External URL will link directly to it)'), "Content");
 		$f->addFieldToTab("Root.Main", new UploadField("Photo", "Photo"), "Content");
 		$f->addFieldToTab("Root.Main", new UploadField("ListingPhoto", "Alternate Photo for Facebook, Twitter, and news listing pages (takes precedence over the Photo field)"), "Content");
 		$f->addFieldToTab('Root.Main', new CheckboxField('IsFeatured', 'Feature this Article? (Yes)'), "Content");
@@ -43,6 +45,14 @@ class NewsEntry extends BlogEntry {
 
 		$f->addFieldToTab('Root.Main', $biggerContentField);
 		return $f;
+	}
+	
+	public function Link() {
+		if ($Link = $this->ExternalURL) {
+			return $Link;
+		} else {
+			return Parent::Link();
+		}
 	}
 
 }
