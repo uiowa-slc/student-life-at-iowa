@@ -70,6 +70,9 @@ ErrorDocument 500 /assets/error-500.html
   RewriteRule ^snowflake$ - [L]
   RewriteRule ^snowflake/.* - [L]
 
+  RewriteRule ^md(.*)$ http://md.studentlife.uiowa.edu/ [R=301,NC,L]
+  RewriteRule ^md/(.*)$ http://md.studentlife.uiowa.edu/ [R=301,NC,L]
+
   #-----------------------------------#
 
   ## CONFIG FOR STATIC PUBLISHING ##
@@ -232,7 +235,7 @@ ErrorDocument 500 /assets/error-500.html
 ### SILVERSTRIPE END ###
 
 
-#php_value error_reporting 2147483647
+php_value error_reporting 2147483647
 php_flag display_errors on
 
 
