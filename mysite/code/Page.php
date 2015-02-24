@@ -33,6 +33,18 @@ class Page extends SiteTree {
 		return $entries;
 	}
 	
+	function validateURL($URL) {
+		if (!$URL || !trim($URL)) {
+			return $URL;
+		}
+
+		if (!preg_match('/^https?:\/\//i',$URL)) {
+			$URL = 'http://'.$URL;
+		}
+		
+		return $URL;
+	}
+	
 }
 class Page_Controller extends ContentController {
 
