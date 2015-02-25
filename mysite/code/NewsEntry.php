@@ -3,7 +3,8 @@ class NewsEntry extends BlogEntry {
 
 	private static $db = array(
 
-		'IsFeatured' => 'Boolean'
+		'IsFeatured' => 'Boolean',
+		'ExternalURL' => 'Varchar(255)',
 	);
 
 	private static $has_one = array(
@@ -27,12 +28,14 @@ class NewsEntry extends BlogEntry {
 		'Date.NiceUS' => 'Date',
 		'Member' => 'Associated Author',
 		'Author' => 'Guest Author Name',
+		'ExternalURL' => 'External post URL (if applicable)',
 	);
 	private static $plural_name = 'News Entries';
 
 	public function getCMSFields() {
 		$f = parent::getCMSFields();
-		
+
+		$f->addFieldToTab('Root.Main', new TextField('ExternalURL', 'External URL for an external post (Tumblr, etc) - no content needed if filled out.'), "Content");
 		$f->addFieldToTab("Root.Main", new UploadField("Photo", "Photo"), "Content");
 		$f->addFieldToTab("Root.Main", new UploadField("ListingPhoto", "Alternate Photo for Facebook, Twitter, and news listing pages (takes precedence over the Photo field)"), "Content");
 		$f->addFieldToTab('Root.Main', new CheckboxField('IsFeatured', 'Feature this Article? (Yes)'), "Content");
@@ -43,6 +46,18 @@ class NewsEntry extends BlogEntry {
 
 		$f->addFieldToTab('Root.Main', $biggerContentField);
 		return $f;
+	}
+
+	function setExternalURL($URL) {
+		return $this->setField('ExternalURL', $this->validateURL($URL));
+	}
+
+	public function Link() {
+		if ($Link = $this->ExternalURL) {
+			return $Link;
+		} else {
+			return Parent::Link();
+		}
 	}
 
 }

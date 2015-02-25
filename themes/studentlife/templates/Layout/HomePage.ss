@@ -1,3 +1,82 @@
+
+<section class="upcoming-events clearfix">
+	<div class="container">
+		<div class="row clearfix">
+			<div class="col-md-6">
+
+				<div class="row">
+
+					<div class="col-sm-12"><h1 class="new-title">Latest Events</h1></div>
+				</div>
+
+				<ul class="unstyled justify justify-2">
+
+		<% with $LocalistCalendar %>
+			<% loop $EventList.limit(2) %>
+			<li class="justify-item">
+				<% loop $Dates %>
+				
+				<% end_loop %>
+				<h3 class="event-title"><a href="$AfterClassLink" target="_blank">$Title</a></h3>
+				<% loop $Dates %>
+										<p class="date-time"><em>
+											<% with $StartDateTime %>
+												<time itemprop="startDate" datetime="$Format(c)">
+													$Format(l), $Format(F) $Format(j)
+												</time>at
+												$Format("g:i A")
+											<% end_with %>
+										
+										</em></p>
+									<% end_loop %>
+				<div class="event-desc">
+					$SummaryContent.BigSummary(30)
+				</div>
+			</li>
+			<% end_loop %>
+		<% end_with %>
+			<li class="justify-item filler"></li>
+			<li class="justify-item filler"></li>
+		</ul>
+
+				
+			</div>
+
+			<div class="col-md-6">
+
+				<div class="row">
+					<div class="col-sm-12"><h1 class="new-title">Latest News</h1>
+					</div>
+				</div>
+
+				<ul class="unstyled justify justify-2">
+					<% loop $NewsEntries(2) %>
+						<li class="justify-item">
+							<h3 class="event-title"><a href="$Link">$Title</a>
+							</h3>
+							<div class="news-desc">
+								<p><em><% if $Member %>
+									<% with $Member %>
+										Posted by <a href="$Link" class="byline-author" rel="author">$FirstName $Surname</a>
+									<% end_with %>
+								<% else_if $Author %>
+									Posted by $Author
+								<% end_if %> on <time datetime="$Date.format(c)" itemprop="datePublished">$Date.format("F j, Y")</time></em></p>
+								$Content.Summary(30)
+								<!-- <p class="news-date">$Date.Format("M. n")</p> -->
+							</div>
+						</li>
+					<% end_loop %>
+					<li class="justify-item filler"></li>
+				</ul>
+
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--
 <section class="upcoming-events clearfix">
 	<div class="container">
 		<h1 class="section-title">What's Happening</h1>
@@ -20,14 +99,10 @@
 			<li class="justify-item filler"></li>
 		</ul>
 
-		<!-- Begin MailChimp Signup Form -->
 		<div id="mc_embed_signup" class="email-signup">
 			<form action="http://uiowa.us2.list-manage.com/subscribe/post?u=c61b1cddac92babd42d7d628e&amp;id=8e3635391c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inlines" role="form" target="_blank" novalidate>
 				<h5>Subscribe to our mailing list</h5>
-				<!-- <div class="form-group">
-					<label class="sr-only" for="exampleInputEmail2">Email Address</label>
-					<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email address">
-				</div> -->
+			
 				<div class="row">
 					<div class="mc-field-group form-group col-sm-8">
 						<label for="mce-EMAIL" class="sr-only">Email Address  <span class="asterisk">*</span></label>
@@ -50,10 +125,10 @@
 				</div>
 			</div>
 		</div>
-		<!--End mc_embed_signup-->
+	
 	</div>
 </section>
-
+-->
 	<% loop Children %>
 		$RenderedSection
 	<% end_loop %>
