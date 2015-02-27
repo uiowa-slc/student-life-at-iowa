@@ -56,7 +56,7 @@ class NewsEntry extends BlogEntry {
 		if ($Link = $this->ExternalURL) {
 			return $Link;
 		} else {
-			return Parent::Link();
+			return parent::Link();
 		}
 	}
 
