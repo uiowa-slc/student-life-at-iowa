@@ -49,3 +49,5 @@ ac-json-events/
 excludechildren/
 .phpintel
 pageholder/
+
+lumberjack/
