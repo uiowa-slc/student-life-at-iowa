@@ -68,9 +68,9 @@
 			<article class="latestnews-item justify-item">
 					<a href="$Link" class="item-img">
 						<% if $ListingPhoto %>
-							<img src="$ListingPhoto.CroppedImage(360,200).URL" alt="$Title">
+							<img class="unveil" src="{$ThemeDir}/images/loader.gif" data-src="$ListingPhoto.CroppedImage(360,200).URL" alt="$Title">
 						<% else_if $Photo %>
-							<img src="$Photo.CroppedImage(360,200).URL" alt="$Title">
+							<img class="unveil" src="{$ThemeDir}/images/loader.gif" data-src="$Photo.CroppedImage(360,200).URL" alt="$Title">
 						<% end_if %>
 						<div class="item-img-title">
 							<h3 class="news-clip-heading">$Title</h3>
@@ -93,19 +93,19 @@
 			<ul class="slides">
 				<% if $PhotoGalleryTitleOne %>
 					<li>
-				 		<img src="$PhotoGalleryImageOne.SetWidth(1024).URL" alt="$PhotoGalleryTitleOne" />
+				 		<img class="unveil" src="{$ThemeDir}/images/loader.gif" data-src="$PhotoGalleryImageOne.SetWidth(1024).URL" alt="$PhotoGalleryTitleOne" />
 				 		<h3 class="caption"><a href="$PhotoGalleryURLOne"><span>$PhotoGalleryTitleOne</span></a></h3>
 					</li>
 				<% end_if %>
 				<% if $PhotoGalleryTitleTwo %>
 					<li>
-				 		<img src="$PhotoGalleryImageTwo.SetWidth(1024).URL" alt="$PhotoGalleryTitleTwo" />
+				 		<img class="unveil" src="{$ThemeDir}/images/loader.gif" data-src="$PhotoGalleryImageTwo.SetWidth(1024).URL" alt="$PhotoGalleryTitleTwo" />
 				 		<h3 class="caption"><a href="$PhotoGalleryURLTwo"><span>$PhotoGalleryTitleTwo</span></a></h3>
 					</li>
 				<% end_if %>
 				<% if $PhotoGalleryTitleTwo %>
 					<li>
-				 		<img src="$PhotoGalleryImageThree.SetWidth(1024).URL" alt="$PhotoGalleryTitleThree" />
+				 		<img class="unveil" src="{$ThemeDir}/images/loader.gif" data-src="$PhotoGalleryImageThree.SetWidth(1024).URL" alt="$PhotoGalleryTitleThree" />
 				 		<h3 class="caption"><a href="$PhotoGalleryURLThree"><span>$PhotoGalleryTitleThree</span></a></h3>
 					</li>
 				<% end_if %>
