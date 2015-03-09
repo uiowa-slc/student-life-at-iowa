@@ -523,7 +523,7 @@ section {
 	color: #333;
 }
 .event-title {
-	@include rem(26);
+	@include rem(22);
 	font-weight: 300;
 	margin-top: 0;
 }
@@ -730,7 +730,7 @@ section {
 /* Dots navigation */
 .feature-section-inner .slick-dots li button:before {
 	color: #fff;
-	font-size: 35px;
+	font-size: 15px;
 	opacity: .5;
 }
 .feature-section-inner .slick-dots li.slick-active button:before {
@@ -843,7 +843,7 @@ transform: translateY(-50%) translateX(-50%) scale(1);
 ========================================================================== */
 
 .one{
-	
+
 	float: left;
 }
 
@@ -865,7 +865,7 @@ transform: translateY(-50%) translateX(-50%) scale(1);
 }
 
 .row{
-	
+
 }
 
 .col-md-6{
