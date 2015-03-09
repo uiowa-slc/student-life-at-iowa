@@ -10,8 +10,6 @@ $(window).load(function() {
 		pauseOnHover: true
 	});
 
-
-
 	/* Navigation
 	================================================== */
 	$('.nav-title a').click(function() {
@@ -63,8 +61,6 @@ $(window).load(function() {
 		});
 
 
-
-
 	/* Slick.js
 	================================================= */
 	$('.responsive').slick({
@@ -105,5 +101,11 @@ $(window).load(function() {
 		 }
 	  ]
 	});
+
+	/* Unveil image lazy loading */
+	$(".unveil").unveil();
+
+	/* FitVids */
+	$(".blog-content").fitVids();
 
 });

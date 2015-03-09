@@ -22,14 +22,6 @@
 							</div>
 						</a>
 					</div>
-					<!-- <a href="$Link">
-						<img src="{$Image.CroppedImage(430, 750).URL}" class="" />
-						<button>View</button>
-						<div class="callout-content">
-							<h3>$Title</h3>
-							<p>$Content</p>
-						</div>
-					</a> -->
 				</div>
 				<% end_loop %>
 			</div>
