@@ -103,10 +103,10 @@
 
 </div>
 	<!-- JS -->
-	<script async src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script async src="{$ThemeDir}/js/build/production.min.js"></script>
-	<script async src="{$ThemeDir}/js/skrollr.js"></script>
-	<script async src="{$ThemeDir}/js/home.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="{$ThemeDir}/js/build/production.min.js"></script>
+	<script src="{$ThemeDir}/js/skrollr.js"></script>
+	<script src="{$ThemeDir}/js/home.js"></script>
 	<% include Analytics %>
 </body>
 </html>

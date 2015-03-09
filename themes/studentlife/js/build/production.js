@@ -1,20 +1,3 @@
-$(document).ready(function(){
-  $('.division-directory').hide();
-
-  $('.directory-toggle').click(function(){
-    $(this).toggleClass("active");
-    $('.division-directory').slideToggle();
-    return false;
-  });
-  $('.search-toggle').click(function(){
-    $(this).toggleClass('active');
-    $('.division-search').slideToggle();
-    return false;
-  });
-  $('.division-menu').on('click','.has-subnav a',function(){
-    $(this).next().slideToggle('slow');$(this).toggleClass('active');
-});
-});
 /*!
  * imagesLoaded PACKAGED v3.0.4
  * JavaScript is all like "You images are done yet or what?"
@@ -6039,7 +6022,37 @@ if ( typeof define === 'function' && define.amd ) {
 
 }));
 
-$(window).load(function() {
+$(document).ready(function() {
+
+    // Hide the directory navigation
+    // $('.division-directory').hide();
+
+
+    // Show/Hide the directory navigation on-click
+    $('.directory-toggle').click(function() {
+        $(this).toggleClass("active");
+        $('.division-directory').toggleClass("active");
+        return false;
+    });
+
+
+    // For small screens - show/hide the search on-click
+    $('.search-toggle').click(function() {
+        $(this).toggleClass('active');
+        $('.division-search').slideToggle();
+        return false;
+    });
+
+
+    // For small screens - show the directory
+    $('.division-menu').on('click', '.has-subnav a', function() {
+        $(this).next().slideToggle('slow');
+        $(this).toggleClass('active');
+
+    });
+
+});
+$(document).ready(function() {
 	// add js class to body if javascript enabled
 	$('html').removeClass('no-js');
 

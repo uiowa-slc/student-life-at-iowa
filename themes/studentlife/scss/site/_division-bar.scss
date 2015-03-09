@@ -14,8 +14,11 @@
     }
 }
 .division-search {
+    @media screen and (min-width: 600px) {
+        right: 274px;
+    }
     @media screen and (min-width: $break-large) {
-        right: 299px;
+        right: 304px;
     }
 }
 .lt-ie9 .division-topbar a {
