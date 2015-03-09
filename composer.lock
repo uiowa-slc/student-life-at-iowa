@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7a1320e0d784a1c0c7d6a00131b76db8",
+    "hash": "0b1b8438f93a0733ec77d4d556f56b44",
     "packages": [
         {
             "name": "briceburg/silverstripe-pageholder",
@@ -327,52 +327,44 @@
         },
         {
             "name": "silverstripe/blog",
-            "version": "dev-master",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-blog.git",
-                "reference": "199653197e3621bee8ed6e606cdf70db0c8a0706"
+                "reference": "bffce65543738d12921614524d50265c58c2a34e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/199653197e3621bee8ed6e606cdf70db0c8a0706",
-                "reference": "199653197e3621bee8ed6e606cdf70db0c8a0706",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/bffce65543738d12921614524d50265c58c2a34e",
+                "reference": "bffce65543738d12921614524d50265c58c2a34e",
                 "shasum": ""
             },
             "require": {
-                "silverstripe/cms": ">=3.1.0",
-                "silverstripe/lumberjack": "~1.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~3.7@stable"
+                "silverstripe/cms": "~3.1"
             },
             "suggest": {
-                "silverstripe/comments": "This module adds comments to your blog.",
-                "silverstripe/widgets": "Some widgets come with the blog which are compatible with the widgets module."
+                "silverstripe/comments": "Enable user comments on any page type, including blog posts",
+                "silverstripe/widgets": "Additional 'sidebar features', e.g. a list of recent posts and a tagcloud",
+                "simplepie/simplepie": "Parse RSS feeds, required for the RSS widget"
             },
             "type": "silverstripe-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
             "authors": [
                 {
-                    "name": "Michael Strong",
-                    "email": "github@michaelstrong.co.uk"
+                    "name": "Saophalkun Ponlu",
+                    "email": "phalkunz@silverstripe.com"
+                },
+                {
+                    "name": "Carlos Barberis",
+                    "email": "carlos@silverstripe.com"
                 }
             ],
-            "description": "A fresh take on blogging in Silverstripe set out to tackle the issue of a cluttered Site Tree.",
+            "description": "The blog module allows you to post blogs on your SilverStripe. It includes the ability to post blogs using a site front-end form. Blogs are summarised on the blog holder page type, with more detail viewable when a specific blog is clicked.",
             "keywords": [
                 "blog",
-                "news",
                 "silverstripe"
             ],
-            "time": "2015-03-06 04:20:36"
+            "time": "2015-03-05 22:27:11"
         },
         {
             "name": "silverstripe/cms",
@@ -508,40 +500,6 @@
                 "silverstripe"
             ],
             "time": "2014-08-14 20:35:49"
-        },
-        {
-            "name": "silverstripe/lumberjack",
-            "version": "1.1.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/silverstripe/silverstripe-lumberjack.git",
-                "reference": "64f261bdf02c5b08f44389fe19dd36614a207747"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-lumberjack/zipball/64f261bdf02c5b08f44389fe19dd36614a207747",
-                "reference": "64f261bdf02c5b08f44389fe19dd36614a207747",
-                "shasum": ""
-            },
-            "require": {
-                "silverstripe/cms": ">=3.1.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~3.7@stable"
-            },
-            "type": "silverstripe-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Strong",
-                    "email": "mstrong@silverstripe.org"
-                }
-            ],
-            "description": "A module to make managing pages in a GridField easy without losing any of the functionality that you're used to in the CMS.",
-            "time": "2015-03-06 04:21:14"
         },
         {
             "name": "silverstripe/staticpublishqueue",

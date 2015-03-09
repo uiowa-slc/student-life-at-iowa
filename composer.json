@@ -8,7 +8,7 @@
 		"md/division-bar" : "*",
         "undefinedoffset/sortablegridfield": "*",
         "colymba/gridfield-bulk-editing-tools": "*",
-		"silverstripe/blog" : "*",
+		"silverstripe/blog" : "1.0",
 		"md/rss-display" : "*",
 		"silverstripe/staticpublishqueue" : "*",
 		"unclecheese/betterbuttons" : "*",
