@@ -581,12 +581,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UndefinedOffset/SortableGridField.git",
-                "reference": "3e9b1b6e2e1111f636ca5b641135394538d75e57"
+                "reference": "ff7a30825ec9903ebe22888163b081a4a8af4d3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/3e9b1b6e2e1111f636ca5b641135394538d75e57",
-                "reference": "3e9b1b6e2e1111f636ca5b641135394538d75e57",
+                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/ff7a30825ec9903ebe22888163b081a4a8af4d3f",
+                "reference": "ff7a30825ec9903ebe22888163b081a4a8af4d3f",
                 "shasum": ""
             },
             "require": {
@@ -613,7 +613,7 @@
                 "gridfield",
                 "silverstripe"
             ],
-            "time": "2015-02-11 13:29:12"
+            "time": "2015-04-07 12:26:53"
         }
     ],
     "packages-dev": [],
