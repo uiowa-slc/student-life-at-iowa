@@ -9,7 +9,7 @@
 			<h2 class="cat-heading-title"><% _t('BlogHolder_ss.VIEWINGTAGGED', 'Viewing entries tagged with') %> '$SelectedTag'</h2>
 			<div class="rule"></div>
 			<div id="" class="justify justify-3">
-			<% loop PaginatedNewsEntries %>
+			<% loop PaginatedList %>
 				<article class="latestnews-item justify-item">
 					<a href="$Link" class="item-img">
 						<% if $ListingPhoto %>
@@ -64,7 +64,7 @@
 		<div class="rule"></div>
 		<div id="" class="justify justify-3">
 
-		<% loop PaginatedNewsEntries %>
+		<% loop PaginatedList %>
 			<article class="latestnews-item justify-item">
 					<a href="$Link" class="item-img">
 						<% if $ListingPhoto %>

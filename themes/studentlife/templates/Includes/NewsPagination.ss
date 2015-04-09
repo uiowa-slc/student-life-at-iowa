@@ -1,4 +1,4 @@
-<% if PaginatedNewsEntries.MoreThanOnePage %>
+<% if PaginatedList.MoreThanOnePage %>
 <div class="pagination">
 	<ul class="PageNumbers">
 		<% if PaginatedNewsEntries.NotFirstPage %>
@@ -11,7 +11,7 @@
 			</li>
 		<% end_if %>
 	
-    	<% loop PaginatedNewsEntries.PaginationSummary(4) %>
+    	<% loop PaginatedList.PaginationSummary(4) %>
 			<% if CurrentBool %>
 				<li class="active"><a class="disabled">$PageNum</a></li>
 			<% else %>
@@ -27,9 +27,9 @@
 			<% end_if %>
 		<% end_loop %>
 	
-		<% if PaginatedNewsEntries.NotLastPage %>
+		<% if PaginatedList.NotLastPage %>
 			<li class="next">
-				<a class="next paginate-right" href="$PaginatedNewsEntries.NextLink" title="View the next page">&gt;</a>
+				<a class="next paginate-right" href="$PaginatedList.NextLink" title="View the next page">&gt;</a>
 			</li>
 		<% else %>
 			<li class="next disabled">

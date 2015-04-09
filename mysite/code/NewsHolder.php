@@ -54,17 +54,6 @@ class NewsHolder extends Blog {
 }
 class NewsHolder_Controller extends BlogHolder_Controller {
 
-	private static $allowed_actions = array(
-		'index',
-		'tag',
-		'rss',
-		'date',
-		'metaweblog',
-		'postblog' => 'BLOGMANAGEMENT',
-		'post',
-		'BlogEntryForm' => 'BLOGMANAGEMENT',
-	);
-
 	public function init() {
 		parent::init();
 

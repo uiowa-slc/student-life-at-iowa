@@ -23,12 +23,12 @@
 						$Content
 					</div>
 					<footer>
-						<% if TagsCollection %>
+						<% if Tags %>
 							<div class="tags">
 								<p>
 								<span class="glyphicon glyphicon-tag"></span> <% _t('BlogEntry_ss.TAGS', 'Tags:') %>
-								<% loop TagsCollection %>
-									<a href="$Link" title="<% _t('BlogEntry_ss.VIEWALLPOSTTAGGED', 'View all posts tagged') %> '$Tag'" rel="tag">$Tag</a>
+								<% loop Tags %>
+									<a href="$Link" title="<% _t('BlogEntry_ss.VIEWALLPOSTTAGGED', 'View all posts tagged') %> '$Title'" rel="tag">$Title</a>
 								<% end_loop %>
 								</p>
 							</div>
