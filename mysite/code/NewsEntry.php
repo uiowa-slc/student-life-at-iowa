@@ -19,7 +19,6 @@ class NewsEntry extends BlogEntry {
 	private static $allowed_children = array(
 
 	);
-	private static $default_sort = 'Date DESC';
 	private static $singular_name = 'News Entry';
 
 	private static $summary_fields = array(
@@ -31,7 +30,7 @@ class NewsEntry extends BlogEntry {
 		'ExternalURL' => 'External post URL (if applicable)',
 	);
 	private static $plural_name = 'News Entries';
-
+	private static $show_in_sitetree = false;
 	public function getCMSFields() {
 		$f = parent::getCMSFields();
 
