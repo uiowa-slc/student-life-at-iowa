@@ -2,24 +2,28 @@
 <% include MainNav %>
 <br>
 
-<% if SelectedTag %>
+<% if $CurrentTag %>
 	<!-- ========= BEGIN SELECTED TAG CONTENT ========= -->
 	<section class="latestnews">
 		<div class="container">
-			<h2 class="cat-heading-title"><% _t('BlogHolder_ss.VIEWINGTAGGED', 'Viewing entries tagged with') %> '$SelectedTag'</h2>
+			<h2 class="cat-heading-title"><% _t('BlogHolder_ss.VIEWINGTAGGED', 'Viewing entries tagged with') %> '$CurrentTag.Title'</h2>
 			<div class="rule"></div>
 			<div id="" class="justify justify-3">
-			<% loop PaginatedNewsEntries %>
+			<% loop PaginatedList %>
 				<article class="latestnews-item justify-item">
 					<a href="$Link" class="item-img">
 						<% if $ListingPhoto %>
 							<img src="$ListingPhoto.CroppedImage(360,200).URL" alt="$Title">
-						<% else_if $Photo %>
-							<img src="$Photo.CroppedImage(360,200).URL" alt="$Title">
+						<% else_if $FeaturedImage %>
+							<img src="$FeaturedImage.CroppedImage(360,200).URL" alt="$Title">
 						<% end_if %>
 						<div class="item-img-title">
 							<h3 class="news-clip-heading">$Title</h3>
-							<p class="snippit">$Content.LimitCharacters(160)</p>
+							<% if $Summary %>
+								<p>$Summary</p>
+							<% else %>
+								<p>$Excerpt</p>
+							<% end_if %>
 						</div>
 					</a>
 				</article>
@@ -36,20 +40,24 @@
 <section>
 	<div class="container">
 		<div class="row blog-featured">
-			<% loop $allChildren %>
+			<% loop $BlogPosts %>
 				<% if $IsFeatured %>
 					<div class="col-md-8">
 						<a href="$Link">
 							<% if $ListingPhoto %>
-								<img src="$ListingPhoto.CroppedImage(800,500).URL" alt="$Title">
-							<% else_if $Photo %>
-								<img src="$Photo.CroppedImage(800,500).URL" alt="$Title">
+								<img class="unveil" src="<% include PlaceholderLargeSrc %>" data-original="$ListingPhoto.CroppedImage(800,500).URL" alt="$Title">
+							<% else_if $FeaturedImage %>
+								<img class="unveil" src="<% include PlaceholderLargeSrc %>" data-original="$FeaturedImage.CroppedImage(800,500).URL" alt="$Title">
 							<% end_if %>
 						</a>
 					</div>
 					<div class="col-md-4">
 						<h1><a href="$Link">$Title</a></h1>
-						<p>$Content.Summary(30)</p>
+							<% if $Summary %>
+							<div class="snippit">$Summary</div>
+							<% else %>
+							<p class="snippit">$Excerpt</p>
+							<% end_if %>
 						<p><a href="$Link" class="btn btn-default">Continue Reading</a></p>
 					</div>
 				<% end_if %>
@@ -64,17 +72,21 @@
 		<div class="rule"></div>
 		<div id="" class="justify justify-3">
 
-		<% loop PaginatedNewsEntries %>
+		<% loop PaginatedList %>
 			<article class="latestnews-item justify-item">
 					<a href="$Link" class="item-img">
 						<% if $ListingPhoto %>
-							<img class="unveil" src="{$ThemeDir}/images/loader.gif" data-src="$ListingPhoto.CroppedImage(360,200).URL" alt="$Title">
-						<% else_if $Photo %>
-							<img class="unveil" src="{$ThemeDir}/images/loader.gif" data-src="$Photo.CroppedImage(360,200).URL" alt="$Title">
+							<img class="unveil" src="{$ThemeDir}/images/placeholder-medium.jpg" data-original="$ListingPhoto.CroppedImage(360,200).URL" alt="$Title">
+						<% else_if $FeaturedImage %>
+							<img class="unveil" src="{$ThemeDir}/images/placeholder-medium.jpg" data-original="$FeaturedImage.CroppedImage(360,200).URL" alt="$Title">
 						<% end_if %>
 						<div class="item-img-title">
 							<h3 class="news-clip-heading">$Title</h3>
-							<p class="snippit">$Content.LimitCharacters(160)</p>
+							<% if $Summary %>
+							<div class="snippit">$Summary.Summary(25)</div>
+							<% else %>
+							<p class="snippit">$Excerpt(25)</p>
+							<% end_if %>
 						</div>
 					</a>
 				</article>
@@ -84,7 +96,11 @@
 		<% include NewsPagination %>
 	</div>
 </section>
-<section class="video-list"></section>
+<!--<section class="video-list">
+	
+	<iframe src="http://www.youtube.com/embed/?listType=user_uploads&list=imubuddy" width="480" height="400" frameBorder="0"></iframe>
+
+</section>-->
 <section>
 	<div class="container">
 		<h2 class="cat-heading-title">Photo Galleries</h2>
@@ -93,19 +109,19 @@
 			<ul class="slides">
 				<% if $PhotoGalleryTitleOne %>
 					<li>
-				 		<img class="unveil" src="{$ThemeDir}/images/loader.gif" data-src="$PhotoGalleryImageOne.SetWidth(1024).URL" alt="$PhotoGalleryTitleOne" />
+				 		<img class="unveil" src="{$ThemeDir}/images/loader.gif" data-original="$PhotoGalleryImageOne.SetWidth(1024).URL" alt="$PhotoGalleryTitleOne" />
 				 		<h3 class="caption"><a href="$PhotoGalleryURLOne"><span>$PhotoGalleryTitleOne</span></a></h3>
 					</li>
 				<% end_if %>
 				<% if $PhotoGalleryTitleTwo %>
 					<li>
-				 		<img class="unveil" src="{$ThemeDir}/images/loader.gif" data-src="$PhotoGalleryImageTwo.SetWidth(1024).URL" alt="$PhotoGalleryTitleTwo" />
+				 		<img class="unveil" src="{$ThemeDir}/images/loader.gif" data-original="$PhotoGalleryImageTwo.SetWidth(1024).URL" alt="$PhotoGalleryTitleTwo" />
 				 		<h3 class="caption"><a href="$PhotoGalleryURLTwo"><span>$PhotoGalleryTitleTwo</span></a></h3>
 					</li>
 				<% end_if %>
 				<% if $PhotoGalleryTitleTwo %>
 					<li>
-				 		<img class="unveil" src="{$ThemeDir}/images/loader.gif" data-src="$PhotoGalleryImageThree.SetWidth(1024).URL" alt="$PhotoGalleryTitleThree" />
+				 		<img class="unveil" src="{$ThemeDir}/images/loader.gif" data-original="$PhotoGalleryImageThree.SetWidth(1024).URL" alt="$PhotoGalleryTitleThree" />
 				 		<h3 class="caption"><a href="$PhotoGalleryURLThree"><span>$PhotoGalleryTitleThree</span></a></h3>
 					</li>
 				<% end_if %>

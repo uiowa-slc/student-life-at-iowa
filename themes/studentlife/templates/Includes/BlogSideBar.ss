@@ -4,17 +4,23 @@
 		<h3 class="sidebar-title">Student News</h3>
 		<% with $Page(news) %>
 			<ul class="unstyled">
-			<% loop $Entries(10) %>
+			<% loop $BlogPosts.Limit(10) %>
 				<li class="clearfix sidebar-blog-item $FirstLast">
 					<a href="$Link" class="clearfix">
 						<% if $ListingPhoto %>
-							<img class="unveil" src="{$ThemeDir}/images/loader.gif" data-src="$ListingPhoto.CroppedImage(130,105).URL" class="sidebar-blog-img" alt="$Title">
-						<% else_if $Photo %>
-							<img class="unveil" src="{$ThemeDir}/images/loader.gif" data-src="$Photo.CroppedImage(130,105).URL" class="sidebar-blog-img" alt="$Title">
+							<img src="{$ThemeDir}/images/placeholder-small.jpg" data-original="$ListingPhoto.CroppedImage(130,105).URL" class="unveil sidebar-blog-img" alt="$Title">
+						<% else_if $FeaturedImage %>
+							<img src="{$ThemeDir}/images/placeholder-small.jpg" data-original="$FeaturedImage.CroppedImage(130,105).URL" class="unveil sidebar-blog-img" alt="$Title">
 						<% end_if %>
+					
 						<div class="sidebar-blog-content">
 							<h4 class="sidebar-blog-title">$Title</h4>
-							<p class="sidebar-blog-snippit">$Content.LimitCharacters(90)</p>
+							<% if $Summary %>
+							<div class="sidebar-blog-snippit">$Summary.Summary(15)</div>
+							<% else %>
+							<p class="sidebar-blog-snippit">$Excerpt(15)</p>
+							<% end_if %>
+							
 						</div>
 					</a>
 				</li>
@@ -41,17 +47,25 @@
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 	</div> -->
 
-	<!-- <div>
-		<h3 class="">Latest Events</h3>
-		<% loop RSSDisplay(3,"http://afterclass.uiowa.edu/events/feed/rss/") %>
-			<li class="justify-item">
-			<img src="$Smallimage" alt="$Title">
-				<p class="event-date">$Dates</p>
-				<h2 class="event-title"><a href="$Link">$Title</a></h2>
-				<div class="event-desc">
-					$Description.Summary(30)
-				</div>
-			</li>
+	<%--<div>
+		<h3>Latest Events</h3>
+		<% with $LocalistCalendar %>
+			<% loop $EventList.Limit(5) %>
+				<li class="justify-item">
+				<img src="$Image.URL" alt="$Title">
+					<p class="event-date">
+						<% with $Dates.First %>
+							<time itemprop="startDate" datetime="$Format(c)">
+								$Format(l), $Format(F) $Format(j) at $Format("g:i A") 
+							</time>
+						<% end_with %>
+					</p>
+					<h2 class="event-title"><a href="$AfterClassLink">$Title</a></h2>
+					<div class="event-desc">
+						$Content.Summary(30)
+					</div>
+				</li>&nbsp;
 			<% end_loop %>
-	</div> -->
+		<% end_with %>
+	</div> --%>
 </div>

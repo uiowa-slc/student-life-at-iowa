@@ -2,49 +2,47 @@
 class Page extends SiteTree {
 
 	private static $db = array(
-		
+
 	);
 
 	private static $has_one = array(
 	);
 
-
-	private static $many_many = array (
+	private static $many_many = array(
 	);
 
-    private static $many_many_extraFields=array(
-      );
+	private static $many_many_extraFields = array(
+	);
 
-    private static $plural_name = "Pages";
+	private static $plural_name = "Pages";
 
-	private static $defaults = array ();
+	private static $defaults = array();
 
-
-	public function getCMSFields(){
+	public function getCMSFields() {
 		$f = parent::getCMSFields();
-		
+
 		return $f;
 	}
 
-	public function NewsEntries($num = 3){
-		$newsHolder = NewsHolder::get()->First();
-		$entries = $newsHolder->Entries($num);
+	public function AllBlogPosts() {
+		$newsHolder = Blog::get()->filter(array('URLSegment' => 'news'))->First();
+		$entries = $newsHolder->blogPosts;
 
 		return $entries;
 	}
-	
+
 	function validateURL($URL) {
 		if (!$URL || !trim($URL)) {
 			return $URL;
 		}
 
-		if (!preg_match('/^https?:\/\//i',$URL)) {
-			$URL = 'http://'.$URL;
+		if (!preg_match('/^https?:\/\//i', $URL)) {
+			$URL = 'http://' . $URL;
 		}
-		
+
 		return $URL;
 	}
-	
+
 }
 class Page_Controller extends ContentController {
 
@@ -70,5 +68,5 @@ class Page_Controller extends ContentController {
 		// instead of putting Requirements calls here.  However these are
 		// included so that our older themes still work
 	}
-	
+
 }

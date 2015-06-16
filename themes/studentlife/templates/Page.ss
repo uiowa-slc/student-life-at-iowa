@@ -8,7 +8,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>$Title | Student Life at Iowa | The University of Iowa</title>
 <% base_tag %>
-<% include Ascii %>
 <!-- Typekit -->
 <% include TypeKit %>
 
@@ -19,8 +18,8 @@
 <meta name="twitter:description" content="$Content.LimitCharacters(120)">
 <% if $ListingPhoto %>
 	<meta name="twitter:image" content="$ListingPhoto.AbsoluteURL">
-<% else_if $Photo %>
-	<meta name="twitter:image" content="$Photo.AbsoluteURL">
+<% else_if $FeaturedImage %>
+	<meta name="twitter:image" content="$FeaturedImage.AbsoluteURL">
 <% end_if %>
 
 <!-- Open Graph data -->

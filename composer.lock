@@ -4,59 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "36839b55fdd66cd48778f595bd91d87b",
+    "hash": "8fdb14bb389cecba653f8e90f1ca51df",
     "packages": [
-        {
-            "name": "briceburg/silverstripe-pageholder",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/briceburg/silverstripe-pageholder.git",
-                "reference": "25f25234c1df4bc8b2e4ed404995ea181db94f94"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/briceburg/silverstripe-pageholder/zipball/25f25234c1df4bc8b2e4ed404995ea181db94f94",
-                "reference": "25f25234c1df4bc8b2e4ed404995ea181db94f94",
-                "shasum": ""
-            },
-            "require": {
-                "micschk/silverstripe-excludechildren": "*",
-                "silverstripe/framework": "~3.0"
-            },
-            "type": "silverstripe-module",
-            "extra": {
-                "installer-name": "pageholder",
-                "screenshots": [
-                    "docs/screenshots/pageholder.png",
-                    "docs/screenshots/pageholder_edit.png"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Brice Burgess",
-                    "email": "briceburg@gmail.com"
-                }
-            ],
-            "description": "Hide children from the CMS sitetree and allow management through a Versioned GridField. Think _BlogHolder_ but flexible and for any page type.",
-            "homepage": "https://github.com/briceburg/silverstripe-pageholder",
-            "keywords": [
-                "children",
-                "cms",
-                "gridfield",
-                "hide",
-                "manage",
-                "silverstripe",
-                "sitetree",
-                "subpages",
-                "versioned"
-            ],
-            "time": "2014-12-05 19:44:47"
-        },
         {
             "name": "colymba/gridfield-bulk-editing-tools",
             "version": "dev-master",
@@ -200,12 +149,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events.git",
-                "reference": "54748377908a31c6cfe2ec3cfbb25a58b4ad0c0b"
+                "reference": "13f2e61e8db79567d08b9c886bff7e6c0eb8aec6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/54748377908a31c6cfe2ec3cfbb25a58b4ad0c0b",
-                "reference": "54748377908a31c6cfe2ec3cfbb25a58b4ad0c0b",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/13f2e61e8db79567d08b9c886bff7e6c0eb8aec6",
+                "reference": "13f2e61e8db79567d08b9c886bff7e6c0eb8aec6",
                 "shasum": ""
             },
             "require": {
@@ -224,7 +173,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/issues"
             },
-            "time": "2015-05-29 14:55:18"
+            "time": "2015-06-09 14:29:57"
         },
         {
             "name": "md/division-bar",
@@ -291,80 +240,57 @@
             "time": "2015-04-28 20:02:10"
         },
         {
-            "name": "micschk/silverstripe-excludechildren",
+            "name": "silverstripe/blog",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/micschk/silverstripe-excludechildren.git",
-                "reference": "cc92ffb01b4926af0507d509b555c69804230a0f"
+                "url": "https://github.com/silverstripe/silverstripe-blog.git",
+                "reference": "070978ecc07a12b695dcb8256d457bbf74a687e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/micschk/silverstripe-excludechildren/zipball/cc92ffb01b4926af0507d509b555c69804230a0f",
-                "reference": "cc92ffb01b4926af0507d509b555c69804230a0f",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/070978ecc07a12b695dcb8256d457bbf74a687e1",
+                "reference": "070978ecc07a12b695dcb8256d457bbf74a687e1",
                 "shasum": ""
             },
             "require": {
-                "silverstripe/framework": "~3.0"
+                "silverstripe/cms": ">=3.1.0",
+                "silverstripe/lumberjack": "~1.1",
+                "silverstripe/tagfield": "~1.0.0"
+            },
+            "replace": {
+                "micmania1/silverstripe-blog": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7@stable"
+            },
+            "suggest": {
+                "silverstripe/comments": "This module adds comments to your blog.",
+                "silverstripe/widgets": "Some widgets come with the blog which are compatible with the widgets module."
             },
             "type": "silverstripe-module",
             "extra": {
-                "installer-name": "excludechildren"
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
             "authors": [
                 {
-                    "name": "micschk"
+                    "name": "Michael Strong",
+                    "email": "github@michaelstrong.co.uk"
                 }
             ],
-            "description": "Extension to hide pages from the SiteTree",
-            "keywords": [
-                "excludechildren",
-                "silverstripe",
-                "sitetree"
-            ],
-            "time": "2015-05-05 05:55:14"
-        },
-        {
-            "name": "silverstripe/blog",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/silverstripe/silverstripe-blog.git",
-                "reference": "bffce65543738d12921614524d50265c58c2a34e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/bffce65543738d12921614524d50265c58c2a34e",
-                "reference": "bffce65543738d12921614524d50265c58c2a34e",
-                "shasum": ""
-            },
-            "require": {
-                "silverstripe/cms": "~3.1"
-            },
-            "suggest": {
-                "silverstripe/comments": "Enable user comments on any page type, including blog posts",
-                "silverstripe/widgets": "Additional 'sidebar features', e.g. a list of recent posts and a tagcloud",
-                "simplepie/simplepie": "Parse RSS feeds, required for the RSS widget"
-            },
-            "type": "silverstripe-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Saophalkun Ponlu",
-                    "email": "phalkunz@silverstripe.com"
-                },
-                {
-                    "name": "Carlos Barberis",
-                    "email": "carlos@silverstripe.com"
-                }
-            ],
-            "description": "The blog module allows you to post blogs on your SilverStripe. It includes the ability to post blogs using a site front-end form. Blogs are summarised on the blog holder page type, with more detail viewable when a specific blog is clicked.",
+            "description": "A fresh take on blogging in Silverstripe set out to tackle the issue of a cluttered Site Tree.",
             "keywords": [
                 "blog",
+                "news",
                 "silverstripe"
             ],
-            "time": "2015-03-05 22:27:11"
+            "time": "2015-06-07 05:29:24"
         },
         {
             "name": "silverstripe/cms",
@@ -502,6 +428,40 @@
             "time": "2014-08-14 20:35:49"
         },
         {
+            "name": "silverstripe/lumberjack",
+            "version": "1.1.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-lumberjack.git",
+                "reference": "f441189ee885369148b4ec900ac690b9dc2bfa7e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-lumberjack/zipball/f441189ee885369148b4ec900ac690b9dc2bfa7e",
+                "reference": "f441189ee885369148b4ec900ac690b9dc2bfa7e",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/cms": ">=3.1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7@stable"
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Strong",
+                    "email": "mstrong@silverstripe.org"
+                }
+            ],
+            "description": "A module to make managing pages in a GridField easy without losing any of the functionality that you're used to in the CMS.",
+            "time": "2015-06-04 06:26:11"
+        },
+        {
             "name": "silverstripe/staticpublishqueue",
             "version": "dev-master",
             "source": {
@@ -538,6 +498,48 @@
                 "static-publishing"
             ],
             "time": "2015-01-04 20:39:55"
+        },
+        {
+            "name": "silverstripe/tagfield",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe-labs/silverstripe-tagfield.git",
+                "reference": "e941dbfc269a406d49dbdf695dc8afbd4727601a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe-labs/silverstripe-tagfield/zipball/e941dbfc269a406d49dbdf695dc8afbd4727601a",
+                "reference": "e941dbfc269a406d49dbdf695dc8afbd4727601a",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "2.0.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Christopher Pitt",
+                    "email": "chris@silverstripe.com",
+                    "homepage": "http://github.com/assertchris"
+                }
+            ],
+            "description": "Tag field for Silverstripe",
+            "keywords": [
+                "field",
+                "silverstripe",
+                "tag"
+            ],
+            "time": "2015-05-22 04:02:35"
         },
         {
             "name": "unclecheese/betterbuttons",
@@ -620,8 +622,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "md/ac-json-events": 20,
-        "briceburg/silverstripe-pageholder": 20
+        "md/ac-json-events": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

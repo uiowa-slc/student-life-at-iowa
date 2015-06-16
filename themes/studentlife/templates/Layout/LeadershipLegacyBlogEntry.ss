@@ -3,7 +3,7 @@
 <article>
 	<div class="mod-hero">
 		<div class="hero-wrapper">
-			<img src="$EntryPhoto.CroppedImage(1100,700).URL" alt="" class="hero">
+			<img src="$FeaturedImage.CroppedImage(1100,700).URL" alt="" class="hero">
 		</div>
 		<!-- Previous Article Link -->
 		<% if PreviousPage %>
@@ -45,14 +45,7 @@
 			</header>
 			<div class="content">
 				<div class="body">
-					<% if $Member %>
-						<% with $Member %>
-							Posted by <a href="$Link" class="byline-author" rel="author"><em>$FirstName $Surname</em></a>
-						<% end_with %>
-					<% else_if $Author %>
-						Posted by <em>$Author</em>
-					<% end_if %>
-					 on <time datetime="$Date.format(c)" itemprop="datePublished">$Date.format(F d Y)</time>
+					<% include Byline %>
 					$Content
 				</div>
 			</div>
@@ -86,7 +79,7 @@
 					<li class="post size-300x360">
 						<a href="$Link">
 							<figure>
-			            	<div class="poster" style="background-image: url('$EntryPhoto.SetHeight(500).URL');"></div>
+			            	<div class="poster" style="background-image: url('$FeaturedImage.SetHeight(500).URL');"></div>
 			            	<figcaption>
 			               	$Title
 			               </figcaption>
@@ -98,7 +91,7 @@
 					<li class="post size-180">
 						<a href="$Link">
 							<figure>
-			            	<div class="poster" style="background-image: url('$EntryPhoto.SetHeight(250).URL');"></div>
+			            	<div class="poster" style="background-image: url('$FeaturedImage.SetHeight(250).URL');"></div>
 			            	<figcaption>
 			               	$Title
 			               </figcaption>

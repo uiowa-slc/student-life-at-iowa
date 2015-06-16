@@ -1,36 +1,34 @@
 <?php
-class LeadershipLegacyIssueHolder extends BlogHolder {
+class LeadershipLegacyIssueHolder extends Blog {
 
 	private static $db = array(
-
 
 	);
 
 	private static $has_one = array(
 
 	);
-	private static $belongs_many_many = array (
+	private static $belongs_many_many = array(
 	);
 	private static $has_many = array(
 	);
 
 	private static $allowed_children = array(
-		'LeadershipLegacyBlogEntry'
+		'LeadershipLegacyBlogEntry',
 	);
 
 	private static $singular_name = 'Leadership Legacy Issue Holder';
 
 	private static $plural_name = 'Leadership Legacy Issue Holders';
-
-	public function getCMSFields(){
+	private static $icon = 'themes/studentlife/images/blogholder-file.png';
+	public function getCMSFields() {
 		$f = parent::getCMSFields();
 
 		return $f;
 	}
 
-
 }
-class LeadershipLegacyIssueHolder_Controller extends BlogHolder_Controller {
+class LeadershipLegacyIssueHolder_Controller extends Blog_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
@@ -47,7 +45,7 @@ class LeadershipLegacyIssueHolder_Controller extends BlogHolder_Controller {
 	 *
 	 * @var array
 	 */
-	private static $allowed_actions = array (
+	private static $allowed_actions = array(
 	);
 
 	public function init() {

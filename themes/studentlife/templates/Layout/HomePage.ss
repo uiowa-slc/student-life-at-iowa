@@ -28,7 +28,7 @@
 								<p class="event-desc">
 									$SummaryContent.BigSummary(25)
 								</p>
-							</li>
+							</li>&nbsp;
 						<% end_loop %>
 					<% end_with %>
 				</ul>
@@ -42,22 +42,17 @@
 				</div>
 				<ul class="unstyled justify justify-2">
 					<% with Page(news) %>
-					<% loop $Entries(2) %>
+					<p>$Title</p>
+					<% loop $BlogPosts.Limit(2) %>
 						<li class="justify-item">
 							<h3 class="event-title"><a href="$Link">$Title</a></h3>
 							<div class="news-desc">
 								<p><em>
-									<% if $Member %>
-										<% with $Member %>
-											Posted by <a href="$Link" class="byline-author" rel="author">$FirstName $Surname</a>
-										<% end_with %>
-									<% else_if $Author %>
-										Posted by $Author
-									<% end_if %> on <time datetime="$Date.format(c)" itemprop="datePublished">$Date.format("F j, Y")</time>
+									<% include Byline %>
 								</em></p>
 								<p>$Content.Summary(25)</p>
 							</div>
-						</li>
+						</li>&nbsp;
 					<% end_loop %>
 					<% end_with %>
 				</ul>

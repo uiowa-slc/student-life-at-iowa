@@ -3,8 +3,8 @@
 <meta property="og:url" content="$AbsoluteLink" />
 <% if $ListingPhoto %>
 	<meta property="og:image" content="$ListingPhoto.AbsoluteURL" />
-<% else_if $Photo %>
-	<meta property="og:image" content="$Photo.AbsoluteURL" />
+<% else_if $FeaturedImage %>
+	<meta property="og:image" content="$FeaturedImage.AbsoluteURL" />
 <% else %>
 	<meta property="og:image" content="{$BaseHref}{$ThemeDir}/images/og-poster.jpg" />
 <% end_if %>

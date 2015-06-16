@@ -7,10 +7,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home | Student Life at Iowa | The University of Iowa</title>
+<title>Student Life at Iowa | The University of Iowa</title>
 <% base_tag %>
 <% include OpenGraph %>
-<% include Ascii %>
 
 <!-- Critical CSS -->
 <style><% include CriticalCss %></style>

@@ -8,12 +8,11 @@
 		"md/division-bar" : "*",
         "undefinedoffset/sortablegridfield": "*",
         "colymba/gridfield-bulk-editing-tools": "*",
-		"silverstripe/blog" : "1.0",
+		"silverstripe/blog" : "2.0.*",
 		"md/rss-display" : "*",
 		"silverstripe/staticpublishqueue" : "*",
 		"unclecheese/betterbuttons" : "*",
-		"md/ac-json-events": "dev-master",
-		"briceburg/silverstripe-pageholder" : "dev-master"
+		"md/ac-json-events": "dev-master"
 	},
 	"config": {
 		"process-timeout": 600	
