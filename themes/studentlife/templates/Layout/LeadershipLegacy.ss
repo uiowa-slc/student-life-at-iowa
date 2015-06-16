@@ -2,10 +2,10 @@
 <% include MainNav %>
 
 
-<% loop $Children.limit(1) %>
+<% loop $AllChildren.Limit(1) %>
 	<div class="flexslider legacy-hero">
 		<ul class="unstyled slides">
-			<% loop $allChildren %>
+			<% loop $BlogPosts.Sort(Sort) %>
 				<li class="flex-active-slide">
 					<div class="gradient"></div>
 					<div class="flexcaption">
@@ -14,7 +14,7 @@
 							<h2 class="title">$Title</h2>
 						</a>
 					</div>
-					<div class="legacy-hero-img" style="background-image:url('$EntryPhoto.URL');"></div>
+					<div class="legacy-hero-img" style="background-image:url('$FeaturedImage.URL');"></div>
 				</li>
 			<% end_loop %>
 		</ul>
@@ -61,15 +61,15 @@
 
 <section>
 	<div class="container">
-		<% loop $Children %>
+		<% loop $AllChildren %>
 			<div class="issue-section">
 				<h3 class="issue-section-title"><em>$Title</em></h3>
 				<ul class="unstyled clearfix">
-				<% loop $allChildren.Limit(1) %>
+				<% loop $BlogPosts.Sort(Sort).Limit(1) %>
 					<li class="post size-300x360">
 						<a href="$Link">
 							<figure>
-			            	<div class="poster" style="background-image: url('$EntryPhoto.SetHeight(500).URL');"></div>
+			            	<div class="poster" style="background-image: url('$FeaturedImage.SetHeight(500).URL');"></div>
 			            	<figcaption>
 			               	$Title
 			               </figcaption>
@@ -77,11 +77,11 @@
 						</a>
 					</li>
 				<% end_loop %>
-				<% loop $allChildren.Limit(4,1) %>
+				<% loop $BlogPosts.Sort(Sort).Limit(4,1) %>
 					<li class="post size-180">
 						<a href="$Link">
 							<figure>
-			            	<div class="poster" style="background-image: url('$EntryPhoto.SetHeight(250).URL');"></div>
+			            	<div class="poster" style="background-image: url('$FeaturedImage.SetHeight(250).URL');"></div>
 			            	<figcaption>
 			               	$Title
 			               </figcaption>

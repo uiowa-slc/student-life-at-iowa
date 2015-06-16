@@ -4,3 +4,6 @@ Member:
 BlogEntry:
   extensions:
     - BlogEntryMemberExtension
+Blog_Controller:
+  extensions:
+    - Blog_ControllerExtension

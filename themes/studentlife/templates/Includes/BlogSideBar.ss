@@ -4,13 +4,13 @@
 		<h3 class="sidebar-title">Student News</h3>
 		<% with $Page(news) %>
 			<ul class="unstyled">
-			<% loop $Entries(10) %>
+			<% loop $BlogPosts.Limit(10) %>
 				<li class="clearfix sidebar-blog-item $FirstLast">
 					<a href="$Link" class="clearfix">
 						<% if $ListingPhoto %>
-							<img class="unveil" src="{$ThemeDir}/images/loader.gif" data-src="$ListingPhoto.CroppedImage(130,105).URL" class="sidebar-blog-img" alt="$Title">
-						<% else_if $Photo %>
-							<img class="unveil" src="{$ThemeDir}/images/loader.gif" data-src="$Photo.CroppedImage(130,105).URL" class="sidebar-blog-img" alt="$Title">
+							<img src="{$ThemeDir}/images/placeholder-small.jpg" data-original="$ListingPhoto.CroppedImage(130,105).URL" class="unveil sidebar-blog-img" alt="$Title">
+						<% else_if $FeaturedImage %>
+							<img src="{$ThemeDir}/images/placeholder-small.jpg" data-original="$FeaturedImage.CroppedImage(130,105).URL" class="unveil sidebar-blog-img" alt="$Title">
 						<% end_if %>
 						<div class="sidebar-blog-content">
 							<h4 class="sidebar-blog-title">$Title</h4>

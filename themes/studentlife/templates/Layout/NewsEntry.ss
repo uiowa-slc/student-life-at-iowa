@@ -9,10 +9,10 @@
 					<header>
 						<h1 class="post-title" itemprop="name headline">$Title</h1>
 						<div class="byline-top">
-							<% include Byline %> on <time datetime="$Date.format(c)" itemprop="datePublished">$Date.format("F j, Y")</time>
+							<% include Byline %> 
 						</div>
 					</header>
-					<p><img src="$Photo.SetWidth(800).URL" alt="Image representing the post $Title"></p>
+					<p><img class="unveil" src="<% include PlaceholderLargeSrc %>" data-original="$FeaturedImage.SetWidth(800).URL" alt="Image representing the post $Title"></p>
 					<ul class="blog-social">
 						<li><a href="javascript:window.open('http://www.facebook.com/sharer/sharer.php?u=$AbsoluteLink', '_blank', 'width=400,height=500');void(0);"  title="Share on Facebook"><span class="social-icon icon-facebook"></span> Facebook</a>
 						</li>
@@ -23,35 +23,42 @@
 						$Content
 					</div>
 					<footer>
-						<% if TagsCollection %>
+						<% if Tags %>
 							<div class="tags">
 								<p>
 								<span class="glyphicon glyphicon-tag"></span> <% _t('BlogEntry_ss.TAGS', 'Tags:') %>
-								<% loop TagsCollection %>
-									<a href="$Link" title="<% _t('BlogEntry_ss.VIEWALLPOSTTAGGED', 'View all posts tagged') %> '$Tag'" rel="tag">$Tag</a>
+								<% loop Tags %>
+									<a href="$Link" title="<% _t('BlogEntry_ss.VIEWALLPOSTTAGGED', 'View all posts tagged') %> '$Title'" rel="tag">$Title</a>
 								<% end_loop %>
 								</p>
 							</div>
 						<% end_if %>
-						<% if $Member %>
-							<% with $Member %>
+						<% if $Credits %>
+						
 								<div class="byline clearfix">
-									<% if $Photo %>
-									<a href="$Link" class="byline-img">
-										<img src="$Photo.CroppedImage(130,130).URL" alt="Read all articles by $FirstName $Surname">
-									</a>
-									<% end_if %>
+
+									<% loop $Credits.Limit(1) %>
+										<% if $BlogProfileImage %>
+										<a href="$Link" class="byline-img">
+											<img src="$BlogProfileImage.CroppedImage(130,130).URL" alt="Read all articles by $FirstName $Surname">
+										</a>
+										<% end_if %>
+									<% end_loop %>
 									<div class="byline-bio">
-										<h4><em>By</em> <a href="$Link" class="byline-author">$FirstName $Surname</a></h4>
-										<% if $Bio %>$Bio<% end_if %>
-										<p class="byline-buttons"><a href="$Link" class="btn btn-default btn-sm">Archives</a></p>
+										<h4><% include Byline %></h4>
+										<% if $BlogProfileSummary %>$BlogProfileSummary<% end_if %>
+										<% loop $Credits %>
+											<% if $URL %>
+												<p class="byline-buttons"><a href="$URL" class="btn btn-default btn-sm">See all posts by $FirstName $Surname</a></p>
+											<% end_if %>
+										<% end_loop %>
 									</div>
 								</div>
-							<% end_with %>
+
 						<% end_if %>
 					</footer>
 				</article>
-				<% if $RelatedNewsEntries %>
+				<%-- if $RelatedNewsEntries %>
 					<aside class="blog-related">
 						<h3>Related Articles</h3>
 						<ul class="unstyled justify justify-3">
@@ -73,7 +80,7 @@
 							<li class="justify-item filler"></li>
 						</ul>
 					</aside>
-				<% end_if %>
+				<% end_if --%>
 			</section>
 		</div>
   		<div class="col-md-4">

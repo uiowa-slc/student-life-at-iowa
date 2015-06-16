@@ -3,7 +3,6 @@ class LatestNewsSection extends Section {
 
 	private static $db = array(
 
-
 	);
 
 	private static $has_one = array(
@@ -16,12 +15,10 @@ class LatestNewsSection extends Section {
 
 	);
 
-
-	public function getCMSFields(){
+	public function getCMSFields() {
 		$f = parent::getCMSFields();
 		return $f;
 	}
-
 
 }
 class LatestNewsSection_Controller extends Section_Controller {
@@ -41,15 +38,12 @@ class LatestNewsSection_Controller extends Section_Controller {
 	 *
 	 * @var array
 	 */
-	private static $allowed_actions = array (
+	private static $allowed_actions = array(
 	);
 
 	public function init() {
 		parent::init();
 
 	}
-
-
-
 
 }

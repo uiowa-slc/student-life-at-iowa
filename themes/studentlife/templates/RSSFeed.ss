@@ -4,12 +4,12 @@
 		<title>$Title</title>
 		<link>$Link</link>
 		<atom:link href="$Link" rel="self" type="application/rss+xml" />
-		<description>$Description.XML</description>
+		<description>$SiteConfig.Tagline.XML</description>
 		<% loop $Entries %>
 		<item>
 			<title>$Title.XML</title>
 			<link>$AbsoluteLink</link>
-			<% if $ListingPhoto %><media:thumbnail url="$ListingPhoto.CroppedImage(360, 200).AbsoluteURL" height="$Photo.CroppedImage(360, 200).Height" width="360"></media:thumbnail><% else_if $Photo %><media:thumbnail url="$Photo.CroppedImage(360, 200).AbsoluteURL" height="$Photo.CroppedImage(360, 200).Height" width="360"></media:thumbnail><% end_if %>
+			<% if $FeaturedImage %><media:thumbnail url="$FeaturedImage.CroppedImage(360, 200).AbsoluteURL" height="$FeaturedImage.CroppedImage(360, 200).Height" width="360"></media:thumbnail><% end_if %>
 			<% if $Description %><description>$Description.AbsoluteLinks.XML</description><% end_if %>
 			<% if $Date %><pubDate>$Date.Rfc822</pubDate>
 			<% else %><pubDate>$Created.Rfc822</pubDate><% end_if %>

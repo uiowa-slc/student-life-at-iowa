@@ -19,7 +19,7 @@ $(document).ready(function() {
 
 	/* Youtube Video Feed
 	================================================== */
-	function show_my_videos(data){
+	/*function show_my_videos(data){
 		html = ['<div class="container"><div class="row">'];
 		$(data.feed.entry).each(function(entry){
 			url = this.link[0].href;
@@ -41,7 +41,7 @@ $(document).ready(function() {
 			show_my_videos(data);
 
 	  }
-	});
+	});*/
 
 	/* FancyBox
 	================================================== */
@@ -103,8 +103,11 @@ $(document).ready(function() {
 	});
 
 	/* Unveil image lazy loading */
-	$(".unveil").unveil();
-
+	//$(".unveil").unveil();
+	/* var bLazy = new Blazy({ 
+        selector: '.unveil' // all images
+    });*/
+	$(".unveil").lazyload();
 	/* FitVids */
 	$(".blog-content").fitVids();
 
