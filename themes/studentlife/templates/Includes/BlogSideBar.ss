@@ -47,17 +47,25 @@
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 	</div> -->
 
-	<!-- <div>
-		<h3 class="">Latest Events</h3>
-		<% loop RSSDisplay(3,"http://afterclass.uiowa.edu/events/feed/rss/") %>
-			<li class="justify-item">
-			<img src="$Smallimage" alt="$Title">
-				<p class="event-date">$Dates</p>
-				<h2 class="event-title"><a href="$Link">$Title</a></h2>
-				<div class="event-desc">
-					$Description.Summary(30)
-				</div>
-			</li>
+	<%--<div>
+		<h3>Latest Events</h3>
+		<% with $LocalistCalendar %>
+			<% loop $EventList.Limit(5) %>
+				<li class="justify-item">
+				<img src="$Image.URL" alt="$Title">
+					<p class="event-date">
+						<% with $Dates.First %>
+							<time itemprop="startDate" datetime="$Format(c)">
+								$Format(l), $Format(F) $Format(j) at $Format("g:i A") 
+							</time>
+						<% end_with %>
+					</p>
+					<h2 class="event-title"><a href="$AfterClassLink">$Title</a></h2>
+					<div class="event-desc">
+						$Content.Summary(30)
+					</div>
+				</li>&nbsp;
 			<% end_loop %>
-	</div> -->
+		<% end_with %>
+	</div> --%>
 </div>

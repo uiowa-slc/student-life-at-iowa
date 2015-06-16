@@ -24,7 +24,11 @@
 						<div class="memberpage-content">
 							<h3><a href="$Link">$Title</a></h3>
 							<p class="date"><em>$Date.Long</em></p>
-							<p>$Content.LimitCharacters(160)</p>
+							<% if $Summary %>
+								<div class="snippit">$Summary</div>
+							<% else %>
+								<p class="snippit">$Excerpt</p>
+							<% end_if %>
 						</div>
 					</article>
 					<% if not Last %><hr><% end_if %>

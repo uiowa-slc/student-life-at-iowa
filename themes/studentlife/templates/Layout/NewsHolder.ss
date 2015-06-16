@@ -53,7 +53,11 @@
 					</div>
 					<div class="col-md-4">
 						<h1><a href="$Link">$Title</a></h1>
-						<p>$Content.Summary(30)</p>
+							<% if $Summary %>
+							<div class="snippit">$Summary</div>
+							<% else %>
+							<p class="snippit">$Excerpt</p>
+							<% end_if %>
 						<p><a href="$Link" class="btn btn-default">Continue Reading</a></p>
 					</div>
 				<% end_if %>
@@ -78,7 +82,11 @@
 						<% end_if %>
 						<div class="item-img-title">
 							<h3 class="news-clip-heading">$Title</h3>
-							<p class="snippit">$Content.LimitCharacters(160)</p>
+							<% if $Summary %>
+							<div class="snippit">$Summary.Summary(25)</div>
+							<% else %>
+							<p class="snippit">$Excerpt(25)</p>
+							<% end_if %>
 						</div>
 					</a>
 				</article>
