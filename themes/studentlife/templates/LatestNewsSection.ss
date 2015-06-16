@@ -9,7 +9,7 @@
 						$Content.Summary(30)
 						<!-- <p class="news-date">$Date.Format("M. n")</p> -->
 					</div>
-				</li>
+				</li>&nbsp;
 			<% end_loop %>
 			<li class="justify-item filler"></li>
 		</ul>

@@ -6399,11 +6399,7 @@ $(document).ready(function() {
 	  ]
 	});
 
-	/* Unveil image lazy loading */
-	//$(".unveil").unveil();
-	/* var bLazy = new Blazy({ 
-        selector: '.unveil' // all images
-    });*/
+	/* image lazy loading */
 	$(".unveil").lazyload();
 	/* FitVids */
 	$(".blog-content").fitVids();

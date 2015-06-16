@@ -21,6 +21,10 @@
 					</ul>
 					<div class="blog-entry">
 						$Content
+						<% if $ExternalURL %>
+						<p>$Summary</p>
+						<p><a href="$ExternalURL" target="_blank" class="btn">Continue Reading...</a></p>
+						<% end_if %>
 					</div>
 					<footer>
 						<% if Tags %>

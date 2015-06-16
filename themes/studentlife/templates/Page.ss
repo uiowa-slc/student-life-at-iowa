@@ -8,7 +8,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>$Title | Student Life at Iowa | The University of Iowa</title>
 <% base_tag %>
-<% include Ascii %>
 <!-- Typekit -->
 <% include TypeKit %>
 

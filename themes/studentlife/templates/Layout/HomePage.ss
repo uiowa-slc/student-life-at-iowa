@@ -28,7 +28,7 @@
 								<p class="event-desc">
 									$SummaryContent.BigSummary(25)
 								</p>
-							</li>
+							</li>&nbsp;
 						<% end_loop %>
 					<% end_with %>
 				</ul>
@@ -52,7 +52,7 @@
 								</em></p>
 								<p>$Content.Summary(25)</p>
 							</div>
-						</li>
+						</li>&nbsp;
 					<% end_loop %>
 					<% end_with %>
 				</ul>

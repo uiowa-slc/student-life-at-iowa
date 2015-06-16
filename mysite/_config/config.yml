@@ -7,3 +7,6 @@ BlogEntry:
 Blog_Controller:
   extensions:
     - Blog_ControllerExtension
+Page_Controller:
+  extensions:
+    - SS_MinifiedResponseExtension

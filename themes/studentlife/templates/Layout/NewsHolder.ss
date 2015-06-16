@@ -19,7 +19,11 @@
 						<% end_if %>
 						<div class="item-img-title">
 							<h3 class="news-clip-heading">$Title</h3>
-							<p class="snippit">$Content.LimitCharacters(160)</p>
+							<% if $Summary %>
+								<p>$Summary</p>
+							<% else %>
+								<p>$Excerpt</p>
+							<% end_if %>
 						</div>
 					</a>
 				</article>
@@ -84,7 +88,11 @@
 		<% include NewsPagination %>
 	</div>
 </section>
-<section class="video-list"></section>
+<!--<section class="video-list">
+	
+	<iframe src="http://www.youtube.com/embed/?listType=user_uploads&list=imubuddy" width="480" height="400" frameBorder="0"></iframe>
+
+</section>-->
 <section>
 	<div class="container">
 		<h2 class="cat-heading-title">Photo Galleries</h2>

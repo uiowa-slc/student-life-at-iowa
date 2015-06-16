@@ -12,9 +12,15 @@
 						<% else_if $FeaturedImage %>
 							<img src="{$ThemeDir}/images/placeholder-small.jpg" data-original="$FeaturedImage.CroppedImage(130,105).URL" class="unveil sidebar-blog-img" alt="$Title">
 						<% end_if %>
+					
 						<div class="sidebar-blog-content">
 							<h4 class="sidebar-blog-title">$Title</h4>
-							<p class="sidebar-blog-snippit">$Content.LimitCharacters(90)</p>
+							<% if $Summary %>
+							<div class="sidebar-blog-snippit">$Summary.Summary(15)</div>
+							<% else %>
+							<p class="sidebar-blog-snippit">$Excerpt(15)</p>
+							<% end_if %>
+							
 						</div>
 					</a>
 				</li>

@@ -30,6 +30,7 @@ class NewsHolder extends Blog {
 	private static $singular_name = 'News Holder';
 
 	private static $plural_name = 'News Holders';
+	private static $icon = 'themes/studentlife/images/blogholder-file.png';
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
