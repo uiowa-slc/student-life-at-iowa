@@ -6400,7 +6400,7 @@ $(document).ready(function() {
 	});
 
 	/* image lazy loading */
-	$(".unveil").lazyload();
+	$(".unveil").unveil();
 	/* FitVids */
 	$(".blog-content").fitVids();
 
