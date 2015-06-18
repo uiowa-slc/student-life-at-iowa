@@ -2,7 +2,7 @@
 
 <section class="homeSlide feature-$ID">
 
-	<div id="$Title" class="fixed" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -150px;" data-bottom-top="background-position: 50% 50px;" style="background-image: url("$BackgroundImage.URL");">
+	<div id="$Title" class="fixed unveil" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -150px;" data-bottom-top="background-position: 50% 50px;" style="background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);" data-original="$BackgroundImage.URL">
 
 		<div class="feature-section-inner" data-bottom-top="background-color:rgba(0,0,0,.2);" data-top-bottom="background-color:rgba(0,0,0,.7);">
 
