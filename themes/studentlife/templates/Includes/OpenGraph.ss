@@ -1,4 +1,8 @@
-<meta property="og:title" content="$Title" />
+<% if $URLSegment == "home" %>
+<meta property="og:title" content="Student Life at Iowa" />
+<% else %>
+<meta property="og:title" content="$Title - Student Life at Iowa" />
+<% end_if %>
 <meta property="og:type" content="article" />
 <meta property="og:url" content="$AbsoluteLink" />
 <% if $ListingPhoto %>
