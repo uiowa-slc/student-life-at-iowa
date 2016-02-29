@@ -18,7 +18,7 @@
 					<article class="clearfix">
 						<% if $FeaturedImage %>
 						<a href="$Link" class="memberpage-img">
-							<img data-original="$FeaturedImage.URL" src="{$ThemeDir}/images/placeholder-medium.jpg" alt="$Title" class="unveil">
+							<img data-src="$FeaturedImage.URL" src="{$ThemeDir}/images/placeholder-medium.jpg" alt="$Title" class="lazyload">
 						</a>
 						<% end_if %>
 						<div class="memberpage-content">

@@ -5,7 +5,7 @@
 			<div class="col-md-6">
 				<div class="row">
 					<div class="col-sm-12">
-						<h1 class="text-center">Latest Events</h1>
+						<h2 class="text-center"><a href="http://afterclass.uiowa.edu/">Latest Events &rarr;</a></h2>
 					</div>
 				</div>
 				<ul class="unstyled justify justify-2">
@@ -37,7 +37,7 @@
 			<div class="col-md-6">
 				<div class="row">
 					<div class="col-sm-12">
-						<h1 class="text-center">Latest News</h1>
+						<h2 class="text-center"><a href="news/">Latest News &rarr;</a></h2>
 					</div>
 				</div>
 				<ul class="unstyled justify justify-2">

@@ -101,9 +101,6 @@ $(document).ready(function() {
 		 }
 	  ]
 	});
-
-	/* image lazy loading */
-	$(".unveil").unveil();
 	/* FitVids */
 	$(".blog-content").fitVids();
 

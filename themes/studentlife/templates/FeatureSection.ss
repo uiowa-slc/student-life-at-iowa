@@ -14,7 +14,7 @@
 				<div class="callout">
 					<div class="callout-margin">
 						<a href="$Link">
-							<img class="unveil" src="{$ThemeDir}/images/placeholder-home.jpg" data-original="{$Image.CroppedImage(344, 600).URL}" alt="$Title" />
+							<img class="lazyload" src="{$ThemeDir}/images/placeholder-home.jpg" data-src="{$Image.CroppedImage(344, 600).URL}" alt="$Title" />
 							<button>View</button>
 							<div class="callout-content">
 								<h3>$Title</h3>

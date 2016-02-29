@@ -12,7 +12,7 @@
 							<% include Byline %> 
 						</div>
 					</header>
-					<p><img class="unveil" src="<% include PlaceholderLargeSrc %>" data-original="$FeaturedImage.SetWidth(800).URL" alt="Image representing the post $Title"></p>
+					<p><img class="lazyload" src="{$ThemeDir}/images/placeholder-large.jpg" data-src="$FeaturedImage.SetWidth(800).URL" alt="Image representing the post $Title"></p>
 					<ul class="blog-social">
 						<li><a href="javascript:window.open('http://www.facebook.com/sharer/sharer.php?u=$AbsoluteLink', '_blank', 'width=400,height=500');void(0);"  title="Share on Facebook"><span class="social-icon icon-facebook"></span> Facebook</a>
 						</li>
