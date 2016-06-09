@@ -19,13 +19,9 @@
           
           
           <div class="col m8 offset-m2">
-            <div class="body-text center">
-              <div id="thanks" style="display: none;">
-                <p>Thank you for submitting your photo.</p>
-              </div>
               <a href="http://president.uiowa.edu" target="_blank" class="main-logo">
                 <img src="https://studentlife.uiowa.edu/senior-photos-static/images/logo-icons.png" class="responsive-img" />
-              </a>
+            <div class="body-text center" id="body-text">
               <h1>Congrats!</h1>
               <p>Congratulations on your Old Gold Scholarship! This year, the University of Iowa will be featuring a photo display of our entering first-year scholarship recipients from Iowa at the Iowa State Fair in Des Moines, August 11-21, 2016.</p>
               <h2>Submit Your Senior Photo</h2>
@@ -33,38 +29,41 @@
               <p><strong>Deadline to submit: July 8, 2016</strong></p>
 
             </div>
+              <div id="thanks" style="display: none;" class="center">
+                <p>Thank you for submitting your photo.</p>
+              </div>
             <form id="myForm" class="">
               <div class="row">
                 <div class="input-field col s6">
-                  <input id="first_name" name="first_name" type="text" class="validate">
+                  <input id="first_name" name="first_name" type="text" class="validate" required>
                   <label for="first_name" class="active">First Name</label>
                 </div>
                 <div class="input-field col s6">
-                  <input id="last_name" name="last_name" type="text" class="validate">
+                  <input id="last_name" name="last_name" type="text" class="validate" required>
                   <label for="last_name" class="active">Last Name</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="email" name="email" type="text" class="validate">
+                  <input id="email" name="email" type="email" class="validate" required>
                   <label for="email" class="active">Email</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="hometown" name="hometown" type="text" class="validate">
+                  <input id="hometown" name="hometown" type="text" class="validate" required>
                   <label for="hometown" class="active">Hometown</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
                   <input id="parent_guardian" name="parent_guardian" type="text" class="validate">
-                  <label for="parent_guardian" class="active">Parent/guardian name to be included in display (not required)</label>
+                  <label for="parent_guardian" class="active">Parent/guardian(s) name to be included in display (not required)</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="last_name" name="last_name" type="text" class="validate">
+                  <input id="major" name="major" type="text" class="validate" required>
                   <label for="major" class="active">Anticipated Major</label>
                 </div>
               </div>
@@ -73,7 +72,7 @@
                   <div class="file-field input-field">
                     <div class="btn">
                       <span>Upload Your Photo</span>
-                      <input type="file" name="myFile">
+                      <input type="file" name="myFile" required>
                     </div>
                     <div class="file-path-wrapper">
                       <input class="file-path validate" type="text">
@@ -82,12 +81,14 @@
                 </div>
               </div>
               <div class="center">
-              <input type="submit" class="btn btn-large green" value="Submit Your Photo"
+              <input type="submit" class="btn btn-large green" value="Submit Your Photo">
+              </div>
+<!--               <input type="submit" class="btn btn-large green" value="Submit Your Photo"
               onclick="this.value='Uploading..';
               google.script.run.withSuccessHandler(fileUploaded)
               .uploadFiles(this.parentNode);
-              return false;">
-              </div>
+              return false;"> -->
+     
               <!-- <button class="btn waves-effect waves-light" type="submit" name="action" onclick="this.value='Uploading..';
               google.script.run.withSuccessHandler(fileUploaded)
               .uploadFiles(this.parentNode);
@@ -104,11 +105,22 @@
     
     <script>
     function fileUploaded(status) {
-    document.getElementById('myForm').style.display = 'none';
+      document.getElementById('myForm').style.display = 'none';
+    document.getElementById('body-text').style.display = 'none';
     document.getElementById('thanks').style.display = 'block';
     }
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>
+    <script>
+      $('#myForm').validate({
+        submitHandler: function(form) {
+           google.script.run.withSuccessHandler(fileUploaded).uploadFiles(form);
+        }
+      });
+    </script>
+
+    
   </body>
 </html>
