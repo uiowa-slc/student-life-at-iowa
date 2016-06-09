@@ -32,7 +32,7 @@
 /* 1. Colors
    ========================================================================== */
 
-$primary-color: #2f1617 !default;
+$primary-color: #222 !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
@@ -252,7 +252,7 @@ $off-black: rgba(0, 0, 0, 0.87) !default;
 
 // Header Styles
 $h1-fontsize: 3.8rem !default;
-$h2-fontsize: 3.56rem !default;
+$h2-fontsize: 3rem !default;
 $h3-fontsize: 2.92rem !default;
 $h4-fontsize: 2.28rem !default;
 $h5-fontsize: 1.64rem !default;

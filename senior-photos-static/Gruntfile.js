@@ -35,15 +35,21 @@ module.exports = function(grunt) {
 
     sass: {
       dist: {
-        options: {
-          style: 'compressed'
-        },
         files: {
           '<%= project.css %>/master.css': '<%= project.scss %>/master.scss',
+        },
+        options: {
+          outputStyle: 'compressed'
         }
       }
     },
-
+    processhtml: {
+        build: {
+            files: {
+                'form.dist.html' : ['form.html']
+            }
+        }
+    },
     imagemin: {
       dynamic: {
         files: [{
@@ -74,7 +80,8 @@ module.exports = function(grunt) {
         }
       },
       markup: {
-          files: ['<%= project.src %>/templates/**/*.ss'],
+          files: ['form.html'],
+          tasks: ['processhtml'],
           options: {
               livereload: true,
           }
@@ -89,8 +96,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-processhtml');
 
   // Default task(s).
-  grunt.registerTask('default', ['concat', 'uglify', 'sass', 'watch']);
+  grunt.registerTask('default', ['concat', 'uglify', 'sass', 'processhtml', 'watch']);
 
 };
