@@ -25,12 +25,19 @@
               <h1>Congrats!</h1>
               <p>Congratulations on your Old Gold Scholarship! This year, the University of Iowa will be featuring a photo display of our entering first-year scholarship recipients from Iowa at the Iowa State Fair in Des Moines, August 11-21, 2016.</p>
               <h2>Submit Your Senior Photo</h2>
-              <p>If you would like your photo included in this display, please fill out the form below and upload your headshot photo. </p>
+              <p>Fill out the form below and upload your headshot photo to be included in the display.</p>
+              <h3>Photo Requirements</h3>
+              <ul>
+                <li>Choose a headshot photo (above the shoulders) if possible. Avoid full body photos.</li>
+                <li>Upload as high-resolution of a photo as you can. Small or fuzzy pictures will not be included in the display.</li>
+              </ul>
+ 
+
               <p><strong>Deadline to submit: July 8, 2016</strong></p>
 
             </div>
               <div id="thanks" style="display: none;" class="center">
-                <p>Thank you for submitting your photo.</p>
+                <p>Thank you for submitting your photo!</p>
               </div>
             <form id="myForm" class="">
               <div class="row">
@@ -57,14 +64,8 @@
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="parent_guardian" name="parent_guardian" type="text" class="validate">
-                  <label for="parent_guardian" class="active">Parent/guardian(s) name to be included in display (not required)</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="major" name="major" type="text" class="validate" required>
-                  <label for="major" class="active">Anticipated Major</label>
+                  <input id="highschool" name="highschool" type="text" class="validate">
+                  <label for="highschool" class="active">High School</label>
                 </div>
               </div>
               <div class="row">
@@ -98,7 +99,8 @@
     
     <script>
     function fileUploaded(status) {
-      document.getElementById('myForm').style.display = 'none';
+      scroll(0,0);
+    document.getElementById('myForm').style.display = 'none';
     document.getElementById('body-text').style.display = 'none';
     document.getElementById('thanks').style.display = 'block';
     }
