@@ -85,47 +85,47 @@ ErrorDocument 500 /assets/error-500.html
   RewriteCond %{REQUEST_METHOD} ^GET|HEAD$
   RewriteCond %{QUERY_STRING} ^$
   RewriteCond %{REQUEST_URI} /(.*[^/])/?$
-  RewriteCond %{DOCUMENT_ROOT}/cache/%1.html -f
+  RewriteCond %{DOCUMENT_ROOT}/cache/%1.php -f
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule .* /cache/%1.html [L]
+  RewriteRule .* /cache/%1.php [L]
 
   RewriteCond %{REQUEST_METHOD} ^GET|HEAD$
   RewriteCond %{QUERY_STRING} ^$
   RewriteCond %{REQUEST_URI} /(.*[^/])/?$
-  RewriteCond %{DOCUMENT_ROOT}/cache/%1.stale.html -f
+  RewriteCond %{DOCUMENT_ROOT}/cache/%1.stale.php -f
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule .* /cache/%1.stale.html [L]
+  RewriteRule .* /cache/%1.stale.php [L]
 
 
   #Three Levels Deep
   RewriteCond %{REQUEST_METHOD} ^GET|HEAD$
   RewriteCond %{QUERY_STRING} ^$
   RewriteCond %{REQUEST_URI} /(.*[^/])/(.*[^/])/?$
-  RewriteCond %{DOCUMENT_ROOT}/cache/%1/%2.html -f
+  RewriteCond %{DOCUMENT_ROOT}/cache/%1/%2.php -f
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule .* /cache/%1/%2.html [L]
+  RewriteRule .* /cache/%1/%2.php [L]
 
   RewriteCond %{REQUEST_METHOD} ^GET|HEAD$
   RewriteCond %{QUERY_STRING} ^$
   RewriteCond %{REQUEST_URI} /(.*[^/])/(.*[^/])/?$
-  RewriteCond %{DOCUMENT_ROOT}/cache/%1/%2.stale.html -f
+  RewriteCond %{DOCUMENT_ROOT}/cache/%1/%2.stale.php -f
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule .* /cache/%1/%2.stale.html [L]
+  RewriteRule .* /cache/%1/%2.stale.php [L]
 
   #Four Levels Deep
   RewriteCond %{REQUEST_METHOD} ^GET|HEAD$
   RewriteCond %{QUERY_STRING} ^$
   RewriteCond %{REQUEST_URI} /(.*[^/])/(.*[^/])/(.*[^/])/?$
-  RewriteCond %{DOCUMENT_ROOT}/cache/%1/%2/%3.html -f
+  RewriteCond %{DOCUMENT_ROOT}/cache/%1/%2/%3.php -f
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule .* /cache/%1/%2/%3.html [L]
+  RewriteRule .* /cache/%1/%2/%3.php [L]
 
   RewriteCond %{REQUEST_METHOD} ^GET|HEAD$
   RewriteCond %{QUERY_STRING} ^$
   RewriteCond %{REQUEST_URI} /(.*[^/])/(.*[^/])/(.*[^/])/?$
-  RewriteCond %{DOCUMENT_ROOT}/cache/%1/%2/%3.stale.html -f
+  RewriteCond %{DOCUMENT_ROOT}/cache/%1/%2/%3.stale.php -f
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule .* /cache/%1/%2/%3.stale.html [L]
+  RewriteRule .* /cache/%1/%2/%3.stale.php [L]
 
   ########################################################
   # Cached content - homepage (site in root of a domain) #
@@ -134,16 +134,16 @@ ErrorDocument 500 /assets/error-500.html
   RewriteCond %{REQUEST_METHOD} ^GET|HEAD$
   RewriteCond %{QUERY_STRING} ^$
   RewriteCond %{REQUEST_URI} ^/?$
-  RewriteCond %{DOCUMENT_ROOT}/cache/index.html -f
+  RewriteCond %{DOCUMENT_ROOT}/cache/index.php -f
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule .* /cache/index.html [L]
+  RewriteRule .* /cache/index.php [L]
 
   RewriteCond %{REQUEST_METHOD} ^GET|HEAD$
   RewriteCond %{QUERY_STRING} ^$
   RewriteCond %{REQUEST_URI} ^/?$
-  RewriteCond %{DOCUMENT_ROOT}/cache/index.stale.html -f
+  RewriteCond %{DOCUMENT_ROOT}/cache/index.stale.php -f
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule .* /cache/index.stale.html [L]
+  RewriteRule .* /cache/index.stale.php [L]
 
 
   ######################################################
@@ -156,16 +156,16 @@ ErrorDocument 500 /assets/error-500.html
   RewriteCond %{REQUEST_METHOD} ^GET|HEAD$
   RewriteCond %{QUERY_STRING} ^$
   RewriteCond %{REQUEST_URI} /(.*[^/])/(.*[^/])/?$
-  RewriteCond %{DOCUMENT_ROOT}/%1/cache/%2.html -f
+  RewriteCond %{DOCUMENT_ROOT}/%1/cache/%2.php -f
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule .* cache/%2.html [L]
+  RewriteRule .* cache/%2.php [L]
 
   RewriteCond %{REQUEST_METHOD} ^GET|HEAD$
   RewriteCond %{QUERY_STRING} ^$
   RewriteCond %{REQUEST_URI} /(.*[^/])/(.*[^/])/?$
-  RewriteCond %{DOCUMENT_ROOT}/%1/cache/%2.stale.html -f
+  RewriteCond %{DOCUMENT_ROOT}/%1/cache/%2.stale.php -f
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule .* cache/%2.stale.html [L]
+  RewriteRule .* cache/%2.stale.php [L]
 
 
   #Three Levels Deep 
@@ -173,32 +173,32 @@ ErrorDocument 500 /assets/error-500.html
   RewriteCond %{REQUEST_METHOD} ^GET|HEAD$
   RewriteCond %{QUERY_STRING} ^$
   RewriteCond %{REQUEST_URI} /(.*[^/])/(.*[^/])/(.*[^/])/?$
-  RewriteCond %{DOCUMENT_ROOT}/%1/cache/%2/%3.html -f
+  RewriteCond %{DOCUMENT_ROOT}/%1/cache/%2/%3.php -f
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule .* cache/%2/%3.html [L]
+  RewriteRule .* cache/%2/%3.php [L]
 
   RewriteCond %{REQUEST_METHOD} ^GET|HEAD$
   RewriteCond %{QUERY_STRING} ^$
   RewriteCond %{REQUEST_URI} /(.*[^/])/(.*[^/])/(.*[^/])/?$
-  RewriteCond %{DOCUMENT_ROOT}/%1/cache/%2/%3.stale.html -f
+  RewriteCond %{DOCUMENT_ROOT}/%1/cache/%2/%3.stale.php -f
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule .* cache/%2/%3.stale.html [L]
+  RewriteRule .* cache/%2/%3.stale.php [L]
 
   #Four Levels Deep 
 
   RewriteCond %{REQUEST_METHOD} ^GET|HEAD$
   RewriteCond %{QUERY_STRING} ^$
   RewriteCond %{REQUEST_URI} /(.*[^/])/(.*[^/])/(.*[^/])/(.*[^/])/?$
-  RewriteCond %{DOCUMENT_ROOT}/%1/cache/%2/%3.html -f
+  RewriteCond %{DOCUMENT_ROOT}/%1/cache/%2/%3.php -f
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule .* cache/%2/%3/%4.html [L]
+  RewriteRule .* cache/%2/%3/%4.php [L]
 
   RewriteCond %{REQUEST_METHOD} ^GET|HEAD$
   RewriteCond %{QUERY_STRING} ^$
   RewriteCond %{REQUEST_URI} /(.*[^/])/(.*[^/])/(.*[^/])/(.*[^/])/?$
-  RewriteCond %{DOCUMENT_ROOT}/%1/cache/%2/%3/%4.stale.html -f
+  RewriteCond %{DOCUMENT_ROOT}/%1/cache/%2/%3/%4.stale.php -f
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule .* cache/%2/%3/%4.stale.html [L]
+  RewriteRule .* cache/%2/%3/%4.stale.php [L]
 
   #####################################################
   # Cached content - homepage (site in sub-directory) #
@@ -207,16 +207,16 @@ ErrorDocument 500 /assets/error-500.html
   RewriteCond %{REQUEST_METHOD} ^GET|HEAD$
   RewriteCond %{QUERY_STRING} ^$
   RewriteCond %{REQUEST_URI} ^/(.*[^/])/?$
-  RewriteCond %{DOCUMENT_ROOT}/%1/cache/index.html -f
+  RewriteCond %{DOCUMENT_ROOT}/%1/cache/index.php -f
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule .* cache/index.html [L]
+  RewriteRule .* cache/index.php [L]
 
   RewriteCond %{REQUEST_METHOD} ^GET|HEAD$
   RewriteCond %{QUERY_STRING} ^$
   RewriteCond %{REQUEST_URI} ^/(.*[^/])/?$
-  RewriteCond %{DOCUMENT_ROOT}/%1/cache/index.stale.html -f
+  RewriteCond %{DOCUMENT_ROOT}/%1/cache/index.stale.php -f
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule .* cache/index.stale.html [L]
+  RewriteRule .* cache/index.stale.php [L]
 
   ##################
   # DYNAMIC CONFIG #
@@ -311,7 +311,7 @@ AddDefaultCharset utf-8
 # | ETag removal                                                               |
 # ------------------------------------------------------------------------------
 # Since we're sending far-future expires headers (see below), ETags can
-# be removed: http://developer.yahoo.com/performance/rules.html#etags.
+# be removed: http://developer.yahoo.com/performance/rules.php#etags.
 
 # `FileETag None` is not enough for every server.
 <IfModule mod_headers.c>

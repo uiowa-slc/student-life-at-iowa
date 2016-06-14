@@ -6,4 +6,4 @@ SiteTree:
   extensions:
     - PublishableSiteTree
     - SiteTreePublishingEngine
-    - FilesystemPublisher('cache', 'html')
+    - FilesystemPublisher('cache', 'php')
