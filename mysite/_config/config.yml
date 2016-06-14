@@ -10,3 +10,5 @@ Blog_Controller:
 Page_Controller:
   extensions:
     - SS_MinifiedResponseExtension
+FilesystemPublisher:
+    static_base_url: https://studentlife.uiowa.edu
