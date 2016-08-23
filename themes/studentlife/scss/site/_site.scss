@@ -579,9 +579,9 @@ body {
 /* UPCOMING EVENTS
 ========================================================================== */
 .upcoming-events {
-	padding: 4em 0;
+	padding: 2em 0;
 
-	@media (min-width: $break-small) {
+	@media (min-width: $break-medium) {
 		padding: 6em 0;
 	}
 }
@@ -590,7 +590,11 @@ body {
 	color: #333;
 	text-transform: uppercase;
 
-	@include rem(45);
+	@include rem(33);
+
+	@media (min-width: $break-medium) {
+		@include rem(45);
+	}
 
 	margin-bottom: 22.5px;
 }
