@@ -12,3 +12,15 @@ Page_Controller:
     - SS_MinifiedResponseExtension
 FilesystemPublisher:
     static_base_url: https://studentlife.uiowa.edu
+---
+Only:
+  environment: live
+---
+Director:
+  alternate_protocol: 'https'
+---
+Only:
+  environment: dev
+---
+Director:
+  alternate_protocol: 'http'

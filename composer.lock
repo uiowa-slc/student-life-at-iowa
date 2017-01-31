@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
-            "version": "dev-master",
+            "version": "2.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/colymba/GridFieldBulkEditingTools.git",
-                "reference": "0e6f2e6efbe8d0e9b397d51a5cd402886a0f2e96"
+                "reference": "3aad957a69c73b43d5e6a1cd7e86633b4a2f7e23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/0e6f2e6efbe8d0e9b397d51a5cd402886a0f2e96",
-                "reference": "0e6f2e6efbe8d0e9b397d51a5cd402886a0f2e96",
+                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/3aad957a69c73b43d5e6a1cd7e86633b4a2f7e23",
+                "reference": "3aad957a69c73b43d5e6a1cd7e86633b4a2f7e23",
                 "shasum": ""
             },
             "require": {
@@ -47,20 +47,20 @@
                 "gridfield bulk upload",
                 "silverstripe"
             ],
-            "time": "2016-11-16 08:47:05"
+            "time": "2017-01-25 12:41:08"
         },
         {
             "name": "composer/installers",
-            "version": "v1.2.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "d78064c68299743e0161004f2de3a0204e33b804"
+                "reference": "020d476ae2ea88ef5fc3f8d711c33ed27ad5ea3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/d78064c68299743e0161004f2de3a0204e33b804",
-                "reference": "d78064c68299743e0161004f2de3a0204e33b804",
+                "url": "https://api.github.com/repos/composer/installers/zipball/020d476ae2ea88ef5fc3f8d711c33ed27ad5ea3e",
+                "reference": "020d476ae2ea88ef5fc3f8d711c33ed27ad5ea3e",
                 "shasum": ""
             },
             "require": {
@@ -104,10 +104,13 @@
                 "Dolibarr",
                 "Hurad",
                 "ImageCMS",
+                "Kanboard",
                 "MODX Evo",
                 "Mautic",
+                "Maya",
                 "OXID",
                 "Plentymarkets",
+                "Porto",
                 "RadPHP",
                 "SMF",
                 "Thelia",
@@ -154,7 +157,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2016-08-13 20:53:52"
+            "time": "2017-01-27 13:02:46"
         },
         {
             "name": "md/ac-json-events",
@@ -307,16 +310,16 @@
         },
         {
             "name": "silverstripe/cms",
-            "version": "3.4.3",
+            "version": "3.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-cms.git",
-                "reference": "9db49bfd62bb8d9a4f395b4548f6f8c36875553b"
+                "reference": "9917cee7bd1678118f1f76c7a4139dd473ea0f7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/9db49bfd62bb8d9a4f395b4548f6f8c36875553b",
-                "reference": "9db49bfd62bb8d9a4f395b4548f6f8c36875553b",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/9917cee7bd1678118f1f76c7a4139dd473ea0f7e",
+                "reference": "9917cee7bd1678118f1f76c7a4139dd473ea0f7e",
                 "shasum": ""
             },
             "require": {
@@ -352,20 +355,20 @@
                 "cms",
                 "silverstripe"
             ],
-            "time": "2016-12-19 12:21:38"
+            "time": "2017-01-31 11:39:08"
         },
         {
             "name": "silverstripe/framework",
-            "version": "3.4.3",
+            "version": "3.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-framework.git",
-                "reference": "28d065c587601597473cb1ce247f60a38fe75f72"
+                "reference": "02a87d4ed154db3956cd8e62d5102e28c3eee7b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/28d065c587601597473cb1ce247f60a38fe75f72",
-                "reference": "28d065c587601597473cb1ce247f60a38fe75f72",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/02a87d4ed154db3956cd8e62d5102e28c3eee7b6",
+                "reference": "02a87d4ed154db3956cd8e62d5102e28c3eee7b6",
                 "shasum": ""
             },
             "require": {
@@ -401,7 +404,7 @@
                 "framework",
                 "silverstripe"
             ],
-            "time": "2016-12-21 23:02:45"
+            "time": "2017-01-31 11:39:09"
         },
         {
             "name": "silverstripe/gridfieldajaxrefresh",
@@ -657,30 +660,31 @@
         },
         {
             "name": "unclecheese/betterbuttons",
-            "version": "dev-master",
+            "version": "3.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/unclecheese/silverstripe-gridfield-betterbuttons.git",
-                "reference": "5aab65439630236fd122968a59013fb8d5a6d667"
+                "reference": "ab7f20949df57a6f15ce60a961b19a70fb9ed59b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/unclecheese/silverstripe-gridfield-betterbuttons/zipball/5aab65439630236fd122968a59013fb8d5a6d667",
-                "reference": "5aab65439630236fd122968a59013fb8d5a6d667",
+                "url": "https://api.github.com/repos/unclecheese/silverstripe-gridfield-betterbuttons/zipball/ab7f20949df57a6f15ce60a961b19a70fb9ed59b",
+                "reference": "ab7f20949df57a6f15ce60a961b19a70fb9ed59b",
                 "shasum": ""
             },
             "require": {
-                "silverstripe/framework": "~3.1"
+                "silverstripe/framework": "3.*"
             },
             "type": "silverstripe-module",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GNU"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
                     "name": "Uncle Cheese",
-                    "email": "unclecheese@leftandmain.com"
+                    "email": "unclecheese@leftandmain.com",
+                    "homepage": "http://leftandmain.com"
                 }
             ],
             "description": "Adds new form actions and buttons to GridField detail form for usability enhancements.",
@@ -689,7 +693,7 @@
                 "gridfield",
                 "silverstripe"
             ],
-            "time": "2017-01-12 08:54:06"
+            "time": "2013-11-25 22:11:03"
         },
         {
             "name": "undefinedoffset/sortablegridfield",
