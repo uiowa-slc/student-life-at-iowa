@@ -45,7 +45,7 @@
 					#mc_embed_signup form {padding:0;}
 				</style>
 				<div id="mc_embed_signup">
-					<form action="http://uiowa.us2.list-manage1.com/subscribe/post?u=c61b1cddac92babd42d7d628e&amp;id=5610779be6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+					<form action="https://uiowa.us2.list-manage1.com/subscribe/post?u=c61b1cddac92babd42d7d628e&amp;id=5610779be6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 						<label for="mce-EMAIL" class="visuallyhidden">Subscribe to our mailing list</label>
 						<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
 					    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
