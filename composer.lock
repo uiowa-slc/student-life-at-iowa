@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6f067fba9034f86e3044ea3de1cfd06d",
-    "content-hash": "2916f554d6f0b22db7d2b8a22bfc1792",
+    "hash": "02706825733f6deb3a2fa17d2b59f0e1",
+    "content-hash": "faa0a8d834c2e2542bab87e010f5737c",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
@@ -55,12 +55,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "020d476ae2ea88ef5fc3f8d711c33ed27ad5ea3e"
+                "reference": "fda8fe5c90d7612927f4533dab7d54df6d345028"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/020d476ae2ea88ef5fc3f8d711c33ed27ad5ea3e",
-                "reference": "020d476ae2ea88ef5fc3f8d711c33ed27ad5ea3e",
+                "url": "https://api.github.com/repos/composer/installers/zipball/fda8fe5c90d7612927f4533dab7d54df6d345028",
+                "reference": "fda8fe5c90d7612927f4533dab7d54df6d345028",
                 "shasum": ""
             },
             "require": {
@@ -102,6 +102,7 @@
             "keywords": [
                 "Craft",
                 "Dolibarr",
+                "Eliasis",
                 "Hurad",
                 "ImageCMS",
                 "Kanboard",
@@ -133,9 +134,11 @@
                 "fuelphp",
                 "grav",
                 "installer",
+                "itop",
                 "joomla",
                 "kohana",
                 "laravel",
+                "lavalite",
                 "lithium",
                 "magento",
                 "mako",
@@ -150,6 +153,7 @@
                 "roundcube",
                 "shopware",
                 "silverstripe",
+                "sydes",
                 "symfony",
                 "typo3",
                 "wordpress",
@@ -157,7 +161,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2017-01-27 13:02:46"
+            "time": "2017-03-13 09:27:45"
         },
         {
             "name": "md/ac-json-events",
@@ -310,16 +314,16 @@
         },
         {
             "name": "silverstripe/cms",
-            "version": "3.4.4",
+            "version": "3.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-cms.git",
-                "reference": "9917cee7bd1678118f1f76c7a4139dd473ea0f7e"
+                "reference": "80099f24b76b4ac36d38477f1ad8230208b031cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/9917cee7bd1678118f1f76c7a4139dd473ea0f7e",
-                "reference": "9917cee7bd1678118f1f76c7a4139dd473ea0f7e",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/80099f24b76b4ac36d38477f1ad8230208b031cb",
+                "reference": "80099f24b76b4ac36d38477f1ad8230208b031cb",
                 "shasum": ""
             },
             "require": {
@@ -330,6 +334,11 @@
                 "silverstripe/siteconfig": "~3.4"
             },
             "type": "silverstripe-module",
+            "extra": {
+                "branch-alias": {
+                    "3.x-dev": "3.6.x-dev"
+                }
+            },
             "autoload": {
                 "classmap": [
                     "tests/behat/"
@@ -355,20 +364,20 @@
                 "cms",
                 "silverstripe"
             ],
-            "time": "2017-01-31 11:39:08"
+            "time": "2017-02-20 17:01:15"
         },
         {
             "name": "silverstripe/framework",
-            "version": "3.4.4",
+            "version": "3.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-framework.git",
-                "reference": "02a87d4ed154db3956cd8e62d5102e28c3eee7b6"
+                "reference": "a2580456bda9ff513cf80227039fc79405908f3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/02a87d4ed154db3956cd8e62d5102e28c3eee7b6",
-                "reference": "02a87d4ed154db3956cd8e62d5102e28c3eee7b6",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/a2580456bda9ff513cf80227039fc79405908f3f",
+                "reference": "a2580456bda9ff513cf80227039fc79405908f3f",
                 "shasum": ""
             },
             "require": {
@@ -379,6 +388,11 @@
                 "phpunit/phpunit": "~3.7"
             },
             "type": "silverstripe-module",
+            "extra": {
+                "branch-alias": {
+                    "3.x-dev": "3.5.x-dev"
+                }
+            },
             "autoload": {
                 "classmap": [
                     "tests/behat/features/bootstrap"
@@ -404,7 +418,7 @@
                 "framework",
                 "silverstripe"
             ],
-            "time": "2017-01-31 11:39:09"
+            "time": "2017-02-20 17:01:16"
         },
         {
             "name": "silverstripe/gridfieldajaxrefresh",
