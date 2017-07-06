@@ -23,13 +23,12 @@ FilesystemPublisher:
     static_base_url: https://studentlife.uiowa.edu
 ---
 Only:
-  environment: live
+  environment: 'dev'
+---
+alternate_protocol: 'http'
+---
+Except:
+  environment: 'dev'
 ---
 Director:
   alternate_protocol: 'https'
----
-Only:
-  environment: dev
----
-Director:
-  alternate_protocol: 'http'
