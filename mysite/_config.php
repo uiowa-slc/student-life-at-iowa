@@ -58,3 +58,5 @@ if(Director::isLive()) {
 	Config::inst()->update('FilesystemPublisher', 'static_base_url', 'http://localhost:8888/student-life-at-iowa/');
 	Config::inst()->update('Director', 'alternate_protocol', 'http');
 }
+
+Authenticator::set_default_authenticator('SAMLAuthenticator');

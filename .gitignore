@@ -41,10 +41,11 @@ snowflake/
 snowglobe/
 cache/
 staticpublishqueue/
-
 gridfieldajaxrefresh/
-
 ac-json-events/
+activedirectory/
+multivaluefield/
+queuedjobs/
 
 excludechildren/
 .phpintel
