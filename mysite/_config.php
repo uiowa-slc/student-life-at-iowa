@@ -50,3 +50,11 @@ HtmlEditorConfig::get('cms')->setOption('paste_strip_class_attributes', 'true');
 if (Director::isLive()) {
 	Director::forceSSL(array('/^admin/', '/^Security/'));
 }
+if(Director::isLive()) {
+	Config::inst()->update('FilesystemPublisher', 'static_base_url', 'https://studentlife.uiowa.edu/');
+	Config::inst()->update('Director', 'alternate_protocol', 'https');
+
+}elseif(Director::isDev()){
+	Config::inst()->update('FilesystemPublisher', 'static_base_url', 'http://localhost:8888/student-life-at-iowa/');
+	Config::inst()->update('Director', 'alternate_protocol', 'http');
+}

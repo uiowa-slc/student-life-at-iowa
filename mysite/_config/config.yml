@@ -16,19 +16,5 @@ BlogEntry:
 Blog_Controller:
   extensions:
     - Blog_ControllerExtension
-Page_Controller:
-  extensions:
-    - SS_MinifiedResponseExtension
 FilesystemPublisher:
     static_base_url: https://studentlife.uiowa.edu
----
-Only:
-  environment: 'dev'
----
-alternate_protocol: 'http'
----
-Except:
-  environment: 'dev'
----
-Director:
-  alternate_protocol: 'https'
