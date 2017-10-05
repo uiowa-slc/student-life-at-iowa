@@ -7,14 +7,14 @@
 <meta property="og:url" content="$AbsoluteLink" />
 <% if $ListingPhoto %>
 	<meta property="og:image" content="$ListingPhoto.Fill(1200,630).AbsoluteURL" />
-	<meta property="og:image:secure_url" content="$ListingPhoto.AbsoluteURL" />
+	<meta property="og:image:secure_url" content="$ListingPhoto.Fill(1200,630).AbsoluteURL" />
 <% else_if $FeaturedImage %>
 	<meta property="og:image" content="$FeaturedImage.Fill(1200,630).AbsoluteURL" />
-	<meta property="og:image:secure_url" content="$FeaturedImage.AbsoluteURL" />
+	<meta property="og:image:secure_url" content="$FeaturedImage.Fill(1200,630).AbsoluteURL" />
 	<meta property="og:image:width" content="$FeaturedImage.Width" />
 	<meta property="og:image:height" content="$FeaturedImage.Height" />
 <% else %>
-	<meta property="og:image" content="$FeaturedImage.Fill(1200,630).AbsoluteURL" />
+	<meta property="og:image" content="{$BaseHref}{$ThemeDir}/images/og-poster.jpg" />
 	<meta property="og:image:secure_url" content="{$BaseHref}{$ThemeDir}/images/og-poster.jpg" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="650" />
