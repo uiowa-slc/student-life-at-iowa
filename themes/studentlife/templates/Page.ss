@@ -2,6 +2,7 @@
 <!--[if lt IE 9]>         <html lang="en" class="lt-ie9 no-js"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js demo-1"> <!--<![endif]-->
 <head>
+<% include GoogleTagManagerHead %>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 <meta name="description" content="">
@@ -37,7 +38,7 @@
 </head>
 
 <body class="$URLSegment">
-
+  <% include GoogleTagManagerBody %>
 	<% include DivisionBar %>
     $Layout
 
@@ -46,7 +47,6 @@
    <!-- JS -->
    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
    <script src="{$ThemeDir}/js/build/production.min.js"></script>
-   <% include Analytics %>
 
 </body>
 </html>
