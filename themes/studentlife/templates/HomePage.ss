@@ -2,6 +2,7 @@
 <!--[if lt IE 9]>         <html lang="en" class="lt-ie9 no-js"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js demo-1"> <!--<![endif]-->
 <head>
+<% include GoogleTagManagerHead %>
 <meta charset="utf-8">
 <meta name="description" content="">
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
@@ -24,7 +25,7 @@
 
 </head>
 <body>
-
+<% include GoogleTagManagerBody %>
 <div id="skrollr-body">
 	<% include DivisionBar %>
 	<% include Header %>
@@ -57,6 +58,5 @@
 	<script src="{$ThemeDir}/js/build/production.min.js"></script>
 	<script src="{$ThemeDir}/js/skrollr.js"></script>
 	<script src="{$ThemeDir}/js/home.js"></script>
-	<% include Analytics %>
 </body>
 </html>
