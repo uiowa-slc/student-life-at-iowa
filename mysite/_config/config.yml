@@ -7,14 +7,5 @@ After:
 # YAML configuration for SilverStripe
 # See http://doc.silverstripe.org/framework/en/topics/configuration
 # Caution: Indentation through two spaces, not tabs
-Member:
-  extensions:
-    - MemberExtension
-BlogEntry:
-  extensions:
-    - BlogEntryMemberExtension
-Blog_Controller:
-  extensions:
-    - Blog_ControllerExtension
 FilesystemPublisher:
     static_base_url: https://studentlife.uiowa.edu
