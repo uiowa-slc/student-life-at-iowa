@@ -58,10 +58,16 @@ class NewsHolder_Controller extends Blog_Controller {
 	private static $allowed_actions = array(
 		'profilerss',
 		'rss',
+		'json'
 	);
 	private static $url_handlers = array(
 		'profile/$URLSegment!/rss' => 'profilerss',
 	);
+
+
+	public function json(){
+		
+	}
 
 	public function rss() {
 		global $project_name;

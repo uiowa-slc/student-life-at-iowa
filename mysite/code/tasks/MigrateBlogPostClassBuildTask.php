@@ -1,13 +1,14 @@
 <?php
 
-class MigrateBlogEntryMembersToAuthorsBuildTask extends BuildTask {
+class MigrateBlogPostClassBuildTask extends BuildTask {
 
-	protected $title = 'Migrate the old blog entry member relationship to the new Blog 2.0 Authors';
+	protected $title = 'Migrate "NewsHolder" and NewsEntry" classes to BlogPost';
 
-	protected $enabled = false;
+	protected $enabled = true;
 
 	function run($request) {
 
+		$blogs = NewsHolder::get();
 		$articles = NewsEntry::get();
 
 		foreach ($articles as $article) {
