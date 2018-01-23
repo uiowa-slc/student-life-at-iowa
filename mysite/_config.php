@@ -6,7 +6,7 @@ $project = 'mysite';
 global $database;
 //!!!!!!!Define your database name:
 $database = 'student-life';
- 
+
 // Use _ss_environment.php file for configuration
 require_once("conf/ConfigureFromEnv.php");
 
@@ -23,4 +23,4 @@ if(Director::isLive()) {
 }
 Authenticator::unregister('MemberAuthenticator');
 Authenticator::set_default_authenticator('SAMLAuthenticator');
-SSViewer::set_theme('studentlife2');
+SSViewer::set_theme('division-subtheme');
