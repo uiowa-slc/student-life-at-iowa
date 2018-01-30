@@ -4,7 +4,7 @@ class MigrateBlogPostClassBuildTask extends BuildTask {
 
 	protected $title = 'Migrate "NewsHolder" and NewsEntry" classes to BlogPost';
 
-	protected $enabled = true;
+	protected $enabled = false;
 
 	function run($request) {
 
