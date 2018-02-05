@@ -2,7 +2,6 @@
 class NewsEntry extends BlogPost {
 
 	private static $db = array(
-
 		'IsFeatured' => 'Boolean',
 		'ExternalURL' => 'Varchar(255)',
 	);
@@ -11,7 +10,8 @@ class NewsEntry extends BlogPost {
 		"Photo" => "Image",
 		'ListingPhoto' => 'Image',
 	);
-	private static $belongs_many_many = array(
+	private static $many_many = array(
+		'Departments' => 'DepartmentPage'
 	);
 	private static $has_many = array(
 	);
@@ -37,14 +37,23 @@ class NewsEntry extends BlogPost {
 
 		$f->addFieldToTab('Root.Main', new TextField('ExternalURL', 'External URL for an external post (Tumblr, etc) - no content needed if filled out.'), "Content");
 		//$f->addFieldToTab("Root.Main", new UploadField("Photo", "Photo"), "Content");
-		$f->addFieldToTab("Root.Main", new UploadField("ListingPhoto", "Alternate Photo for Facebook, Twitter, and news listing pages (takes precedence over the Featured Image field)"), "FeaturedImage");
-		$f->addFieldToTab('Root.Main', new CheckboxField('IsFeatured', 'Feature this Article? (Yes)'), "Content");
+
 		$f->removeByName('Content');
 		$f->removeByName('Metadata');
+
 		$biggerContentField = new HTMLEditorField('Content', 'Content');
 		$biggerContentField->setRows(60);
-
 		$f->addFieldToTab('Root.Main', $biggerContentField);
+
+		$tagField = TagField::create(
+			'Departments',
+			'Departments',
+			DepartmentPage::get(),
+			$this->Departments()
+		)->setShouldLazyLoad(true) // tags should be lazy loaded
+		 ->setCanCreate(false); 
+
+		$f->addFieldToTab('Root.Main', $tagField, 'Content');
 		return $f;
 	}
 

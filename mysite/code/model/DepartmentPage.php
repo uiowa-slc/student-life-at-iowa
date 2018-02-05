@@ -11,12 +11,16 @@ class DepartmentPage extends Page {
 		"Photo" => "Image",
 	);
 
+	private static $belongs_many_many = array(
+		'NewsEntries' => 'NewsEntry'
+	);
+
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
 		$fields->addFieldToTab("Root.Main", new TextField("Phone", "Phone (XXX-XXX-XXXX)"));
 		$fields->addFieldToTab("Root.Main", new TextField("DepartmentURL", "Department or Website URL (optional)"));
-		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Photo"));
+		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Photo"), "Content");
 
 		return $fields;
 
