@@ -61,6 +61,7 @@ class Page_Controller extends ContentController {
 	 *
 	 * @var array
 	 */
+
 	public function init() {
 		parent::init();
 

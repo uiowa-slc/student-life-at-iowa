@@ -58,17 +58,51 @@ class NewsHolder_Controller extends Blog_Controller {
 	private static $allowed_actions = array(
 		'profilerss',
 		'rss',
-		'json'
+		'json',
+		'departmentListFeed',
+		'departmentNewsFeed',
+		'departmentNewsPost'
 	);
 	private static $url_handlers = array(
 		'profile/$URLSegment!/rss' => 'profilerss',
+		'departmentListFeed' => 'departmentListFeed',
+		'departmentNewsFeed//$ID' => 'departmentNewsFeed',
+		'departmentNewsPost//$ID' => 'departmentNewsPost'
 	);
 
+	public function departmentListFeed(){
+		$depts = DepartmentPage::get();
+		$deptArray = array();
 
-	public function json(){
-		
+		foreach($depts as $dept){
+			array_push($deptArray,
+				array(
+					$dept->Title => $dept->ID
+
+				)
+			);
+		}
+
+		return json_encode($deptArray);
 	}
+	public function departmentNewsFeed(){
+		$feedArray = array();
+		$deptID = $this->getRequest()->param('ID');
+		$dept = DepartmentPage::get()->byID($deptID);
 
+		if(!$dept) return;
+
+		$posts = $dept->NewsEntries();
+
+		foreach($posts as $post){
+			array_push($feedArray, $post->toFeedArray());
+		}
+		$this->getResponse()->addHeader("Content-Type", "application/json");
+		return json_encode($feedArray);
+	}
+	public function departmentNewsPost(){
+		echo $this->getRequest()->param('ID');
+	}
 	public function rss() {
 		global $project_name;
 		$blogName = $this->Title;
@@ -116,5 +150,7 @@ class NewsHolder_Controller extends Blog_Controller {
 		$entries = $this->BlogEntries();
 		return $entries->setPageLength($pageLength);
 	}
+
+
 
 }
