@@ -35,7 +35,7 @@ class Page extends SiteTree {
 	public function DepartmentsWithPosts(){
 
 		$depts = DepartmentPage::get()->filterByCallback(function($item, $list) {
-		    return ($item->NewsEntries()->Count() > 1);
+		    return ($item->NewsEntries()->Count() > 0);
 		});
 
 		return $depts;
