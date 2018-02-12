@@ -3,140 +3,140 @@ $Header
 
 <main class="main-content__container" id="main-content__container">
 
-
 	$BlockArea(BeforeContent)
 
 	<div class="row">
-
 		<div class="featured-news clearfix">
 			<div class="featured-news__large-column">
-				<div class="news-card news-card--large news-card--border">
-					<div class="news-card__thumb">
-						<img src="http://via.placeholder.com/600x400">
-						<span class="news-card__dept news-card__dept--wthumb">Counseling Service</span>
+				<% loop $PaginatedList.limit(1) %>
+					<div class="news-card news-card--large news-card--border">
+						<div class="news-card__thumb">
+							<a href="$Link"><img src="$FeaturedImage.CroppedFocusedImage(600,400).URL" alt="$Title"></a>
+							<% if $Departments %>
+								<span class="news-card__dept news-card__dept--wthumb">
+									<% loop $Departments %>
+										$Title
+									<% end_loop %>
+								</span>
+							<% end_if %>
+						</div>
+						<div class="news-card__body text-center">
+							<h1 class="news-card__title"><a href="#"><a href="$Link">$Title</a></h1>
+							<% if $Summary %>
+								<div class="news-card__desc">$Summary</div>
+							<% else %>
+								<p class="news-card__desc">$Content.LimitCharacters(110)</p>
+							<% end_if %>
+
+							<% if $Credits %><div class="news-card__author">By <% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %><span class="byline__and"> and </span><% end_if %><span class="byline__author">$FirstName $Surname</span><% end_loop %></div><% end_if %>
+
+						</div>
 					</div>
-					<div class="news-card__body text-center">
-						<h1 class="news-card__title"><a href="#">Sit Venenatis Ultricies Condimentum Bibendum</a></h1>
-						<p class="news-card__desc">Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.</p>
-						<span class="news-card__author">by Brian McIntosh</span>
-					</div>
-				</div>
+				<% end_loop %>
 			</div>
+
 			<div class="featured-news__medium-column">
+				<% loop $PaginatedList.limit(2, 1) %>
 				<div class="news-card">
 					<div class="news-card__thumb">
-						<img src="http://via.placeholder.com/600x400">
-						<span class="news-card__dept news-card__dept--wthumb">Counseling Service</span>
+						<a href="$Link"><img src="$FeaturedImage.CroppedFocusedImage(450,300).URL" alt="$Title"></a>
+						<% if $Departments %>
+							<span class="news-card__dept news-card__dept--wthumb">
+								<% loop $Departments %>
+									$Title
+								<% end_loop %>
+							</span>
+							<% end_if %>
 					</div>
 					<div class="news-card__body">
 						<h2 class="news-card__title news-card__title--small">
-							<a href="#">Parturient Commodo Amet Fringilla Vehicula</a>
+							<a href="$Link">$Title</a>
 						</h2>
-						<span class="news-card__author">by Brian McIntosh</span>
+						<% if $Credits %><div class="news-card__author">By <% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %><span class="byline__and"> and </span><% end_if %><span class="byline__author">$FirstName $Surname</span><% end_loop %></div><% end_if %>
 					</div>
 				</div>
-				<div class="news-card">
-					<div class="news-card__thumb">
-						<img src="http://via.placeholder.com/600x400">
-						<span class="news-card__dept news-card__dept--wthumb">Counseling Service</span>
-					</div>
-					<div class="news-card__body">
-						<h2 class="news-card__title news-card__title--small">
-							<a href="#">Parturient Commodo Amet Fringilla Vehicula</a>
-						</h2>
-						<span class="news-card__author">by Brian McIntosh</span>
-					</div>
+				<% end_loop %>
+			</div>
+			<div class="featured-news__small-column featured-news__small-column--border">
+				<div class="trending">
+					<h3 class="trending__heading">Trending</h3>
+					<ol class="trending__list">
+						<% loop $PaginatedList.limit(4) %>
+						<li class="trending__card">
+							<div class="trending__body">
+								<% if $Departments %>
+									<span class="trending__dept">
+										<% loop $Departments %>
+											$Title
+										<% end_loop %>
+									</span>
+								<% end_if %>
+								<h2 class="trending__title">
+									<a href="$Link">$Title</a>
+								</h2>
+							</div>
+						</li>
+						<% end_loop %>
+					</ol>
 				</div>
 			</div>
-			<div class="featured-news__small-column">
-				<div class="news-card">
-					<div class="news-card__body">
-						<span class="news-card__dept">Counseling Service</span>
-						<h2 class="news-card__title news-card__title--small">
-							<a href="#">Mollis Pellentesque Nullam Ultricies Ipsum Pharetra Sollicitudin</a>
-						</h2>
-						<span class="news-card__author">by Brian McIntosh</span>
-					</div>
-				</div>
-				<div class="news-card">
-					<div class="news-card__body">
-						<span class="news-card__dept">Counseling Service</span>
-						<h2 class="news-card__title news-card__title--small">
-							<a href="#">Sit Venenatis Ultricies Condimentum Bibendum Sit</a>
-						</h2>
-						<span class="news-card__author">by Brian McIntosh</span>
-					</div>
-				</div>
-				<div class="news-card">
-					<div class="news-card__body">
-						<span class="news-card__dept">Counseling Service</span>
-						<h2 class="news-card__title news-card__title--small">
-							<a href="#">Ultricies Sit Ullamcorper Dapibus Elit</a>
-						</h2>
-						<span class="news-card__author">by Brian McIntosh</span>
-					</div>
-				</div>
-				<div class="news-card">
-					<div class="news-card__body">
-						<span class="news-card__dept">Counseling Service</span>
-						<h2 class="news-card__title news-card__title--small">
-							<a href="#">Cursus Vestibulum Consectetur Sit Justo</a>
-						</h2>
-						<span class="news-card__author">by Brian McIntosh</span>
-					</div>
-				</div>
-			</div>
-		</div><!-- end topstories -->
-
-		<!-- In The News -->
-		<div class="iowa-now">
-			<div class="line-header">
-				<h2>Student Life In The News</h2>
-			</div>
-			<ol class="iowa-now__list">
-				<li class="iowa-now__item">
-					<div class="iowa-now__body">
-						<div class="">
-							<h2 class="iowa-now__title"><a href="#">Sit Venenatis Ultricies Condimentum Bibendum</a></h2>
-							<span class="iowa-now__date">January 14, 2018</span>
-						</div>
-					</div>
-				</li>
-				<li class="iowa-now__item">
-					<div class="iowa-now__body">
-						<div class="">
-							<h2 class="iowa-now__title"><a href="#">Sit Venenatis Ultricies Condimentum Bibendum</a></h2>
-							<span class="iowa-now__date">January 14, 2018</span>
-						</div>
-					</div>
-				</li>
-				<li class="iowa-now__item">
-					<div class="iowa-now__body">
-						<div class="">
-							<h2 class="iowa-now__title"><a href="#">Sit Venenatis Ultricies Condimentum Bibendum</a></h2>
-							<span class="iowa-now__date">January 14, 2018</span>
-						</div>
-					</div>
-				</li>
-				<li class="iowa-now__item">
-					<div class="iowa-now__body">
-						<div class="">
-							<h2 class="iowa-now__title"><a href="#">Sit Venenatis Ultricies Condimentum Bibendum</a></h2>
-							<span class="iowa-now__date">January 14, 2018</span>
-						</div>
-					</div>
-				</li>
-				<li class="iowa-now__item">
-					<div class="iowa-now__body">
-						<div class="">
-							<h2 class="iowa-now__title"><a href="#">Sit Venenatis Ultricies Condimentum Bibendum</a></h2>
-							<span class="iowa-now__date">January 14, 2018</span>
-						</div>
-					</div>
-				</li>
-			</ol>
 		</div>
+	</div><!-- end .row -->
 
+	<!-- Begin Iowa Now News Feed -->
+	<div class="news-fullwidth">
+		<div class="row">
+			<div class="iowa-now">
+				<div class="line-header">
+					<h2>Student Life In The News</h2>
+				</div>
+				<ol class="iowa-now__list">
+					<li class="iowa-now__item">
+						<div class="iowa-now__body">
+							<div class="">
+								<h2 class="iowa-now__title"><a href="#">Sit Venenatis Ultricies Condimentum Bibendum</a></h2>
+								<span class="iowa-now__date">January 14, 2018</span>
+							</div>
+						</div>
+					</li>
+					<li class="iowa-now__item">
+						<div class="iowa-now__body">
+							<div class="">
+								<h2 class="iowa-now__title"><a href="#">Porta Egestas Inceptos Justo Tellus</a></h2>
+								<span class="iowa-now__date">January 14, 2018</span>
+							</div>
+						</div>
+					</li>
+					<li class="iowa-now__item">
+						<div class="iowa-now__body">
+							<div class="">
+								<h2 class="iowa-now__title"><a href="#">Tristique Adipiscing Cras Risus Dapibus Cursus Purus Porta</a></h2>
+								<span class="iowa-now__date">January 14, 2018</span>
+							</div>
+						</div>
+					</li>
+					<li class="iowa-now__item">
+						<div class="iowa-now__body">
+							<div class="">
+								<h2 class="iowa-now__title"><a href="#">Sit Venenatis Ultricies Condimentum Bibendum</a></h2>
+								<span class="iowa-now__date">January 14, 2018</span>
+							</div>
+						</div>
+					</li>
+					<li class="iowa-now__item">
+						<div class="iowa-now__body">
+							<div class="">
+								<h2 class="iowa-now__title"><a href="#">Sit Venenatis Ultricies Condimentum Bibendum</a></h2>
+								<span class="iowa-now__date">January 14, 2018</span>
+							</div>
+						</div>
+					</li>
+				</ol>
+			</div>
+		</div>
+	</div><!-- End Iowa Now News -->
+
+	<div class="row">
 		<div class="title-fullwidth">
 			<h2>Latest News</h2>
 		</div>
@@ -147,145 +147,36 @@ $Header
 
 			<div class="main-content__text">
 
-				<!--
-					<% loop $PaginatedList %>
-						<% include BlogCard %>
-					<% end_loop %>
-				-->
-				<article class="bloglistitem clearfix">
-					<a href="#" class="bloglistitem__img">
-						<img class="" src="http://via.placeholder.com/240x160" width="500" height="333" alt="">
-					</a>
-					<div class="bloglistitem__content--wimage">
-						<h3 class="bloglistitem__heading"><a href="/news/meet-the-ucs-2/">Vulputate Vehicula Bibendum Parturient</a></h3>
-						<p class="bloglistitem__desc">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-						<div class="blogmeta__byline">
-							<p><em class="byline__by">By </em>  <a href="mailto:jeremy-kinser@uiowa.edu">Jeremy Kinser</a>,   University Counseling Service  <span class="byline__on">on </span><time datetime="2016-11-21T10:42:56-06:00" itemprop="datePublished">November 21, 2016</time></p>
-						</div>
-					</div>
-				</article>
-
-				<article class="bloglistitem clearfix">
-					<div class="bloglistitem__content">
-						<h3 class="bloglistitem__heading"><a href="/news/meet-the-ucs-2/">Vulputate Vehicula Bibendum Parturient</a></h3>
-						<p class="bloglistitem__desc">Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur.</p>
-						<div class="blogmeta__byline">
-							<p><em class="byline__by">By </em>  <a href="mailto:jeremy-kinser@uiowa.edu">Jeremy Kinser</a>,   University Counseling Service  <span class="byline__on">on </span><time datetime="2016-11-21T10:42:56-06:00" itemprop="datePublished">November 21, 2016</time></p>
-						</div>
-					</div>
-				</article>
-
-				<article class="bloglistitem clearfix">
-					<a href="#" class="bloglistitem__img">
-						<img class="" src="http://via.placeholder.com/240x160" width="500" height="333" alt="">
-					</a>
-					<div class="bloglistitem__content--wimage">
-						<h3 class="bloglistitem__heading"><a href="/news/meet-the-ucs-2/">Vulputate Vehicula Bibendum Parturient</a></h3>
-						<p class="bloglistitem__desc">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-						<div class="blogmeta__byline">
-							<p><em class="byline__by">By </em>  <a href="mailto:jeremy-kinser@uiowa.edu">Jeremy Kinser</a>,   University Counseling Service  <span class="byline__on">on </span><time datetime="2016-11-21T10:42:56-06:00" itemprop="datePublished">November 21, 2016</time></p>
-						</div>
-					</div>
-				</article>
-
-				<article class="bloglistitem clearfix">
-					<div class="bloglistitem__content">
-						<h3 class="bloglistitem__heading"><a href="/news/meet-the-ucs-2/">Vulputate Vehicula Bibendum Parturient</a></h3>
-						<p class="bloglistitem__desc">Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur.</p>
-						<div class="blogmeta__byline">
-							<p><em class="byline__by">By </em>  <a href="mailto:jeremy-kinser@uiowa.edu">Jeremy Kinser</a>,   University Counseling Service  <span class="byline__on">on </span><time datetime="2016-11-21T10:42:56-06:00" itemprop="datePublished">November 21, 2016</time></p>
-						</div>
-					</div>
-				</article>
-
-				<article class="bloglistitem clearfix">
-					<div class="bloglistitem__content">
-						<h3 class="bloglistitem__heading"><a href="/news/meet-the-ucs-2/">Vulputate Vehicula Bibendum Parturient</a></h3>
-						<p class="bloglistitem__desc">Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur.</p>
-						<div class="blogmeta__byline">
-							<p><em class="byline__by">By </em>  <a href="mailto:jeremy-kinser@uiowa.edu">Jeremy Kinser</a>,   University Counseling Service  <span class="byline__on">on </span><time datetime="2016-11-21T10:42:56-06:00" itemprop="datePublished">November 21, 2016</time></p>
-						</div>
-					</div>
-				</article>
-
-				<article class="bloglistitem clearfix">
-					<a href="#" class="bloglistitem__img">
-						<img class="" src="http://via.placeholder.com/240x160" width="500" height="333" alt="">
-					</a>
-					<div class="bloglistitem__content--wimage">
-						<h3 class="bloglistitem__heading"><a href="/news/meet-the-ucs-2/">Vulputate Vehicula Bibendum Parturient</a></h3>
-						<p class="bloglistitem__desc">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-						<div class="blogmeta__byline">
-							<p><em class="byline__by">By </em>  <a href="mailto:jeremy-kinser@uiowa.edu">Jeremy Kinser</a>,   University Counseling Service  <span class="byline__on">on </span><time datetime="2016-11-21T10:42:56-06:00" itemprop="datePublished">November 21, 2016</time></p>
-						</div>
-					</div>
-				</article>
-
-				<article class="bloglistitem clearfix">
-					<a href="#" class="bloglistitem__img">
-						<img class="" src="http://via.placeholder.com/240x160" width="500" height="333" alt="">
-					</a>
-					<div class="bloglistitem__content--wimage">
-						<h3 class="bloglistitem__heading"><a href="/news/meet-the-ucs-2/">Vulputate Vehicula Bibendum Parturient</a></h3>
-						<p class="bloglistitem__desc">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-						<div class="blogmeta__byline">
-							<p><em class="byline__by">By </em>  <a href="mailto:jeremy-kinser@uiowa.edu">Jeremy Kinser</a>,   University Counseling Service  <span class="byline__on">on </span><time datetime="2016-11-21T10:42:56-06:00" itemprop="datePublished">November 21, 2016</time></p>
-						</div>
-					</div>
-				</article>
-
-				<article class="bloglistitem clearfix">
-					<div class="bloglistitem__content">
-						<h3 class="bloglistitem__heading"><a href="/news/meet-the-ucs-2/">Vulputate Vehicula Bibendum Parturient</a></h3>
-						<p class="bloglistitem__desc">Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur.</p>
-						<div class="blogmeta__byline">
-							<p><em class="byline__by">By </em>  <a href="mailto:jeremy-kinser@uiowa.edu">Jeremy Kinser</a>,   University Counseling Service  <span class="byline__on">on </span><time datetime="2016-11-21T10:42:56-06:00" itemprop="datePublished">November 21, 2016</time></p>
-						</div>
-					</div>
-				</article>
-
-				<article class="bloglistitem clearfix">
-					<a href="#" class="bloglistitem__img">
-						<img class="" src="http://via.placeholder.com/240x160" width="500" height="333" alt="">
-					</a>
-					<div class="bloglistitem__content--wimage">
-						<h3 class="bloglistitem__heading"><a href="/news/meet-the-ucs-2/">Vulputate Vehicula Bibendum Parturient</a></h3>
-						<p class="bloglistitem__desc">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-						<div class="blogmeta__byline">
-							<p><em class="byline__by">By </em>  <a href="mailto:jeremy-kinser@uiowa.edu">Jeremy Kinser</a>,   University Counseling Service  <span class="byline__on">on </span><time datetime="2016-11-21T10:42:56-06:00" itemprop="datePublished">November 21, 2016</time></p>
-						</div>
-					</div>
-				</article>
-
-				<article class="bloglistitem clearfix">
-					<a href="#" class="bloglistitem__img">
-						<img class="" src="http://via.placeholder.com/240x160" width="500" height="333" alt="">
-					</a>
-					<div class="bloglistitem__content--wimage">
-						<h3 class="bloglistitem__heading"><a href="/news/meet-the-ucs-2/">Vulputate Vehicula Bibendum Parturient</a></h3>
-						<p class="bloglistitem__desc">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-						<div class="blogmeta__byline">
-							<p><em class="byline__by">By </em>  <a href="mailto:jeremy-kinser@uiowa.edu">Jeremy Kinser</a>,   University Counseling Service  <span class="byline__on">on </span><time datetime="2016-11-21T10:42:56-06:00" itemprop="datePublished">November 21, 2016</time></p>
-						</div>
-					</div>
-				</article>
+				<% loop $PaginatedList.limit(10) %>
+					<% include BlogCard %>
+				<% end_loop %>
 
 				<br /><br />
 
 				$BlockArea(AfterContentConstrained)
 				$Form
 				$CommentsForm
-
-
 			</div>
 		</div>
-
 
 		<aside class="sidebar dp-sticky">
 			<% include SideNav %>
 			<% if $SideBarView %>
+
+				<%-- Begin Listing Departments --%>
+				<div class="WidgetHolder BlogCategoriesWidget first last">
+					<h3>Departments</h3>
+					<ul>
+						<% loop DepartmentsWithPosts %>
+						<li><a href="$Link" title=""><span class="text">$Title</span></a></li>
+						<% end_loop %>
+					</ul>
+				</div>
+				<%-- End Listing Departments --%>
+
 				$SideBarView
 			<% end_if %>
+
 			$BlockArea(Sidebar)
 
 		</aside>
