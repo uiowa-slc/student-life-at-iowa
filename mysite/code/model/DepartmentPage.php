@@ -2,8 +2,12 @@
 class DepartmentPage extends Page {
 
 	private static $db = array(
-		"Phone"          => "Text",
-		"DepartmentURL"  => "Text",
+		"KeyStat1Num" => "Text",
+		"KeyStat1Body" => "HTMLText",
+		"KeyStat2Num" => "Text",
+		"KeyStat2Body" => "HTMLText",
+		"KeyStat3Num" => "Text",
+		"KeyStat3Body" => "HTMLText"
 
 	);
 
@@ -20,9 +24,16 @@ class DepartmentPage extends Page {
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
-		$fields->addFieldToTab("Root.Main", new TextField("Phone", "Phone (XXX-XXX-XXXX)"));
-		$fields->addFieldToTab("Root.Main", new TextField("DepartmentURL", "Department or Website URL (optional)"));
 		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Photo"), "Content");
+
+		$fields->addFieldToTab("Root.Main", new TextField("KeyStat1Num", "Key Stat 1 - Number"));
+		$fields->addFieldToTab("Root.Main", HtmlEditorField::create("KeyStat1Body", "Key Stat 1 - Content")->setRows(4));
+
+		$fields->addFieldToTab("Root.Main", new TextField("KeyStat2Num", "Key Stat 2 - Number"));
+		$fields->addFieldToTab("Root.Main", HtmlEditorField::create("KeyStat2Body", "Key Stat 2 - Content")->setRows(4));
+
+		$fields->addFieldToTab("Root.Main", new TextField("KeyStat3Num", "Key Stat 3 - Number"));
+		$fields->addFieldToTab("Root.Main", HtmlEditorField::create("KeyStat3Body", "Key Stat 3 - Content")->setRows(4));
 
 		return $fields;
 
