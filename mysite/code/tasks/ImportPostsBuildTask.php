@@ -40,15 +40,25 @@ class ImportPostsBuildTask extends BuildTask {
 		foreach($postsArray as $postArray){
 			$entry = new NewsEntry();
 
+			$entry->OriginalDepartmentID = $deptId;
 			$entry->createFromArray($postArray);
 
-			echo '<li>Created entry: <strong>'.$entry->Title.'</strong></li>';
-			$entry->write();
-			$entry->Departments()->add($dept);
-			// 
+			//See if we've already imported this post:
+			$existingPostTest = NewsEntry::get()->filter(array('OriginID' => $entry->OriginID, 'OriginalDepartmentID' => $entry->OriginalDepartmentID))->First();
 
-			$entry->publish('Stage', 'Live');
-			
+
+			if($existingPostTest){
+				echo '<li>We\'ve already imported the post <strong>'.$entry->Title.'</strong>, skipping</li>';
+
+			}else{
+				echo '<li>Created entry: <strong>'.$entry->Title.'</strong></li>';
+				$entry->write();
+				$entry->Departments()->add($dept);
+				// 
+
+				$entry->publish('Stage', 'Live');				
+			}
+
 			//$entry->Authors()->removeAll();
 
 		}

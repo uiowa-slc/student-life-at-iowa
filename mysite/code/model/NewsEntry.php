@@ -4,6 +4,8 @@ class NewsEntry extends BlogPost {
 	private static $db = array(
 		'IsFeatured' => 'Boolean',
 		'ExternalURL' => 'Varchar(255)',
+		'OriginID' => 'Int',
+		'OriginalDepartmentID' => 'Int'
 	);
 
 	private static $has_one = array(
@@ -83,23 +85,30 @@ class NewsEntry extends BlogPost {
 	public function createFromArray($array){
 
 		$entry = $this;
+
+
 		$parent = NewsHolder::get()->filter(array('URLSegment' => 'news'))->First();
 
 		$entry->Title = $array['Title'];
 		$entry->Content = $array['Content'];
 		$entry->ParentID = $parent->ID;
-		//TODO: Authors
+		$entry->OriginID = $array['ID'];
+
+		$authors = implode(', ', $array['Authors']);
+
+		$entry->StoryByEmail = $authors;
+		$entry->StoryBy = $array['StoryBy'];
+		$entry->StoryByTitle = $array['StoryByTitle'];
+		$entry->StoryByDept = $array['StoryByDept'];
 
 		$entry->PublishDate = $array['PublishDate'];
 
-
-		//TODO: Image import
 		echo '<ul>';
 		if($array['FeaturedImageName'] != ''){
 
 			$imageURL = $array['FeaturedImage'];
 			$imageName = $array['FeaturedImageName'];
-			$assetsDir = Director::getAbsFile('assets/Uploads');
+			$assetsDir = Director::getAbsFile('assets/Uploads/imported/');
 
 			$newImagePath = $assetsDir.$imageName;
 			file_put_contents($newImagePath, 
@@ -169,10 +178,7 @@ class NewsEntry extends BlogPost {
 		echo '</ul>';		
 
 
-		$entry->StoryBy = $array['StoryBy'];
-		$entry->StoryByEmail = $array['StoryByEmail'];
-		$entry->StoryByTitle = $array['StoryByTitle'];
-		$entry->StoryByDept = $array['StoryByDept'];
+
 		$entry->PhotosBy = $array['PhotosBy'];
 		$entry->PhotosByEmail = $array['PhotosByEmail'];
 		$entry->ExternalURL = $array['ExternalURL'];
