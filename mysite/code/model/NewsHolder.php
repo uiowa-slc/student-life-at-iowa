@@ -77,8 +77,8 @@ class NewsHolder_Controller extends Blog_Controller {
 		foreach($depts as $dept){
 			array_push($deptArray,
 				array(
-					$dept->Title => $dept->ID
-
+					'ID' => $dept->ID,
+					'Title' => $dept->Title
 				)
 			);
 		}
@@ -86,22 +86,42 @@ class NewsHolder_Controller extends Blog_Controller {
 		return json_encode($deptArray);
 	}
 	public function departmentNewsFeed(){
-		$feedArray = array();
+		$postArray = array();
 		$deptID = $this->getRequest()->param('ID');
 		$dept = DepartmentPage::get()->byID($deptID);
-
+		$postCount = $dept->NewsEntries()->Count();
 		if(!$dept) return;
 
-		$posts = $dept->NewsEntries();
+		$posts = new PaginatedList($dept->NewsEntries(), $this->getRequest());
+		$posts->setPageLength(10);
 
 		foreach($posts as $post){
-			array_push($feedArray, $post->toFeedArray());
+			array_push($postArray, $post->toFeedArray());
 		}
 		$this->getResponse()->addHeader("Content-Type", "application/json");
+
+
+		$feedArray = array(
+			'meta' => array(
+				'postCount' => $postCount
+			),
+			'posts' => $postArray
+		);
+
 		return json_encode($feedArray);
+
 	}
 	public function departmentNewsPost(){
-		echo $this->getRequest()->param('ID');
+		$id = $this->getRequest()->param('ID');
+		$post = NewsEntry::get()->filter(array('URLSegment' => $id))->First();
+
+		if($post){
+			$postArray = $post->toFeedArray();
+
+			$this->getResponse()->addHeader("Content-Type", "application/json");
+			return json_encode($postArray);			
+		}
+
 	}
 	public function rss() {
 		global $project_name;

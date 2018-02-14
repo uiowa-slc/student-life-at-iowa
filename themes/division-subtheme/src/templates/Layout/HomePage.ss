@@ -1,1 +1,5 @@
 $Header("dark-header","overlay")
+<h2>Departments with posts</h2>
+<% loop $DepartmentsWithPosts %>
+	$Title
+<% end_loop %>
