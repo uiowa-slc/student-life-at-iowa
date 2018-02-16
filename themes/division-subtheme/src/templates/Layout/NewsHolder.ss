@@ -161,7 +161,7 @@ $Header
 
 		<aside class="sidebar dp-sticky">
 			<% include SideNav %>
-			<% if $SideBarView %>
+			
 
 				<%-- Begin Listing Departments --%>
 				<div class="WidgetHolder BlogCategoriesWidget first last">
@@ -173,7 +173,7 @@ $Header
 					</ul>
 				</div>
 				<%-- End Listing Departments --%>
-
+			<% if $SideBarView %>
 				$SideBarView
 			<% end_if %>
 

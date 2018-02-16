@@ -59,17 +59,23 @@ class NewsHolder_Controller extends Blog_Controller {
 		'profilerss',
 		'rss',
 		'json',
+		'department',
+		//Feeds:
 		'departmentListFeed',
 		'departmentNewsFeed',
 		'departmentNewsPost'
 	);
 	private static $url_handlers = array(
 		'profile/$URLSegment!/rss' => 'profilerss',
+		'department//$ID' => 'department',
 		'departmentListFeed' => 'departmentListFeed',
 		'departmentNewsFeed//$ID' => 'departmentNewsFeed',
 		'departmentNewsPost//$ID' => 'departmentNewsPost'
 	);
 
+	public function department(){
+		
+	}
 	public function departmentListFeed(){
 		$depts = DepartmentPage::get();
 		$deptArray = array();
