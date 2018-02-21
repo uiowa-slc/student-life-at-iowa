@@ -63,13 +63,17 @@ class NewsHolder_Controller extends Blog_Controller {
 		//Feeds:
 		'departmentListFeed',
 		'departmentNewsFeed',
-		'departmentNewsPost'
+		'departmentNewsPost',
+		'departmentNewsFeedByCat',
+		'departmentNewsFeedByTag'
 	);
 	private static $url_handlers = array(
 		'profile/$URLSegment!/rss' => 'profilerss',
 		'department//$ID' => 'department',
 		'departmentListFeed' => 'departmentListFeed',
 		'departmentNewsFeed//$ID' => 'departmentNewsFeed',
+		'departmentNewsFeedByTag//$ID/$TagID' => 'departmentNewsFeedByTag',
+		'departmentNewsFeedByCat//$ID/$CatID' => 'departmentNewsFeedByCat',
 		'departmentNewsPost//$ID' => 'departmentNewsPost'
 	);
 
@@ -88,9 +92,10 @@ class NewsHolder_Controller extends Blog_Controller {
 				)
 			);
 		}
-
+		$this->getResponse()->addHeader("Content-Type", "application/json");
 		return json_encode($deptArray);
 	}
+
 	public function departmentNewsFeed(){
 		$postArray = array();
 		$deptID = $this->getRequest()->param('ID');
@@ -99,6 +104,60 @@ class NewsHolder_Controller extends Blog_Controller {
 		if(!$dept) return;
 
 		$posts = new PaginatedList($dept->NewsEntries(), $this->getRequest());
+		$posts->setPageLength(10);
+
+		foreach($posts as $post){
+			array_push($postArray, $post->toFeedArray());
+		}
+		$this->getResponse()->addHeader("Content-Type", "application/json");
+
+
+		$feedArray = array(
+			'meta' => array(
+				'postCount' => $postCount
+			),
+			'posts' => $postArray
+		);
+
+		return json_encode($feedArray);
+
+	}
+	public function departmentNewsFeedByCat(){
+		$postArray = array();
+		$deptID = $this->getRequest()->param('ID');
+		$dept = DepartmentPage::get()->byID($deptID);
+		$cat = $this->getRequest()->param('CatID');
+		$postCount = $dept->NewsEntriesByCat($cat)->Count();
+		if(!$dept) return;
+
+		$posts = new PaginatedList($dept->NewsEntriesByCat($cat), $this->getRequest());
+		$posts->setPageLength(10);
+
+		foreach($posts as $post){
+			array_push($postArray, $post->toFeedArray());
+		}
+		$this->getResponse()->addHeader("Content-Type", "application/json");
+
+
+		$feedArray = array(
+			'meta' => array(
+				'postCount' => $postCount
+			),
+			'posts' => $postArray
+		);
+
+		return json_encode($feedArray);
+
+	}
+	public function departmentNewsFeedByTag(){
+		$postArray = array();
+		$deptID = $this->getRequest()->param('ID');
+		$dept = DepartmentPage::get()->byID($deptID);
+		$tag = $this->getRequest()->param('TagID');
+		$postCount = $dept->NewsEntriesByTag($tag)->Count();
+		if(!$dept) return;
+
+		$posts = new PaginatedList($dept->NewsEntriesByTag($tag), $this->getRequest());
 		$posts->setPageLength(10);
 
 		foreach($posts as $post){
