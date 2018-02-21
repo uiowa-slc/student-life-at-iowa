@@ -4,7 +4,7 @@ class MigrateBlogEntryMembersToAuthorsBuildTask extends BuildTask {
 
 	protected $title = 'Migrate the old blog entry member relationship to the new Blog 2.0 Authors';
 
-	protected $enabled = true;
+	protected $enabled = false;
 
 	function run($request) {
 
