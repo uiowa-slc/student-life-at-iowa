@@ -944,12 +944,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "f757b451c8b4237d4f019bf33820e26ba3f1c4c9"
+                "reference": "b2949f37571030d44131bb871f2ed1c6c33a5126"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/f757b451c8b4237d4f019bf33820e26ba3f1c4c9",
-                "reference": "f757b451c8b4237d4f019bf33820e26ba3f1c4c9",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/b2949f37571030d44131bb871f2ed1c6c33a5126",
+                "reference": "b2949f37571030d44131bb871f2ed1c6c33a5126",
                 "shasum": ""
             },
             "require": {
@@ -1001,7 +1001,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/2.0.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2018-02-16 22:35:28"
+            "time": "2018-02-21 17:10:58"
         },
         {
             "name": "md/rss-display",
@@ -2873,12 +2873,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symbiote/silverstripe-gridfieldextensions.git",
-                "reference": "04a07d505f32f3256f35c7653389198e18e0bccd"
+                "reference": "e20ead262481b2aaadb360bd7b907531ff81c048"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symbiote/silverstripe-gridfieldextensions/zipball/04a07d505f32f3256f35c7653389198e18e0bccd",
-                "reference": "04a07d505f32f3256f35c7653389198e18e0bccd",
+                "url": "https://api.github.com/repos/symbiote/silverstripe-gridfieldextensions/zipball/e20ead262481b2aaadb360bd7b907531ff81c048",
+                "reference": "e20ead262481b2aaadb360bd7b907531ff81c048",
                 "shasum": ""
             },
             "require": {
@@ -2918,7 +2918,7 @@
                 "gridfield",
                 "silverstripe"
             ],
-            "time": "2017-09-04 04:59:38"
+            "time": "2018-02-21 09:23:34"
         },
         {
             "name": "symbiote/silverstripe-multivaluefield",
