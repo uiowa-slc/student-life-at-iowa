@@ -154,6 +154,7 @@ class NewsHolder_Controller extends Blog_Controller {
 		$deptID = $this->getRequest()->param('ID');
 		$dept = DepartmentPage::get()->byID($deptID);
 		$tag = $this->getRequest()->param('TagID');
+
 		$postCount = $dept->NewsEntriesByTag($tag)->Count();
 		if(!$dept) return;
 

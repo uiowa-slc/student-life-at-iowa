@@ -39,7 +39,7 @@
 
 <body class="$URLSegment">
   <% include GoogleTagManagerBody %>
-	<% include DivisionBar %>
+	<% include UiowaBar %>
     $Layout
 
 
