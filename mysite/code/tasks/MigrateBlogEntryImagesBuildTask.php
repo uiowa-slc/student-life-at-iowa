@@ -4,7 +4,7 @@ class MigrateBlogEntryImagesBuildTask extends BuildTask {
 
 	protected $title = 'Migrate the old blog entry image relationships';
 
-	protected $enabled = true;
+	protected $enabled = false;
 
 	function run($request) {
 

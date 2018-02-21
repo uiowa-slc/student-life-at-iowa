@@ -1,9 +1,0 @@
----
-Name: mysiteconfig_staticpublishqueue
-After: 'staticpublishqueue/*','#mysiteconfig_redirector'
----
-SiteTree:
-  extensions:
-    - PublishableSiteTree
-    - SiteTreePublishingEngine
-    - FilesystemPublisher('cache', 'php')

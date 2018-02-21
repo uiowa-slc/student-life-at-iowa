@@ -27,7 +27,7 @@
 <body>
 <% include GoogleTagManagerBody %>
 <div id="skrollr-body">
-	<% include DivisionBar %>
+	<% include UiowaBar %>
 	<% include Header %>
 
 
