@@ -100,8 +100,11 @@ class NewsHolder_Controller extends Blog_Controller {
 		$postArray = array();
 		$deptID = $this->getRequest()->param('ID');
 		$dept = DepartmentPage::get()->byID($deptID);
-		$postCount = $dept->NewsEntries()->Count();
+
 		if(!$dept) return;
+
+		$postCount = $dept->NewsEntries()->Count();
+		
 
 		$posts = new PaginatedList($dept->NewsEntries(), $this->getRequest());
 		$posts->setPageLength(10);
