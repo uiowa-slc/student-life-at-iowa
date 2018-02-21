@@ -130,9 +130,11 @@ class NewsHolder_Controller extends Blog_Controller {
 		$deptID = $this->getRequest()->param('ID');
 		$dept = DepartmentPage::get()->byID($deptID);
 		$cat = $this->getRequest()->param('CatID');
-		$postCount = $dept->NewsEntriesByCat($cat)->Count();
+
 		if(!$dept) return;
 
+		$postCount = $dept->NewsEntriesByCat($cat)->Count();
+		
 		$posts = new PaginatedList($dept->NewsEntriesByCat($cat), $this->getRequest());
 		$posts->setPageLength(10);
 
@@ -158,8 +160,10 @@ class NewsHolder_Controller extends Blog_Controller {
 		$dept = DepartmentPage::get()->byID($deptID);
 		$tag = $this->getRequest()->param('TagID');
 
-		$postCount = $dept->NewsEntriesByTag($tag)->Count();
 		if(!$dept) return;
+
+		$postCount = $dept->NewsEntriesByTag($tag)->Count();
+		
 
 		$posts = new PaginatedList($dept->NewsEntriesByTag($tag), $this->getRequest());
 		$posts->setPageLength(10);
@@ -189,6 +193,8 @@ class NewsHolder_Controller extends Blog_Controller {
 
 			$this->getResponse()->addHeader("Content-Type", "application/json");
 			return json_encode($postArray);			
+		}else{
+			return;
 		}
 
 	}
