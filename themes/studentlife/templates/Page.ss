@@ -27,7 +27,7 @@
 <% include OpenGraph %>
 
 <!-- CSS -->
-<link rel="stylesheet" href="{$ThemeDir}/css/master.css">
+<link rel="stylesheet" href="{$ThemeDir}/css/main.css">
 
 <!-- IE FIXES -->
 <!--[if lt IE 9]>
@@ -39,7 +39,7 @@
 
 <body class="$URLSegment">
   <% include GoogleTagManagerBody %>
-	<% include DivisionBar %>
+	<% include UiowaBar %>
     $Layout
 
 

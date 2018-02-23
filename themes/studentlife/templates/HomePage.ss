@@ -12,7 +12,7 @@
 <% base_tag %>
 <% include OpenGraph %>
 
-<link href="{$ThemeDir}/css/master.css" rel="stylesheet"></noscript>
+<link href="{$ThemeDir}/css/main.css" rel="stylesheet"></noscript>
 
 <!-- IE FIXES -->
 <!--[if lt IE 9]>
@@ -27,7 +27,7 @@
 <body>
 <% include GoogleTagManagerBody %>
 <div id="skrollr-body">
-	<% include DivisionBar %>
+	<% include UiowaBar %>
 	<% include Header %>
 
 

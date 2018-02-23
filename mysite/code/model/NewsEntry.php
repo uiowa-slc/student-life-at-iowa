@@ -4,6 +4,8 @@ class NewsEntry extends BlogPost {
 	private static $db = array(
 		'IsFeatured' => 'Boolean',
 		'ExternalURL' => 'Varchar(255)',
+		'OriginID' => 'Int',
+		'OriginalDepartmentID' => 'Int'
 	);
 
 	private static $has_one = array(
@@ -83,105 +85,39 @@ class NewsEntry extends BlogPost {
 	public function createFromArray($array){
 
 		$entry = $this;
+
+
 		$parent = NewsHolder::get()->filter(array('URLSegment' => 'news'))->First();
 
 		$entry->Title = $array['Title'];
-		$entry->Content = $array['Content'];
+
+		$content = $array['Content'];
+
+		$contentFiltered = $this->filterAndImportInlineImages($content);
+
+		$entry->Content = $contentFiltered;
 		$entry->ParentID = $parent->ID;
-		//TODO: Authors
+		$entry->OriginID = $array['ID'];
 
-		$entry->PublishDate = $array['PublishDate'];
+		$authors = implode(', ', $array['Authors']);
 
-
-		//TODO: Image import
-		echo '<ul>';
-		if($array['FeaturedImageName'] != ''){
-
-			$imageURL = $array['FeaturedImage'];
-			$imageName = $array['FeaturedImageName'];
-			$assetsDir = Director::getAbsFile('assets/Uploads');
-
-			$newImagePath = $assetsDir.$imageName;
-			file_put_contents($newImagePath, 
-				file_get_contents($imageURL)
-			);
-
-
-			$image = new Image();
-
-			
-			$image->Name = $imageName;
-
-			$image->write();
-			$image->Filename = 'assets/Uploads/imported/'.$imageName;
-			//Need to write the image data object twice in order for the updated Filename to stick for some reason
-			$image->write();
-
-			$entry->FeaturedImageID = $image->ID;
-
-			echo '<li>No featured image on this post.</li>';
-			
-
-			
-		}else{
-			echo '<li>No featured image on this post.</li>';
-		}
-		echo '</ul>';
-
-		//TODO: Tags import
-
-		echo '<ul>';
-		if(count($array['Tags']) > 0){
-			echo '<li>Found tags: ';
-			$newTagCandidates = $array['Tags'];
-
-			foreach($newTagCandidates as $newTagCandidate){
-				echo $newTagCandidate.', ';
-			}
-
-			foreach($newTagCandidates as $newTagCandidate){
-				$newTagCandidate = trim($newTagCandidate);
-				echo 'Converting tag <strong>'.$newTagCandidate.'</strong>...';
-				$existingTag = BlogTag::get()->filter(array('Title' => $newTagCandidate))->First();
-
-
-				if($existingTag){
-					echo 'Existing tag <strong>'.$existingTag->Title.'</strong> found in database, adding post to this tag. ';
-
-					$entry->Tags()->add($existingTag);
-				}else{
-					echo 'No equivalent tag found, creating a new tag <strong>'.$newTagCandidate.'</strong>';
-					$newTag = BlogTag::create();
-					$newTag->Title = $newTagCandidate;
-					$newTag->BlogID = $parent->ID;
-					$newTag->write();
-					
-					$entry->Tags()->add($newTag);
-				}
-			echo '</li>';
-
-			}
-
-			
-		}else{
-			echo '<li>No tags on this post.</li>';
-		}
-		echo '</ul>';		
-
-
+		$entry->StoryByEmail = $authors;
 		$entry->StoryBy = $array['StoryBy'];
-		$entry->StoryByEmail = $array['StoryByEmail'];
 		$entry->StoryByTitle = $array['StoryByTitle'];
 		$entry->StoryByDept = $array['StoryByDept'];
+
+		$entry->PublishDate = $array['PublishDate'];
+		$entry->FeaturedImageURL = $array['FeaturedImageURL'];
+	
+		
+		//TODO: Tags import
+
 		$entry->PhotosBy = $array['PhotosBy'];
 		$entry->PhotosByEmail = $array['PhotosByEmail'];
 		$entry->ExternalURL = $array['ExternalURL'];
 
 
 		return $entry;
-
-
-
 
 	}
 	public function onBeforeWrite() {

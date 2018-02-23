@@ -23,4 +23,3 @@ if(Director::isLive()) {
 }
 Authenticator::unregister('MemberAuthenticator');
 Authenticator::set_default_authenticator('SAMLAuthenticator');
-SSViewer::set_theme('division-subtheme');

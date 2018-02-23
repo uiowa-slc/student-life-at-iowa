@@ -53,6 +53,9 @@ lumberjack/
 reports/
 siteconfig/
 /vendor
+<<<<<<< HEAD
+division-analytics
+=======
 addressable/
 betternavigator/
 blocks/
@@ -77,3 +80,4 @@ staticpublisher/
 youtubefield/
 sortableuploadfield/
 silverstripe-blog
+>>>>>>> 2.0.x
