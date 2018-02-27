@@ -488,7 +488,7 @@
 				
 				<div class="callout">
 					<div class="callout-margin">
-						<a href="http://housing.uiowa.edu/associated-residence-halls-arh">
+						<a href="https://arh.org.uiowa.edu">
 							<img class="lazyload" src="themes/studentlife/images/placeholder-home.jpg" data-src="assets/Uploads/residence-hall-30.jpg" alt="Associated Residence Halls" />
 							<button>View</button>
 							<div class="callout-content">
