@@ -95,7 +95,7 @@ $Header
 						<div class="iowa-now__body">
 							<div class="">
 								<h2 class="iowa-now__title"><a href="#">Sit Venenatis Ultricies Condimentum Bibendum</a></h2>
-								<span class="iowa-now__date">January 14, 2018</span>
+								<span class="iowa-now__date"><em>Iowa Now</em> Jan. 14, 2018</span>
 							</div>
 						</div>
 					</li>
@@ -103,7 +103,7 @@ $Header
 						<div class="iowa-now__body">
 							<div class="">
 								<h2 class="iowa-now__title"><a href="#">Porta Egestas Inceptos Justo Tellus</a></h2>
-								<span class="iowa-now__date">January 14, 2018</span>
+								<span class="iowa-now__date"><em>Iowa Now</em> Jan. 14, 2018</span>
 							</div>
 						</div>
 					</li>
@@ -111,7 +111,7 @@ $Header
 						<div class="iowa-now__body">
 							<div class="">
 								<h2 class="iowa-now__title"><a href="#">Tristique Adipiscing Cras Risus Dapibus Cursus Purus Porta</a></h2>
-								<span class="iowa-now__date">January 14, 2018</span>
+								<span class="iowa-now__date"><em>Iowa Now</em> Jan. 14, 2018</span>
 							</div>
 						</div>
 					</li>
@@ -119,7 +119,7 @@ $Header
 						<div class="iowa-now__body">
 							<div class="">
 								<h2 class="iowa-now__title"><a href="#">Sit Venenatis Ultricies Condimentum Bibendum</a></h2>
-								<span class="iowa-now__date">January 14, 2018</span>
+								<span class="iowa-now__date"><em>Iowa Now</em> Jan. 14, 2018</span>
 							</div>
 						</div>
 					</li>
@@ -127,7 +127,7 @@ $Header
 						<div class="iowa-now__body">
 							<div class="">
 								<h2 class="iowa-now__title"><a href="#">Sit Venenatis Ultricies Condimentum Bibendum</a></h2>
-								<span class="iowa-now__date">January 14, 2018</span>
+								<span class="iowa-now__date"><em>Iowa Now</em> Jan. 14, 2018</span>
 							</div>
 						</div>
 					</li>
