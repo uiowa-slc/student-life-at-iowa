@@ -40,6 +40,10 @@ class Page extends SiteTree {
 
 		return $depts;
 	}
+
+	public function AllDepartments(){
+		return DepartmentPage::get();
+	}
 	function validateURL($URL) {
 		if (!$URL || !trim($URL)) {
 			return $URL;
