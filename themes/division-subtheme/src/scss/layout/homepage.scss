@@ -1,23 +1,79 @@
 /* HOMEPAGE
 =============================================== */
-.head {
-	position: relative;
+.home-feature {
+
+	&__header {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		z-index: 100;
+	}
+	&__media {
+		background: url(../images/feature-image.jpg) no-repeat center top;
+		background-size: cover;
+		position: absolute;
+		position: sticky;
+		top: 0;
+		width: 100%;
+		height: 100vh;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&:after {
+			content:'';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom:0;
+			left: 0;
+			background-color: rgba(0,0,0,.4);
+		}
+	}
+	&__herotext {
+		text-align: center;
+		position: relative;
+		z-index: 30;
+		& h1 {
+			margin: 0;
+			color: #fff;
+			font-size: calc(50px + 29 * ((100vw - 320px) / (1024 - 320)));
+			line-height: 1.2;
+			text-shadow: 2px 2px rgba(0,0,0,.2);
+			@include breakpoint(large) {
+				font-size: rem-calc(79);
+			}
+		}
+	}
+	&__content-wrap {
+		width: 100%;
+		margin-top: -50px;
+		position: relative;
+		background: linear-gradient(to bottom,transparent,rgba(0,0,0,.8));
+		padding-bottom: 50px;
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	&__content {
+		background-color: white;
+		box-shadow: 0 5px 15px rgba(0,0,0,.3);
+		@include grid-row;
+		height: 1000px;
+	}
 }
-.navpanel {
-	width: 100%;
-	position: absolute;
-	top: 0;
-	z-index: 100;
+
+// Fade technique https://codepen.io/davatron5000/pen/oENPYq
+.home-feature__herotext  h1{
+	opacity: calc( 1 - calc(var(--scroll-amount) * 0.002));
+	transform: translateY(calc(var(--scroll-amount) * var(--multiplier) * 1px ));
+	will-change: transform;
+
+	@media (prefers-reduced-motion) {
+		transform: none;
+	}
 }
-.headbg {
-	background: url(../images/river-students2.jpg) no-repeat center top;
-	background-size: cover;
-	position: absolute;
-	position: sticky;
-	top: 0;
-	width: 100%;
-	height: 100vh;
-}
+
+
 .fullwidth-video {
 	position: absolute;
 	top: 0;
@@ -52,25 +108,6 @@
 	transform: translateX(-50%) translateY(-50%);
 	background-size: cover;
 }
-.headinner {
-	width: 100%;
-	margin-top: -50px;
-	position: relative;
-	// background: linear-gradient(to bottom,transparent,rgba(0,0,0,1));
-	padding-bottom: 50px;
-}
-.inpanel {
-	background-color: white;
-	box-shadow: 0 5px 15px rgba(0,0,0,.4);
-	@include grid-row;
-}
-.bdcontent {
-	background-color: white;
-	height: 700px;
-}
-
-
-
 
 
 

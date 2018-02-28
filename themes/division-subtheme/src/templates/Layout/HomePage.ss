@@ -1,23 +1,20 @@
-<div class="">
-	<div class="navpanel">
+<section class="home-feature">
+	<div class="home-feature__header">
 		$Header("dark-header","overlay")
 	</div>
 
-	<div class="headbg">
-		<% loop NewHomePageHeroFeatures %>
-		<%-- <div class="fullwidth-video">
-			<video playsinline autoplay muted loop autoplay src="$Video.URL" id="vid-bg" class="ani-vid-fadein" style="opacity: 1;" <% if $VideoPoster %>poster="$VideoPoster.CroppedFocusedImage(1500,900).URL"<% end_if %>></video>
-		</div> --%>
-		<% end_loop %>
+	<div class="home-feature__media">
+		<div class="home-feature__herotext">
+			<h1 class="title">One Division,<br /> One Mission: Student Success</h1>
+		</div>
 	</div>
 
-	<div class="headinner">
-		<div class="inpanel">
-
+	<div class="home-feature__content-wrap">
+		<div class="home-feature__content">
 		test
 		</div>
 	</div>
-</div>
+</section>
 
 <!-- What We Do -->
 <section class="whatwedo">
@@ -27,7 +24,19 @@
 			<p class="whatwedo__text">Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 		</div>
 	</div>
+
+
+
+
+		<% loop $DepartmentsWithPosts %>
+			$Title
+		<% end_loop %>
+
+
+
+
 	<ul class="infosection">
+
 		<li class="infosection__item">
 			<a href="#" class="infosection__link">
 				<img src="{$ThemeDir}/dist/images/csil-feature.jpg" alt="" class="infosection__img">
@@ -163,7 +172,7 @@
 	<div class="row">
 		<div class="columns">
 			<h3>Follow us on Instagram <a href="https://www.instagram.com/uiowaimu/">@uiowaimu</a></h3>
-			<!-- LightWidget WIDGET - lightwidget.com --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/540ef234fc6e5598a4853292af5c3696.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+			<!-- LightWidget WIDGET - lightwidget.com --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/d42f1547dd2c56fb8ad082838075f620.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
 		</div>
 	</div>
 </section>
