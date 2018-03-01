@@ -91,46 +91,16 @@ $Header
 					<h2>Student Life In The News</h2>
 				</div>
 				<ol class="iowa-now__list">
+					<% loop RSSDisplay %>
 					<li class="iowa-now__item">
 						<div class="iowa-now__body">
 							<div class="">
-								<h2 class="iowa-now__title"><a href="#">Sit Venenatis Ultricies Condimentum Bibendum</a></h2>
-								<span class="iowa-now__date"><em>Iowa Now</em> Jan. 14, 2018</span>
+								<h2 class="iowa-now__title"><a href="$Link">$Title</a></h2>
+								<span class="iowa-now__date"><em>Iowa Now</em> $Date.Format("M j, Y")</span>
 							</div>
 						</div>
 					</li>
-					<li class="iowa-now__item">
-						<div class="iowa-now__body">
-							<div class="">
-								<h2 class="iowa-now__title"><a href="#">Porta Egestas Inceptos Justo Tellus</a></h2>
-								<span class="iowa-now__date"><em>Iowa Now</em> Jan. 14, 2018</span>
-							</div>
-						</div>
-					</li>
-					<li class="iowa-now__item">
-						<div class="iowa-now__body">
-							<div class="">
-								<h2 class="iowa-now__title"><a href="#">Tristique Adipiscing Cras Risus Dapibus Cursus Purus Porta</a></h2>
-								<span class="iowa-now__date"><em>Iowa Now</em> Jan. 14, 2018</span>
-							</div>
-						</div>
-					</li>
-					<li class="iowa-now__item">
-						<div class="iowa-now__body">
-							<div class="">
-								<h2 class="iowa-now__title"><a href="#">Sit Venenatis Ultricies Condimentum Bibendum</a></h2>
-								<span class="iowa-now__date"><em>Iowa Now</em> Jan. 14, 2018</span>
-							</div>
-						</div>
-					</li>
-					<li class="iowa-now__item">
-						<div class="iowa-now__body">
-							<div class="">
-								<h2 class="iowa-now__title"><a href="#">Sit Venenatis Ultricies Condimentum Bibendum</a></h2>
-								<span class="iowa-now__date"><em>Iowa Now</em> Jan. 14, 2018</span>
-							</div>
-						</div>
-					</li>
+					<% end_loop %>
 				</ol>
 			</div>
 		</div>
