@@ -39,8 +39,13 @@
 	<% end_if %> --%>
 
 	<div class="home-feature__media">
+		<% loop NewHomePageHeroFeatures %>
+		<div class="fullwidth-video">
+			<video playsinline autoplay muted loop autoplay src="$Video.URL" id="vid-bg" class="ani-vid-fadein" style="opacity: 1;" <% if $VideoPoster %>poster="$VideoPoster.CroppedFocusedImage(1500,900).URL"<% end_if %>></video>
+		</div>
+		<% end_loop %>
 		<div class="home-feature__herotext">
-			<h1 class="title">One Division,<br /> One Mission: <span>Student Success</span></h1>
+			<h1 class="title">One Division.<br /> One Mission. <span>Student Success.</span></h1>
 		</div>
 	</div>
 
@@ -111,11 +116,8 @@
 													<% include DateTimesList %>
 												<% end_loop %>
 											</p>
-										<% else %>
-												No upcoming dates.
 										<% end_if %>
 										<h5 class="home-event-list__title">$Title</h5>
-
 										<p class="home-event-list__summary">$Content.Summary(30)</p>
 										<% if $Venue %>
 											<p class="home-event-list__venue">
