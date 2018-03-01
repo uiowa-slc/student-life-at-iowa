@@ -3,18 +3,136 @@
 		$Header("dark-header","overlay")
 	</div>
 
+<%-- 	<% if $NewHomePageHeroFeatures %>
+		<% loop NewHomePageHeroFeatures.limit(1) %>
+			<% if $Image %>
+				<% with $Image %>
+				<div class="home-feature__media" style="background-image: url($CroppedFocusedImage(1500,900).URL)">
+				<% end_with %>
+					<div class="home-feature__herotext">
+						<h1>$Title</h1>
+						<% if $ButtonText %>
+							<% if $ExternalLink %>
+								<a href="$ExternalLink" target="_blank" class="cell-btn">$ButtonText</a>
+							<% else %>
+								<a href="$AssociatedPage.Link" class="cell-btn">$ButtonText</a>
+							<% end_if %>
+						<% end_if %>
+					</div>
+				</div>
+			<% else_if $Video %>
+				<div class="fullwidth-video">
+					<video playsinline autoplay muted loop autoplay src="$Video.URL" id="vid-bg" class="ani-vid-fadein" style="opacity: 1;" <% if $VideoPoster %>poster="$VideoPoster.CroppedFocusedImage(1500,900).URL"<% end_if %>></video>
+				</div>
+				<div class="home-feature__herotext">
+					<h1>$Title</h1>
+					<% if $ButtonText %>
+						<% if $ExternalLink %>
+							<a href="$ExternalLink" target="_blank" class="cell-btn">$ButtonText</a>
+						<% else %>
+							<a href="$AssociatedPage.Link" class="cell-btn">$ButtonText</a>
+						<% end_if %>
+					<% end_if %>
+				</div>
+			<% end_if %>
+		<% end_loop %>
+	<% end_if %> --%>
+
 	<div class="home-feature__media">
 		<div class="home-feature__herotext">
-			<h1 class="title">One Division,<br /> One Mission: Student Success</h1>
+			<h1 class="title">One Division,<br /> One Mission: <span>Student Success</span></h1>
 		</div>
 	</div>
 
 	<div class="home-feature__content-wrap">
 		<div class="home-feature__content">
-		test
+			<div class="home-feature__news">
+				<h3 class="home-feature__event-title">Latest News / <a href="{$BaseHref}news/">View All</a></h3>
+				<div class="clearfix news-container">
+					<div class="news-main">
+						<div class="news-main__article">
+							<% with $Page(news) %>
+								<% loop $BlogPosts.limit(1) %>
+									<a href="$Link" class="news-main__link">
+										<img src="$FeaturedImage.CroppedFocusedImage(450,600).URL" alt="$Title" class="news-main__img">
+										<div class="news-main__content">
+											<% if $Departments %>
+													<span class="news-main__dept">
+														<% loop $Departments.limit(1) %>
+															$Title
+														<% end_loop %>
+													</span>
+												<% end_if %>
+											<h3 class="news-main__title">$Title</h3>
+											<% if $Credits %><p class="news-main__author">By <% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %><span class="byline__and"> and </span><% end_if %><span class="byline__author">$FirstName $Surname</span><% end_loop %></p><% end_if %>
+										</div>
+									</a>
+								<% end_loop %>
+							<% end_with %>
+						</div>
+					</div>
+					<div class="news-secondary">
+						<% with $Page(news) %>
+							<ul class="news-secondary__list clearfix">
+								<% loop $BlogPosts.limit(3, 1) %>
+									<li class="news-secondary__item clearfix">
+										<a href="$Link" class="news-secondary__link">
+											<img src="$FeaturedImage.CroppedFocusedImage(320,200).URL" alt="$Title" class="news-secondary__img">
+											<div class="news-secondary__content">
+												<% if $Departments %>
+													<span class="news-secondary__dept">
+														<% loop $Departments %>
+															$Title
+														<% end_loop %>
+													</span>
+												<% end_if %>
+												<h3 class="news-secondary__title">$Title</h3>
+												<% if $Credits %><p class="news-secondary__author">By <% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %><span class="byline__and"> and </span><% end_if %><span class="byline__author">$FirstName $Surname</span><% end_loop %></p><% end_if %>
+											</div>
+										</a>
+									</li>
+								<% end_loop %>
+							</ul>
+						<% end_with %>
+					</div>
+				</div>
+			</div>
+			<div class="home-feature__events">
+				<h3 class="home-feature__event-title">Upcoming Events / <a href="{$BaseHref}/events/">View All</a></h3>
+				<% with $Page(events) %>
+					<% if $EventList %>
+						<ul class="home-event-list">
+							<% loop $EventList.Limit(3) %>
+								<li class="home-event-list__item">
+									<a href="$Link" class="home-event-list__link">
+										<% if $Dates %>
+											<p class="home-event-list__date">
+												<% loop $Dates.Limit(1) %>
+													<% include DateTimesList %>
+												<% end_loop %>
+											</p>
+										<% else %>
+												No upcoming dates.
+										<% end_if %>
+										<h5 class="home-event-list__title">$Title</h5>
+
+										<p class="home-event-list__summary">$Content.Summary(30)</p>
+										<% if $Venue %>
+											<p class="home-event-list__venue">
+												$Venue.Title
+											</p>
+										<% end_if %>
+									</a>
+								</li>
+							<% end_loop %>
+						</ul>
+					<% end_if %>
+				<% end_with %>
+			</div>
 		</div>
 	</div>
 </section>
+
 
 <!-- What We Do -->
 <section class="whatwedo">
@@ -24,84 +142,29 @@
 			<p class="whatwedo__text">Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 		</div>
 	</div>
-
-
-
-
-		<% loop $DepartmentsWithPosts %>
-			$Title
-		<% end_loop %>
-
-
-
-
+	<% with page(what-we-do) %>
 	<ul class="infosection">
-
+		<% loop children %>
 		<li class="infosection__item">
-			<a href="#" class="infosection__link">
-				<img src="{$ThemeDir}/dist/images/csil-feature.jpg" alt="" class="infosection__img">
+			<a href="$Link" class="infosection__link">
+				<% if $BackgroundImage %>
+					<img src="$BackgroundImage.CroppedFocusedImage(360,450).URL" width="180" height="150" class="infosection__img" alt="$Title">
+				<% else_if $YoutubeBackgroundEmbed %>
+					<img src="http://img.youtube.com/vi/$YoutubeBackgroundEmbed/sddefault.jpg" class="infosection__img" alt="$Title">
+				<% else_if $MainImage %>
+					<img src="$MainImage.PaddedImage(360,450).URL" width="180" height="150" class="infosection__img" alt="$Title">
+				<% end_if %>
 				<div class="infosection__body">
-					<h3 class="infosection__title">Culture and Entertainment</h3>
+					<h3 class="infosection__title">$Title</h3>
 					<p class="infosection__reveal"><span>Learn More</span></p>
 				</div>
 			</a>
 		</li>
-		<li class="infosection__item">
-			<a href="#" class="infosection__link">
-				<img src="{$ThemeDir}/dist/images/csil-feature.jpg" alt="" class="infosection__img">
-				<div class="infosection__body">
-					<h3 class="infosection__title">Health and Safety</h3>
-					<p class="infosection__reveal"><span>Learn More</span></p>
-				</div>
-			</a>
-		</li>
-		<li class="infosection__item">
-			<a href="#" class="infosection__link">
-				<img src="{$ThemeDir}/dist/images/csil-feature.jpg" alt="" class="infosection__img">
-				<div class="infosection__body">
-					<h3 class="infosection__title">Leadership Development</h3>
-					<p class="infosection__reveal"><span>Learn More</span></p>
-				</div>
-			</a>
-		</li>
-		<li class="infosection__item">
-			<a href="#" class="infosection__link">
-				<img src="{$ThemeDir}/dist/images/csil-feature.jpg" alt="" class="infosection__img">
-				<div class="infosection__body">
-					<h3 class="infosection__title">Recreation and Wellness</h3>
-					<p class="infosection__reveal"><span>Learn More</span></p>
-				</div>
-			</a>
-		</li>
-		<li class="infosection__item">
-			<a href="#" class="infosection__link">
-				<img src="{$ThemeDir}/dist/images/csil-feature.jpg" alt="" class="infosection__img">
-				<div class="infosection__body">
-					<h3 class="infosection__title">Residence Life</h3>
-					<p class="infosection__reveal"><span>Learn More</span></p>
-				</div>
-			</a>
-		</li>
-		<li class="infosection__item">
-			<a href="#" class="infosection__link">
-				<img src="{$ThemeDir}/dist/images/csil-feature.jpg" alt="" class="infosection__img">
-				<div class="infosection__body">
-					<h3 class="infosection__title">Student Activities</h3>
-					<p class="infosection__reveal"><span>Learn More</span></p>
-				</div>
-			</a>
-		</li>
-		<li class="infosection__item">
-			<a href="#" class="infosection__link">
-				<img src="{$ThemeDir}/dist/images/csil-feature.jpg" alt="" class="infosection__img">
-				<div class="infosection__body">
-					<h3 class="infosection__title">Iowa Challenge</h3>
-					<p class="infosection__reveal"><span>Learn More</span></p>
-				</div>
-			</a>
-		</li>
+		<% end_loop %>
 	</ul>
+	<% end_with %>
 </section>
+
 <!-- End What We Do -->
 
 
@@ -165,6 +228,15 @@
 	</div>
 </section>
 <!-- End Departments -->
+
+
+	<!--
+	<% if $AllDepartments %>
+		<% loop $AllDepartments %>
+			$Title
+		<% end_loop %>
+	<% end_if %>
+	-->
 
 
 <!-- Instagram Feed -->

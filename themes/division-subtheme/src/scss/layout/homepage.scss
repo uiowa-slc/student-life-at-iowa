@@ -38,8 +38,11 @@
 			margin: 0;
 			color: #fff;
 			font-size: calc(50px + 29 * ((100vw - 320px) / (1024 - 320)));
-			line-height: 1.2;
+			line-height: 1;
 			text-shadow: 2px 2px rgba(0,0,0,.2);
+			& span {
+				color: $yellow;
+			}
 			@include breakpoint(large) {
 				font-size: rem-calc(79);
 			}
@@ -58,7 +61,24 @@
 		background-color: white;
 		box-shadow: 0 5px 15px rgba(0,0,0,.3);
 		@include grid-row;
-		height: 1000px;
+	}
+	&__news {
+		padding: rem-calc(45);
+	}
+	&__events {
+		background-color: $yellow;
+		padding: rem-calc(45);
+	}
+	&__event-title {
+		font-weight: normal;
+		margin-top: 0;
+		& a {
+			color: #333;
+			text-decoration: underline;
+			&:hover, &:focus {
+				color: $anchor-color;
+			}
+		}
 	}
 }
 
@@ -110,11 +130,223 @@
 }
 
 
+/* Featured News
+=============================================== */
+.news-container {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+/* main article */
+.news-main {
+	&__article {
+		position: relative;
+	}
+	&__link {
+		display: block;
+		position: relative;
+		&:after {
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.15) 55%, rgba(0, 0, 0, 0.15) 75%, rgba(0, 0, 0, 0.5));
+			content: "";
+		}
+	}
+	&__img {
+		width: 100%;
+	}
+	&__content {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding: 2em;
+		z-index: 2;
+	}
+	&__dept {
+		font-size: rem-calc(11);
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		background-color: $yellow;
+		color: #333;
+		padding: 0 2px;
+		position: relative;
+		top: -9px;
+	}
+	&__title {
+		color: #fff;
+		margin: 0;
+		font-size: rem-calc(22);
+		line-height: 1.1;
+		@include breakpoint(large) {
+			font-size: rem-calc(28);
+		}
+	}
+	&__author {
+		font-size: rem-calc(14);
+		font-style: italic;
+		color: #fff;
+		margin: 0;
+	}
+
+	@include breakpoint(medium) {
+		float: left;
+		width: 50%;
+	}
+	@include breakpoint(large) {
+		width: 40%;
+	}
+}
+
+
+/* secondary articles */
+.news-secondary {
+
+	&__list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		@include breakpoint(medium) {
+			padding-left: 2em;
+		}
+		@include breakpoint(large) {
+			padding-left: 3em;
+		}
+	}
+	&__item {
+		clear: both;
+		margin-top: rem-calc(40);
+		width: 100%;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		@include breakpoint(medium) {
+			margin-bottom: rem-calc(60);
+			margin-top: 0;
+		}
+	}
+	&__link {
+		color: #333;
+		display: block;
+	}
+	&__img {
+		display: inline-block;
+		margin-bottom: 1em;
+		width: 100%;
+		@include breakpoint(medium) {
+			display: none;
+		}
+		@include breakpoint(large) {
+			display: inline-block;
+			float: left;
+			width: 35%;
+			padding-right: 1em;
+			margin-bottom: 0;
+		}
+	}
+	&__content {
+		@include breakpoint(medium) {
+
+		}
+		@include breakpoint(large) {
+			float: left;
+			width: 65%;
+		}
+	}
+	&__dept {
+		font-size: rem-calc(11);
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		background-color: $yellow;
+		color: #333;
+		padding: 0 2px;
+		position: relative;
+		top: -9px;
+	}
+	&__title {
+		margin: 0;
+		font-size: rem-calc(24);
+		font-weight: normal;
+		@include breakpoint(medium only) {
+			font-size: rem-calc(18);
+		}
+	}
+	&__author {
+		font-size: rem-calc(14);
+		font-style: italic;
+		color: #666;
+		margin: 0;
+	}
+
+	@include breakpoint(medium) {
+		float: left;
+		width: 50%;
+	}
+	@include breakpoint(large) {
+		width: 60%;
+	}
+}
+
+
+
 
 /* Events
 =============================================== */
-.events-wrap {
-	background-color: #eee;
+.home-event-list {
+	list-style: none;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	&__item {
+		border-radius: 2px;
+		width: 100%;
+		background-color: $yellow;
+		transition: background-color .3s linear;
+		&:hover, &:focus {
+			background-color: darken($yellow, 3%);
+		}
+		@include breakpoint(medium) {
+			width: 49%;
+		}
+		@include breakpoint(large) {
+			width: 32%;
+		}
+	}
+	&__link {
+		color: #333;
+		display: block;
+		padding: 1.2em;
+	}
+	&__date {
+		color: #555;
+		font-size: rem-calc(12);
+		margin: 0;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+	&__title {
+		color: #333;
+		font-size: rem-calc(22);
+		margin: rem-calc(10 0);
+	}
+	&__venue {
+		color: #fff;
+		background-color: #000;
+		display: inline-block;
+		font-size: rem-calc(12);
+		margin: 0;
+		padding: 0 2px;
+	}
+	&__summary {
+		color: #333;
+		font-size: rem-calc(15);
+		margin-bottom: 8px;
+	}
 }
 
 

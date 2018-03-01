@@ -57,7 +57,7 @@ class NewsEntry extends BlogPost {
 			DepartmentPage::get(),
 			$this->Departments()
 		)->setShouldLazyLoad(true) // tags should be lazy loaded
-		 ->setCanCreate(false); 
+		 ->setCanCreate(false);
 
 		$f->addFieldToTab('Root.Main', $deptField, 'Content');
 
@@ -108,8 +108,8 @@ class NewsEntry extends BlogPost {
 
 		$entry->PublishDate = $array['PublishDate'];
 		$entry->FeaturedImageURL = $array['FeaturedImageURL'];
-	
-		
+
+
 		//TODO: Tags import
 
 		$entry->PhotosBy = $array['PhotosBy'];

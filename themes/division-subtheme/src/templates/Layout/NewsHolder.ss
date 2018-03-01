@@ -46,7 +46,7 @@ $Header
 									$Title
 								<% end_loop %>
 							</span>
-							<% end_if %>
+						<% end_if %>
 					</div>
 					<div class="news-card__body">
 						<h2 class="news-card__title news-card__title--small">
@@ -161,7 +161,7 @@ $Header
 
 		<aside class="sidebar dp-sticky">
 			<% include SideNav %>
-			
+
 
 				<%-- Begin Listing Departments --%>
 				<div class="WidgetHolder BlogCategoriesWidget first last">

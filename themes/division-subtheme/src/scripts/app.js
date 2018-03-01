@@ -4,7 +4,8 @@ $('.infosection').flickity({
 	imagesLoaded: true,
 	pageDots: false,
 	initialIndex: 2,
-	wrapAround: true
+	wrapAround: true,
+	freeScroll: true
 });
 
 
@@ -15,7 +16,7 @@ window.addEventListener('scroll', function() {
 });
 
 const title = document.querySelector('h1.title');
-const speed = 0.01;
+const speed = 0.02;
 title.style.transform = 'translateY( calc( var(--scrollparallax) * 1px ) )';
 
 function setScrollParallax() {
