@@ -46,20 +46,30 @@
 		& h1 {
 			margin: 0;
 			color: #fff;
-			font-size: calc(50px + 29 * ((100vw - 320px) / (1024 - 320)));
+			font-size: calc(48px + 29 * ((100vw - 320px) / (1024 - 320)));
 			line-height: 1;
 			text-shadow: 2px 2px rgba(0,0,0,.2);
 			& span {
-				color: $yellow;
+				display: block;
+				@include breakpoint(medium) {
+					display: inline;
+				}
 			}
 			@include breakpoint(large) {
 				font-size: rem-calc(79);
 			}
 		}
 	}
+	&__texthighlight {
+		color: $yellow;
+		@include breakpoint(large) {
+			font-size: rem-calc(115);
+			letter-spacing: 4px;
+		}
+	}
 	&__content-wrap {
 		width: 100%;
-		// margin-top: -50px;
+		margin-top: -90px;
 		position: relative;
 		background: linear-gradient(to bottom,transparent,rgba(0,0,0,.8));
 		padding-bottom: 50px;
@@ -68,7 +78,7 @@
 	}
 	&__content {
 		background-color: white;
-		box-shadow: 0 5px 15px rgba(0,0,0,.3);
+		box-shadow: 0 3px 18px rgba(0,0,0,.25);
 		@include grid-row;
 	}
 	&__news {
@@ -80,6 +90,7 @@
 	}
 	&__event-title {
 		font-weight: normal;
+		line-height: 1;
 		margin-top: 0;
 		& a {
 			color: #333;
@@ -252,6 +263,15 @@
 	&__link {
 		color: #333;
 		display: block;
+		&:hover, &:focus {
+			& .news-secondary__title {
+				color: #000;
+			}
+			& .news-secondary__title:before {
+				width: 100%;
+				left: 0;
+			}
+		}
 	}
 	&__img {
 		display: inline-block;
@@ -291,6 +311,23 @@
 		margin: 0;
 		font-size: rem-calc(24);
 		font-weight: normal;
+		position: relative;
+		& span {
+			position: relative;
+		}
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 100%;
+			width: 0;
+			background: $yellow;
+			-webkit-transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+			transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+			z-index: 0;
+		}
 		@include breakpoint(medium only) {
 			font-size: rem-calc(18);
 		}

@@ -45,7 +45,7 @@
 		</div>
 		<% end_loop %>
 		<div class="home-feature__herotext">
-			<h1 class="title">One Division.<br /> One Mission. <span>Student Success.</span></h1>
+			<h1 class="title"><span>One Division. </span>One Mission.<br /><span class="home-feature__texthighlight">Student Success.</span></h1>
 		</div>
 	</div>
 
@@ -91,7 +91,7 @@
 														<% end_loop %>
 													</span>
 												<% end_if %>
-												<h3 class="news-secondary__title">$Title</h3>
+												<h3 class="news-secondary__title"><span>$Title</span></h3>
 												<% if $Credits %><p class="news-secondary__author">By <% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %><span class="byline__and"> and </span><% end_if %><span class="byline__author">$FirstName $Surname</span><% end_loop %></p><% end_if %>
 											</div>
 										</a>
