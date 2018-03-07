@@ -1,3 +1,5 @@
+
+// homepage what we do carousel
 $('.infosection').flickity({
 	cellAlign: 'center',
 	contain: true,
@@ -6,6 +8,15 @@ $('.infosection').flickity({
 	initialIndex: 2,
 	wrapAround: true,
 	freeScroll: true
+});
+
+// homepage deptment slider
+$('.dept-slider__gallery').flickity({
+	imagesLoaded: true,
+	pageDots: false,
+	wrapAround: true,
+	contain: true,
+	lazyLoad: true
 });
 
 
