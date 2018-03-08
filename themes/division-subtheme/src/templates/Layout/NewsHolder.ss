@@ -15,9 +15,7 @@ $Header
 								<a href="$Link"><img src="$FeaturedImage.CroppedFocusedImage(600,400).URL" alt="$Title"></a>
 								<% if $Departments %>
 									<span class="news-card__dept news-card__dept--wthumb">
-										<% loop $Departments %>
-											$Title
-										<% end_loop %>
+										<% loop $Departments %><% if not $First && $Last %>, <% end_if %>$Title<% end_loop %>
 									</span>
 								<% end_if %>
 							</div>
@@ -25,9 +23,7 @@ $Header
 						<div class="news-card__body text-center">
 							<% if $Departments && not $FeaturedImage %>
 								<span class="news-card__dept">
-									<% loop $Departments %>
-										$Title
-									<% end_loop %>
+									<% loop $Departments %><% if not $First && $Last %>, <% end_if %>$Title<% end_loop %>
 								</span>
 							<% end_if %>
 							<h1 class="news-card__title"><a href="#"><a href="$Link">$Title</a></h1>
@@ -52,9 +48,7 @@ $Header
 							<a href="$Link"><img src="$FeaturedImage.CroppedFocusedImage(450,300).URL" alt="$Title"></a>
 							<% if $Departments %>
 								<span class="news-card__dept news-card__dept--wthumb">
-									<% loop $Departments %>
-										$Title
-									<% end_loop %>
+									<% loop $Departments %><% if not $First && $Last %>, <% end_if %>$Title<% end_loop %>
 								</span>
 							<% end_if %>
 						</div>
@@ -62,9 +56,7 @@ $Header
 					<div class="news-card__body">
 						<% if $Departments && not $FeaturedImage %>
 							<span class="news-card__dept">
-								<% loop $Departments %>
-									$Title
-								<% end_loop %>
+								<% loop $Departments %><% if not $First && $Last %>, <% end_if %>$Title<% end_loop %>
 							</span>
 						<% end_if %>
 						<h2 class="news-card__title news-card__title--small">
@@ -84,9 +76,7 @@ $Header
 							<div class="trending__body">
 								<% if $Departments %>
 									<span class="trending__dept">
-										<% loop $Departments %>
-											$Title
-										<% end_loop %>
+										<% loop $Departments %><% if not $First && $Last %>, <% end_if %>$Title<% end_loop %>
 									</span>
 								<% end_if %>
 								<h2 class="trending__title">
