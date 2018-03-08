@@ -65,9 +65,7 @@
 										<div class="news-main__content">
 											<% if $Departments %>
 													<span class="news-main__dept">
-														<% loop $Departments.limit(1) %>
-															$Title
-														<% end_loop %>
+														<% loop $Departments %><% if not $First && $Last %>, <% end_if %>$Title<% end_loop %>
 													</span>
 												<% end_if %>
 											<h3 class="news-main__title">$Title</h3>
@@ -90,9 +88,7 @@
 											<div class="news-secondary__content <% if $FeaturedImage %>news-secondary__content--img<% end_if %>">
 												<% if $Departments %>
 													<span class="news-secondary__dept">
-														<% loop $Departments %>
-															$Title
-														<% end_loop %>
+														<% loop $Departments %><% if not $First && $Last %>, <% end_if %>$Title<% end_loop %>
 													</span>
 												<% end_if %>
 												<h3 class="news-secondary__title"><span>$Title</span></h3>
