@@ -59,7 +59,9 @@
 							<% with $Page(news) %>
 								<% loop $BlogPosts.limit(1) %>
 									<a href="$Link" class="news-main__link">
-										<img src="$FeaturedImage.CroppedFocusedImage(450,600).URL" alt="$Title" class="news-main__img">
+										<% if $FeaturedImage %>
+											<img src="$FeaturedImage.CroppedFocusedImage(450,600).URL" alt="$Title" class="news-main__img">
+										<% end_if %>
 										<div class="news-main__content">
 											<% if $Departments %>
 													<span class="news-main__dept">
@@ -82,8 +84,10 @@
 								<% loop $BlogPosts.limit(3, 1) %>
 									<li class="news-secondary__item clearfix">
 										<a href="$Link" class="clearfix news-secondary__link">
-											<img src="$FeaturedImage.CroppedFocusedImage(320,200).URL" alt="$Title" class="news-secondary__img">
-											<div class="news-secondary__content">
+											<% if $FeaturedImage %>
+												<img src="$FeaturedImage.CroppedFocusedImage(320,200).URL" alt="$Title" class="news-secondary__img">
+											<% end_if %>
+											<div class="news-secondary__content <% if $FeaturedImage %>news-secondary__content--img<% end_if %>">
 												<% if $Departments %>
 													<span class="news-secondary__dept">
 														<% loop $Departments %>

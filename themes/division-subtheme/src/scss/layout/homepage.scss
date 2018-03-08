@@ -291,12 +291,11 @@
 		}
 	}
 	&__content {
-		@include breakpoint(medium) {
-
-		}
-		@include breakpoint(large) {
-			float: left;
-			width: 65%;
+		&--img {
+			@include breakpoint(large) {
+				float: left;
+				width: 65%;
+			}
 		}
 	}
 	&__dept {
