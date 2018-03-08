@@ -19,13 +19,18 @@ $Header
 									</span>
 								<% end_if %>
 							</div>
+							<% else %>
+								<div class="news-card__thumb">
+								<a href="$Link"><img src="{$ThemeDir}/dist/images/news-placeholder-s.jpg" alt="$Title" class="news-main__img"></a>
+								<% if $Departments %>
+									<span class="news-card__dept news-card__dept--wthumb">
+										<% loop $Departments %><% if not $First && $Last %>, <% end_if %>$Title<% end_loop %>
+									</span>
+								<% end_if %>
+							</div>
+
 						<% end_if %>
 						<div class="news-card__body text-center">
-							<% if $Departments && not $FeaturedImage %>
-								<span class="news-card__dept">
-									<% loop $Departments %><% if not $First && $Last %>, <% end_if %>$Title<% end_loop %>
-								</span>
-							<% end_if %>
 							<h1 class="news-card__title"><a href="#"><a href="$Link">$Title</a></h1>
 							<% if $Summary %>
 								<div class="news-card__desc">$Summary</div>

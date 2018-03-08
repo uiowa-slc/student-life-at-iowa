@@ -61,13 +61,15 @@
 									<a href="$Link" class="news-main__link">
 										<% if $FeaturedImage %>
 											<img src="$FeaturedImage.CroppedFocusedImage(450,600).URL" alt="$Title" class="news-main__img">
+										<% else %>
+											<img src="{$ThemeDir}/dist/images/news-placeholder.jpg" alt="$Title" class="news-main__img">
 										<% end_if %>
 										<div class="news-main__content">
 											<% if $Departments %>
-													<span class="news-main__dept">
-														<% loop $Departments %><% if not $First && $Last %>, <% end_if %>$Title<% end_loop %>
-													</span>
-												<% end_if %>
+												<span class="news-main__dept">
+													<% loop $Departments %><% if not $First && $Last %>, <% end_if %>$Title<% end_loop %>
+												</span>
+											<% end_if %>
 											<h3 class="news-main__title">$Title</h3>
 											<% if $Credits %><p class="news-main__author">By <% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %><span class="byline__and"> and </span><% end_if %><span class="byline__author">$FirstName $Surname</span><% end_loop %></p><% end_if %>
 										</div>
