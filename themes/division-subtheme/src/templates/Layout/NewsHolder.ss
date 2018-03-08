@@ -10,17 +10,26 @@ $Header
 			<div class="featured-news__large-column">
 				<% loop $PaginatedList.limit(1) %>
 					<div class="news-card news-card--large news-card--border">
-						<div class="news-card__thumb">
-							<a href="$Link"><img src="$FeaturedImage.CroppedFocusedImage(600,400).URL" alt="$Title"></a>
-							<% if $Departments %>
-								<span class="news-card__dept news-card__dept--wthumb">
+						<% if $FeaturedImage %>
+							<div class="news-card__thumb">
+								<a href="$Link"><img src="$FeaturedImage.CroppedFocusedImage(600,400).URL" alt="$Title"></a>
+								<% if $Departments %>
+									<span class="news-card__dept news-card__dept--wthumb">
+										<% loop $Departments %>
+											$Title
+										<% end_loop %>
+									</span>
+								<% end_if %>
+							</div>
+						<% end_if %>
+						<div class="news-card__body text-center">
+							<% if $Departments && not $FeaturedImage %>
+								<span class="news-card__dept">
 									<% loop $Departments %>
 										$Title
 									<% end_loop %>
 								</span>
 							<% end_if %>
-						</div>
-						<div class="news-card__body text-center">
 							<h1 class="news-card__title"><a href="#"><a href="$Link">$Title</a></h1>
 							<% if $Summary %>
 								<div class="news-card__desc">$Summary</div>
@@ -38,17 +47,26 @@ $Header
 			<div class="featured-news__medium-column">
 				<% loop $PaginatedList.limit(2, 1) %>
 				<div class="news-card">
-					<div class="news-card__thumb">
-						<a href="$Link"><img src="$FeaturedImage.CroppedFocusedImage(450,300).URL" alt="$Title"></a>
-						<% if $Departments %>
-							<span class="news-card__dept news-card__dept--wthumb">
+					<% if $FeaturedImage %>
+						<div class="news-card__thumb">
+							<a href="$Link"><img src="$FeaturedImage.CroppedFocusedImage(450,300).URL" alt="$Title"></a>
+							<% if $Departments %>
+								<span class="news-card__dept news-card__dept--wthumb">
+									<% loop $Departments %>
+										$Title
+									<% end_loop %>
+								</span>
+							<% end_if %>
+						</div>
+					<% end_if %>
+					<div class="news-card__body">
+						<% if $Departments && not $FeaturedImage %>
+							<span class="news-card__dept">
 								<% loop $Departments %>
 									$Title
 								<% end_loop %>
 							</span>
 						<% end_if %>
-					</div>
-					<div class="news-card__body">
 						<h2 class="news-card__title news-card__title--small">
 							<a href="$Link">$Title</a>
 						</h2>

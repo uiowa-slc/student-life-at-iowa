@@ -705,7 +705,7 @@
 		@include breakpoint(900) {
 			width: 60%;
 			position: absolute;
-			left: 20px;
+			left: 30px;
 			bottom: 0;
 			padding:rem-calc(20);
 			height: 370px;
@@ -750,6 +750,17 @@
 			background-color: #000;
 		}
 	}
+	& .flickity-prev-next-button {
+		border-radius: 0;
+		background-color: $yellow;
+		top: calc(50% - 60px);
+	}
+	& .flickity-prev-next-button.next {
+		right: 0;
+	}
+	& .flickity-prev-next-button.previous {
+		left: 0;
+	}
 }
 .dept-slider__gallery-slide.is-selected .dept-slider__gallery-box-content {
 	@include breakpoint(900) {
@@ -767,13 +778,6 @@
   opacity: 1;
 }
 
-.dept-slider__gallery:not(.flickity-enabled) {
-	white-space: nowrap;
-	overflow: scroll;
-	.dept-slider__gallery-slide {
-		display: inline-block;
-	}
-}
 
 
 
