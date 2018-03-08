@@ -232,7 +232,7 @@
 			<% if $AllDepartments %>
 				<% loop $AllDepartments %>
 					<div class="dept-slider__gallery-slide">
-						<img data-flickity-lazyload="$BackgroundImage.CroppedFocusedImage(800,600).URL" class="dept-slider__gallery-img">
+						<img src="http://placehold.it/800x600?text=Student%20Life" data-flickity-lazyload="$BackgroundImage.CroppedFocusedImage(800,600).URL" class="dept-slider__gallery-img">
 						<div class="dept-slider__gallery-box">
 							<div class="dept-slider__gallery-box-content">
 								<h3 class="dept-slider__gallery-title">$Title</h3>

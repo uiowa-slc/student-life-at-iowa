@@ -343,10 +343,10 @@
 
 	@include breakpoint(medium) {
 		float: left;
-		width: 50%;
+		width: 49%;
 	}
 	@include breakpoint(large) {
-		width: 60%;
+		width: 59%;
 	}
 }
 
@@ -777,7 +777,23 @@
 .dept-slider__gallery-img.flickity-lazyerror {
   opacity: 1;
 }
-
+.dept-slider__gallery:not(.flickity-enabled) {
+	white-space: nowrap;
+	overflow: scroll;
+	.dept-slider__gallery-slide {
+		display: inline-block;
+	}
+	.dept-slider__gallery-img {
+		opacity: 1;
+	}
+	.dept-slider__gallery-box-content {
+		opacity: 1;
+		top: 10%;
+	}
+	.dept-slider__gallery-desc p {
+		white-space: normal;
+	}
+}
 
 
 
