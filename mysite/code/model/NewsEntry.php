@@ -28,7 +28,7 @@ class NewsEntry extends BlogPost {
 		'Photo.CMSThumbnail' => 'Photo',
 		'Title' => 'Title',
 		'OriginalDepartmentName' => 'Original Department Website',
-		'PublishDate.NiceUS' => 'Date',
+		'PublishDate' => 'Date',
 		'ExternalURL' => 'External post URL (if applicable)',
 	);
 	private static $plural_name = 'News Entries';

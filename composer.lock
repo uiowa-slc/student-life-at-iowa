@@ -85,16 +85,16 @@
         },
         {
             "name": "composer/installers",
-            "version": "v1.5.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "049797d727261bf27f2690430d935067710049c2"
+                "reference": "0c420e1cd0e8a3a78e7a5e48b1d2ec2fded5d39e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/049797d727261bf27f2690430d935067710049c2",
-                "reference": "049797d727261bf27f2690430d935067710049c2",
+                "url": "https://api.github.com/repos/composer/installers/zipball/0c420e1cd0e8a3a78e7a5e48b1d2ec2fded5d39e",
+                "reference": "0c420e1cd0e8a3a78e7a5e48b1d2ec2fded5d39e",
                 "shasum": ""
             },
             "require": {
@@ -201,7 +201,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2017-12-29T09:13:20+00:00"
+            "time": "2018-01-25T16:41:42+00:00"
         },
         {
             "name": "embed/embed",
@@ -425,12 +425,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "649e354b657977c312cb6fb95720b1ac485f2092"
+                "reference": "59f1a30206f753cb29b2e4c8352c10968dadb5e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/649e354b657977c312cb6fb95720b1ac485f2092",
-                "reference": "649e354b657977c312cb6fb95720b1ac485f2092",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/59f1a30206f753cb29b2e4c8352c10968dadb5e7",
+                "reference": "59f1a30206f753cb29b2e4c8352c10968dadb5e7",
                 "shasum": ""
             },
             "require": {
@@ -482,7 +482,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2018-02-28T07:24:56+00:00"
+            "time": "2018-03-21T13:09:20+00:00"
         },
         {
             "name": "jeremeamia/SuperClosure",
@@ -830,12 +830,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events.git",
-                "reference": "95e3670bf7ce2da1172ea283e429c822288b5c26"
+                "reference": "fba6b16591e59d06312bbc8a23fa8bea2af06f44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/95e3670bf7ce2da1172ea283e429c822288b5c26",
-                "reference": "95e3670bf7ce2da1172ea283e429c822288b5c26",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/fba6b16591e59d06312bbc8a23fa8bea2af06f44",
+                "reference": "fba6b16591e59d06312bbc8a23fa8bea2af06f44",
                 "shasum": ""
             },
             "require": {
@@ -854,7 +854,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/issues"
             },
-            "time": "2018-03-01T22:05:24+00:00"
+            "time": "2018-03-15T16:18:17+00:00"
         },
         {
             "name": "md/blog",
@@ -944,12 +944,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "c274a6b8aa8ce5379913dfd1e9d30341f9310474"
+                "reference": "3a722965fa6232feb102fec16e98d3ddabcaffde"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/c274a6b8aa8ce5379913dfd1e9d30341f9310474",
-                "reference": "c274a6b8aa8ce5379913dfd1e9d30341f9310474",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/3a722965fa6232feb102fec16e98d3ddabcaffde",
+                "reference": "3a722965fa6232feb102fec16e98d3ddabcaffde",
                 "shasum": ""
             },
             "require": {
@@ -1001,7 +1001,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/2.0.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2018-03-12T20:05:16+00:00"
+            "time": "2018-03-22T14:21:33+00:00"
         },
         {
             "name": "md/rss-display",
@@ -1881,12 +1881,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe-themes/silverstripe-simple.git",
-                "reference": "9518f430b306ae5ba0a3183d157846b75e093e61"
+                "reference": "4f723b68e4c053a34067ca93cdd404d4aca4a3b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe-themes/silverstripe-simple/zipball/9518f430b306ae5ba0a3183d157846b75e093e61",
-                "reference": "9518f430b306ae5ba0a3183d157846b75e093e61",
+                "url": "https://api.github.com/repos/silverstripe-themes/silverstripe-simple/zipball/4f723b68e4c053a34067ca93cdd404d4aca4a3b9",
+                "reference": "4f723b68e4c053a34067ca93cdd404d4aca4a3b9",
                 "shasum": ""
             },
             "require": {
@@ -1909,7 +1909,7 @@
                 "silverstripe",
                 "theme"
             ],
-            "time": "2018-01-11T21:46:13+00:00"
+            "time": "2018-03-21T12:26:06+00:00"
         },
         {
             "name": "silverstripe/activedirectory",
@@ -2120,12 +2120,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wilr/silverstripe-googlesitemaps.git",
-                "reference": "930fd7f9ac96450d9758d32c87d4d21e5dca73a7"
+                "reference": "36091bc8401b3a7debe8f5059a7395809f1b5a2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wilr/silverstripe-googlesitemaps/zipball/930fd7f9ac96450d9758d32c87d4d21e5dca73a7",
-                "reference": "930fd7f9ac96450d9758d32c87d4d21e5dca73a7",
+                "url": "https://api.github.com/repos/wilr/silverstripe-googlesitemaps/zipball/36091bc8401b3a7debe8f5059a7395809f1b5a2d",
+                "reference": "36091bc8401b3a7debe8f5059a7395809f1b5a2d",
                 "shasum": ""
             },
             "require": {
@@ -2152,7 +2152,7 @@
                 "seo",
                 "silverstripe"
             ],
-            "time": "2016-09-26T17:43:00+00:00"
+            "time": "2018-03-07T11:45:24+00:00"
         },
         {
             "name": "silverstripe/installer",
@@ -2539,12 +2539,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-staticpublisher.git",
-                "reference": "d417b6e8694cfda11ecf665277c5d5e04737a49b"
+                "reference": "2f5abd13e3f5afec9d1848072e1596b4128775f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-staticpublisher/zipball/d417b6e8694cfda11ecf665277c5d5e04737a49b",
-                "reference": "d417b6e8694cfda11ecf665277c5d5e04737a49b",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-staticpublisher/zipball/2f5abd13e3f5afec9d1848072e1596b4128775f1",
+                "reference": "2f5abd13e3f5afec9d1848072e1596b4128775f1",
                 "shasum": ""
             },
             "require": {
@@ -2554,7 +2554,7 @@
             "notification-url": "https://packagist.org/downloads/",
             "authors": [
                 {
-                    "name": "Sam Minnée",
+                    "name": "Sam Minnee",
                     "email": "sam@silverstripe.com"
                 },
                 {
@@ -2569,7 +2569,7 @@
                 "silverstripe-labs",
                 "static"
             ],
-            "time": "2016-05-17T23:22:02+00:00"
+            "time": "2018-03-20T21:45:08+00:00"
         },
         {
             "name": "silverstripe/tagfield",
@@ -2965,12 +2965,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symbiote/silverstripe-queuedjobs.git",
-                "reference": "0f16f2d1c909d2bb6ace207e27e8dbfb85b776cc"
+                "reference": "8087310ce174d3622942888c0cb8294875474e82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symbiote/silverstripe-queuedjobs/zipball/0f16f2d1c909d2bb6ace207e27e8dbfb85b776cc",
-                "reference": "0f16f2d1c909d2bb6ace207e27e8dbfb85b776cc",
+                "url": "https://api.github.com/repos/symbiote/silverstripe-queuedjobs/zipball/8087310ce174d3622942888c0cb8294875474e82",
+                "reference": "8087310ce174d3622942888c0cb8294875474e82",
                 "shasum": ""
             },
             "require": {
@@ -3001,7 +3001,7 @@
                 "jobs",
                 "silverstripe"
             ],
-            "time": "2018-01-17T22:57:18+00:00"
+            "time": "2018-03-20T16:41:06+00:00"
         },
         {
             "name": "thisisbd/silverstripe-maintenance-mode",
