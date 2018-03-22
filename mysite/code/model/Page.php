@@ -33,11 +33,9 @@ class Page extends SiteTree {
 
 
 	public function DepartmentsWithPosts(){
-
 		$depts = DepartmentPage::get()->filterByCallback(function($item, $list) {
 		    return ($item->NewsEntries()->Count() > 0);
 		});
-
 		return $depts;
 	}
 
@@ -75,6 +73,16 @@ class Page_Controller extends ContentController {
 	 * @var array
 	 */
 
+	public function TrendingPosts(){
+
+		$timeLimit = date('Y-m-d', strtotime("-6 months"));
+
+		$posts = NewsEntry::get()->filter(array(
+			'PublishDate:GreaterThan' => $timeLimit
+		))->sort('RAND()');
+
+		return $posts;
+	}
 	public function init() {
 		parent::init();
 		// Note: you should use SS template require tags inside your templates

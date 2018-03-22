@@ -61,6 +61,13 @@ class DepartmentPage extends Page {
 
 
 	}
+
+	public function NewsLink(){
+		$newsHolder = NewsHolder::get()->First();
+		$link = $newsHolder->Link('department/'.$this->ID);
+		return $link;
+	}
+	
 	public function NewsEntriesByCat($catTitle){
 		$tag = BlogCategory::get()->filter(array('Title' => $catTitle))->First();
 
@@ -76,6 +83,17 @@ class DepartmentPage extends Page {
 
 
 
+	}
+
+	public function NewsEntriesByAuthor($authorID){
+		$author = Member::get()->filter(array('ID' => $authorID))->First();
+		
+		if($author){
+			$authorEntries = $author->BlogPosts();
+			return $authorEntries;
+		}
+
+		return null;
 	}
 
 	//private static $allowed_children = array("");

@@ -65,7 +65,9 @@ class NewsHolder_Controller extends Blog_Controller {
 		'departmentNewsFeed',
 		'departmentNewsPost',
 		'departmentNewsFeedByCat',
-		'departmentNewsFeedByTag'
+		'departmentNewsFeedByTag',
+		'departmentNewsFeedByAuthor',
+		'authorInfo'
 	);
 	private static $url_handlers = array(
 		'profile/$URLSegment!/rss' => 'profilerss',
@@ -74,11 +76,47 @@ class NewsHolder_Controller extends Blog_Controller {
 		'departmentNewsFeed//$ID' => 'departmentNewsFeed',
 		'departmentNewsFeedByTag//$ID/$TagID' => 'departmentNewsFeedByTag',
 		'departmentNewsFeedByCat//$ID/$CatID' => 'departmentNewsFeedByCat',
-		'departmentNewsPost//$ID' => 'departmentNewsPost'
+		'departmentNewsFeedByAuthor//$ID/$AuthorID' => 'departmentNewsFeedByAuthor',
+		'departmentNewsPost//$ID' => 'departmentNewsPost',
+		'authorInfo//$ID' => 'authorInfo'
 	);
 
-	public function department(){
-		
+    /**
+     * Renders the blog posts for a given tag.
+     *
+     * @return null|SS_HTTPResponse
+     */
+    public function department()
+    {
+        $deptID = $this->getRequest()->param('ID');
+        $dept = DepartmentPage::get()->byID($deptID);
+
+        if ($dept) {
+            $this->blogPosts = $dept->NewsEntries();
+
+                return $this->render();
+        }
+
+        $this->httpError(404, 'Not Found');
+
+        return null;
+    }
+
+	public function authorInfo(){
+		$authorID = $this->getRequest()->param('ID');
+		$author = Member::get()->byID($authorID);
+
+		if($author){
+			$authorArray = array(
+				'Name' => $author->Name,
+				'ID' => $author->ID,
+				'Email' => $author->Email
+			);
+			$this->getResponse()->addHeader("Content-Type", "application/json");
+			return json_encode($authorArray);
+		}
+
+		return $this->httpError(404);
 	}
 	public function departmentListFeed(){
 		$depts = DepartmentPage::get();
@@ -160,12 +198,42 @@ class NewsHolder_Controller extends Blog_Controller {
 		$dept = DepartmentPage::get()->byID($deptID);
 		$tag = $this->getRequest()->param('TagID');
 
-		if(!$dept) return;
+		if(!$dept) $this->httpError(404);
 
 		$postCount = $dept->NewsEntriesByTag($tag)->Count();
 		
 
 		$posts = new PaginatedList($dept->NewsEntriesByTag($tag), $this->getRequest());
+		$posts->setPageLength(10);
+
+		foreach($posts as $post){
+			array_push($postArray, $post->toFeedArray());
+		}
+		$this->getResponse()->addHeader("Content-Type", "application/json");
+
+
+		$feedArray = array(
+			'meta' => array(
+				'postCount' => $postCount
+			),
+			'posts' => $postArray
+		);
+
+		return json_encode($feedArray);
+
+	}
+	public function departmentNewsFeedByAuthor(){
+		$postArray = array();
+		$deptID = $this->getRequest()->param('ID');
+		$dept = DepartmentPage::get()->byID($deptID);
+		$authorID = $this->getRequest()->param('AuthorID');
+
+		if(!$dept) $this->httpError(404);
+		if(!Member::get()->byID($authorID)) $this->httpError(404);
+
+		$postCount = $dept->NewsEntriesByAuthor($authorID)->Count();
+		
+		$posts = new PaginatedList($dept->NewsEntriesByAuthor($authorID), $this->getRequest());
 		$posts->setPageLength(10);
 
 		foreach($posts as $post){
@@ -194,7 +262,7 @@ class NewsHolder_Controller extends Blog_Controller {
 			$this->getResponse()->addHeader("Content-Type", "application/json");
 			return json_encode($postArray);			
 		}else{
-			return;
+			$this->httpError(404);
 		}
 
 	}

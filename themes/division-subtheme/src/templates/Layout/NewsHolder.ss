@@ -76,7 +76,7 @@ $Header
 				<div class="trending">
 					<h3 class="trending__heading">Trending</h3>
 					<ol class="trending__list">
-						<% loop $PaginatedList.limit(4) %>
+						<% loop $TrendingPosts.limit(4) %>
 						<li class="trending__card">
 							<div class="trending__body">
 								<% if $Departments %>

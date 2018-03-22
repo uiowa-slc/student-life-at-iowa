@@ -27,9 +27,8 @@ class NewsEntry extends BlogPost {
 	private static $summary_fields = array(
 		'Photo.CMSThumbnail' => 'Photo',
 		'Title' => 'Title',
+		'OriginalDepartmentName' => 'Original Department Website',
 		'PublishDate.NiceUS' => 'Date',
-		'Member' => 'Associated Author',
-		'Author' => 'Guest Author Name',
 		'ExternalURL' => 'External post URL (if applicable)',
 	);
 	private static $plural_name = 'News Entries';
@@ -37,6 +36,17 @@ class NewsEntry extends BlogPost {
 	public function getCMSFields() {
 		$f = parent::getCMSFields();
 
+		
+
+		$tagField = $f->fieldByName('blog-admin-sidebar.Tags');
+		$catField = $f->fieldByName('blog-admin-sidebar.Categories');
+
+		$f->remove($tagField);
+		$f->remove($catField);
+
+
+		$f->addFieldToTab('Root.Main', $catField, 'Content');
+		$f->addFieldToTab('Root.Main', $tagField, 'Content');
 		$f->addFieldToTab('Root.Main', new TextField('ExternalURL', 'External URL for an external post (Tumblr, etc) - no content needed if filled out.'), "Content");
 		//$f->addFieldToTab("Root.Main", new UploadField("Photo", "Photo"), "Content");
 
@@ -79,6 +89,18 @@ class NewsEntry extends BlogPost {
 			return $Link;
 		} else {
 			return parent::Link();
+		}
+	}
+
+	public function getOriginalDepartmentName(){
+		
+		$originalDeptID = $this->OriginalDepartmentID;
+
+		if($originalDeptID){
+			$depts = DepartmentPage::get()->map()->toArray();
+			if(isset($depts[$originalDeptID])){
+				return $depts[$originalDeptID];
+			}
 		}
 	}
 
