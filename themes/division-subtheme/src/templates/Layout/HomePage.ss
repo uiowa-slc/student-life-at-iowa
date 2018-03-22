@@ -226,7 +226,7 @@
 		<div class="dept-slider__mast">
 			<h2 class="dept-slider__mast-title">Our Departments</h2>
 			<div class="dept-slider__mast-desc"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia quis voluptas libero repudiandae. Maxime, accusantium, sequi, repudiandae architecto molestias illum ea libero amet ratione rem asperiores similique consectetur iste laudantium.</p></div>
-			<a href="#" class="dept-slider__mast-btn">See All Departments</a>
+			<a href="{$BaseHref}our-departments/" class="dept-slider__mast-btn">See All Departments</a>
 		</div>
 		<div class="dept-slider__gallery">
 			<% if $AllDepartments %>
@@ -236,7 +236,7 @@
 						<div class="dept-slider__gallery-box">
 							<div class="dept-slider__gallery-box-content">
 								<h3 class="dept-slider__gallery-title">$Title</h3>
-								<div class="dept-slider__gallery-desc"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, cum sunt illo amet iste assumenda.</p></div>
+								<div class="dept-slider__gallery-desc"><p>$Content.FirstSentence.LimitCharacters(150)</p></div>
 								<a href="$Link" class="dept-slider__gallery-btn">Learn More</a>
 							</div>
 						</div>
