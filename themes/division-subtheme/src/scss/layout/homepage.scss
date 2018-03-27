@@ -539,7 +539,7 @@
 /* Spotlight
 =============================================== */
 .spotlight {
-	background: url(../images/leadership2.jpg) no-repeat top center;
+	background-position: top center;
 	background-size: cover;
 	padding: rem-calc(40 0);
 	position: relative;
@@ -569,33 +569,33 @@
 	&__title {
 		margin: 0;
 	}
-	&__text p {
+	&__content p {
 		font-size: rem-calc(16);
 		margin: rem-calc(10 0);
 	}
-	&__list {
+	&__content ul {
 		list-style: none;
 		margin: 1em 0 0;
 	}
-	&__list-item {
+	&__content ul li {
+		background-color: #fff;
 		border-bottom: 1px solid #ddd;
 		font-size: rem-calc(15);
+		padding: rem-calc(8 2);
+		transition: background-color .2s linear;
 		& a {
-			background-color: #fff;
 			color: #333;
 			display: block;
 			display: flex;
 			justify-content: space-between;
-			padding: rem-calc(8 2);
-			transition: background-color .2s linear;
-			&:hover, &:focus {
-				background-color: #f4f4f4;
-			}
 			&:after {
 				content:"\279E";
 				color: #666;
 				padding-left: 6px;
 			}
+		}
+		&:hover, &:focus {
+			background-color: #f4f4f4;
 		}
 		&:first-child {
 			border-top: 1px solid #ddd;
@@ -609,7 +609,7 @@
 		right: 0;
 		bottom:0;
 		left: 0;
-		background-color: rgba(0,0,0,.35);
+		background-color: rgba(0,0,0,.4);
 	}
 	@include breakpoint(large) {
 		padding: rem-calc(70 0);

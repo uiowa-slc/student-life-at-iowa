@@ -3,47 +3,13 @@
 		$Header("dark-header","overlay")
 	</div>
 
-<%-- 	<% if $NewHomePageHeroFeatures %>
-		<% loop NewHomePageHeroFeatures.limit(1) %>
-			<% if $Image %>
-				<% with $Image %>
-				<div class="home-feature__media" style="background-image: url($CroppedFocusedImage(1500,900).URL)">
-				<% end_with %>
-					<div class="home-feature__herotext">
-						<h1>$Title</h1>
-						<% if $ButtonText %>
-							<% if $ExternalLink %>
-								<a href="$ExternalLink" target="_blank" class="cell-btn">$ButtonText</a>
-							<% else %>
-								<a href="$AssociatedPage.Link" class="cell-btn">$ButtonText</a>
-							<% end_if %>
-						<% end_if %>
-					</div>
-				</div>
-			<% else_if $Video %>
-				<div class="fullwidth-video">
-					<video playsinline autoplay muted loop autoplay src="$Video.URL" id="vid-bg" class="ani-vid-fadein" style="opacity: 1;" <% if $VideoPoster %>poster="$VideoPoster.CroppedFocusedImage(1500,900).URL"<% end_if %>></video>
-				</div>
-				<div class="home-feature__herotext">
-					<h1>$Title</h1>
-					<% if $ButtonText %>
-						<% if $ExternalLink %>
-							<a href="$ExternalLink" target="_blank" class="cell-btn">$ButtonText</a>
-						<% else %>
-							<a href="$AssociatedPage.Link" class="cell-btn">$ButtonText</a>
-						<% end_if %>
-					<% end_if %>
-				</div>
-			<% end_if %>
-		<% end_loop %>
-	<% end_if %> --%>
 
 	<div class="home-feature__media">
-		<% loop NewHomePageHeroFeatures %>
-		<div class="fullwidth-video">
-			<video playsinline autoplay muted loop autoplay src="$Video.URL" id="vid-bg" class="ani-vid-fadein" style="opacity: 1;" <% if $VideoPoster %>poster="$VideoPoster.CroppedFocusedImage(1500,900).URL"<% end_if %>></video>
-		</div>
-		<% end_loop %>
+		<% if $Video %>
+			<div class="fullwidth-video">
+				<video playsinline autoplay muted loop autoplay src="$Video.URL" id="vid-bg" class="ani-vid-fadein" style="opacity: 1;" <% if $VideoPoster %>poster="$VideoPoster.CroppedFocusedImage(1500,900).URL"<% end_if %>></video>
+			</div>
+		<% end_if %>
 		<div class="home-feature__herotext">
 			<h1 class="title"><span>One Division. </span>One Mission.<br /><span class="home-feature__texthighlight">Student Success.</span></h1>
 		</div>
@@ -202,21 +168,22 @@
 
 
 <!-- Spotlight Feature -->
-<section class="spotlight">
+<% if $SpotlightTitle || $SpotlightContent %>
+<section class="spotlight" <% if $SpotlightImage %>data-interchange="[$SpotlightImage.CroppedFocusedImage(800,600).URL, small], [$SpotlightImage.CroppedFocusedImage(1300,500).URL, large]"<% end_if %>>
 	<div class="column row">
 		<div class="spotlight__container">
-			<h3 class="spotlight__title">Iowa Challenge</h3>
-			<div class="spotlight__text">
-				<p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui.</p>
-			</div>
-			<ul class="spotlight__list">
-				<li class="spotlight__list-item"><a href="#">Purus Sollicitudin Consectetur Cursus Mollis Sollicitudin Vestibulum Ridiculus</a></li>
-				<li class="spotlight__list-item"><a href="#">Cursus Mollis Sollicitudin</a></li>
-				<li class="spotlight__list-item"><a href="#">Sem Vestibulum Ridiculus</a></li>
-			</ul>
+			<% if $SpotlightTitle %>
+				<h3 class="spotlight__title">$SpotlightTitle</h3>
+			<% end_if %>
+			<% if $SpotlightContent %>
+				<div class="spotlight__content">
+					$SpotlightContent
+				</div>
+			<% end_if %>
 		</div>
 	</div>
 </section>
+<% end_if %>
 <!-- End Spotlight Feature -->
 
 
@@ -247,15 +214,6 @@
 	</div>
 </section>
 <!-- End Departments -->
-
-
-	<!--
-	<% if $AllDepartments %>
-		<% loop $AllDepartments %>
-			$Title
-		<% end_loop %>
-	<% end_if %>
-	-->
 
 
 <!-- Instagram Feed -->
