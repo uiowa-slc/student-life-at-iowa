@@ -2,8 +2,12 @@
 class HomePageExtension extends DataExtension {
 
 	private static $db = array(
+		"WhatWeDoTitle" => "Text",
+		"WhatWeDoContent" => "HTMLText",
 		"SpotlightTitle" => "Text",
-		"SpotlightContent" => "HTMLText"
+		"SpotlightContent" => "HTMLText",
+		"DepartmentTitle" => "Text",
+		"DepartmentContent" => "HTMLText"
 
 	);
 
@@ -24,14 +28,21 @@ class HomePageExtension extends DataExtension {
 		$fields->removeByName("LayoutType");
 		$fields->removeByName("NewHomePageHeroFeature");
 
-
 		$fields->addFieldToTab("Root.Main", new UploadField("Video", "Video"));
 		$fields->addFieldToTab("Root.Main", new UploadField("VideoPoster", "Poster image for video"));
+
+		$fields->addFieldToTab("Root.Main", new HeaderField( '<br /><br /><br />', '1', true ) );
+		$fields->addFieldToTab("Root.Main", new TextField("WhatWeDoTitle", "What We Do Title"));
+		$fields->addFieldToTab("Root.Main", new HtmlEditorField("WhatWeDoContent", "What We Do Content"));
 
 		$fields->addFieldToTab("Root.Main", new HeaderField( '<br /><br /><br />', '1', true ) );
 		$fields->addFieldToTab("Root.Main", new TextField("SpotlightTitle", "Spotlight Title"));
 		$fields->addFieldToTab("Root.Main", new UploadField("SpotlightImage", "Spotlight Background Image"));
 		$fields->addFieldToTab("Root.Main", new HtmlEditorField("SpotlightContent", "Spotlight Content"));
+
+		$fields->addFieldToTab("Root.Main", new HeaderField( '<br /><br /><br />', '1', true ) );
+		$fields->addFieldToTab("Root.Main", new TextField("DepartmentTitle", "Departments Title"));
+		$fields->addFieldToTab("Root.Main", new HtmlEditorField("DepartmentContent", "Departments Content"));
 
 	}
 

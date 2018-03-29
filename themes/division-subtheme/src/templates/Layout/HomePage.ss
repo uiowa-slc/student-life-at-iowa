@@ -7,7 +7,7 @@
 	<div class="home-feature__media">
 		<% if $Video %>
 			<div class="fullwidth-video">
-				<video playsinline autoplay muted loop autoplay src="$Video.URL" id="vid-bg" class="ani-vid-fadein" style="opacity: 1;" <% if $VideoPoster %>poster="$VideoPoster.CroppedFocusedImage(1500,900).URL"<% end_if %>></video>
+				<video playsinline autoplay muted loop autoplay src="$Video.URL" id="vid-bg" class="ani-vid-fadein" style="opacity: 1;" <% if $VideoPoster %>poster="$VideoPoster.CroppedFocusedImage(1400,900).URL"<% end_if %>></video>
 			</div>
 		<% end_if %>
 		<div class="home-feature__herotext">
@@ -71,7 +71,7 @@
 				</div>
 			</div>
 			<div class="home-feature__events">
-				<h3 class="home-feature__event-title">Upcoming Events / <a href="{$BaseHref}/events/">View All</a></h3>
+				<h3 class="home-feature__event-title">Upcoming Events / <a href="{$BaseHref}events/">View All</a></h3>
 				<% with $Page(events) %>
 					<% if $EventList %>
 						<ul class="home-event-list">
@@ -108,8 +108,8 @@
 <section class="whatwedo">
 	<div class="row">
 		<div class="columns large-10 large-offset-1">
-			<h2 class="whatwedo__title">What We Do</h2>
-			<p class="whatwedo__text">Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+			<% if $WhatWeDoTitle %><h2 class="whatwedo__title">$WhatWeDoTitle</h2><% end_if %>
+			<% if $WhatWeDoContent %><div class="whatwedo__text">$WhatWeDoContent</div><% end_if %>
 		</div>
 	</div>
 	<% with page(what-we-do) %>
@@ -191,8 +191,8 @@
 <section class="dept-container">
 	<div class="dept-slider">
 		<div class="dept-slider__mast">
-			<h2 class="dept-slider__mast-title">Our Departments</h2>
-			<div class="dept-slider__mast-desc"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia quis voluptas libero repudiandae. Maxime, accusantium, sequi, repudiandae architecto molestias illum ea libero amet ratione rem asperiores similique consectetur iste laudantium.</p></div>
+			<% if $DepartmentTitle %><h2 class="dept-slider__mast-title">$DepartmentTitle</h2><% end_if %>
+			<% if $DepartmentContent %><div class="dept-slider__mast-desc">$DepartmentContent</div><% end_if %>
 			<a href="{$BaseHref}our-departments/" class="dept-slider__mast-btn">See All Departments</a>
 		</div>
 		<div class="dept-slider__gallery">
