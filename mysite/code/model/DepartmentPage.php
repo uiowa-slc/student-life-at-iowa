@@ -64,7 +64,7 @@ class DepartmentPage extends Page {
 
 	public function NewsLink(){
 		$newsHolder = NewsHolder::get()->First();
-		$link = $newsHolder->Link('department/'.$this->ID);
+		$link = $newsHolder->Link('department/'.$this->URLSegment);
 		return $link;
 	}
 	
