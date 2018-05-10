@@ -37,17 +37,18 @@ class NewsEntry extends BlogPost {
 		$f = parent::getCMSFields();
 
 		
-
+		$urlSegment = $f->dataFieldByName('URLSegment');
 		$tagField = $f->fieldByName('blog-admin-sidebar.Tags');
 		$catField = $f->fieldByName('blog-admin-sidebar.Categories');
 
 		$f->remove($tagField);
 		$f->remove($catField);
+		$f->remove($urlSegment);
 
-
+		$f->addFieldToTab('Root.Main', $urlSegment, 'Content');
 		$f->addFieldToTab('Root.Main', $catField, 'Content');
 		$f->addFieldToTab('Root.Main', $tagField, 'Content');
-		$f->addFieldToTab('Root.Main', new TextField('ExternalURL', 'External URL for an external post (Tumblr, etc) - no content needed if filled out.'), "Content");
+		$f->addFieldToTab('Root.Main', new TextField('ExternalURL', 'External URL for an external post (http:// required)'), "Content");
 		//$f->addFieldToTab("Root.Main", new UploadField("Photo", "Photo"), "Content");
 
 		$f->removeByName('Content');
@@ -75,7 +76,7 @@ class NewsEntry extends BlogPost {
 		$authorEmailField = TextareaField::create('StoryByEmail', 'Author email addresses (comma separated)')->setRows(3);
 		$member = Member::currentUser();
 
-		$f->addFieldToTab('blog-admin-sidebar', $authorEmailField, 'PhotosBy');
+		$f->addFieldToTab('Root.Main', $authorEmailField, 'Content');
 
 		return $f;
 	}

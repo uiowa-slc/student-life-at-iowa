@@ -89,13 +89,24 @@ class NewsHolder_Controller extends Blog_Controller {
     public function department()
     {
         $deptID = $this->getRequest()->param('ID');
-        $dept = DepartmentPage::get()->byID($deptID);
+        $dept = DepartmentPage::get()->filter(array('URLSegment' => $deptID))->First();
+
 
         if ($dept) {
-            $this->blogPosts = $dept->NewsEntries();
+            $posts =  new PaginatedList($dept->NewsEntries(), $this->getRequest());
+			$posts->setPageLength(10);
 
-                return $this->render();
+			$this->blogPosts = $posts;
+
+	        $data = new ArrayData(array(
+	        	'CurrentDepartment' => $dept,
+	        	'PaginatedList' => $posts
+	        ));
+
+            return $this->customise($data)->renderWith(array('NewsHolder_department', 'Page'));
         }
+
+
 
         $this->httpError(404, 'Not Found');
 
