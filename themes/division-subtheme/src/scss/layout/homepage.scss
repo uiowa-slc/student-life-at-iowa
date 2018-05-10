@@ -10,8 +10,9 @@
 	}
 	&__media {
 		// background: url(../images/feature-image.jpg) no-repeat center top;
+		background-color: #000;
 		background-size: cover;
-		position: absolute;
+		position: relative;
 		position: sticky;
 		top: 0;
 		width: 100%;
@@ -802,6 +803,9 @@
 =============================================== */
 .instafeed {
 	padding: rem-calc(40 0);
+	& a:hover, & a:focus {
+		text-decoration: underline;
+	}
 	@include breakpoint(large) {
 		padding: rem-calc(120 0);
 	}

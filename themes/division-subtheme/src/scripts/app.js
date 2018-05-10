@@ -29,7 +29,7 @@ $('.dept-slider__gallery').flickity({
 // Fade technique https://codepen.io/davatron5000/pen/oENPYq
 // Set the variable to the scroll distance
 window.addEventListener('scroll', function() {
-  document.body.style.setProperty("--scroll-amount", (document.body.scrollTop || document.documentElement.scrollTop) );
+	document.body.style.setProperty("--scroll-amount", (document.body.scrollTop || document.documentElement.scrollTop) );
 });
 
 const title = document.querySelector('h1.title');
@@ -37,8 +37,15 @@ const speed = 0.02;
 title.style.transform = 'translateY( calc( var(--scrollparallax) * 1px ) )';
 
 function setScrollParallax() {
-    title.style.setProperty("--scrollparallax", (document.body.scrollTop || document.documentElement.scrollTop) * speed);
-    window.requestAnimationFrame( setScrollParallax );
+	title.style.setProperty("--scrollparallax", (document.body.scrollTop || document.documentElement.scrollTop) * speed);
+	window.requestAnimationFrame( setScrollParallax );
 }
 
 window.requestAnimationFrame( setScrollParallax );
+
+
+// Position sticky pollyfill (https://github.com/wilddeer/stickyfill)
+var elements = document.querySelectorAll('.sticky');
+Stickyfill.add(elements);
+
+

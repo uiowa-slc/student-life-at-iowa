@@ -59,4 +59,5 @@ PATHS:
     # Division Project Scripts:
     - "src/scripts/lib/*.js"
     # - "src/scripts/!(app).js"
+    - "../themes/division-subtheme/src/scripts/libs/stickyfill.min.js"
     - "src/scripts/app.js"

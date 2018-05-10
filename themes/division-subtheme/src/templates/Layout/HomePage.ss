@@ -1,10 +1,10 @@
-<section class="home-feature">
+<section class="home-feature" aria-label="Student Life News and Events">
 	<div class="home-feature__header">
 		$Header("dark-header","overlay")
 	</div>
 
 
-	<div class="home-feature__media">
+	<div class="home-feature__media sticky">
 		<% if $Video %>
 			<div class="fullwidth-video">
 				<video playsinline autoplay muted loop autoplay src="$Video.URL" id="vid-bg" class="ani-vid-fadein" style="opacity: 1;" <% if $VideoPoster %>poster="$VideoPoster.CroppedFocusedImage(1400,900).URL"<% end_if %>></video>
@@ -18,7 +18,7 @@
 	<div class="home-feature__content-wrap">
 		<div class="home-feature__content">
 			<div class="home-feature__news">
-				<h3 class="home-feature__event-title">Latest News / <a href="{$BaseHref}news/">View All</a></h3>
+				<h2 class="home-feature__event-title">Latest News / <a href="{$BaseHref}news/">View All</a></h2>
 				<div class="clearfix news-container">
 					<div class="news-main">
 						<div class="news-main__article">
@@ -85,7 +85,7 @@
 												<% end_loop %>
 											</p>
 										<% end_if %>
-										<h5 class="home-event-list__title">$Title</h5>
+										<h4 class="home-event-list__title">$Title</h4>
 										<p class="home-event-list__summary">$Content.Summary(30)</p>
 										<% if $Venue %>
 											<p class="home-event-list__venue">
@@ -105,10 +105,10 @@
 
 
 <!-- What We Do -->
-<section class="whatwedo">
+<section class="whatwedo" aria-labelledby="whatwedo__id">
 	<div class="row">
 		<div class="columns large-10 large-offset-1">
-			<% if $WhatWeDoTitle %><h2 class="whatwedo__title">$WhatWeDoTitle</h2><% end_if %>
+			<% if $WhatWeDoTitle %><h2 class="whatwedo__title" id="whatwedo__id">$WhatWeDoTitle</h2><% end_if %>
 			<% if $WhatWeDoContent %><div class="whatwedo__text">$WhatWeDoContent</div><% end_if %>
 		</div>
 	</div>
@@ -134,46 +134,16 @@
 	</ul>
 	<% end_with %>
 </section>
-
 <!-- End What We Do -->
-
-
-<!-- Newsletter Sign Up -->
-<section class="homepage-signup">
-	<div class="row">
-		<div class="columns large-8 large-offset-2">
-			<p class="homepage-signup__text">Sign up to receive emails on the latest information on upcoming events and news about Student Life.</p>
-
-			<!-- Begin MailChimp Signup Form -->
-			<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-			<style type="text/css">
-				#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
-			</style>
-			<div id="mc_embed_signup">
-				<form action="https://uiowa.us2.list-manage.com/subscribe/post?u=c61b1cddac92babd42d7d628e&amp;id=8e3635391c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-					<div id="mc_embed_signup_scroll">
-						<label for="mce-EMAIL">Subscribe to our mailing list</label>
-						<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-						<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c61b1cddac92babd42d7d628e_8e3635391c" tabindex="-1" value=""></div>
-						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-					</div>
-				</form>
-			</div>
-			<!--End mc_embed_signup-->
-		</div>
-	</div>
-</section>
-<!-- End Newsletter Signup
 
 
 <!-- Spotlight Feature -->
 <% if $SpotlightTitle || $SpotlightContent %>
-<section class="spotlight" <% if $SpotlightImage %>data-interchange="[$SpotlightImage.CroppedFocusedImage(800,600).URL, small], [$SpotlightImage.CroppedFocusedImage(1300,500).URL, large]"<% end_if %>>
+<section class="spotlight" <% if $SpotlightImage %>data-interchange="[$SpotlightImage.CroppedFocusedImage(800,600).URL, small], [$SpotlightImage.CroppedFocusedImage(1300,500).URL, large]"<% end_if %> aria-labelledby="spotlight__id">
 	<div class="column row">
 		<div class="spotlight__container">
 			<% if $SpotlightTitle %>
-				<h3 class="spotlight__title">$SpotlightTitle</h3>
+				<h3 class="spotlight__title" id="spotlight__id">$SpotlightTitle</h3>
 			<% end_if %>
 			<% if $SpotlightContent %>
 				<div class="spotlight__content">
@@ -188,10 +158,10 @@
 
 
 <!-- Departments -->
-<section class="dept-container">
+<section class="dept-container" aria-labelledby="dept__id">
 	<div class="dept-slider">
 		<div class="dept-slider__mast">
-			<% if $DepartmentTitle %><h2 class="dept-slider__mast-title">$DepartmentTitle</h2><% end_if %>
+			<% if $DepartmentTitle %><h2 class="dept-slider__mast-title" id="dept__id">$DepartmentTitle</h2><% end_if %>
 			<% if $DepartmentContent %><div class="dept-slider__mast-desc">$DepartmentContent</div><% end_if %>
 			<a href="{$BaseHref}our-departments/" class="dept-slider__mast-btn">See All Departments</a>
 		</div>
@@ -199,12 +169,12 @@
 			<% if $AllDepartments %>
 				<% loop $AllDepartments %>
 					<div class="dept-slider__gallery-slide">
-						<img src="http://placehold.it/800x600?text=Student%20Life" data-flickity-lazyload="$BackgroundImage.CroppedFocusedImage(800,600).URL" class="dept-slider__gallery-img">
+						<img src="http://placehold.it/800x600?text=Student%20Life" data-flickity-lazyload="$BackgroundImage.CroppedFocusedImage(800,600).URL" class="dept-slider__gallery-img" alt="$Title">
 						<div class="dept-slider__gallery-box">
 							<div class="dept-slider__gallery-box-content">
 								<h3 class="dept-slider__gallery-title">$Title</h3>
 								<div class="dept-slider__gallery-desc"><p>$Content.FirstSentence.LimitCharacters(150)</p></div>
-								<a href="$Link" class="dept-slider__gallery-btn">Learn More</a>
+								<a href="$Link" class="dept-slider__gallery-btn">Learn More About $Title</a>
 							</div>
 						</div>
 					</div>
@@ -217,16 +187,13 @@
 
 
 <!-- Instagram Feed -->
-<section class="instafeed">
+<section class="instafeed" aria-labelledby="instagramid">
 	<div class="row">
 		<div class="columns">
-			<h3>Follow us on Instagram <a href="https://www.instagram.com/uiowaimu/">@uiowaimu</a></h3>
+			<h3 id="instagramid">Follow us on Instagram <a href="https://www.instagram.com/uiowaimu/">@uiowaimu</a></h3>
 			<!-- LightWidget WIDGET - lightwidget.com --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/d42f1547dd2c56fb8ad082838075f620.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
 		</div>
 	</div>
 </section>
-
-
-
 
 
