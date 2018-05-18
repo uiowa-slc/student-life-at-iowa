@@ -9,3 +9,6 @@ After:
 # Caution: Indentation through two spaces, not tabs
 FilesystemPublisher:
     static_base_url: https://studentlife.uiowa.edu
+StaffPage:
+  extensions:
+    - StaffPageExtension

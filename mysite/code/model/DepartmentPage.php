@@ -16,7 +16,8 @@ class DepartmentPage extends Page {
 	);
 
 	private static $belongs_many_many = array(
-		'NewsEntries' => 'NewsEntry'
+		'NewsEntries' => 'NewsEntry',
+		'StaffHolderPages' => 'StaffHolderPage'
 	);
 
 	private static $icon = 'mysite/cms_icons/department.png';

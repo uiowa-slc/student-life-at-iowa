@@ -80,4 +80,5 @@ staticpublisher/
 youtubefield/
 sortableuploadfield/
 silverstripe-blog
->>>>>>> 2.0.x
+codeeditorfield/
+silverstripe-versioneddataobjects/
