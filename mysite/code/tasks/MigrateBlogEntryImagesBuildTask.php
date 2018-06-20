@@ -1,5 +1,5 @@
 <?php
-
+use SilverStripe\Dev\BuildTask;
 class MigrateBlogEntryImagesBuildTask extends BuildTask {
 
 	protected $title = 'Migrate the old blog entry image relationships';

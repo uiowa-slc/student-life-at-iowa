@@ -1,4 +1,8 @@
 <?php
+use SilverStripe\Dev\BuildTask;
+use SilverStripe\Control\Director;
+use SilverStripe\Assets\Image;
+use SilverStripe\Blog\Model\BlogTag;
 
 class ImportPostsBuildTask extends BuildTask {
 

@@ -1,4 +1,6 @@
 <?php
+use SilverStripe\Dev\BuildTask;
+use SilverStripe\Blog\Model\BlogTag;
 
 class ConsolidateTagsBuildTask extends BuildTask {
 

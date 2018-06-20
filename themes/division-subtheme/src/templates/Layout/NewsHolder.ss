@@ -3,7 +3,7 @@ $Header
 
 <main class="main-content__container" id="main-content__container">
 
-	$BlockArea(BeforeContent)
+	$BeforeContent
 
 	<div class="row">
 		<div class="featured-news clearfix">
@@ -124,9 +124,9 @@ $Header
 			<h2>Latest News</h2>
 		</div>
 
-		<div role="main" class="main-content main-content--with-padding <% if $Children || $Menu(2) || $SidebarBlocks ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
+		<div role="main" class="main-content main-content--with-padding <% if $Children || $Menu(2) || $SidebarArea.Elements ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
 
-			$BlockArea(BeforeContentConstrained)
+			$BeforeContentConstrained
 
 			<div class="main-content__text">
 
@@ -156,15 +156,13 @@ $Header
 					</ul>
 				</div>
 				<%-- End Listing Departments --%>
-			<% if $SideBarView %>
-				$SideBarView
-			<% end_if %>
 
-			$BlockArea(Sidebar)
+
+			$SidebarArea
 
 		</aside>
 	</div>
 
-	$BlockArea(AfterContent)
+	$AfterContent
 
 </main>
