@@ -5,4 +5,5 @@ SilverStripe\View\SSViewer:
   themes:
     - '$public'
     - 'division-subtheme'
+    - 'md/division-project'
     - '$default'

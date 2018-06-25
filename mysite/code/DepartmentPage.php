@@ -1,5 +1,5 @@
 <?php
-
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Assets\Image;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Forms\TextField;

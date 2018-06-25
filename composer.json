@@ -29,8 +29,8 @@
             "web.config"
         ],
         "expose": [
-            "themes/division-subtheme/dist/",
-            "themes/division-subtheme/css/"
+            "themes/division-subtheme/dist",
+            "themes/division-subtheme/css"
             
         ]
     },
