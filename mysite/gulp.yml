@@ -60,4 +60,5 @@ PATHS:
     - "src/scripts/lib/*.js"
     # - "src/scripts/!(app).js"
     - "../themes/division-subtheme/src/scripts/libs/stickyfill.min.js"
+    - "../themes/division-subtheme/src/scripts/libs/isotope.pkgd.js"
     - "src/scripts/app.js"

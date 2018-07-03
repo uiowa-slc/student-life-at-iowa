@@ -26,6 +26,51 @@ $('.dept-slider__gallery').flickity({
 });
 
 
+
+// Year In Review - Shop/hide text
+$(".toggletext").on("click", function () {
+	var txt = $(".slidetext").is(':visible') ? 'Read More' : 'Read Less';
+	$(".toggletext").text(txt);
+	$('.slidetext').slideToggle('slow');
+});
+
+
+
+// Year In Review - Isotope article filters
+var $container = $('.yir-article-container'),
+	$checkboxes = $('#filters input');
+
+$container.isotope({
+	itemSelector: '.yir-article',
+	percentPosition: true,
+	layoutMode: 'fitRows',
+	masonry: {
+		// use element for option
+		columnWidth: '.grid-sizer'
+	}
+});
+
+
+
+$checkboxes.change(function(){
+	var filters = [];
+	// get checked checkboxes values
+	$checkboxes.filter(':checked').each(function(){
+	filters.push( this.value );
+	});
+	filters = filters.join(', ');
+	$container.isotope({ filter: filters });
+});
+
+var $items = $container.children();
+
+$grid.imagesLoaded().progress( function() {
+  $grid.isotope('layout');
+});
+
+
+
+
 // Fade technique https://codepen.io/davatron5000/pen/oENPYq
 // Set the variable to the scroll distance
 window.addEventListener('scroll', function() {
