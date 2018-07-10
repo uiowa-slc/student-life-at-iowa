@@ -40,16 +40,17 @@ $(".toggletext").on("click", function () {
 var $container = $('.yir-article-container'),
 	$checkboxes = $('#filters input');
 
-$container.isotope({
-	itemSelector: '.yir-article',
-	percentPosition: true,
-	layoutMode: 'fitRows',
-	masonry: {
-		// use element for option
-		columnWidth: '.grid-sizer'
-	}
-});
+var $grid = $('.yir-article-container').imagesLoaded( function() {
+	$container.isotope({
+		itemSelector: '.yir-article',
+		percentPosition: true,
+		layoutMode: 'fitRows',
+		// masonry: {
+		// 	columnWidth: '.grid-sizer'
+		// }
+	});
 
+});
 
 
 $checkboxes.change(function(){
@@ -64,9 +65,7 @@ $checkboxes.change(function(){
 
 var $items = $container.children();
 
-$grid.imagesLoaded().progress( function() {
-  $grid.isotope('layout');
-});
+
 
 
 

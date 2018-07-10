@@ -193,7 +193,7 @@ $BlockArea(BeforeContent)
 
 <section class="yir-section yir-stories">
 	<div class="column row">
-		<h2>Featured Articles From 2017-2018</h2>
+		<% if $StoryTitle %><h2>$StoryTitle</h2><% end_if %>
 		<div id="filters">
 			<div class="filter">
 				<input type="checkbox" name="excel" value=".excel" id="excel">
@@ -221,139 +221,11 @@ $BlockArea(BeforeContent)
 
 	<div class="column row">
 		<div class="yir-article-container">
-			<article class="yir-article yir-article--large excel">
-				<img src="http://report.studentlife.uiowa.edu/assets/Uploads/_resampled/CroppedFocusedImageWyI1MDYiLCIzNDAiLCJ4IiwxOTJd/workshop.jpg" alt="">
-				<div class="yir-article__body">
-					<h4><a href="#">Ullamcorper Malesuada Euismod Tellus Aenean Elit Vulputate</a></h4>
-					<p class="yir-article__footer">Student Health</p>
-				</div>
-			</article>
 
-			<article class="yir-article serve grid-sizer">
-				<img src="http://report.studentlife.uiowa.edu/assets/Uploads/_resampled/CroppedFocusedImageWyI1MDYiLCIzNDAiLCJ4Iiw0Nl0/finals.jpg" alt="">
-				<div class="yir-article__body">
-					<h4><a href="#">Ullamcorper Malesuada Aenean Elit Tellus Risus Sem Pellentesque</a></h4>
-					<p class="yir-article__footer">Dean Of Students</p>
-				</div>
-			</article>
+			<% loop $Entries %>
+				<% include YearInReviewBlogCard %>
+			<% end_loop %>
 
-			<article class="yir-article choose">
-				<img src="http://report.studentlife.uiowa.edu/assets/Uploads/_resampled/CroppedFocusedImageWyI1MDYiLCIzNDAiLCJ4IiwyXQ/Rehydration-Article.jpg" alt="">
-				<div class="yir-article__body">
-					<h4><a href="#">Fusce Etiam Elit Mattis Risus Condimentum Mollis Dolor Tristique</a></h4>
-					<p class="yir-article__footer">University Housing & Dining</p>
-				</div>
-			</article>
-
-			<article class="yir-article engage">
-				<img src="http://report.studentlife.uiowa.edu/assets/Uploads/_resampled/CroppedFocusedImageWyI1MDYiLCIzNDAiLCJ4IiwyXQ/26366197694-e178c8c7f6-o.jpg" alt="">
-				<div class="yir-article__body">
-					<h4><a href="#">Ullamcorper Aenean Elit Vulputate Euismod Tellus Risus Sem Lorem</a></h4>
-					<p class="yir-article__footer">University Counseling Service</p>
-				</div>
-			</article>
-
-			<article class="yir-article stretch">
-				<img src="http://report.studentlife.uiowa.edu/assets/Uploads/_resampled/CroppedFocusedImageWyI1MDYiLCIzNDAiLCJ4IiwyXQ/29571002215-f08cf8acb0-o.jpg" alt="">
-				<div class="yir-article__body">
-					<h4><a href="#">Ullamcorper Malesuada Euismod Tellus Aenean Elit Commodo Nullam</a></h4>
-					<p class="yir-article__footer">Student Disability Services</p>
-				</div>
-			</article>
-
-			<article class="yir-article excel">
-				<img src="http://report.studentlife.uiowa.edu/assets/Uploads/_resampled/CroppedFocusedImageWyI1MDYiLCIzNDAiLCJ4IiwxNTJd/welcome.jpg" alt="">
-				<div class="yir-article__body">
-					<h4><a href="#">Ullamcorper Malesuada Aenean Elit Tellus Risus Sem Pellentesque</a></h4>
-					<p class="yir-article__footer">Dean Of Students</p>
-				</div>
-			</article>
-
-			<article class="yir-article serve">
-				<img src="http://report.studentlife.uiowa.edu/assets/Uploads/_resampled/CroppedFocusedImageWyI1MDYiLCIzNDAiLCJ4IiwxXQ/15112778345-aaa55cec68-h.jpg" alt="">
-				<div class="yir-article__body">
-					<h4><a href="#">Ullamcorper Malesuada Euismod Risus Mollis Tellus Elit Bibendum Nullam</a></h4>
-					<p class="yir-article__footer">Recreational Services</p>
-				</div>
-			</article>
-
-			<article class="yir-article choose">
-				<img src="https://hulk.imu.uiowa.edu/student-life-at-iowa/assets/Uploads/_resampled/CroppedFocusedImageWyI1MDAiLCIzMzMiLCJ5IiwwXQ/2018-01-25-Tabitha-Tab-Wiggins-tschoon-007.jpg" alt="">
-				<div class="yir-article__body">
-					<h4><a href="#">Ullamcorper Aenean Elit Vulputate Euismod Tellus Risus Porta</a></h4>
-					<p class="yir-article__footer">University Housing & Dining</p>
-				</div>
-			</article>
-
-			<article class="yir-article engage">
-				<img src="https://hulk.imu.uiowa.edu/student-life-at-iowa/assets/Uploads/_resampled/CroppedFocusedImageWyI1MDAiLCIzMzMiLCJ5IiwwXQ/aj-smith.jpg" alt="">
-				<div class="yir-article__body">
-					<h4><a href="#">Ullamcorper Malesuada Euismod Tellus Aenean Elit Vulputate</a></h4>
-					<p class="yir-article__footer">Recreational Services</p>
-				</div>
-			</article>
-
-			<article class="yir-article yir-article--large yir-article--quote">
-				<div class="yir-article__quote">
-					<p class="">"Nullam id dolor id nibh ultricies vehicula ut id elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget odio sem nec elit. Cras mattis purus sit amet fermentum. Lorem ipsum dolor sit amet. Leo risus, porta ac consectetur ac, vestibulum at eros."</p>
-				</div>
-			</article>
-
-			<article class="yir-article excel">
-				<img src="https://hulk.imu.uiowa.edu/student-life-at-iowa/assets/Uploads/_resampled/CroppedFocusedImageWyI1MDAiLCIzMzMiLCJ5IiwwXQ/dylan-goncalves.jpg" alt="">
-				<div class="yir-article__body">
-					<h4><a href="#">Fusce Etiam Elit Mattis Risus Condimentum Mollis Dolor Tristique</a></h4>
-					<p class="yir-article__footer">Student Disability Services</p>
-				</div>
-			</article>
-
-			<article class="yir-article serve">
-				<img src="http://report.studentlife.uiowa.edu/assets/Uploads/_resampled/CroppedFocusedImageWyI1MDYiLCIzNDAiLCJ4IiwyXQ/22315344476-a8e7a0c2e1-k.jpg" alt="">
-				<div class="yir-article__body">
-					<h4><a href="#">Ullamcorper Aenean Elit Vulputate Euismod Tellus Risus Sem Lorem Fringilla Sit Pharetra</a></h4>
-					<p class="yir-article__footer">Iowa Memorial Union</p>
-				</div>
-			</article>
-
-			<article class="yir-article choose">
-				<img src="http://report.studentlife.uiowa.edu/assets/Uploads/_resampled/CroppedFocusedImageWyI1MDYiLCIzNDAiLCJ5IiwzOV0/mosoon.jpg" alt="">
-				<div class="yir-article__body">
-					<h4><a href="#">Ullamcorper Malesuada Euismod Tellus Aenean Elit Commodo Nullam</a></h4>
-					<p class="yir-article__footer">Women's Resource & Action Center</p>
-				</div>
-			</article>
-
-			<article class="yir-article engage">
-				<img src="http://report.studentlife.uiowa.edu/assets/Uploads/_resampled/CroppedFocusedImageWyI1MDYiLCIzNDAiLCJ4IiwxNTJd/sds.jpg" alt="">
-				<div class="yir-article__body">
-					<h4><a href="#">Ullamcorper Malesuada Aenean Elit Tellus Risus Sem Pellentesque</a></h4>
-					<p class="yir-article__footer">Rape Victim Advocacy Program</p>
-				</div>
-			</article>
-
-			<article class="yir-article yir-article--large choose">
-				<img src="http://report.studentlife.uiowa.edu/assets/Uploads/_resampled/CroppedFocusedImageWyI1MDYiLCIzNDAiLCJ4IiwxNTJd/social-work.jpg" alt="">
-				<div class="yir-article__body">
-					<h4><a href="#">Ullamcorper Malesuada Euismod Tellus Aenean Elit Vulputate</a></h4>
-					<p class="yir-article__footer">University Counseling Service</p>
-				</div>
-			</article>
-
-			<article class="yir-article stretch">
-				<img src="http://report.studentlife.uiowa.edu/assets/Uploads/_resampled/CroppedFocusedImageWyI1MDYiLCIzNDAiLCJ4IiwyXQ/34996602746-44c54ca6d5-k.jpg" alt="">
-				<div class="yir-article__body">
-					<h4><a href="#">Ullamcorper Malesuada Euismod Risus Mollis Tellus Elit</a></h4>
-					<p class="yir-article__footer">Women's Resource & Action Center</p>
-				</div>
-			</article>
-
-			<article class="yir-article expel">
-				<img src="http://report.studentlife.uiowa.edu/assets/Uploads/_resampled/CroppedFocusedImageWyI1MDYiLCIzNDAiLCJ4IiwyXQ/PrEP-Article.jpg" alt="">
-				<div class="yir-article__body">
-					<h4><a href="#">Ullamcorper Aenean Elit Vulputate Euismod Tellus Risus Porta Bibendum Nullam</a></h4>
-					<p class="yir-article__footer">Iowa Memorial Union</p>
-				</div>
-			</article>
 		</div>
 	</div><!-- end row -->
 </section>

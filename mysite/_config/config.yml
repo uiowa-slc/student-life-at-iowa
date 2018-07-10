@@ -12,3 +12,9 @@ FilesystemPublisher:
 HomePage:
   extensions:
     - HomePageExtension
+BlogTag:
+  extensions:
+    - BlogTagExtension
+BlogCategory:
+  extensions:
+    - BlogCategoryExtension

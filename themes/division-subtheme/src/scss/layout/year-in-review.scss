@@ -89,59 +89,68 @@ hr.large {
 	}
 }
 
-/* Articles */
+/* Articles
+========================================================= */
+.yir-stories {
+	background-color: #fff;
+}
 .yir-article-container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
+
 .yir-article {
 	border-top: 1px solid #eee;
 	padding: 2.5em 0;
 	overflow: hidden;
 	width: 100%;
+
+	&__img {
+		display: block;
+		& img {
+			width: 100%;
+		}
+	}
+	&__content {
+		position: relative;
+		background: #fff;
+		margin: -15px 10px 0;
+		padding: 10px 10px 10px;
+	}
+	&__heading {
+		font-size: 18px;
+		margin: 0;
+		& a {
+			color: $black;
+		}
+	}
+	&__departments {
+		font-size: 12px;
+		color: #666;
+		text-transform: uppercase;
+		margin: 8px 0 0;
+	}
 	@include breakpoint(medium) {
 		width: 48%;
 		margin-right: 2%;
 	}
 	@include breakpoint(large) {
-		width: 22%;
+		width: 30%;
 		margin-right: 3%;
 	}
 }
-.yir-article--large {
+.yir-article:nth-child(8n-7) {
 	@include breakpoint(medium) {
-		width: 47%;
+		width: 63%;
 	}
 }
-.yir-article img {
-	width: 100%;
-}
-.yir-article__body {
-	position: relative;
-	background: #fff;
-	margin: -15px 10px 0;
-	padding: 10px 10px 10px;
-}
-.yir-article__body h4 {
-	font-size: 18px;
-	margin: 0;
-	& a {
-		color: $black;
-	}
-}
-.yir-article__footer {
-	font-size: 12px;
-	color: #666;
-	text-transform: uppercase;
-	margin: 8px 0 0;
-}
+
 .yir-article__quote {
 	background-color: $yellow;
 	color: $black;
 	padding: 3em;
-	font-size: 18px;
-
+	font-size: 21px;
 	& p {
 		margin: 0;
 		line-height: 1.9;
