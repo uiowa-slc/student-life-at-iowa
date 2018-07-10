@@ -889,16 +889,16 @@
         },
         {
             "name": "md/ac-json-events",
-            "version": "dev-ss-4.x",
+            "version": "dev-ss4.x-ui",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events.git",
-                "reference": "0c908bebc9ccf696c32eec9fa45f88b04db6752a"
+                "reference": "f277968f22becef9449efeab4c525fa267dc9a8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/0c908bebc9ccf696c32eec9fa45f88b04db6752a",
-                "reference": "0c908bebc9ccf696c32eec9fa45f88b04db6752a",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/f277968f22becef9449efeab4c525fa267dc9a8c",
+                "reference": "f277968f22becef9449efeab4c525fa267dc9a8c",
                 "shasum": ""
             },
             "require": {
@@ -906,7 +906,7 @@
                 "silverstripe/cms": "4.*",
                 "silverstripe/framework": "4.*"
             },
-            "type": "silverstripe-vendormodule",
+            "type": "silverstripe-module",
             "extra": {
                 "branch-alias": {
                     "dev-master": "0.1.x-dev"
@@ -914,10 +914,10 @@
             },
             "description": "After Class JSON Display Module",
             "support": {
-                "source": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/tree/ss-4.x",
+                "source": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/tree/ss4.x-ui",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/issues"
             },
-            "time": "2018-05-11T14:26:46+00:00"
+            "time": "2018-06-26T18:50:55+00:00"
         },
         {
             "name": "md/division-project",
@@ -925,12 +925,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "587fde2c507bcb19caa407dfa30ab4fcb6f22113"
+                "reference": "55a0613027db6e5e6796ba21b6387c6f8a01345a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/587fde2c507bcb19caa407dfa30ab4fcb6f22113",
-                "reference": "587fde2c507bcb19caa407dfa30ab4fcb6f22113",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/55a0613027db6e5e6796ba21b6387c6f8a01345a",
+                "reference": "55a0613027db6e5e6796ba21b6387c6f8a01345a",
                 "shasum": ""
             },
             "require": {
@@ -938,7 +938,7 @@
                 "edgarindustries/youtubefield": "*",
                 "gorriecoe/silverstripe-webfonts": "*",
                 "jonom/focuspoint": "*",
-                "md/ac-json-events": "dev-ss-4.x",
+                "md/ac-json-events": "dev-ss4.x-ui",
                 "md/saml": "dev-md",
                 "php": ">=5.5",
                 "silverstripe-australia/gridfieldextensions": "*",
@@ -971,7 +971,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/ss4.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2018-06-25T21:42:25+00:00"
+            "time": "2018-06-26T18:47:17+00:00"
         },
         {
             "name": "md/saml",

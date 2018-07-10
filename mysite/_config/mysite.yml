@@ -3,3 +3,5 @@ Name: myproject
 ---
 SilverStripe\Core\Manifest\ModuleManifest:
   project: mysite
+SilverStripe\Control\Email\Email:
+  admin_email: imu-web@uiowa.edu
