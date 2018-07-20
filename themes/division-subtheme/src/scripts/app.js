@@ -26,6 +26,10 @@ $('.dept-slider__gallery').flickity({
 });
 
 
+$('.cardflip-btn').on('click', function () {
+  $('.card').toggleClass('flipped');
+});
+
 
 // Year In Review - Shop/hide text
 $(".toggletext").on("click", function () {

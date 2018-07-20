@@ -17,82 +17,175 @@ hr.large {
 	margin: 0;
 	margin: 50px 0 30px;
 }
+
+
+/* Stats
+========================================================= */
 .yir-stats {
-	background-image: url(../images/image-study.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	color: #fff;
+
 }
-.yir-stats:before {
-	display: block;
+.stats {
+	border-top: 15px solid $yellow;
+	border-bottom: 15px solid $yellow;
+	display: grid;
+	margin: 0 auto;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-auto-rows: minmax(350px, auto);
+	grid-auto-flow: dense;
+	padding-left: 1px;
+	@include breakpoint(1516) {
+		grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+	}
+	&__box {
+		color: #111;
+		padding: .8em;
+		font-size: 150%;
+		border: 1px solid #ccc;
+		margin-top: -1px;
+		margin-left: -1px;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+	}
+	&__box--span2 {
+		@include breakpoint(medium) {
+			grid-column: span 2;
+		}
+	}
+	&__box--spanAll {
+		grid-column: 1/-1;
+	}
+	&__label {
+		font-family: $header-font-family;
+		font-weight: bold;
+		font-size: rem-calc(32);
+		line-height: 1.1;
+		color: #9f9f9f;
+		display: block;
+	}
+	&__copy {
+		color: #444;
+		display: block;
+		font-family: Georgia, Times, "Times New Roman", serif;
+		font-size: rem-calc(21);
+		font-style: italic;
+	}
+	&__num {
+		font-family: $header-font-family;
+		font-weight: bold;
+		color: #111;
+		font-size: rem-calc(90);
+		display: block;
+		line-height: 1.1;
+	}
+	&__num--stroke {
+		color: $yellow;
+		text-stroke: 4px white;
+		-webkit-text-stroke: 4px white;
+    	text-shadow: 6px 7px 0px rgba(0,0,0,.15);
+	}
+	&__num--thin {
+		font-weight: 200;
+	}
+	&__num .gray {
+		color: #999;
+	}
+	&__num--md {
+		font-size: rem-calc(62);
+	}
+	&__num--lg {
+		font-size: rem-calc(55);
+		@include breakpoint(medium) {
+			font-size: rem-calc(110);
+		}
+	}
+	&__num--xlg {
+		font-size: rem-calc(65);
+		@include breakpoint(medium) {
+			font-size: rem-calc(150);
+		}
+	}
+	&__num--floatleft {
+		@include breakpoint(medium) {
+			float: left;
+			width: 38%;
+		}
+	}
+	&__copy--alignleft {
+		text-align:left;
+	}
+}
+.stats__box--reverse {
+	background-color: #111;
+	color: #fff;
+	& .stats__num, & .stats__label, & .stats__copy {
+		color: #fff;
+	}
+}
+.stats__box--dm {
+	background: url(../images/dollar-sign-solid.png) bottom left;
+}
+.stats__box--house {
+	background: url(../images/home-solid.png) bottom left;
+}
+.pie {
+	background: url(../images/pie.jpg) no-repeat 8% center;
+}
+
+
+/* Card Flip */
+.card-container {
+	perspective: 800px;
+	width: 100%;
+	height: 100%;
+}
+.card {
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	background-color: rgba(0,0,0,0.6);
-	content: "";
-	top:0;
-	left: 0;
+	transform-style: preserve-3d;
+	transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.yir-stats h3 {
-	color: #fff;
-	margin: 0;
-}
-.yir-stats .ptext {
-	font-size: 30px;
-	font-weight: bold;
-	margin: 0;
-}
-
-/* Grid */
-.div {
-	height: 30px;
-	@include breakpoint(large) {
-		height: 75px;
-	}
-
-}
-.stats-container {
+.face {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	background: #fff;
 	display: flex;
-	justify-content: space-between;
-	flex-wrap:wrap;
+	justify-content: center;
+	align-items: center;
 }
-.stat {
-	padding: 50px 30px;
-	width: 22%;
-	margin-bottom: 4%;
-
-	&--red { background-color: rgba(157,21,53, .95); }
-	&--teal { background-color: rgba(2,111,121, .95); }
-	&--blue { background-color: rgba(2,86,121,0.95); }
-	&--orange { background-color: rgba(184,91,5, .95); }
-	&--black { background-color: rgba(17,17,17, .95); }
-	&--gray { background-color: rgba(102,102,102,0.95); }
-
-	&--growtwo {
-		width: 48%;
-	}
-	&--growthree {
-		width: 74%;
-	}
-
-	&__heading {
-		font-size: 50px;
-		margin-top: .25em;
-		font-weight: normal;
-		line-height: 1;
-		& span {
-			font-size: 28px;
-		}
-	}
-	&__body {
-		p {font-size: 18px;}
-	}
+.back {
+	transform: rotateY(180deg);
+	background-color: black;
+	color: #fff;
 }
+.card.flipped {
+	transform: rotateY(180deg);
+}
+.cardflip-btn {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 18px;
+	height: 19px;
+	background: url(../images/flip.gif) no-repeat top left;
+	cursor: pointer;
+	z-index: 100;
+}
+
+
+
+
+
 
 /* Articles
 ========================================================= */
 .yir-stories {
-	background-color: #fff;
+	// background-color: #fff;
 }
 .yir-article-container {
 	display: flex;
@@ -115,11 +208,11 @@ hr.large {
 	&__content {
 		position: relative;
 		background: #fff;
-		margin: -15px 10px 0;
-		padding: 10px 10px 10px;
+		margin: -15px 15px 0 0;
+		padding: 10px 10px 10px 0;
 	}
 	&__heading {
-		font-size: 18px;
+		font-size: 20px;
 		margin: 0;
 		& a {
 			color: $black;
@@ -140,11 +233,11 @@ hr.large {
 		margin-right: 3%;
 	}
 }
-.yir-article:nth-child(8n-7) {
-	@include breakpoint(medium) {
-		width: 63%;
-	}
-}
+// .yir-article:nth-child(8n) {
+// 	@include breakpoint(medium) {
+// 		width: 63%;
+// 	}
+// }
 
 .yir-article__quote {
 	background-color: $yellow;
@@ -162,7 +255,14 @@ hr.large {
 	flex-wrap: wrap;
 }
 .filter {
-
+	background: #eee;
+	margin-right: 1em;
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	& input {
+		margin-bottom: 0;
+	}
 }
 
 .yir-video {
@@ -170,5 +270,26 @@ hr.large {
 }
 
 
-
+svg {
+  width: 100%;
+  position:absolute;
+  top: 0;
+  left: 0; // needed for FF, Safari, Edge
+  height: 100%;
+}
+svg text {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 54px;
+}
+svg rect {
+  fill: white;
+}
+svg > rect {
+    -webkit-mask: url(#mask);
+    mask: url(#mask);
+}
+.carousel-cell .cell-bg::after {
+	display: none;
+}
 
