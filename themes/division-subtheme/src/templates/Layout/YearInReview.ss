@@ -4,8 +4,6 @@
 	$Header("dark-header","overlay")
 
 
-
-
 	<% if $YearInReviewHeroFeatures %>
 		<div class="carousel" id="main-content__container">
 			<% loop YearInReviewHeroFeatures %>
@@ -148,12 +146,12 @@ $BlockArea(BeforeContent)
 		<div class="stats__box">
 			<div class="stats__inner">
 				<span class="stats__label header--caps">Meet The Class Of</span>
-				<span class="stats__num stats__num--thin stats__num--xlg">2017</span>
+				<span class="stats__num stats__num--thin stats__num--xlg stats__num--stroke">2018</span>
 			</div>
 		</div>
 		<div class="stats__box stats__box--dm">
 			<div class="stats__inner">
-				<span class="stats__num stats__num--stroke stats__num--xlg">3M+</span>
+				<span class="stats__num stats__num--shadow stats__num--xlg">3M+</span>
 				<span class="stats__copy">Raised by UIDM for Children's Hospital</span>
 			</div>
 		</div>
@@ -172,13 +170,6 @@ $BlockArea(BeforeContent)
 				</div>
 			</div>
 		</div>
-		<%-- <div class="stats__box">
-			<div class="stats__inner">
-				<span class="stats__num">2,135</span>
-				<span class="stats__label">Students</span>
-				<span class="stats__copy">Attended a violence prevention team workshop</span>
-			</div>
-		</div> --%>
 		<div class="stats__box">
 			<div class="stats__inner">
 				<span class="stats__num stats__num--thin stats__num--md header--caps">Seventy <span class="gray">Thousand</span></span>
@@ -200,7 +191,7 @@ $BlockArea(BeforeContent)
 		</div>
 		<div class="stats__box stats__box--reverse">
 			<div class="stats__inner">
-				<span class="stats__num">560</span>
+				<span class="stats__num stats__num--yellow">560</span>
 				<span class="stats__label">Meals</span>
 				<span class="stats__copy">Distributed through Hawkeye Meal Share</span>
 			</div>
@@ -217,16 +208,16 @@ $BlockArea(BeforeContent)
 				<span class="stats__copy stats__copy--alignleft">Overall satisfaction reported by patients for their visit to the Iowa Memorial Union Nurse Care.</span>
 			</div>
 		</div>
-		<div class="stats__box">
-			<div class="stats__inner">
-				<span class="stats__num stats__num--stroke stats__num--xlg">36</span>
-				<span class="stats__copy">New student organizations created in 2018</span>
-			</div>
-		</div>
 		<div class="stats__box stats__box--house">
 			<div class="stats__inner">
 				<span class="stats__num stats__num--thin stats__num--md header--caps">Sixteen <span class="gray">Thousand</span></span>
 				<span class="stats__copy">Number of rooms sold in the Iowa House Hotel in 2017-2018.</span>
+			</div>
+		</div>
+		<div class="stats__box">
+			<div class="stats__inner">
+				<span class="stats__num stats__num--shadow stats__num--xlg">36</span>
+				<span class="stats__copy">New student organizations created in 2018</span>
 			</div>
 		</div>
 	</div>
@@ -275,7 +266,7 @@ $BlockArea(BeforeContent)
 <section class="yir-section yir-video">
 	<div class="row">
 		<div class="columns small-12">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/e_AgeDadPjI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/4fS018JT4Io?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 		</div>
 	</div>
 </section>
