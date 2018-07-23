@@ -1,9 +1,3 @@
-// .yir {
-// 	background-image: url(../images/yir.jpg);
-// 	background-repeat: no-repeat;
-// 	background-size: cover;
-// 	height: 7000px;
-// }
 .yir-section {
 	padding: 6em 0;
 	position: relative;
@@ -80,14 +74,18 @@ hr.large {
 		display: block;
 		line-height: 1.1;
 	}
-	&__num--stroke {
+	&__num--shadow {
 		color: $yellow;
 		text-stroke: 4px white;
+		-moz-text-stroke: 4px white;
 		-webkit-text-stroke: 4px white;
     	text-shadow: 6px 7px 0px rgba(0,0,0,.15);
 	}
 	&__num--thin {
 		font-weight: 200;
+	}
+	&__num--yellow {
+		color: $yellow !important;
 	}
 	&__num .gray {
 		color: #999;
@@ -100,6 +98,16 @@ hr.large {
 		@include breakpoint(medium) {
 			font-size: rem-calc(110);
 		}
+	}
+	&__num--stroke {
+		text-stroke: 2px solid #333;
+		text-fill-color: #fff;
+
+		-moz-text-stroke: 2px #333;
+		-webkit-text-stroke: 2px #333;
+
+		-moz-text-fill-color: white;
+		-webkit-text-fill-color: white;
 	}
 	&__num--xlg {
 		font-size: rem-calc(65);
@@ -266,7 +274,7 @@ hr.large {
 }
 
 .yir-video {
-	background-color: $black;
+	background-color: #eee;
 }
 
 
@@ -288,8 +296,5 @@ svg rect {
 svg > rect {
     -webkit-mask: url(#mask);
     mask: url(#mask);
-}
-.carousel-cell .cell-bg::after {
-	display: none;
 }
 
