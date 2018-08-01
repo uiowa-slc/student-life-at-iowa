@@ -1,29 +1,31 @@
-<article class="yir-article grid-sizer clearfix <% if $Tags.exists %><% loop $Tags %>$URLSegment <% end_loop %><% end_if %>">
+<article class="yir-article <% if $First %>grid-sizer<% end_if %> clearfix <% if $Tags.exists %><% loop $Tags %>$URLSegment <% end_loop %><% end_if %>">
 	<% if $FeaturedImage %>
 		<a href="$Link" class="yir-article__img">
-			<img src="$FeaturedImage.CroppedFocusedImage(500,400).URL" width="500" height="400" alt="$Title">
+			<img src="$FeaturedImage.CroppedFocusedImage(500,350).URL" width="500" height="350" alt="$Title">
 		</a>
 	<% else_if $BackgroundImage %>
-		<a href="$Link" class="bloglistitem__img">
-			<img src="$BackgroundImage.CroppedFocusedImage(500,400).URL" width="500" height="400" alt="$Title">
+		<a href="$Link" class="yir-article__img">
+			<img src="$BackgroundImage.CroppedFocusedImage(500,350).URL" width="500" height="350" alt="$Title">
 		</a>
 	<% else_if $YoutubeBackgroundEmbed %>
-		<a href="$Link" class="bloglistitem__img">
-			<img src="http://img.youtube.com/vi/$YoutubeBackgroundEmbed/sddefault.jpg" width="500" height="400"  alt="$Title">
+		<a href="$Link" class="yir-article__img">
+			<img src="http://img.youtube.com/vi/$YoutubeBackgroundEmbed/sddefault.jpg" width="500" height="350"  alt="$Title">
 		</a>
 	<% end_if %>
 	<div class="yir-article__content <% if $FeaturedImage || $BackgroundImage || $YoutubeBackgroundEmbed %>yir-article__content--wimage<% end_if %>">
 
-		<h3 class="yir-article__heading">
-			<a href="$Link">$Title</a>
-		</h3>
-
 		<% if $Departments.exists %>
 			<p class="yir-article__departments">
 				<% loop $Departments %>
-					<a href="$NewsLink">$Title</a><% if not Last %>, <% else %><% end_if %>
+					$Title<% if not Last %>, <% else %><% end_if %>
 				<% end_loop %>
 			</p>
 		<% end_if %>
+
+		<h3 class="yir-article__heading">
+			<a href="$Link">$Title</a>
+		</h3>
+		<br />
+		<% if $Credits %><div class="news-card__author">By <% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %><span class="byline__and"> and </span><% end_if %><span class="byline__author">$FirstName $Surname</span><% end_loop %></div><% end_if %>
 	</div>
 </article>

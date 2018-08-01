@@ -263,6 +263,8 @@ $BlockArea(BeforeContent)
 	</div><!-- end row -->
 </section>
 
+$BlockArea(AfterContent)
+
 <section class="yir-section yir-video">
 	<div class="row">
 		<div class="columns small-12">
@@ -270,6 +272,3 @@ $BlockArea(BeforeContent)
 		</div>
 	</div>
 </section>
-
-
-$BlockArea(AfterContent)

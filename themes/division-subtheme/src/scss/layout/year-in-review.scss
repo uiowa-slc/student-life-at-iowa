@@ -202,10 +202,14 @@ hr.large {
 }
 
 .yir-article {
-	border-top: 1px solid #eee;
-	padding: 2.5em 0;
+	// border-top: 1px solid #eee;
+	// padding: 2.5em 0;
 	overflow: hidden;
 	width: 100%;
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	margin-bottom: 3em;
 
 	&__img {
 		display: block;
@@ -215,35 +219,44 @@ hr.large {
 	}
 	&__content {
 		position: relative;
-		background: #fff;
-		margin: -15px 15px 0 0;
-		padding: 10px 10px 10px 0;
+		min-height: 175px;
+		padding: 15px;
 	}
 	&__heading {
 		font-size: 20px;
+		font-weight: 600;
 		margin: 0;
 		& a {
 			color: $black;
+			&:hover, &:focus {
+				text-decoration: underline;
+			}
 		}
 	}
 	&__departments {
-		font-size: 12px;
+		font-size: 11px;
 		color: #666;
 		text-transform: uppercase;
-		margin: 8px 0 0;
+		margin: 8px 0;
+		background: #fff;
+		position: absolute;
+		top: -35px;
+		left: 0;
+		padding: 8px;
+		line-height: 1;
 	}
 	@include breakpoint(medium) {
 		width: 48%;
 		margin-right: 2%;
 	}
 	@include breakpoint(large) {
-		width: 30%;
+		width: 22%;
 		margin-right: 3%;
 	}
 }
-// .yir-article:nth-child(8n) {
+// .yir-article:nth-child(9n) {
 // 	@include breakpoint(medium) {
-// 		width: 63%;
+// 		width: 47%;
 // 	}
 // }
 
