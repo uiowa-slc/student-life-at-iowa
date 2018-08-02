@@ -81,7 +81,7 @@ class NewsEntry extends BlogPost {
 		return $f;
 	}
 
-	function setExternalURL($URL) {
+	public function setExternalURL($URL) {
 		return $this->setField('ExternalURL', $this->validateURL($URL));
 	}
 
@@ -91,6 +91,10 @@ class NewsEntry extends BlogPost {
 		} else {
 			return parent::Link();
 		}
+	}
+
+	public function HasTag($tagName){
+		return $this->Tags()->filter(array('Title' => $tagName))->First();
 	}
 
 	public function getOriginalDepartmentName(){
