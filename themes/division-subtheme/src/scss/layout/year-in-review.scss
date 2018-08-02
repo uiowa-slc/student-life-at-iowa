@@ -11,7 +11,9 @@ hr.large {
 	margin: 0;
 	margin: 50px 0 30px;
 }
-
+.YearInReview .carousel .flickity-page-dots {
+	display: none;
+}
 
 /* Stats
 ========================================================= */
@@ -252,8 +254,10 @@ hr.large {
 	}
 	&__content {
 		position: relative;
-		min-height: 175px;
 		padding: 15px;
+		@include breakpoint(medium) {
+			min-height: 175px;
+		}
 	}
 	&__heading {
 		font-size: 20px;
@@ -329,28 +333,55 @@ hr.large {
 	}
 }
 
+/* Video */
 .yir-video {
 	background-color: #eee;
 }
 
+/* Scroll Indicator */
+.homepage__header {
+	z-index: 1;
+}
+.yir-section {
+	z-index: 2;
+}
+.arrow-wrap {
+	position:absolute;
+	z-index:1;
+	left:50%;
+	top:-5em;
+	margin-left:-5em;
+	background:#111;
+	width:10em;
+	height:10em;
+	padding:4em 2em;
+	border-radius:50%;
+	font-size:0.5em;
+	display:block;
+	box-shadow:0px 0px 5px 0px #333;
+	opacity: calc( 1 - calc(var(--scroll-amount) * 0.002));
+}
 
-svg {
-  width: 100%;
-  position:absolute;
-  top: 0;
-  left: 0; // needed for FF, Safari, Edge
-  height: 100%;
-}
-svg text {
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 54px;
-}
-svg rect {
-  fill: white;
-}
-svg > rect {
-    -webkit-mask: url(#mask);
-    mask: url(#mask);
+.arrow {
+	float:left;
+	position:relative;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 3em 3em 0 3em;
+	border-color: #ffffff transparent transparent transparent;
+	-webkit-transform:rotate(360deg)
 }
 
+.arrow:after {
+	content:'';
+	position:absolute;
+	top:-3.2em;
+	left:-3em;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 3em 3em 0 3em;
+	border-color: #111 transparent transparent transparent;
+	-webkit-transform:rotate(360deg)
+}

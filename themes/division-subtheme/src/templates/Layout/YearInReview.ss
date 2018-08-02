@@ -30,29 +30,7 @@
 						<div class="cell-bg">
 							<div class="fullwidth-video">
 								<video playsinline autoplay muted loop autoplay src="$Video.URL" id="vid-bg" class="ani-vid-fadein" style="opacity: 1;" <% if $VideoPoster %>poster="$VideoPoster.CroppedFocusedImage(1500,900).URL"<% end_if %>></video>
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285 80" preserveAspectRatio="xMidYMid slice">
-									<defs>
-										<mask id="mask" x="0" y="0" width="100%" height="100%" >
-											<rect x="0" y="0" width="100%" height="100%" />
-											<text x="82"  y="60">2017</text>
-										</mask>
-									</defs>
-									<rect x="0" y="0" width="100%" height="100%" />
-								</svg>
 							</div>
-							<%-- <div class="inner">
-								<div class="cell-text">
-									<span>Featured Page</span>
-									<h2>$Title</h2>
-									<% if $ButtonText %>
-										<% if $ExternalLink %>
-											<a href="$ExternalLink" target="_blank" class="cell-btn">$ButtonText</a>
-										<% else %>
-											<a href="$AssociatedPage.Link" class="cell-btn">$ButtonText</a>
-										<% end_if %>
-									<% end_if %>
-								</div>
-							</div> --%>
 						</div>
 					<% else %>
 						<%-- if no image or video, fallback to a default image --%>
@@ -80,20 +58,14 @@
 		</div>
 	<% end_if %>
 
-	<% if $YearInReviewHeroFeatures && $YearInReviewHeroFeatures.Count > 1 %>
-		<div class="carousel-nav" data-flickity='{ "asNavFor": ".carousel", "contain": true, "pageDots": false, "prevNextButtons": false, "autoPlay": true }'>
-			<% loop YearInReviewHeroFeatures %>
-				<div class="carousel-nav-cell">
-					$Title
-				</div>
-			<% end_loop %>
-		</div>
-	<% end_if %>
 </div>
 
 $BlockArea(BeforeContent)
 
-<section class="yir-section">
+<section class="yir-section" id="yir-start">
+	<a class="arrow-wrap" href="#yir-start">
+		<span class="arrow"></span>
+	</a>
 	<div class="row">
 		<div class="columns small-12 large-6">
 			<h2 class="header--caps">2017-2018 Year in review</h2>
