@@ -1,15 +1,15 @@
 <article class="yir-article <% if $First %>grid-sizer<% end_if %> clearfix <% if $Tags.exists %><% loop $Tags %>$URLSegment <% end_loop %><% end_if %>">
 	<% if $FeaturedImage %>
 		<a href="$Link" class="yir-article__img">
-			<img src="$FeaturedImage.CroppedFocusedImage(500,350).URL" width="500" height="350" alt="$Title">
+			<img src="$FeaturedImage.CroppedFocusedImage(550,325).URL" alt="$Title">
 		</a>
 	<% else_if $BackgroundImage %>
 		<a href="$Link" class="yir-article__img">
-			<img src="$BackgroundImage.CroppedFocusedImage(500,350).URL" width="500" height="350" alt="$Title">
+			<img src="$BackgroundImage.CroppedFocusedImage(550,325).URL" alt="$Title">
 		</a>
 	<% else_if $YoutubeBackgroundEmbed %>
 		<a href="$Link" class="yir-article__img">
-			<img src="http://img.youtube.com/vi/$YoutubeBackgroundEmbed/sddefault.jpg" width="500" height="350"  alt="$Title">
+			<img src="http://img.youtube.com/vi/$YoutubeBackgroundEmbed/sddefault.jpg" width="550" height="325" alt="$Title">
 		</a>
 	<% end_if %>
 	<div class="yir-article__content <% if $FeaturedImage || $BackgroundImage || $YoutubeBackgroundEmbed %>yir-article__content--wimage<% end_if %>">

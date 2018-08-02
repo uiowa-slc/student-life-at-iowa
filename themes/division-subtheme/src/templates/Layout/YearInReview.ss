@@ -125,6 +125,7 @@ $BlockArea(BeforeContent)
 	<div class="stats">
 		<div class="stats__box">
 			<div class="stats__inner">
+				<a href="#" class="stats__linkout"></a>
 				<span class="stats__num">8,408</span>
 				<span class="stats__label">Events</span>
 			</div>
@@ -156,7 +157,7 @@ $BlockArea(BeforeContent)
 			</div>
 		</div>
 		<div class="stats__box">
-			<button class="cardflip-btn"></button>
+			<button class="cardflip-btn">Flip</button>
 			<div class="card-container">
 				<div class="card">
 					<div class="face front">
@@ -166,7 +167,9 @@ $BlockArea(BeforeContent)
 							<span class="stats__copy">Attended a violence prevention team workshop</span>
 						</div>
 					</div>
-					<div class="face back">Yo, what up?</div>
+					<div class="face back">
+						<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis <a href="#">euismod</a>.</p>
+					</div>
 				</div>
 			</div>
 		</div>

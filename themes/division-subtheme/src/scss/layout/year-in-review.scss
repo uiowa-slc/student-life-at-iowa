@@ -124,6 +124,20 @@ hr.large {
 	&__copy--alignleft {
 		text-align:left;
 	}
+	&__linkout {
+		height: 16px;
+		width: 18px;
+		background: url(../images/link-out.png) no-repeat 0 0;
+		background-size: contain;
+		position: absolute;
+		right: 4px;
+		top: 4px;
+		transition: .2s ease;
+		opacity: .4;
+		&:hover, &:focus {
+			opacity: 1;
+		}
+	}
 }
 .stats__box--reverse {
 	background-color: #111;
@@ -170,19 +184,35 @@ hr.large {
 	transform: rotateY(180deg);
 	background-color: black;
 	color: #fff;
+	font-size: rem-calc(21);
+	padding: 1em;
+	& a {
+		color: #fff;
+		text-decoration: underline;
+	}
+	& p {
+		margin: 5px 0;
+	}
 }
 .card.flipped {
 	transform: rotateY(180deg);
 }
 .cardflip-btn {
 	position: absolute;
-	top: 5px;
-	right: 5px;
-	width: 18px;
-	height: 19px;
-	background: url(../images/flip.gif) no-repeat top left;
+	top: 4px;
+	right: 4px;
+	width: 16px;
+	height: 16px;
+	background: url(../images/flip.png) no-repeat top left;
+	background-size: contain;
 	cursor: pointer;
 	z-index: 100;
+	transition: .2s ease;
+	text-indent: -999em;
+	opacity: .4;
+	&:hover, &:focus {
+		opacity: 1;
+	}
 }
 
 
@@ -199,6 +229,9 @@ hr.large {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	@include breakpoint(large) {
+		margin-right: -2%;
+	}
 }
 
 .yir-article {
@@ -250,16 +283,26 @@ hr.large {
 		margin-right: 2%;
 	}
 	@include breakpoint(large) {
-		width: 22%;
-		margin-right: 3%;
+		width: 23%;
 	}
 }
-// .yir-article:nth-child(9n) {
-// 	@include breakpoint(medium) {
-// 		width: 47%;
-// 	}
-// }
-
+.yir-article:nth-child(3),
+.yir-article:nth-child(8),
+.yir-article:nth-child(17),
+.yir-article:nth-child(22),
+.yir-article:nth-child(31), {
+	@include breakpoint(large) {
+		width: 48%;
+		& .yir-article__content {
+			position: absolute;
+			width: 100%;
+			bottom: 0;
+			left: 0;
+			background-color: #fff;
+			min-height: auto;
+		}
+	}
+}
 .yir-article__quote {
 	background-color: $yellow;
 	color: $black;

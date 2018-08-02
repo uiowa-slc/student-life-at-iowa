@@ -44,7 +44,9 @@ $Header
 						<p><a href="$ExternalURL" class="button--shaded" target="_blank">$ExternalURLText</a></p>
 					<% end_if %>
 				</div>
+
 				$BlockArea(AfterContentConstrained)
+
 				<% include TagsCategories %>
 			</div>
 			$Form
