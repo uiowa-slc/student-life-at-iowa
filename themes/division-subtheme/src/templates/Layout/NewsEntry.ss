@@ -27,6 +27,7 @@ $Header
 
 					<div class="blogmeta clearfix">
 						<% include ByLine %>
+
 						<ul class="blogmeta__social">
 							<li><a href="javascript:window.open('http://www.facebook.com/sharer/sharer.php?u=$AbsoluteLink', '_blank', 'width=400,height=500');void(0);"  title="Share on Facebook"><img src="{$ThemeDir}/dist/images/icon_facebook.png" alt="Share on Facebook"></a>
 							</li>
@@ -39,12 +40,17 @@ $Header
 							<img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.URL" alt="" class="right post-image">
 						<% end_if %>
 					<% end_if %>
+					<% if $HasTag("2018 Year In Review") %>
+						<a href="#">Back to the 2018 Year In Review</a>
+					<% end_if %>
 					$Content
 					<% if $ExternalURL %>
 						<p><a href="$ExternalURL" class="button--shaded" target="_blank">$ExternalURLText</a></p>
 					<% end_if %>
 				</div>
+
 				$BlockArea(AfterContentConstrained)
+
 				<% include TagsCategories %>
 			</div>
 			$Form
