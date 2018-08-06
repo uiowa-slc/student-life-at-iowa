@@ -1,6 +1,7 @@
 .yir-section {
 	padding: 6em 0;
 	position: relative;
+	outline: none;
 }
 hr.large {
 	background-color: rgba(255,255,255,.1);
@@ -44,6 +45,7 @@ hr.large {
 		align-items: center;
 		justify-content: center;
 		position: relative;
+		overflow: hidden;
 	}
 	&__box--span2 {
 		@include breakpoint(medium) {
@@ -101,6 +103,12 @@ hr.large {
 			font-size: rem-calc(110);
 		}
 	}
+	&__num--xlg {
+		font-size: rem-calc(65);
+		@include breakpoint(medium) {
+			font-size: rem-calc(140);
+		}
+	}
 	&__num--stroke {
 		text-stroke: 2px solid #333;
 		text-fill-color: #fff;
@@ -111,16 +119,10 @@ hr.large {
 		-moz-text-fill-color: white;
 		-webkit-text-fill-color: white;
 	}
-	&__num--xlg {
-		font-size: rem-calc(65);
-		@include breakpoint(medium) {
-			font-size: rem-calc(150);
-		}
-	}
 	&__num--floatleft {
 		@include breakpoint(medium) {
 			float: left;
-			width: 38%;
+			width: 50%;
 		}
 	}
 	&__copy--alignleft {
@@ -135,7 +137,7 @@ hr.large {
 		right: 4px;
 		top: 4px;
 		transition: .2s ease;
-		opacity: .4;
+		opacity: .3;
 		&:hover, &:focus {
 			opacity: 1;
 		}
@@ -147,6 +149,9 @@ hr.large {
 	& .stats__num, & .stats__label, & .stats__copy {
 		color: #fff;
 	}
+	& .stats__linkout {
+		background-image: url(../images/link-out-reverse.png);
+	}
 }
 .stats__box--dm {
 	background: url(../images/dollar-sign-solid.png) bottom left;
@@ -154,50 +159,51 @@ hr.large {
 .stats__box--house {
 	background: url(../images/home-solid.png) bottom left;
 }
-.pie {
-	background: url(../images/pie.jpg) no-repeat 8% center;
-}
+// .pie {
+// 	background: url(../images/pie.jpg) no-repeat 14% center;
+// }
 
 
 /* Card Flip */
-.card-container {
+.cardflip-container {
 	perspective: 800px;
 	width: 100%;
 	height: 100%;
 }
-.card {
+.cardflip {
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	transform-style: preserve-3d;
-	transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.face {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	backface-visibility: hidden;
-	background: #fff;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.back {
-	transform: rotateY(180deg);
-	background-color: black;
-	color: #fff;
-	font-size: rem-calc(21);
-	padding: 1em;
-	& a {
+	transition: transform 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	&__face {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		backface-visibility: hidden;
+		background: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__back {
+		transform: rotateY(180deg);
+		background-color: black;
 		color: #fff;
-		text-decoration: underline;
+		font-size: rem-calc(20);
+		padding: 1em;
+		position: relative;
+		& a {
+			color: #fff;
+			text-decoration: underline;
+		}
+		& p {
+			margin: 5px 0;
+		}
 	}
-	& p {
-		margin: 5px 0;
+	&.flipped {
+		transform: rotateY(180deg);
 	}
-}
-.card.flipped {
-	transform: rotateY(180deg);
 }
 .cardflip-btn {
 	position: absolute;
@@ -209,11 +215,19 @@ hr.large {
 	background-size: contain;
 	cursor: pointer;
 	z-index: 100;
-	transition: .2s ease;
+	transition: .4s ease;
 	text-indent: -999em;
-	opacity: .4;
+	opacity: .3;
 	&:hover, &:focus {
 		opacity: 1;
+		transform: rotate(-90deg);
+	}
+	&--reverse {
+		background-image: url(../images/flip-reverse.png);
+		opacity: .8;
+		&:hover, &:focus {
+			transform: rotate(90deg);
+		}
 	}
 }
 
@@ -361,7 +375,6 @@ hr.large {
 	box-shadow:0px 0px 5px 0px #333;
 	opacity: calc( 1 - calc(var(--scroll-amount) * 0.002));
 }
-
 .arrow {
 	float:left;
 	position:relative;
@@ -372,7 +385,6 @@ hr.large {
 	border-color: #ffffff transparent transparent transparent;
 	-webkit-transform:rotate(360deg)
 }
-
 .arrow:after {
 	content:'';
 	position:absolute;

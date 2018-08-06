@@ -27,7 +27,7 @@ $('.dept-slider__gallery').flickity({
 
 
 $('.cardflip-btn').on('click', function () {
-  $('.card').toggleClass('flipped');
+	$(this).closest('.cardflip').toggleClass('flipped');
 });
 
 
