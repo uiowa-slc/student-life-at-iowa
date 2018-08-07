@@ -1,5 +1,4 @@
 .yir-section {
-	padding: 6em 0;
 	position: relative;
 	outline: none;
 }
@@ -15,6 +14,13 @@ hr.large {
 .YearInReview .carousel .flickity-page-dots {
 	display: none;
 }
+
+/* Message from the Director
+========================================================= */
+.yir-director, .yir-video {
+	padding: 6em 0;
+}
+
 
 /* Stats
 ========================================================= */
@@ -239,12 +245,48 @@ hr.large {
 /* Articles
 ========================================================= */
 .yir-stories {
-	// background-color: #fff;
+	background-color: #f4f4f4;
+}
+.yir-stories header {
+	background-color: #111;
+	padding: 4em 0 1em 0;
+	& h2 {
+		color: #fff;
+		@include breakpoint(large) {
+			font-size: rem-calc(50);
+		}
+	}
+	& p {
+		color: #fff;
+	}
+}
+/* Filters */
+.filter-container {
+	background-color: #fff;
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	border-bottom: 1px solid #ddd;
+}
+#filters {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.filter {
+	border-bottom: 3px solid #fff;
+	cursor: pointer;
+	font-size: rem-calc(15);
+	padding: 15px 0;
+	&.is-checked {
+		border-bottom-color: $yellow;
+	}
 }
 .yir-article-container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	padding: 4em 0;
 	@include breakpoint(large) {
 		margin-right: -2%;
 	}
@@ -332,24 +374,11 @@ hr.large {
 	}
 }
 
-#filters {
-	display: flex;
-	flex-wrap: wrap;
-}
-.filter {
-	background: #eee;
-	margin-right: 1em;
-	padding: 10px 20px;
-	border-radius: 5px;
-	border: 1px solid #ddd;
-	& input {
-		margin-bottom: 0;
-	}
-}
+
 
 /* Video */
 .yir-video {
-	background-color: #eee;
+	background-color: #fff;
 }
 
 /* Scroll Indicator */
@@ -396,4 +425,15 @@ hr.large {
 	border-width: 3em 3em 0 3em;
 	border-color: #111 transparent transparent transparent;
 	-webkit-transform:rotate(360deg)
+}
+
+/* back to year in review section */
+.backtoreview {
+	background-color: #f8f6f3;
+	border: 1px solid #ddd;
+	padding: 2em 1em;
+	& .button {
+		padding: 10px 14px;
+	}
+
 }

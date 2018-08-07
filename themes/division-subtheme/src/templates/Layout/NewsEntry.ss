@@ -40,9 +40,7 @@ $Header
 							<img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.URL" alt="" class="right post-image">
 						<% end_if %>
 					<% end_if %>
-					<% if $HasTag("2018 Year In Review") %>
-						<a href="#">Back to the 2018 Year In Review</a>
-					<% end_if %>
+
 					$Content
 					<% if $ExternalURL %>
 						<p><a href="$ExternalURL" class="button--shaded" target="_blank">$ExternalURLText</a></p>
@@ -50,6 +48,14 @@ $Header
 				</div>
 
 				$BlockArea(AfterContentConstrained)
+				<!-- Year In Review -->
+				<% if $HasTag("2018 Year In Review") %>
+					<div class="backtoreview">
+						<h3 style="margin-top: 0;">2018 Year In Review</h3>
+						<p>This article is part of the 2018 Year In Review showcasing some of the accomplishments from the previous academic year.</p>
+						<p><a href="#" class="button">Go to Year in Review</a></p>
+					</div>
+				<% end_if %>
 
 				<% include TagsCategories %>
 			</div>

@@ -62,7 +62,7 @@
 
 $BlockArea(BeforeContent)
 
-<section class="yir-section" id="yir-start">
+<section class="yir-section yir-director" id="yir-start">
 	<a class="arrow-wrap" href="#yir-start">
 		<span class="arrow"></span>
 	</a>
@@ -251,32 +251,25 @@ $BlockArea(BeforeContent)
 </section>
 
 <section class="yir-section yir-stories">
-	<div class="column row">
-		<% if $StoryTitle %><h2>$StoryTitle</h2><% end_if %>
-		<div id="filters">
-			<div class="filter">
-				<input type="checkbox" name="excel" value=".excel" id="excel">
-				<label for="excel">Excel</label>
-			</div>
-			<div class="filter">
-				<input type="checkbox" name="stretch" value=".stretch" id="stretch">
-				<label for="stretch">Stretch</label>
-			</div>
-			<div class="filter">
-				<input type="checkbox" name="engage" value=".engage" id="engage">
-				<label for="engage">Engage</label>
-			</div>
-			<div class="filter">
-				<input type="checkbox" name="choose" value=".choose" id="choose">
-				<label for="choose">Choose</label>
-			</div>
-			<div class="filter">
-				<input type="checkbox" name="serve" value=".serve" id="serve">
-				<label for="serve">Serve</label>
+	<header>
+		<div class="column row">
+			<% if $StoryTitle %><h2>$StoryTitle</h2><% end_if %>
+			<p>The IOWA Challenge expresses important principles that help students succeed in the classroom and beyond. It establishes what the University of Iowa expects from its students, and what students should expect from themselves and each other. In essence, it’s a mission statement for UI students.</p>
+		</div>
+	</header>
+
+	<section class="filter-container">
+		<div class="column row">
+			<div id="filters" class="button-group">
+				<button class="filter is-checked" data-filter="*">Show All</button>
+				<button class="filter" data-filter=".excel">Excel</button>
+				<button class="filter" data-filter=".stretch">Stretch</button>
+				<button class="filter" data-filter=".engage">Engage</button>
+				<button class="filter" data-filter=".choose">Choose</button>
+				<button class="filter" data-filter=".serve">Serve</button>
 			</div>
 		</div>
-		<br />
-	</div>
+	</section>
 
 	<div class="column row">
 		<div class="yir-article-container">
