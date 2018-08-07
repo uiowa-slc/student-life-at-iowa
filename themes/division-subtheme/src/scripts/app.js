@@ -41,43 +41,20 @@ $(".toggletext").on("click", function () {
 
 
 // // Year In Review - Isotope article filters
-// var $container = $('.yir-article-container'),
-// 	$checkboxes = $('#filters input');
-
-// var $grid = $('.yir-article-container').imagesLoaded( function() {
-// 	$container.isotope({
-// 		itemSelector: '.yir-article',
-// 		percentPosition: true,
-// 		layoutMode: 'fitRows',
-// 		// masonry: {
-// 		// 	columnWidth: '.grid-sizer'
-// 		// }
-// 	});
-
-// });
-
-// $checkboxes.change(function(){
-// 	var filters = [];
-// 	// get checked checkboxes values
-// 	$checkboxes.filter(':checked').each(function(){
-// 	filters.push( this.value );
-// 	});
-// 	filters = filters.join(', ');
-// 	$container.isotope({ filter: filters });
-// });
-
-// var $items = $container.children();
-
-
-
-
-
 $( function() {
-  // init Isotope
-  var $container = $('.yir-article-container').isotope({
-    itemSelector: '.yir-article',
-    layoutMode: 'fitRows'
-  });
+	// init Isotope
+	var $container = $('.yir-article-container');
+	var $grid = $('.yir-article-container').imagesLoaded( function() {
+		$container.isotope({
+			itemSelector: '.yir-article',
+			percentPosition: true,
+			layoutMode: 'fitRows',
+			// masonry: {
+			// 	columnWidth: '.grid-sizer'
+			// }
+		});
+
+	});
 
   // bind filter button click
   $('#filters').on( 'click', 'button', function() {
