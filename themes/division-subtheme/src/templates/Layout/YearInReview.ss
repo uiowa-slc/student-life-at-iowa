@@ -63,8 +63,8 @@
 $BlockArea(BeforeContent)
 
 <section class="yir-section yir-director" id="yir-start">
-	<a class="arrow-wrap" href="#yir-start">
-		<span class="arrow"></span>
+	<a class="yir-arrow-wrap" href="#yir-start">
+		<span class="yir-arrow"></span>
 	</a>
 	<div class="row">
 		<div class="columns small-12 large-6">

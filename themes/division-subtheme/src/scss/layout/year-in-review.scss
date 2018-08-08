@@ -388,7 +388,7 @@ hr.large {
 .yir-section {
 	z-index: 2;
 }
-.arrow-wrap {
+.yir-arrow-wrap {
 	position:absolute;
 	z-index:1;
 	left:50%;
@@ -404,7 +404,7 @@ hr.large {
 	box-shadow:0px 0px 5px 0px #333;
 	opacity: calc( 1 - calc(var(--scroll-amount) * 0.002));
 }
-.arrow {
+.yir-arrow {
 	float:left;
 	position:relative;
 	width: 0px;
@@ -414,7 +414,7 @@ hr.large {
 	border-color: #ffffff transparent transparent transparent;
 	-webkit-transform:rotate(360deg)
 }
-.arrow:after {
+.yir-arrow:after {
 	content:'';
 	position:absolute;
 	top:-3.2em;
