@@ -3,12 +3,14 @@ class YearInReview extends Page {
 
 	private static $db = array(
 		"StoryTitle" => "Text",
+		"StoryContent" => "HTMLText",
 		'FilterBy' => 'Enum(array("Tag","Category")',
 		'SortBy' => "Enum('Recent,Random,Featured')"
 	);
 
 	private static $has_one = array(
-		'Blog' => 'Blog'
+		'Blog' => 'Blog',
+		'StoryPhoto' => 'Image'
 	);
 
 	private static $has_many = array(
@@ -48,7 +50,8 @@ class YearInReview extends Page {
 
 
 		// Stories
-		$fields->addFieldToTab("Root.Main", new TextField("StoryTitle", "Title for Stories"));
+		$fields->addFieldToTab("Root.Main", new UploadField("StoryPhoto", "Photo for Stories Header"));
+		$fields->addFieldToTab("Root.Main", new HTMLEditorField("StoryContent", "Content for Stories Header"));
 
 		$tags = BlogTag::get();
 		$cats = BlogCategory::get();
