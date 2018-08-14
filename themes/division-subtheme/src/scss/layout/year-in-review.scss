@@ -11,9 +11,16 @@ hr.large {
 	margin: 0;
 	margin: 50px 0 30px;
 }
+
+/* Video Header
+========================================================= */
 .YearInReview .carousel .flickity-page-dots {
 	display: none;
 }
+.YearInReview .carousel-cell .cell-bg:after {
+	display: none;
+}
+
 
 /* Message from the Director
 ========================================================= */
