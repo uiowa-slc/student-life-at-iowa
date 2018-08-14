@@ -52,7 +52,7 @@ $Header
 				<% if $HasTag("2018 Year In Review") %>
 					<div class="backtoreview">
 						<h3 style="margin-top: 0;">2018 Year In Review</h3>
-						<p>This article is part of the 2018 Year In Review showcasing some of the accomplishments from the previous academic year.</p>
+						<p>This article is part of the <a href="/1718-year-in-review/">2018 Year in Review</a>, which highlights some of the Division of Student Life's accomplishments from the previous academic year.</p>
 						<p><a href="/1718-year-in-review/" class="button">Go to Year in Review</a></p>
 					</div>
 				<% end_if %>
