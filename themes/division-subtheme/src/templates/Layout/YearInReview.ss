@@ -79,6 +79,7 @@ $BlockArea(BeforeContent)
 					<p>Together for UI,<br />
 						Melissa
 					</p>
+					<img src="https://vp.studentlife.uiowa.edu/assets/Uploads/_resampled/ResizedImageWzM0OSwxMTFd/sig.png" alt="Melissa">
 				</div>
 				<hr class="large" />
 
@@ -141,7 +142,7 @@ $BlockArea(BeforeContent)
 		<div class="stats__box">
 			<div class="stats__inner">
 				<a href="#" class="stats__linkout"></a>
-				<span class="stats__num stats__num--thin stats__num--xlg stats__num--stroke">4,860</span>
+				<span class="stats__num stats__num--thin stats__num--xlg stats__num--stroke">5,168</span>
 				<span class="stats__label header--caps">Hours</span>
 				<span class="stats__copy">Group Counseling</span>
 			</div>
@@ -233,10 +234,22 @@ $BlockArea(BeforeContent)
 				</div>
 			</div>
 		</div>
-		<div class="stats__box stats__box--house">
-			<div class="stats__inner">
-				<span class="stats__num stats__num--thin stats__num--md header--caps">Sixteen <span class="gray">Thousand</span></span>
-				<span class="stats__copy">Number of rooms sold in the Iowa House Hotel in 2017-2018.</span>
+		<div class="stats__box">
+			<div class="cardflip-container">
+				<div class="cardflip">
+					<div class="cardflip__face cardflip__front">
+						<button class="cardflip-btn">Flip</button>
+						<div class="stats__inner">
+							<span class="stats__num stats__num--xlg">24</span>
+							<span class="stats__label">Student Interns</span>
+							<span class="stats__copy">Who gained hands-on experience and training.</span>
+						</div>
+					</div>
+					<div class="cardflip__face cardflip__back">
+						<button class="cardflip-btn cardflip-btn--reverse">Flip</button>
+						<p>24 student interns gained hands-on experience and training, preparing them for post-graduation success in the fields of marketing, communications, design, digital production, and web development.</p>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="stats__box">
@@ -251,10 +264,9 @@ $BlockArea(BeforeContent)
 </section>
 
 <section class="yir-section yir-stories">
-	<header>
+	<header class="featuredpageblock-bg dp-lazy" data-original="<% if $StoryPhoto %>$StoryPhoto.CroppedFocusedImage(1400,500).URL<% end_if %>">
 		<div class="column row">
-			<% if $StoryTitle %><h2>$StoryTitle</h2><% end_if %>
-			<p>The IOWA Challenge expresses important principles that help students succeed in the classroom and beyond. It establishes what the University of Iowa expects from its students, and what students should expect from themselves and each other. In essence, it’s a mission statement for UI students.</p>
+			<% if $StoryContent %>$StoryContent<% end_if %>
 		</div>
 	</header>
 

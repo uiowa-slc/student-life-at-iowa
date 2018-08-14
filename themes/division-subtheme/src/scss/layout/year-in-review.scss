@@ -249,15 +249,28 @@ hr.large {
 }
 .yir-stories header {
 	background-color: #111;
-	padding: 4em 0 1em 0;
+	padding: 2em 0 3em 0;
 	& h2 {
-		color: #fff;
 		@include breakpoint(large) {
 			font-size: rem-calc(50);
 		}
 	}
-	& p {
+	& p, & h2, & h3, & h4, & h5 {
 		color: #fff;
+	}
+	& .row {
+		z-index: 2;
+		position: relative;
+	}
+	&:after {
+		content: "";
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+		background-image: linear-gradient(180deg,transparent 5%,rgba(0,0,0,.7) 80%);
 	}
 }
 /* Filters */
