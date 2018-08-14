@@ -141,7 +141,7 @@ $BlockArea(BeforeContent)
 		</div>
 		<div class="stats__box">
 			<div class="stats__inner">
-				<a href="#" class="stats__linkout"></a>
+				<a href="https://studentlife.uiowa.edu/news/enriching-the-ucs-group-counseling-program/" class="stats__linkout"></a>
 				<span class="stats__num stats__num--thin stats__num--xlg stats__num--stroke">5,168</span>
 				<span class="stats__label header--caps">Hours</span>
 				<span class="stats__copy">Group Counseling</span>
