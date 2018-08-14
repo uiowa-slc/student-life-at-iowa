@@ -53,7 +53,7 @@ $Header
 					<div class="backtoreview">
 						<h3 style="margin-top: 0;">2018 Year In Review</h3>
 						<p>This article is part of the 2018 Year In Review showcasing some of the accomplishments from the previous academic year.</p>
-						<p><a href="#" class="button">Go to Year in Review</a></p>
+						<p><a href="/1718-year-in-review/" class="button">Go to Year in Review</a></p>
 					</div>
 				<% end_if %>
 
