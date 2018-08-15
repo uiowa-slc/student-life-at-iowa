@@ -199,7 +199,7 @@ $BlockArea(BeforeContent)
 		<div class="stats__box">
 			<div class="stats__inner">
 				<a href="https://studentlife.uiowa.edu/news/flip-the-script/" class="stats__linkout"></a>
-				<span class="stats__num stats__num--xlg">4</span></span>
+				<span class="stats__num stats__num--xlg">3</span></span>
 				<span class="stats__copy">Sections of Flip the Script.</span>
 			</div>
 		</div>
