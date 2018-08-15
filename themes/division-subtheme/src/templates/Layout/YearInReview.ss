@@ -68,7 +68,7 @@ $BlockArea(BeforeContent)
 	</a>
 	<div class="row">
 		<div class="columns small-12 large-6">
-			<h2 class="header--caps">2017-2018 Year in review</h2>
+			<h2 class="header--caps" style="margin-top:0;">2017-2018 Year in review</h2>
 			<div>
 				<p>Each fall, the Division of Student Life has an opportunity to showcase some of the accomplishments from the previous academic year. It is something I look forward to enthusiastically. I see the work of this dedicated and loyal team every single day, so it gives me great pleasure to be able to share it with you.</p>
 				<p>Giving students a well-rounded, positive experience during their time at the University of Iowa is our number one goal, and we embrace the important role that Student Life plays in shaping that experience. The staff is committed to presenting students with opportunities for co-curricular learning, leadership, and personal growth.</p>
@@ -88,7 +88,7 @@ $BlockArea(BeforeContent)
 		</div>
 		<div class="columns small-12 large-5 large-offset-1">
 			<img src="{$ThemeDir}/dist/images/melissa.jpg" alt="">
-			<small>Melissa S. Shivers, Ph.D.</small>
+			<small>Melissa Shivers, VP for Student Life</small>
 		</div>
 	</div>
 </section>
@@ -103,7 +103,7 @@ $BlockArea(BeforeContent)
 						<button class="cardflip-btn">Flip</button>
 						<div class="stats__inner">
 							<span class="stats__num">8,408</span>
-							<span class="stats__label">Events</span>
+							<span class="stats__label">Events in the IMU</span>
 						</div>
 					</div>
 					<div class="cardflip__face cardflip__back">
@@ -121,7 +121,7 @@ $BlockArea(BeforeContent)
 						<div class="stats__inner">
 							<span class="stats__num stats__num--lg">1,422,972</span>
 							<span class="stats__label">Students</span>
-							<span class="stats__copy">Visited the Recreational Services in 2018</span>
+							<span class="stats__copy">Visited recreational facilities</span>
 						</div>
 					</div>
 					<div class="cardflip__face cardflip__back">
@@ -136,12 +136,12 @@ $BlockArea(BeforeContent)
 				<a href="https://studentlife.uiowa.edu/news/student-disability-services-actively-involved-in-recruiting-students-to-ui/" class="stats__linkout"></a>
 				<span class="stats__num">1,264</span>
 				<span class="stats__label">Students</span>
-				<span class="stats__copy">Served by Student Disability Services in 2018</span>
+				<span class="stats__copy">Served by Student Disability Services</span>
 			</div>
 		</div>
 		<div class="stats__box">
 			<div class="stats__inner">
-				<a href="#" class="stats__linkout"></a>
+				<a href="https://studentlife.uiowa.edu/news/enriching-the-ucs-group-counseling-program/" class="stats__linkout"></a>
 				<span class="stats__num stats__num--thin stats__num--xlg stats__num--stroke">5,168</span>
 				<span class="stats__label header--caps">Hours</span>
 				<span class="stats__copy">Group Counseling</span>
@@ -161,7 +161,6 @@ $BlockArea(BeforeContent)
 						<button class="cardflip-btn">Flip</button>
 						<div class="stats__inner">
 							<span class="stats__num stats__num--xlg">4</span>
-							<%-- <span class="stats__label">Cultural and Resource Centers</span> --%>
 							<span class="stats__copy">Cultural and Resource Centers</span>
 						</div>
 					</div>
@@ -170,18 +169,6 @@ $BlockArea(BeforeContent)
 						<p>The Centers provide a "Home Away From Home" atmosphere for many students, intra-and cross-cultural education, leadership and organizational development opportunities, and social justice education.</p>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="stats__box">
-			<div class="stats__inner">
-				<span class="stats__num stats__num--thin stats__num--md header--caps">Seventy <span class="gray">Thousand</span></span>
-				<span class="stats__copy">Number of students and staff who participated in a group fitness class.</span>
-			</div>
-		</div>
-		<div class="stats__box stats__box--spanAll">
-			<div class="stats__inner">
-				<span class="stats__num stats__num--xlg stats__num--thin header--caps">2018 Key Statistics</span>
-				<span class="stats__copy">The Division of Student Life fosters student success by creating and promoting inclusive educationally <br />purposeful services and activities within and beyond the classroom.</span>
 			</div>
 		</div>
 		<div class="stats__box">
@@ -202,6 +189,20 @@ $BlockArea(BeforeContent)
 				</div>
 			</div>
 		</div>
+
+		<div class="stats__box stats__box--spanAll">
+			<div class="stats__inner">
+				<span class="stats__num stats__num--xlg stats__num--thin header--caps">2018 Key Statistics</span>
+				<span class="stats__copy">The Division of Student Life fosters student success by creating and promoting inclusive educationally <br />purposeful services and activities within and beyond the classroom.</span>
+			</div>
+		</div>
+		<div class="stats__box">
+			<div class="stats__inner">
+				<a href="https://studentlife.uiowa.edu/news/flip-the-script/" class="stats__linkout"></a>
+				<span class="stats__num stats__num--xlg">4</span></span>
+				<span class="stats__copy">Sections of Flip the Script.</span>
+			</div>
+		</div>
 		<div class="stats__box stats__box--reverse">
 			<div class="stats__inner">
 				<a href="https://studentlife.uiowa.edu/news/hawkeye-meal-share/" class="stats__linkout"></a>
@@ -214,7 +215,7 @@ $BlockArea(BeforeContent)
 			<div class="stats__inner">
 				<a href="https://studentlife.uiowa.edu/news/womxn-of-color-network-creates-space-for-dialogue-support-and-empowerment/" class="stats__linkout"></a>
 				<span class="stats__num stats__num--lg stats__num--floatleft">180+</span>
-				<span class="stats__copy stats__copy--alignleft">Total attendance at Womxn of Colour Network events.</span>
+				<span class="stats__copy stats__copy--alignleft">Total attendance at Womxn of Color Network events.</span>
 			</div>
 		</div>
 		<div class="stats__box stats__box--span2 pie">
@@ -224,7 +225,7 @@ $BlockArea(BeforeContent)
 						<button class="cardflip-btn">Flip</button>
 						<div class="stats__inner">
 							<span class="stats__num stats__num--lg stats__num--floatleft ">98%</span>
-							<span class="stats__copy stats__copy--alignleft">Overall satisfaction reported by patients for their visit to the Iowa Memorial Union Nurse Care.</span>
+							<span class="stats__copy stats__copy--alignleft">Overall satisfaction reported by patients for their visit to the IMU Nurse Care.</span>
 						</div>
 					</div>
 					<div class="cardflip__face cardflip__back">
@@ -256,7 +257,7 @@ $BlockArea(BeforeContent)
 			<div class="stats__inner">
 				<a href="https://studentlife.uiowa.edu/news/rvap-celebrates-45-years-of-advocacy-support-and-prevention/" class="stats__linkout"></a>
 				<span class="stats__num stats__num--shadow stats__num--xlg">45</span>
-				<span class="stats__copy">Years RVAP has been on campus.</span>
+				<span class="stats__copy">Years of RVAP providing advocacy, support, and prevention to the campus and the community.</span>
 			</div>
 		</div>
 	</div>

@@ -37,13 +37,24 @@ hr.large {
 .stats {
 	border-top: 15px solid $yellow;
 	border-bottom: 15px solid $yellow;
+	-ms-display: grid;
 	display: grid;
 	margin: 0 auto;
+	-ms-grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+	-ms-grid-auto-rows: minmax(350px, auto);
 	grid-auto-rows: minmax(350px, auto);
+
+	-ms-grid-auto-flow: dense;
+	-webkit-grid-auto-flow: dense;
 	grid-auto-flow: dense;
+
 	padding-left: 1px;
 	@include breakpoint(1516) {
+		-ms-grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+		-webkit-grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+		-moz-grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
 		grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
 	}
 	&__box {
@@ -54,6 +65,7 @@ hr.large {
 		margin-top: -1px;
 		margin-left: -1px;
 		text-align: center;
+		-ms-display: flex;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -62,10 +74,16 @@ hr.large {
 	}
 	&__box--span2 {
 		@include breakpoint(medium) {
+			-ms-grid-column: span 2;
+			-webkit-grid-column: span 2;
+			-moz-grid-column: span 2;
 			grid-column: span 2;
 		}
 	}
 	&__box--spanAll {
+		-ms-grid-column: 1/-1;
+		-webkit-grid-column: 1/-1;
+		-moz-grid-column: 1/-1;
 		grid-column: 1/-1;
 	}
 	&__label {
@@ -94,6 +112,7 @@ hr.large {
 	&__num--shadow {
 		color: $yellow;
 		text-stroke: 4px white;
+		-ms-text-stroke: 4px white;
 		-moz-text-stroke: 4px white;
 		-webkit-text-stroke: 4px white;
     	text-shadow: 6px 7px 0px rgba(0,0,0,.15);
@@ -126,9 +145,11 @@ hr.large {
 		text-stroke: 2px solid #333;
 		text-fill-color: #fff;
 
+		-ms-text-stroke: 2px #333;
 		-moz-text-stroke: 2px #333;
 		-webkit-text-stroke: 2px #333;
 
+		-ms-text-fill-color: white;
 		-moz-text-fill-color: white;
 		-webkit-text-fill-color: white;
 	}
@@ -172,13 +193,13 @@ hr.large {
 .stats__box--house {
 	background: url(../images/home-solid.png) bottom left;
 }
-// .pie {
-// 	background: url(../images/pie.jpg) no-repeat 14% center;
-// }
 
 
 /* Card Flip */
 .cardflip-container {
+	-ms-perspective: 800px;
+	-moz-perspective: 800px;
+	-webkit-perspective: 800px;
 	perspective: 800px;
 	width: 100%;
 	height: 100%;
@@ -187,19 +208,34 @@ hr.large {
 	width: 100%;
 	height: 100%;
 	position: absolute;
+
+	-ms-transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;
+
+	-ms-transition: transform 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	-webkit-transition: transform 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	-moz-transition: transform 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	transition: transform 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	&__face {
 		position: absolute;
 		width: 100%;
 		height: 100%;
+		-ms-backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
 		backface-visibility: hidden;
 		background: #fff;
+		-ms-display: flex;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
+
 	&__back {
+		-ms-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+		-webkit-transform: rotateY(180deg);
 		transform: rotateY(180deg);
 		background-color: black;
 		color: #fff;
@@ -215,6 +251,9 @@ hr.large {
 		}
 	}
 	&.flipped {
+		-ms-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+		-webkit-transform: rotateY(180deg);
 		transform: rotateY(180deg);
 	}
 }
