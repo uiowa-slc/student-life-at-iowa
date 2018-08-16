@@ -199,7 +199,7 @@ $BlockArea(BeforeContent)
 		<div class="stats__box">
 			<div class="stats__inner">
 				<a href="https://studentlife.uiowa.edu/news/flip-the-script/" class="stats__linkout"></a>
-				<span class="stats__num stats__num--xlg">4</span></span>
+				<span class="stats__num stats__num--xlg">3</span></span>
 				<span class="stats__copy">Sections of Flip the Script.</span>
 			</div>
 		</div>
@@ -293,6 +293,7 @@ $BlockArea(BeforeContent)
 
 		</div>
 	</div><!-- end row -->
+
 </section>
 
 $BlockArea(AfterContent)
@@ -301,6 +302,12 @@ $BlockArea(AfterContent)
 	<div class="row">
 		<div class="columns small-12">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/8No2G7mtMpU?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="row">
+		<div class="columns small-12">
+			<h2>About the Year in Review</h2>
+			<p>The Division of Student Life Year in Review is produced as a collaboration between the Office of the Vice President for Student Life, Student Life Marketing + Design, and communications, marketing, and outreach staff from departments within the Division. We hope you enjoy learning about how the Division of Student Life contributes to student success through these stores. For more information, contact <a href="mailto:vp-student-life@uiowa.edu">vp-student-life@uiowa.edu</a>.</p>
 		</div>
 	</div>
 </section>
