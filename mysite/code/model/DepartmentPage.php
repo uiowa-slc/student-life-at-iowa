@@ -2,6 +2,7 @@
 class DepartmentPage extends Page {
 
 	private static $db = array(
+		"KeyStatTitle" => "Text",
 		"KeyStat1Num" => "Text",
 		"KeyStat1Body" => "HTMLText",
 		"KeyStat2Num" => "Text",
@@ -26,6 +27,7 @@ class DepartmentPage extends Page {
 
 		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Photo"), "Content");
 
+		$fields->addFieldToTab("Root.Main", new TextField("KeyStatTitle", "Key Title"));
 		$fields->addFieldToTab("Root.Main", new TextField("KeyStat1Num", "Key Stat 1 - Number"));
 		$fields->addFieldToTab("Root.Main", HtmlEditorField::create("KeyStat1Body", "Key Stat 1 - Content")->setRows(4));
 
@@ -46,12 +48,12 @@ class DepartmentPage extends Page {
 		$tagEntries = $tag->BlogPosts()->map()->keys();
 		$deptEntries = $this->NewsEntries()->map()->keys();
 
-	
+
 		//print_r($tagEntries);
 		//print_r($deptEntries);
 
 		$intersectEntries = array_intersect($tagEntries,$deptEntries);
-		
+
 		//print_r($intersectEntries);
 		$list = NewsEntry::get()->byIds($intersectEntries);
 
@@ -67,7 +69,7 @@ class DepartmentPage extends Page {
 		$link = $newsHolder->Link('department/'.$this->URLSegment);
 		return $link;
 	}
-	
+
 	public function NewsEntriesByCat($catTitle){
 		$tag = BlogCategory::get()->filter(array('Title' => $catTitle))->First();
 
@@ -87,7 +89,7 @@ class DepartmentPage extends Page {
 
 	public function NewsEntriesByAuthor($authorID){
 		$author = Member::get()->filter(array('ID' => $authorID))->First();
-		
+
 		if($author){
 			$authorEntries = $author->BlogPosts();
 			return $authorEntries;

@@ -52,7 +52,7 @@
 	<div class="dept-stats">
 		<div class="row">
 			<div class="column">
-				<h2>Key Statistics</h2>
+				<h2><% if $KeyStatTitle %>$KeyStatTitle<% else %>Key Statistics<% end_if %></h2>
 			</div>
 		</div>
 		<div class="stat-cards">
