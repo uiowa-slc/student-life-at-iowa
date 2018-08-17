@@ -120,8 +120,8 @@ $BlockArea(BeforeContent)
 						<button class="cardflip-btn">Flip</button>
 						<div class="stats__inner">
 							<span class="stats__num stats__num--lg">1,422,972</span>
-							<span class="stats__label">Students</span>
-							<span class="stats__copy">Visited recreational facilities</span>
+							<span class="stats__label">Visits</span>
+							<span class="stats__copy">Student visits to recreational facilities</span>
 						</div>
 					</div>
 					<div class="cardflip__face cardflip__back">
