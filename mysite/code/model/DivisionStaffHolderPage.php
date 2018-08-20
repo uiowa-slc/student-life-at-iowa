@@ -94,12 +94,11 @@ class DivisionStaffHolderPage_Controller extends Page_Controller {
 		'json',
 		'department',
 		//Feeds:
-		'departmentNewsFeed',
+		'departmentFeed',
 	);
 	private static $url_handlers = array(
 		'profile/$URLSegment!/rss' => 'profilerss',
-		'department//$Title' => 'department',
-		'departmentNewsFeed//$ID' => 'departmentNewsFeed',
+		'departmentFeed//$Title' => 'departmentFeed',
 	);
 
 	public function departmentFeed(){
