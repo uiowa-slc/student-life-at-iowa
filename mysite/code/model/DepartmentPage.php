@@ -16,6 +16,10 @@ class DepartmentPage extends Page {
 		"Photo" => "Image",
 	);
 
+	private static $has_many = array(
+		"StaffPages" => "DivisionStaffPage",
+	);
+
 	private static $belongs_many_many = array(
 		'NewsEntries' => 'NewsEntry'
 	);
