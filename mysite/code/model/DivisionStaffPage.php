@@ -15,8 +15,7 @@ class DivisionStaffPage extends Page {
 	);
 
 	private static $has_one = array(
-		"Photo" => "Image",
-		"Department" => "DepartmentPage"
+		"Photo" => "Image"
 	);
 
 	private static $defaults = array(
@@ -25,6 +24,7 @@ class DivisionStaffPage extends Page {
 
 	private static $belongs_many_many = array(
 		"Teams" => "DivisionStaffTeam",
+		"Department" => "DepartmentPage"
 	);
 
 	public function getCMSFields() {

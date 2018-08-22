@@ -92,26 +92,48 @@ class DivisionStaffHolderPage_Controller extends Page_Controller {
 	private static $allowed_actions = array(
 		'rss',
 		'json',
-		'department',
 		//Feeds:
-		'departmentFeed',
+		'departmentListFeed',
+		'departmentNewsFeed'
 	);
 	private static $url_handlers = array(
-		'profile/$URLSegment!/rss' => 'profilerss',
-		'departmentFeed//$Title' => 'departmentFeed',
+		'departmentListFeed' => 'departmentListFeed',
+		'departmentNewsFeed//$ID/$TeamID' => 'departmentNewsFeed'
 	);
 
-	public function departmentFeed(){
+	public function departmentListFeed(){
+		$depts = DepartmentPage::get();
+		$deptArray = array();
+
+		foreach($depts as $dept){
+			array_push($deptArray,
+				array(
+					'ID' => $dept->ID,
+					'Title' => $dept->Title
+				)
+			);
+		}
+		$this->getResponse()->addHeader("Content-Type", "application/json");
+		return json_encode($deptArray);
+	}
+
+	public function departmentNewsFeed(){
 		$postArray = array();
-		$deptTitle = $this->getRequest()->param('Title');
-		$dept = DepartmentPage::get($deptTitle);
+		$deptID = $this->getRequest()->param('ID');
+		$dept = DepartmentPage::get()->byID($deptID);
+		$teamID = $this->getRequest()->param('TeamID');
+		$team = DivisionStaffTeam::get()->byID($teamID);
 
 		if(!$dept) return;
 
+		// $staffPages = $dept->staffPages;
+		// $staffTeams = array();
+
+		// foreach($staffPages as $staffPage){
+		// 	$staffTeams->push($staffPage->Teams);
+		// }
 
 		$postCount = $dept->NewsEntries()->Count();
-		
-
 		$posts = new PaginatedList($dept->NewsEntries(), $this->getRequest());
 		$posts->setPageLength(10);
 
@@ -126,15 +148,39 @@ class DivisionStaffHolderPage_Controller extends Page_Controller {
 				'postCount' => $postCount
 			),
 			'posts' => $postArray
+			// 'teams' => $staffTeams
 		);
 
 		return json_encode($feedArray);
 
 	}
 
-	public function init() {
-		parent::init();
+	public function rss() {
+		global $project_name;
+		$blogName = $this->Title;
+		$altBlogName = $project_name . ' blog';
+		$filters = array();
+		$getVars = $this->request->getVars();
+
+		if (isset($getVars['member'])) {
+			$memberId = $getVars['member'];
+
+			//$filters['Member.Email'] = $memberId;
+
+			$member = Member::get()->filter(array('Email' => $memberId))->First();
+
+			if ($member) {
+				$entries = $member->BlogPosts(999);
+				if ($entries->First()) {
+					$rss = new RSSFeed($entries, $this->Link(), ($blogName ? $blogName : $altBlogName), "", "Title", "RSSContent");
+					return $rss->outputToBrowser();
+				}
+			}
+		} else {
+			return parent::rss();
+		}
 
 	}
+
 
 }
