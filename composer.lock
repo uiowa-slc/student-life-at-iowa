@@ -862,12 +862,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events.git",
-                "reference": "bda15cbe91598d1aef2c0b49f177347143862674"
+                "reference": "696fe37296ac3efcbc22b49db01beb9bdadd3e07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/bda15cbe91598d1aef2c0b49f177347143862674",
-                "reference": "bda15cbe91598d1aef2c0b49f177347143862674",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/696fe37296ac3efcbc22b49db01beb9bdadd3e07",
+                "reference": "696fe37296ac3efcbc22b49db01beb9bdadd3e07",
                 "shasum": ""
             },
             "require": {
@@ -886,7 +886,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/issues"
             },
-            "time": "2018-07-31T21:38:40+00:00"
+            "time": "2018-08-20T19:21:32+00:00"
         },
         {
             "name": "md/blog",
@@ -976,12 +976,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "2bd02660017fb21edd3905a411b76377d640c15f"
+                "reference": "ed8914207b373a722da1f8ada607ce373c43d519"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/2bd02660017fb21edd3905a411b76377d640c15f",
-                "reference": "2bd02660017fb21edd3905a411b76377d640c15f",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/ed8914207b373a722da1f8ada607ce373c43d519",
+                "reference": "ed8914207b373a722da1f8ada607ce373c43d519",
                 "shasum": ""
             },
             "require": {
@@ -1035,7 +1035,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/2.0.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2018-08-14T21:43:14+00:00"
+            "time": "2018-08-20T14:55:15+00:00"
         },
         {
             "name": "md/rss-display",
