@@ -94,11 +94,11 @@ class DivisionStaffHolderPage_Controller extends Page_Controller {
 		'json',
 		//Feeds:
 		'departmentListFeed',
-		'departmentNewsFeed'
+		'departmentStaffFeed'
 	);
 	private static $url_handlers = array(
 		'departmentListFeed' => 'departmentListFeed',
-		'departmentNewsFeed//$ID/$TeamID' => 'departmentNewsFeed'
+		'departmentStaffFeed//$ID/$TeamID' => 'departmentStaffFeed'
 	);
 
 	public function departmentListFeed(){
@@ -117,38 +117,37 @@ class DivisionStaffHolderPage_Controller extends Page_Controller {
 		return json_encode($deptArray);
 	}
 
-	public function departmentNewsFeed(){
-		$postArray = array();
+	public function departmentStaffFeed(){
+		$teamArray = array();
 		$deptID = $this->getRequest()->param('ID');
 		$dept = DepartmentPage::get()->byID($deptID);
-		$teamID = $this->getRequest()->param('TeamID');
-		$team = DivisionStaffTeam::get()->byID($teamID);
 
 		if(!$dept) return;
 
-		// $staffPages = $dept->staffPages;
-		// $staffTeams = array();
+		$staffPages = $dept->staffPages;
+		$staffTeams = array();
 
-		// foreach($staffPages as $staffPage){
-		// 	$staffTeams->push($staffPage->Teams);
-		// }
+		foreach($staffPages as $staffPage){
+			$staffTeams->push($staffPage->Teams);
+		}
+		
+		$staffTeams->removeDuplicates();
 
-		$postCount = $dept->NewsEntries()->Count();
-		$posts = new PaginatedList($dept->NewsEntries(), $this->getRequest());
-		$posts->setPageLength(10);
+		$teamCount = $staffTeams->Count();
+		$teams = new PaginatedList($staffTeams, $this->getRequest());
+		$teams->setPageLength(10);
 
-		foreach($posts as $post){
-			array_push($postArray, $post->toFeedArray());
+		foreach($teams as $team){
+			array_push($teamArray, $team->toFeedArray());
 		}
 		$this->getResponse()->addHeader("Content-Type", "application/json");
 
 
 		$feedArray = array(
 			'meta' => array(
-				'postCount' => $postCount
+				'teamCount' => $teamCount
 			),
-			'posts' => $postArray
-			// 'teams' => $staffTeams
+			'teams' => $teamArray
 		);
 
 		return json_encode($feedArray);
