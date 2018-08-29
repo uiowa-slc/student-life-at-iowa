@@ -67,8 +67,8 @@ class DivisionStaffHolderPage extends Page {
 		return $staffPages;
 	}
 
-	public function StaffTeams(){
-		$teams = StaffTeam::get();
+	public function DivisionStaffTeams(){
+		$teams = DivisionStaffTeam::get();
 		return $teams;
 	}
 }
@@ -124,7 +124,7 @@ class DivisionStaffHolderPage_Controller extends Page_Controller {
 
 		if(!$dept) return;
 
-		$staffPages = $dept->staffPages;
+		$staffPages = $dept->StaffPages;
 		$staffTeams = array();
 
 		foreach($staffPages as $staffPage){

@@ -64,7 +64,6 @@ class DivisionStaffPage extends Page {
 
 		return $fullName;
 	}
-	//private static $allowed_children = array("");
 
 }
 class DivisionStaffPage_Controller extends Page_Controller {
@@ -91,16 +90,4 @@ class DivisionStaffPage_Controller extends Page_Controller {
 		parent::init();
 
 	}
-	// public function NewsPosts() {
-
-	// 	$memberId = $this->EmailAddress;
-
-	// 	if (isset($memberId)) {
-	// 		$url = 'http://studentlife.uiowa.edu/news/rss?member='.$memberId;
-	// 		return $this->RSSDisplay(20, $url);
-	// 	} else {
-	// 		return false;
-	// 	}
-
-	// }
 }
