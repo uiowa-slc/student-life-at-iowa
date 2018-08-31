@@ -45,7 +45,7 @@ class DivisionStaffPage extends Page {
 		$fields->addFieldToTab("Root.Main", new TextField("OtherWebsiteLabel", "Other website label (default: \"Website\""));
 
 
-		$fields->addFieldToTab("Root.Main", new CheckboxSetField("Teams", 'Team <a href="admin/pages/edit/show/14" target="_blank">(Manage Teams)</a>', StaffTeam::get()->map('ID', 'Name')));
+		$fields->addFieldToTab("Root.Main", new CheckboxSetField("Teams", 'Team <a href="admin/pages/edit/show/14" target="_blank">(Manage Teams)</a>', DivisionStaffTeam::get()->map('ID', 'Name')));
 
 		//$fields->addFieldToTab("Root.Main", new LiteralField("TeamLabel", ''));
 
