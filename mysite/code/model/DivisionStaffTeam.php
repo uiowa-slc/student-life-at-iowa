@@ -42,11 +42,10 @@ class DivisionStaffTeam extends DataObject {
 		$teamStaffArray = array();
 
 		foreach($teamStaff as $staff){
-			$postAuthorSingleArray = array(
+			$teamStaffSingleArray = array(
 				'ID' => $staff->ID,
 				'Name' => $staff->Name,
 				'Email' => $staff->Email,
-				'ImageURL' => $staff->BlogProfileImage()->AbsoluteURL,
 			);
 			array_push($teamStaffArray, $teamStaffSingleArray);
 		}

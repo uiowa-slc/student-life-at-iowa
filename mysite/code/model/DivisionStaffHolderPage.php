@@ -128,15 +128,16 @@ class DivisionStaffHolderPage_Controller extends Page_Controller {
 		$staffTeams = new ArrayList();
 
 		foreach($staffPages as $staffPage){
-			$staffTeams->push($staffPage->Teams());
+			$staffPagesTeams = $staffPage->Teams();
+			foreach ($staffPagesTeams as $team) {
+				$staffTeams->push($team);
+			}
 		}
 		$staffTeams->removeDuplicates();
 
 		$teamCount = $staffTeams->Count();
-		$teams = new PaginatedList($staffTeams, $this->getRequest());
-		$teams->setPageLength(10);
-
-		foreach($teams as $team){
+		
+		foreach($staffTeams as $team){
 			array_push($teamArray, $team->toStaffFeedArray());
 		}
 		$this->getResponse()->addHeader("Content-Type", "application/json");
@@ -146,7 +147,7 @@ class DivisionStaffHolderPage_Controller extends Page_Controller {
 			'meta' => array(
 				'teamCount' => $teamCount
 			),
-			'teams' => $teamArray
+			'staffTeams' => $teamArray
 		);
 
 		return json_encode($feedArray);
