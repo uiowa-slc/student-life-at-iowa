@@ -12,10 +12,10 @@ $Header
 
 			<div class="main-content__text">
 
-				<% loop Children %>
+				<% loop Teams %>
 					<h3>$Title</h3>
-					<% loop Teams %>
-						<li>$Title</li>
+					<% loop StaffPages %>
+						<li>$FirstName $LastName</li>
 					<% end_loop %>
 				<% end_loop %>
 
@@ -28,9 +28,6 @@ $Header
 		</div>
 
 		<aside class="sidebar dp-sticky">
-			<% include SideNav %>
-
-
 				<%-- Begin Listing Departments --%>
 				<div class="WidgetHolder BlogCategoriesWidget first last">
 					<h3>Departments</h3>

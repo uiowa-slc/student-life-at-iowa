@@ -44,7 +44,8 @@ class DivisionStaffTeam extends DataObject {
 		foreach($teamStaff as $staff){
 			$teamStaffSingleArray = array(
 				'ID' => $staff->ID,
-				'Name' => $staff->Name,
+				'FirstName' => $staff->FirstName,
+				'LastName' => $staff->LastName,
 				'Email' => $staff->Email,
 			);
 			array_push($teamStaffArray, $teamStaffSingleArray);
@@ -57,7 +58,6 @@ class DivisionStaffTeam extends DataObject {
 				'Content' => $team->Content,
 				'URLSegment' => $team->URLSegment,
 				'Staff' => $teamStaffArray,
-				'PublishDate' => $team->PublishDate,
 				'ExternalURL' => $team->ExternalURL
 		);
 
