@@ -42,7 +42,7 @@ class DivisionStaffHolderPage extends Page {
 		$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
 
 
-		$gridField = new GridField('StaffTeam', 'Division Staff Teams', StaffTeam::get(), $gridFieldConfig);
+		$gridField = new GridField('StaffTeam', 'Staff Teams', DivisionStaffTeam::get(), $gridFieldConfig);
 		$f->addFieldToTab('Root.Main', $gridField, 'Content'); // add the grid field to a tab in the CMS
 
 		return $f;
@@ -124,13 +124,12 @@ class DivisionStaffHolderPage_Controller extends Page_Controller {
 
 		if(!$dept) return;
 
-		$staffPages = $dept->StaffPages;
-		$staffTeams = array();
+		$staffPages = $dept->StaffPages();
+		$staffTeams = new ArrayList();
 
 		foreach($staffPages as $staffPage){
-			$staffTeams->push($staffPage->Teams);
+			$staffTeams->push($staffPage->Teams());
 		}
-		
 		$staffTeams->removeDuplicates();
 
 		$teamCount = $staffTeams->Count();
@@ -138,7 +137,7 @@ class DivisionStaffHolderPage_Controller extends Page_Controller {
 		$teams->setPageLength(10);
 
 		foreach($teams as $team){
-			array_push($teamArray, $team->toFeedArray());
+			array_push($teamArray, $team->toStaffFeedArray());
 		}
 		$this->getResponse()->addHeader("Content-Type", "application/json");
 

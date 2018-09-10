@@ -15,13 +15,10 @@ class DepartmentPage extends Page {
 	private static $has_one = array(
 		"Photo" => "Image",
 	);
-
-	private static $many_many = array(
-		"StaffPages" => "DivisionStaffPage",
-	);
-
+	
 	private static $belongs_many_many = array(
-		'NewsEntries' => 'NewsEntry'
+		'NewsEntries' => 'NewsEntry',
+		"StaffPages" => "DivisionStaffPage"
 	);
 
 	private static $icon = 'mysite/cms_icons/department.png';

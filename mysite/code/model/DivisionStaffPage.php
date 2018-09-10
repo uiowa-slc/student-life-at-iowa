@@ -22,9 +22,12 @@ class DivisionStaffPage extends Page {
 		"OtherWebsiteLabel" => "Website"
 	);
 
+	private static $many_many = array(
+		"Departments" => "DepartmentPage"
+	);
+
 	private static $belongs_many_many = array(
-		"Teams" => "DivisionStaffTeam",
-		"Department" => "DepartmentPage"
+		"Teams" => "DivisionStaffTeam"
 	);
 
 	public function getCMSFields() {
@@ -45,9 +48,19 @@ class DivisionStaffPage extends Page {
 		$fields->addFieldToTab("Root.Main", new TextField("OtherWebsiteLabel", "Other website label (default: \"Website\""));
 
 
-		$fields->addFieldToTab("Root.Main", new CheckboxSetField("Teams", 'Team <a href="admin/pages/edit/show/14" target="_blank">(Manage Teams)</a>', DivisionStaffTeam::get()->map('ID', 'Name')));
+		$fields->addFieldToTab("Root.Main", new CheckboxSetField("Teams", 'Team <a href="admin/pages/edit/show/378" target="_blank">(Manage Teams)</a>', DivisionStaffTeam::get()->map('ID', 'Name')));
 
-		//$fields->addFieldToTab("Root.Main", new LiteralField("TeamLabel", ''));
+		$deptField = TagField::create(
+			'Departments',
+			'Departments',
+			DepartmentPage::get(),
+			$this->Departments()
+		)->setShouldLazyLoad(true) // tags should be lazy loaded
+		 ->setCanCreate(false);
+
+		$fields->addFieldToTab('Root.Main', $deptField);
+
+		$fields->addFieldToTab("Root.Main", new LiteralField("TeamLabel", ''));
 
 		$fields->addFieldToTab("Root.Main", new HTMLEditorField("Content", "Biography"));
 		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Photo (4:3 preferred - resizes to 760 x 507)"));

@@ -10,9 +10,7 @@ class DivisionStaffTeam extends DataObject {
 		'StaffPages' => 'DivisionStaffPage',
 		'StaffHolderPages' => 'DivisionStaffHolderPage'
 	);
-	
-	private static $belongs_many_many = array();
-	
+		
 	private static $summary_fields = array( 
 		'Name' => 'Name',
 	);
@@ -24,7 +22,7 @@ class DivisionStaffTeam extends DataObject {
 	public function getCMSFields() {
 		$f = parent::getCMSFields();
 		
-		$f->addFieldToTab('Root.Main', new CheckboxSetField('StaffPages', 'Team <a href="admin/pages/edit/show/14" target="_blank">(Manage Teams)</a>', StaffPage::get()->map('ID', 'Title')));
+		$f->addFieldToTab('Root.Main', new CheckboxSetField('StaffPages', 'Team <a href="admin/pages/edit/show/14" target="_blank">(Manage Teams)</a>', DivisionStaffPage::get()->map('ID', 'Title')));
 		return $f;
 		
 	}
@@ -34,6 +32,37 @@ class DivisionStaffTeam extends DataObject {
 		$this->extend('alterSortedStaffPages', $staffPages);
 		return $staffPages;
 
+	}
+
+	public function toStaffFeedArray(){
+		$team = $this->owner;
+		$teamArray = array();
+
+		$teamStaff = $team->StaffPages();
+		$teamStaffArray = array();
+
+		foreach($teamStaff as $staff){
+			$postAuthorSingleArray = array(
+				'ID' => $staff->ID,
+				'Name' => $staff->Name,
+				'Email' => $staff->Email,
+				'ImageURL' => $staff->BlogProfileImage()->AbsoluteURL,
+			);
+			array_push($teamStaffArray, $teamStaffSingleArray);
+		}
+
+		$staffArrayItem = array(
+				'StudentLifeID' => $team->ID,
+				'Title' => $team->Title,
+				'ID' => $team->ID,
+				'Content' => $team->Content,
+				'URLSegment' => $team->URLSegment,
+				'Staff' => $teamStaffArray,
+				'PublishDate' => $team->PublishDate,
+				'ExternalURL' => $team->ExternalURL
+		);
+
+		return $staffArrayItem;
 	}
 
 }

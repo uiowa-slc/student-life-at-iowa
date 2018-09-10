@@ -6,15 +6,27 @@ $Header
 	$BlockArea(BeforeContent)
 
 	<div class="row">
-		<% loop Children %>
-			<h3>$Title</h3>
-			<% loop Teams %>
-				<li>$Title</li>
-			<% end_loop %>
-		<% end_loop %>
-	</div><!-- end .row -->
+		<div role="main" class="main-content main-content--with-padding <% if $Children || $Menu(2) || $SidebarBlocks ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
 
-	<div class="row">
+			$BlockArea(BeforeContentConstrained)
+
+			<div class="main-content__text">
+
+				<% loop Children %>
+					<h3>$Title</h3>
+					<% loop Teams %>
+						<li>$Title</li>
+					<% end_loop %>
+				<% end_loop %>
+
+				<br /><br />
+
+				$BlockArea(AfterContentConstrained)
+				$Form
+				$CommentsForm
+			</div>
+		</div>
+
 		<aside class="sidebar dp-sticky">
 			<% include SideNav %>
 
@@ -37,6 +49,7 @@ $Header
 
 		</aside>
 	</div>
+
 
 	$BlockArea(AfterContent)
 
