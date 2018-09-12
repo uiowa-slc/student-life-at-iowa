@@ -5,10 +5,11 @@ $Header
 
 	$BlockArea(BeforeContent)
 
+	<% if $FeaturedNews %>
 	<div class="row">
 		<div class="featured-news clearfix">
 			<div class="featured-news__large-column">
-				<% loop $PaginatedList.limit(1) %>
+				<% loop $FeaturedNews.limit(1) %>
 					<div class="news-card news-card--large news-card--border">
 						<% if $FeaturedImage %>
 							<div class="news-card__thumb">
@@ -46,7 +47,7 @@ $Header
 			</div>
 
 			<div class="featured-news__medium-column">
-				<% loop $PaginatedList.limit(2, 1) %>
+				<% loop $FeaturedNews.limit(2, 1) %>
 				<div class="news-card">
 					<% if $FeaturedImage %>
 						<div class="news-card__thumb">
@@ -95,7 +96,7 @@ $Header
 			</div>
 		</div>
 	</div><!-- end .row -->
-
+	<% end_if %>
 	<!-- Begin Iowa Now News Feed -->
 	<div class="news-fullwidth">
 		<div class="row">

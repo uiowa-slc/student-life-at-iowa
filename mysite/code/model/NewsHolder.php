@@ -52,6 +52,8 @@ class NewsHolder extends Blog {
 		return $fields;
 	}
 
+
+
 }
 class NewsHolder_Controller extends Blog_Controller {
 
@@ -325,6 +327,22 @@ class NewsHolder_Controller extends Blog_Controller {
 		return $entries->setPageLength($pageLength);
 	}
 
+	public function FeaturedNews(){
 
+		$tag = BlogTag::get()->filter(array('Title' => 'Featured'))->First();
+		//If Featured tag doesn't exist, just return standard chronological posts
+		if(!$tag){
+			return $this->PaginatedList();
+		}
+
+		$posts = $tag->BlogPosts()->filter(array("ParentID" => $this->ID));
+
+		if($posts->Count() > 0){
+			return $posts;
+		}else{
+			return $this->PaginatedList();
+		}
+
+	}
 
 }
