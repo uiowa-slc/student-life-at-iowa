@@ -310,12 +310,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "05f9f3b9f928c7fe051382b26102b4c4e41fb61c"
+                "reference": "c7faf23816251ca3f35463c55f3178a9b60128fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/05f9f3b9f928c7fe051382b26102b4c4e41fb61c",
-                "reference": "05f9f3b9f928c7fe051382b26102b4c4e41fb61c",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/c7faf23816251ca3f35463c55f3178a9b60128fc",
+                "reference": "c7faf23816251ca3f35463c55f3178a9b60128fc",
                 "shasum": ""
             },
             "require": {
@@ -367,7 +367,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2018-09-07T17:54:47+00:00"
+            "time": "2018-09-12T15:59:05+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -977,12 +977,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "85095057f7d16dfe53a5a6c0c31db0bbaf8c721e"
+                "reference": "c05ee3ac749993a90c3d424b1e8d772fefd07d5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/85095057f7d16dfe53a5a6c0c31db0bbaf8c721e",
-                "reference": "85095057f7d16dfe53a5a6c0c31db0bbaf8c721e",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/c05ee3ac749993a90c3d424b1e8d772fefd07d5c",
+                "reference": "c05ee3ac749993a90c3d424b1e8d772fefd07d5c",
                 "shasum": ""
             },
             "require": {
@@ -1036,7 +1036,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/2.0.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2018-09-11T19:26:46+00:00"
+            "time": "2018-09-14T21:37:04+00:00"
         },
         {
             "name": "md/rss-display",
