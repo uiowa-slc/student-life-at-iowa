@@ -28,7 +28,7 @@ class DivisionStaffTeam extends DataObject {
 	}
 
 	public function SortedStaffPages(){
-		$staffPages = $this->DivisionStaffPages()->sort('Sort');
+		$staffPages = $this->StaffPages()->sort('Sort');
 		$this->extend('alterSortedStaffPages', $staffPages);
 		return $staffPages;
 
