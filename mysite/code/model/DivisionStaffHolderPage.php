@@ -31,13 +31,8 @@ class DivisionStaffHolderPage extends Page {
 	public function getCMSFields(){
 		$f = parent::getCMSFields();
 
-		// $f->addFieldToTab('Root.Settings', new CheckboxField('SortLastName','Sort Staff By Last Name'));
-		// $f->addFieldToTab('Root.Settings', new CheckboxField('HideLinksToStaffPages','Hide links to individual staff pages?'));
-		// $f->addFieldToTab('Root.Settings', DropdownField::create( 'PhotoOrientation', 'Photo orientation', singleton('StaffHolderPage')->dbObject('PhotoOrientation')->enumValues()));
-
 		$f->addFieldToTab('Root.Main', new CheckboxSetField('Teams', 'Show the following staff teams on this page:', StaffTeam::get()->map('ID', 'Title')), 'Content');
 
-		//$f->removeByName('Content');
 		$gridFieldConfig = GridFieldConfig_RecordEditor::create();
 		$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
 

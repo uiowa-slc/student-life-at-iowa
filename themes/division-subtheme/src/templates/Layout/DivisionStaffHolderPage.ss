@@ -12,13 +12,6 @@ $Header
 
 			<div class="main-content__text">
 
-				<% loop Teams %>
-					<h3>$Title</h3>
-					<% loop StaffPages %>
-						<li>$FirstName $LastName</li>
-					<% end_loop %>
-				<% end_loop %>
-
 				<br /><br />
 
 				$BlockArea(AfterContentConstrained)
