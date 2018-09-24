@@ -44,7 +44,7 @@ class DivisionStaffTeam extends DataObject {
 		foreach($teamStaff as $staff){
 			$teamStaffSingleArray = array(
 				'ID' => $staff->ID,
-				'Title' => $staff->Title,
+				'Position' => $staff->Position,
 				'FirstName' => $staff->FirstName,
 				'LastName' => $staff->LastName,
 				'Email' => $staff->Email,
