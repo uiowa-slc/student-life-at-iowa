@@ -87,7 +87,7 @@ $BlockArea(BeforeContent)
 			</div>
 		</div>
 		<div class="columns small-12 large-5 large-offset-1">
-			<img src="{$ThemeDir}/dist/images/melissa.jpg" alt="">
+			<img src="{$ThemeDir}/dist/images/melissa.jpg" alt="Melissa Shivers">
 			<small>Melissa Shivers, VP for Student Life</small>
 		</div>
 	</div>
