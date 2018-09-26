@@ -491,6 +491,10 @@ hr.large {
 	background-color: #f8f6f3;
 	border: 1px solid #ddd;
 	padding: 2em 1em;
+	&__title {
+		font-family: $header-font-family;
+		font-size: rem-calc(30);
+	}
 	& .button {
 		padding: 10px 14px;
 	}
