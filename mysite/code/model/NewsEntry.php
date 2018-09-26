@@ -48,6 +48,8 @@ class NewsEntry extends BlogPost {
 		$f->addFieldToTab('Root.Main', $urlSegment, 'Content');
 		$f->addFieldToTab('Root.Main', $catField, 'Content');
 		$f->addFieldToTab('Root.Main', $tagField, 'Content');
+
+		$f->renameField('Tags', 'Tags (add "Featured" to feature posts)');
 		$f->addFieldToTab('Root.Main', new TextField('ExternalURL', 'External URL for an external post (http:// required)'), "Content");
 		//$f->addFieldToTab("Root.Main", new UploadField("Photo", "Photo"), "Content");
 

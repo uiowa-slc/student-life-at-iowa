@@ -42,9 +42,13 @@ class DepartmentPage extends Page {
 	}
 
 	public function NewsEntriesByTag($tagTitle){
-		$tag = BlogTag::get()->filter(array('Title' => $tagTitle))->First();
 
+		// print_r($tagTitle);
+		$tag = BlogTag::get()->filter(array('URLSegment' => $tagTitle))->First();
 
+		if(!$tag){
+			return false;
+		}
 		$tagEntries = $tag->BlogPosts()->map()->keys();
 		$deptEntries = $this->NewsEntries()->map()->keys();
 
