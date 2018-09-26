@@ -301,7 +301,7 @@ $BlockArea(AfterContent)
 <section class="yir-section yir-video">
 	<div class="row">
 		<div class="columns small-12">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/8No2G7mtMpU?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/8No2G7mtMpU?rel=0" title="year in review video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 		</div>
 	</div>
 	<div class="row">
