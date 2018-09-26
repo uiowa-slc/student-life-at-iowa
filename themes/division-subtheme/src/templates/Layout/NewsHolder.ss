@@ -32,7 +32,7 @@ $Header
 
 						<% end_if %>
 						<div class="news-card__body text-center">
-							<h1 class="news-card__title"><a href="#"><a href="$Link">$Title</a></h1>
+							<h1 class="news-card__title"><a href="$Link">$Title</a></h1>
 							<% if $Summary %>
 								<div class="news-card__desc">$Summary</div>
 							<% else %>
