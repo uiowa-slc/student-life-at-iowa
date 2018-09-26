@@ -23,7 +23,7 @@
 					<div class="news-main">
 						<div class="news-main__article">
 							<% with $Page(news) %>
-								<% loop $BlogPosts.limit(1) %>
+								<% loop $FeaturedNews.limit(1) %>
 									<a href="$Link" class="news-main__link">
 										<% if $FeaturedImage %>
 											<img src="$FeaturedImage.CroppedFocusedImage(450,600).URL" alt="$Title" class="news-main__img">
@@ -47,7 +47,7 @@
 					<div class="news-secondary">
 						<% with $Page(news) %>
 							<ul class="news-secondary__list clearfix">
-								<% loop $BlogPosts.limit(3, 1) %>
+								<% loop $FeaturedNews.limit(3, 1) %>
 									<li class="news-secondary__item clearfix">
 										<a href="$Link" class="clearfix news-secondary__link">
 											<% if $FeaturedImage %>
