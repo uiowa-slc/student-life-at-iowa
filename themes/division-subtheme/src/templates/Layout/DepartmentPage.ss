@@ -57,15 +57,15 @@
 		</div>
 		<div class="stat-cards">
 			<div class="stat-card">
-				<h5 class="stat-card__digit">$KeyStat1Num</h5>
+				<div class="stat-card__digit">$KeyStat1Num</div>
 				<div class="stat-card__text">$KeyStat1Body</div>
 			</div>
 			<div class="stat-card">
-				<h5 class="stat-card__digit">$KeyStat2Num</h5>
+				<div class="stat-card__digit">$KeyStat2Num</div>
 				<div class="stat-card__text">$KeyStat2Body</div>
 			</div>
 			<div class="stat-card">
-				<h5 class="stat-card__digit">$KeyStat3Num</h5>
+				<div class="stat-card__digit">$KeyStat3Num</div>
 				<div class="stat-card__text">$KeyStat3Body</div>
 			</div>
 		</div>
