@@ -47,7 +47,7 @@ class DivisionStaffTeam extends DataObject {
 				'Position' => $staff->Position,
 				'FirstName' => $staff->FirstName,
 				'LastName' => $staff->LastName,
-				'Email' => $staff->Email,
+				'EmailAddress' => $staff->EmailAddress,
 				'URLSegment' => $staff->URLSegment,
 				'Photo' => $staff->Photo
 			);

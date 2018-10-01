@@ -78,6 +78,42 @@ class DivisionStaffPage extends Page {
 		return $fullName;
 	}
 
+	public function Link() {
+		if ($Link = $this->ExternalURL) {
+			return $Link;
+		} else {
+			return parent::Link();
+		}
+	}
+
+	public function toFeedArray(){
+		$post = $this->owner;
+		$postsArray = array();
+
+		if($post->obj('FeaturedImage')->exists()){
+			$postImage = $post->obj('FeaturedImage')->AbsoluteURL;
+			$postImageName = $post->obj('FeaturedImage')->Name;
+		}else{
+			$postImage = null;
+			$postImageName = null;
+		}
+
+		$postArrayItem = array(
+				'FirstName' => $post->FirstName,
+				'LastName' => $post->LastName,
+				'Position' => $post->Position,
+				'EmailAddress' => $post->EmailAddress,
+				'ID' => $post->ID,
+				'Photo' => $post->Photo,
+				'Title' => $post->Title,
+				'ID' => $post->ID,
+				'URLSegment' => $post->URLSegment,
+				'FeaturedImage' => $postImage,
+			);
+
+		return $postArrayItem;
+	}
+
 }
 class DivisionStaffPage_Controller extends Page_Controller {
 

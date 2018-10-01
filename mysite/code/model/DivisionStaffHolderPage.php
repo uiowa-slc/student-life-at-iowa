@@ -89,11 +89,13 @@ class DivisionStaffHolderPage_Controller extends Page_Controller {
 		'json',
 		//Feeds:
 		'departmentListFeed',
-		'departmentStaffFeed'
+		'departmentStaffFeed',
+		'departmentStaffPage'
 	);
 	private static $url_handlers = array(
 		'departmentListFeed' => 'departmentListFeed',
-		'departmentStaffFeed//$ID/$TeamID' => 'departmentStaffFeed'
+		'departmentStaffFeed//$ID/$TeamID' => 'departmentStaffFeed',
+		'departmentStaffPage//$ID' => 'departmentStaffPage'
 	);
 
 	public function departmentListFeed(){
@@ -146,6 +148,20 @@ class DivisionStaffHolderPage_Controller extends Page_Controller {
 		);
 
 		return json_encode($feedArray);
+
+	}
+
+	public function departmentStaffPage(){
+		$id = $this->getRequest()->param('ID');
+		$post =DivisionStaffPage::get()->filter(array('URLSegment' => $id))->First();
+
+		if($post){
+			$postArray = $post->toFeedArray();
+			$this->getResponse()->addHeader("Content-Type", "application/json");
+			return json_encode($postArray);	
+		}else{
+			$this->httpError(404);
+		}
 
 	}
 
