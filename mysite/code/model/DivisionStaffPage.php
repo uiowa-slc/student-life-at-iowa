@@ -90,13 +90,19 @@ class DivisionStaffPage extends Page {
 		$post = $this->owner;
 		$postsArray = array();
 
+		if($post->obj('Photo')->exists()){
+			$postImage = $post->obj('Photo')->AbsoluteURL;
+		}else{
+			$postImage = null;
+		}
+
 		$postArrayItem = array(
 				'FirstName' => $post->FirstName,
 				'LastName' => $post->LastName,
 				'Position' => $post->Position,
 				'EmailAddress' => $post->EmailAddress,
 				'ID' => $post->ID,
-				'Photo' => $post->Photo,
+				'PhotoURL' => $postImage,
 				'Phone' => $post->Phone,
 				'DepartmentName' => $post->DepartmentName,
 				'DepartmentURL' => $post->DepartmentURL,
