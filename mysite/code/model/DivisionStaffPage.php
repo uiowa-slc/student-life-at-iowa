@@ -107,6 +107,7 @@ class DivisionStaffPage extends Page {
 				'Photo' => $post->Photo,
 				'Phone' => $post->Phone,
 				'DepartmentName' => $post->DepartmentName,
+				'DepartmentURL' => $post->DepartmentURL,
 				'Title' => $post->Title,
 				'ID' => $post->ID,
 				'URLSegment' => $post->URLSegment,

@@ -51,6 +51,7 @@ class DivisionStaffTeam extends DataObject {
 				'URLSegment' => $staff->URLSegment,
 				'Phone' => $staff->Phone,
 				'DepartmentName' => $staff->DepartmentName,
+				'DepartmentURL' => $staff->DepartmentURL
 				'Photo' => $staff->Photo
 			);
 			array_push($teamStaffArray, $teamStaffSingleArray);
