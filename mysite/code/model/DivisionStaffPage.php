@@ -90,14 +90,6 @@ class DivisionStaffPage extends Page {
 		$post = $this->owner;
 		$postsArray = array();
 
-		if($post->obj('FeaturedImage')->exists()){
-			$postImage = $post->obj('FeaturedImage')->AbsoluteURL;
-			$postImageName = $post->obj('FeaturedImage')->Name;
-		}else{
-			$postImage = null;
-			$postImageName = null;
-		}
-
 		$postArrayItem = array(
 				'FirstName' => $post->FirstName,
 				'LastName' => $post->LastName,
@@ -111,7 +103,6 @@ class DivisionStaffPage extends Page {
 				'Title' => $post->Title,
 				'ID' => $post->ID,
 				'URLSegment' => $post->URLSegment,
-				'FeaturedImage' => $postImage,
 			);
 
 		return $postArrayItem;
