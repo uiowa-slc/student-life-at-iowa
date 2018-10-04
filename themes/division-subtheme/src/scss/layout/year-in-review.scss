@@ -10,6 +10,7 @@ hr.large {
 	border: none;
 	margin: 0;
 	margin: 50px 0 30px;
+	clear: none;
 }
 
 /* Video Header
@@ -26,6 +27,19 @@ hr.large {
 ========================================================= */
 .yir-director, .yir-video {
 	padding: 6em 0;
+}
+.yir-director__img {
+	float: right;
+	margin: 0 0 2em 2em;
+	width: 40%;
+	@include breakpoint(medium) {
+		margin: 0 0 2em 6em;
+	}
+}
+.yir-director .toggletext {
+	color: $anchor-color;
+	cursor: pointer;
+	text-decoration: underline;
 }
 
 

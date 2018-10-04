@@ -67,7 +67,12 @@ $BlockArea(BeforeContent)
 		<span class="yir-arrow"></span>
 	</a>
 	<div class="row">
-		<div class="columns small-12 large-6">
+		<div class="columns small-12">
+
+			<div class="yir-director__img">
+				<img src="{$ThemeDir}/dist/images/melissa.jpg" alt="Melissa Shivers">
+				<small style="display:block;">Melissa Shivers, VP for Student Life</small>
+			</div>
 			<h2 class="header--caps" style="margin-top:0;">2017-2018 Year in review</h2>
 			<div>
 				<p>Each fall, the Division of Student Life has an opportunity to showcase some of the accomplishments from the previous academic year. It is something I look forward to enthusiastically. I see the work of this dedicated and loyal team every single day, so it gives me great pleasure to be able to share it with you.</p>
@@ -81,15 +86,15 @@ $BlockArea(BeforeContent)
 					</p>
 					<img src="https://vp.studentlife.uiowa.edu/assets/Uploads/_resampled/ResizedImageWzM0OSwxMTFd/sig.png" alt="Melissa">
 				</div>
-				<hr class="large" />
+				<%-- <hr style="clear:none;" class="large" /> --%>
 
 				<p><button class="toggletext" data-content="toggle-text">Read More</button></p>
 			</div>
 		</div>
-		<div class="columns small-12 large-5 large-offset-1">
+		<%-- <div class="columns small-12 large-5 large-offset-1">
 			<img src="{$ThemeDir}/dist/images/melissa.jpg" alt="Melissa Shivers">
-			<small>Melissa Shivers, VP for Student Life</small>
-		</div>
+			<small style="display:block;">Melissa Shivers, VP for Student Life</small>
+		</div> --%>
 	</div>
 </section>
 
