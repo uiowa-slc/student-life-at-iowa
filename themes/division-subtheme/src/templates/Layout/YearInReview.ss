@@ -312,7 +312,7 @@ $BlockArea(AfterContent)
 	<div class="row">
 		<div class="columns small-12">
 			<h2>About the Year in Review</h2>
-			<p>The Division of Student Life Year in Review is produced as a collaboration between the Office of the Vice President for Student Life, Student Life Marketing + Design, and communications, marketing, and outreach staff from departments within the Division. We hope you enjoy learning about how the Division of Student Life contributes to student success through these stores. For more information, contact <a href="mailto:vp-student-life@uiowa.edu">vp-student-life@uiowa.edu</a>.</p>
+			<p>The Division of Student Life Year in Review is produced as a collaboration between the Office of the Vice President for Student Life, Student Life Marketing + Design, and communications, marketing, and outreach staff from departments within the Division. We hope you enjoy learning about how the Division of Student Life contributes to student success through these stories. For more information, contact <a href="mailto:vp-student-life@uiowa.edu">vp-student-life@uiowa.edu</a>.</p>
 		</div>
 	</div>
 </section>
