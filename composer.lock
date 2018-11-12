@@ -89,12 +89,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "365ddc2f8a147c27447d70e375e4c5bdf38e2766"
+                "reference": "b20f7b252cd6765ee68e66f8b3093a230ad97608"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/365ddc2f8a147c27447d70e375e4c5bdf38e2766",
-                "reference": "365ddc2f8a147c27447d70e375e4c5bdf38e2766",
+                "url": "https://api.github.com/repos/composer/installers/zipball/b20f7b252cd6765ee68e66f8b3093a230ad97608",
+                "reference": "b20f7b252cd6765ee68e66f8b3093a230ad97608",
                 "shasum": ""
             },
             "require": {
@@ -202,7 +202,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2018-09-12T10:41:00+00:00"
+            "time": "2018-10-10T11:17:18+00:00"
         },
         {
             "name": "embed/embed",
@@ -310,12 +310,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "c7faf23816251ca3f35463c55f3178a9b60128fc"
+                "reference": "51cb9063b8e07c2aa1e52f343de63ed08d822135"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/c7faf23816251ca3f35463c55f3178a9b60128fc",
-                "reference": "c7faf23816251ca3f35463c55f3178a9b60128fc",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/51cb9063b8e07c2aa1e52f343de63ed08d822135",
+                "reference": "51cb9063b8e07c2aa1e52f343de63ed08d822135",
                 "shasum": ""
             },
             "require": {
@@ -367,7 +367,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2018-09-12T15:59:05+00:00"
+            "time": "2018-11-03T10:47:53+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -375,12 +375,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "136531aa4e42f9b1971a47fb0faf60da00d2fefa"
+                "reference": "926eaa3ff73cde2becf652b785831bcb7618568a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/136531aa4e42f9b1971a47fb0faf60da00d2fefa",
-                "reference": "136531aa4e42f9b1971a47fb0faf60da00d2fefa",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/926eaa3ff73cde2becf652b785831bcb7618568a",
+                "reference": "926eaa3ff73cde2becf652b785831bcb7618568a",
                 "shasum": ""
             },
             "require": {
@@ -418,7 +418,7 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2018-03-25T01:26:01+00:00"
+            "time": "2018-10-30T00:20:04+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -426,12 +426,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "4b981cdeb8c13d22a6c193554f8c686f53d5c958"
+                "reference": "23e7d3812a82bdbff4a5cb8e4628bcc06eec5d68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/4b981cdeb8c13d22a6c193554f8c686f53d5c958",
-                "reference": "4b981cdeb8c13d22a6c193554f8c686f53d5c958",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/23e7d3812a82bdbff4a5cb8e4628bcc06eec5d68",
+                "reference": "23e7d3812a82bdbff4a5cb8e4628bcc06eec5d68",
                 "shasum": ""
             },
             "require": {
@@ -478,13 +478,14 @@
             "keywords": [
                 "http",
                 "message",
+                "psr-7",
                 "request",
                 "response",
                 "stream",
                 "uri",
                 "url"
             ],
-            "time": "2018-07-29T08:09:46+00:00"
+            "time": "2018-11-01T01:48:29+00:00"
         },
         {
             "name": "heyday/silverstripe-versioneddataobjects",
@@ -798,15 +799,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Masterminds/html5-php.git",
-                "reference": "441fb2bc82599e4e3e90ee94d0f084649f4952f2"
+                "reference": "a48091cd223f7075a8eb9cf2f41a782f64a46896"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/441fb2bc82599e4e3e90ee94d0f084649f4952f2",
-                "reference": "441fb2bc82599e4e3e90ee94d0f084649f4952f2",
+                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/a48091cd223f7075a8eb9cf2f41a782f64a46896",
+                "reference": "a48091cd223f7075a8eb9cf2f41a782f64a46896",
                 "shasum": ""
             },
             "require": {
+                "ext-ctype": "*",
+                "ext-dom": "*",
                 "ext-libxml": "*",
                 "php": ">=5.3.0"
             },
@@ -855,7 +858,7 @@
                 "serializer",
                 "xml"
             ],
-            "time": "2017-09-04T12:36:31+00:00"
+            "time": "2018-11-08T07:54:56+00:00"
         },
         {
             "name": "md/ac-json-events",
@@ -977,12 +980,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "4d95df1181ee9fbc854b9519042c631f62a07077"
+                "reference": "7e2b18305ba268729e4e9a24a313757fe8e29a27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/4d95df1181ee9fbc854b9519042c631f62a07077",
-                "reference": "4d95df1181ee9fbc854b9519042c631f62a07077",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/7e2b18305ba268729e4e9a24a313757fe8e29a27",
+                "reference": "7e2b18305ba268729e4e9a24a313757fe8e29a27",
                 "shasum": ""
             },
             "require": {
@@ -1036,7 +1039,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/2.0.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2018-09-26T18:38:56+00:00"
+            "time": "2018-10-17T19:04:26+00:00"
         },
         {
             "name": "md/rss-display",
@@ -1449,17 +1452,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PlatoCreative/silverstripe-typekit.git",
-                "reference": "ea65907304a807cf24e08748955c661044dbc4b1"
+                "reference": "4869cebfe01715bc414ea17b3a2f0302e14ecf9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PlatoCreative/silverstripe-typekit/zipball/ea65907304a807cf24e08748955c661044dbc4b1",
-                "reference": "ea65907304a807cf24e08748955c661044dbc4b1",
+                "url": "https://api.github.com/repos/PlatoCreative/silverstripe-typekit/zipball/4869cebfe01715bc414ea17b3a2f0302e14ecf9f",
+                "reference": "4869cebfe01715bc414ea17b3a2f0302e14ecf9f",
                 "shasum": ""
             },
             "require": {
-                "silverstripe/cms": "^3.5",
-                "silverstripe/framework": "^3.5"
+                "silverstripe/cms": "3.*",
+                "silverstripe/framework": "3.*"
             },
             "type": "silverstripe-module",
             "autoload": {
@@ -1488,7 +1491,7 @@
                 "typekit",
                 "typography"
             ],
-            "time": "2017-12-15T00:16:26+00:00"
+            "time": "2018-09-21T03:25:41+00:00"
         },
         {
             "name": "psr/http-message",
