@@ -23,7 +23,7 @@
 					<div class="news-main">
 						<div class="news-main__article">
 							<% with $Page(news) %>
-								<% loop $BlogPosts.limit(1) %>
+								<% loop $FeaturedNews.limit(1) %>
 									<a href="$Link" class="news-main__link">
 										<% if $FeaturedImage %>
 											<img src="$FeaturedImage.CroppedFocusedImage(450,600).URL" alt="$Title" class="news-main__img">
@@ -47,7 +47,7 @@
 					<div class="news-secondary">
 						<% with $Page(news) %>
 							<ul class="news-secondary__list clearfix">
-								<% loop $BlogPosts.limit(3, 1) %>
+								<% loop $FeaturedNews.limit(3, 1) %>
 									<li class="news-secondary__item clearfix">
 										<a href="$Link" class="clearfix news-secondary__link">
 											<% if $FeaturedImage %>
@@ -156,7 +156,7 @@
 						<label for="mce-EMAIL">Subscribe to our mailing list</label>
 						<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
 						<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c61b1cddac92babd42d7d628e_8e3635391c" tabindex="-1" value=""></div>
+						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c61b1cddac92babd42d7d628e_8e3635391c" title="hidden field" tabindex="-1" value=""></div>
 						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
 					</div>
 				</form>
@@ -200,7 +200,7 @@
 			<% if $AllDepartments %>
 				<% loop $AllDepartments %>
 					<div class="dept-slider__gallery-slide">
-						<img src="http://placehold.it/800x600?text=Student%20Life" data-flickity-lazyload="$BackgroundImage.CroppedFocusedImage(800,600).URL" class="dept-slider__gallery-img" alt="$Title">
+						<img src="{$ThemeDir}/dist/images/dosl.png" data-flickity-lazyload="$BackgroundImage.CroppedFocusedImage(800,600).URL" class="dept-slider__gallery-img" alt="$Title">
 						<div class="dept-slider__gallery-box">
 							<div class="dept-slider__gallery-box-content">
 								<h3 class="dept-slider__gallery-title">$Title</h3>
@@ -218,13 +218,13 @@
 
 
 <!-- Instagram Feed -->
-<%-- <section class="instafeed" aria-labelledby="instagramid">
+<section class="instafeed" aria-labelledby="instagramid">
 	<div class="row">
 		<div class="columns">
-			<h3 id="instagramid">Follow us on Instagram <a href="https://www.instagram.com/uiowaimu/">@uiowaimu</a></h3>
-			<!-- LightWidget WIDGET - lightwidget.com --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/d42f1547dd2c56fb8ad082838075f620.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+			<h3 id="instagramid">Follow us on Instagram <a href="https://www.instagram.com/uistudentlife/">@uistudentlife</a></h3>
+			<!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="https://cdn.lightwidget.com/widgets/d42f1547dd2c56fb8ad082838075f620.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
 		</div>
 	</div>
-</section> --%>
+</section>
 
 

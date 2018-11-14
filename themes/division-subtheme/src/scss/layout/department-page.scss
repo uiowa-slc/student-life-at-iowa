@@ -28,7 +28,9 @@
    padding: rem-calc(25);
    box-shadow: 1px 1px 5px rgba(0,0,0,.08);
 	&__digit {
-		font-size: 72px;
+		font-size: rem-calc(72);
+		font-family: $header-font-family;
+		font-weight: bold;
 		margin-top: 0;
 		margin-bottom: 10px;
 		letter-spacing: -2.5px;

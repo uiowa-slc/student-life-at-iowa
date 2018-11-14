@@ -67,7 +67,12 @@ $BlockArea(BeforeContent)
 		<span class="yir-arrow"></span>
 	</a>
 	<div class="row">
-		<div class="columns small-12 large-6">
+		<div class="columns small-12">
+
+			<div class="yir-director__img">
+				<img src="{$ThemeDir}/dist/images/melissa.jpg" alt="Melissa Shivers">
+				<small style="display:block;">Melissa Shivers, VP for Student Life</small>
+			</div>
 			<h2 class="header--caps" style="margin-top:0;">2017-2018 Year in review</h2>
 			<div>
 				<p>Each fall, the Division of Student Life has an opportunity to showcase some of the accomplishments from the previous academic year. It is something I look forward to enthusiastically. I see the work of this dedicated and loyal team every single day, so it gives me great pleasure to be able to share it with you.</p>
@@ -81,15 +86,15 @@ $BlockArea(BeforeContent)
 					</p>
 					<img src="https://vp.studentlife.uiowa.edu/assets/Uploads/_resampled/ResizedImageWzM0OSwxMTFd/sig.png" alt="Melissa">
 				</div>
-				<hr class="large" />
+				<%-- <hr style="clear:none;" class="large" /> --%>
 
 				<p><button class="toggletext" data-content="toggle-text">Read More</button></p>
 			</div>
 		</div>
-		<div class="columns small-12 large-5 large-offset-1">
-			<img src="{$ThemeDir}/dist/images/melissa.jpg" alt="">
-			<small>Melissa Shivers, VP for Student Life</small>
-		</div>
+		<%-- <div class="columns small-12 large-5 large-offset-1">
+			<img src="{$ThemeDir}/dist/images/melissa.jpg" alt="Melissa Shivers">
+			<small style="display:block;">Melissa Shivers, VP for Student Life</small>
+		</div> --%>
 	</div>
 </section>
 
@@ -301,13 +306,13 @@ $BlockArea(AfterContent)
 <section class="yir-section yir-video">
 	<div class="row">
 		<div class="columns small-12">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/8No2G7mtMpU?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/8No2G7mtMpU?rel=0" title="year in review video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 		</div>
 	</div>
 	<div class="row">
 		<div class="columns small-12">
 			<h2>About the Year in Review</h2>
-			<p>The Division of Student Life Year in Review is produced as a collaboration between the Office of the Vice President for Student Life, Student Life Marketing + Design, and communications, marketing, and outreach staff from departments within the Division. We hope you enjoy learning about how the Division of Student Life contributes to student success through these stores. For more information, contact <a href="mailto:vp-student-life@uiowa.edu">vp-student-life@uiowa.edu</a>.</p>
+			<p>The Division of Student Life Year in Review is produced as a collaboration between the Office of the Vice President for Student Life, Student Life Marketing + Design, and communications, marketing, and outreach staff from departments within the Division. We hope you enjoy learning about how the Division of Student Life contributes to student success through these stories. For more information, contact <a href="mailto:vp-student-life@uiowa.edu">vp-student-life@uiowa.edu</a>.</p>
 		</div>
 	</div>
 </section>

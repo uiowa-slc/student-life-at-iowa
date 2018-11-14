@@ -20,7 +20,7 @@ $Header
 			<div class="main-content__text">
 				<% if $FeaturedImage %>
 					<% if FeaturedImage.Width >= 700 %>
-						<p class="post-image"><img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.SetWidth(1040).URL" alt="" role="presentation" width="840" height="$FeaturedImage.SetWidth(1040).Height" /></p>
+						<p class="post-image"><img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.SetWidth(1040).URL" alt="$FeaturedImage.Title" role="presentation" width="840" height="$FeaturedImage.SetWidth(1040).Height" /></p>
 					<% end_if %>
 				<% end_if %>
 				<div class="content">
@@ -37,7 +37,7 @@ $Header
 					</div>
 					<% if $FeaturedImage %>
 						<% if FeaturedImage.Width < 700 %>
-							<img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.URL" alt="" class="right post-image">
+							<img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.URL" alt="$FeaturedImage.Title" class="right post-image">
 						<% end_if %>
 					<% end_if %>
 
@@ -51,8 +51,8 @@ $Header
 				<!-- Year In Review -->
 				<% if $HasTag("2018 Year In Review") %>
 					<div class="backtoreview">
-						<h3 style="margin-top: 0;">2018 Year In Review</h3>
-						<p>This article is part of the <a href="/1718-year-in-review/">2018 Year in Review</a>, which highlights some of the Division of Student Life's accomplishments from the previous academic year.</p>
+						<p class="backtoreview__title"><strong>2018 Year In Review</strong></p>
+						<p>This article is part of the <strong>2018 Year in Review</strong>, which highlights some of the Division of Student Life's accomplishments from the previous academic year.</p>
 						<p><a href="/1718-year-in-review/" class="button">Go to Year in Review</a></p>
 					</div>
 				<% end_if %>
