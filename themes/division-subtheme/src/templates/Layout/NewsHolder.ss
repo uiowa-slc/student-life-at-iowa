@@ -5,6 +5,7 @@ $Header
 
 	$BlockArea(BeforeContent)
 
+<% if $Action == "index" %>
 	<% if $FeaturedNews %>
 	<div class="row">
 		<div class="featured-news clearfix">
@@ -119,10 +120,25 @@ $Header
 			</div>
 		</div>
 	</div><!-- End Iowa Now News -->
-
+<% end_if %>
 	<div class="row">
 		<div class="title-fullwidth">
-			<h2>Latest News</h2>
+			<h2>					<% if $ArchiveYear %>
+						<%t Blog.Archive 'Archive' %>:
+						<% if $ArchiveDay %>
+							$ArchiveDate.Nice
+						<% else_if $ArchiveMonth %>
+							$ArchiveDate.format('F, Y')
+						<% else %>
+							$ArchiveDate.format('Y')
+						<% end_if %>
+					<% else_if $CurrentTag %>
+						<%t Blog.Tag 'Tag' %>: $CurrentTag.Title
+					<% else_if $CurrentCategory %>
+						<%t Blog.Category 'Category' %>: $CurrentCategory.Title
+					<% else %>
+						Latest News
+					<% end_if %></h2>
 		</div>
 
 		<div role="main" class="main-content main-content--with-padding <% if $Children || $Menu(2) || $SidebarBlocks ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
