@@ -7,6 +7,10 @@ use SilverStripe\Blog\Model\BlogTag;
 use SilverStripe\Blog\Model\BlogCategory;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\Security\Member;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
+use Silverstripe\Forms\HTMLEditor\HtmlEditorField;
+
 class DepartmentPage extends Page {
 
 	private static $db = array(

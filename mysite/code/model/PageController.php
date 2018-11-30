@@ -7,6 +7,7 @@ use SilverStripe\ORM\FieldType\DBDate;
 use SilverStripe\ORM\FieldType\DBText;
 use SilverStripe\ORM\FieldType\DBHTMLText;
 
+
 class PageController extends ContentController {
 
 	/**
@@ -56,7 +57,7 @@ class PageController extends ContentController {
 				$title = new DBText('Title');
 				$title->setValue(html_entity_decode($item->get_title()));
 				// Cast the Date
-				$date = new DBDate('Date');
+				$date = new DBDate(DBDate::class);
 				$date->setValue($item->get_date('Y-m-d'));
 
 				$author = new DBText('Author');

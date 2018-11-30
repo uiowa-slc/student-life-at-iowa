@@ -1,4 +1,7 @@
 <?php
+
+use SilverStripe\Forms\CheckboxSetField;
+use SilverStripe\ORM\DataObject;
 class DivisionStaffTeam extends DataObject {
 
 	private static $db = array(

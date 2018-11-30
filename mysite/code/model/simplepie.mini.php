@@ -1,4 +1,6 @@
 <?php
+
+use SilverStripe\Assets\File;
 /**
  * SimplePie
  *
@@ -341,7 +343,7 @@ class SimplePie
 	
 	public function set_file_class($class = 'SimplePie_File')
 	{
-		return $this->registry->register('File', $class, true);
+		return $this->registry->register(File::class, $class, true);
 	}
 	
 	public function set_sanitize_class($class = 'SimplePie_Sanitize')
@@ -525,7 +527,7 @@ class SimplePie
 		// Pass whatever was set with config options over to the sanitizer.
 		// Pass the classes in for legacy support; new classes should use the registry instead
 		$this->sanitize->pass_cache_data($this->cache, $this->cache_location, $this->cache_name_function, $this->registry->get_class('Cache'));
-		$this->sanitize->pass_file_data($this->registry->get_class('File'), $this->timeout, $this->useragent, $this->force_fsockopen);
+		$this->sanitize->pass_file_data($this->registry->get_class(File::class), $this->timeout, $this->useragent, $this->force_fsockopen);
 		if (!empty($this->multifeed_url))
 		{
 			$i = 0;
@@ -712,7 +714,7 @@ class SimplePie
 						{
 							$headers['if-none-match'] = $this->data['headers']['etag'];
 						}
-						$file = $this->registry->create('File', array($this->feed_url, $this->timeout/10, 5, $headers, $this->useragent, $this->force_fsockopen));
+						$file = $this->registry->create(File::class, array($this->feed_url, $this->timeout/10, 5, $headers, $this->useragent, $this->force_fsockopen));
 						if ($file->success)
 						{
 							if ($file->status_code === 304)
@@ -753,7 +755,7 @@ class SimplePie
 				$headers = array(
 					'Accept' => 'application/atom+xml, application/rss+xml, application/rdf+xml;q=0.9, application/xml;q=0.8, text/xml;q=0.8, text/html;q=0.7, unknown/unknown;q=0.1, application/unknown;q=0.1, */*;q=0.1',
 				);
-				$file = $this->registry->create('File', array($this->feed_url, $this->timeout, 5, $headers, $this->useragent, $this->force_fsockopen));
+				$file = $this->registry->create(File::class, array($this->feed_url, $this->timeout, 5, $headers, $this->useragent, $this->force_fsockopen));
 			}
 		}
 		// If the file connection has an error, set SimplePie::error to that and quit
@@ -8786,7 +8788,7 @@ class SimplePie_Locator
 					$headers = array(
 						'Accept' => 'application/atom+xml, application/rss+xml, application/rdf+xml;q=0.9, application/xml;q=0.8, text/xml;q=0.8, text/html;q=0.7, unknown/unknown;q=0.1, application/unknown;q=0.1, */*;q=0.1',
 					);
-					$feed = $this->registry->create('File', array($href, $this->timeout, 5, $headers, $this->useragent));
+					$feed = $this->registry->create(File::class, array($href, $this->timeout, 5, $headers, $this->useragent));
 					if ($feed->success && ($feed->method & SIMPLEPIE_FILE_SOURCE_REMOTE === 0 || ($feed->status_code === 200 || $feed->status_code > 206 && $feed->status_code < 300)) && $this->is_feed($feed))
 					{
 						$feeds[$href] = $feed;
@@ -8858,7 +8860,7 @@ class SimplePie_Locator
 				$headers = array(
 					'Accept' => 'application/atom+xml, application/rss+xml, application/rdf+xml;q=0.9, application/xml;q=0.8, text/xml;q=0.8, text/html;q=0.7, unknown/unknown;q=0.1, application/unknown;q=0.1, */*;q=0.1',
 				);
-				$feed = $this->registry->create('File', array($value, $this->timeout, 5, $headers, $this->useragent));
+				$feed = $this->registry->create(File::class, array($value, $this->timeout, 5, $headers, $this->useragent));
 				if ($feed->success && ($feed->method & SIMPLEPIE_FILE_SOURCE_REMOTE === 0 || ($feed->status_code === 200 || $feed->status_code > 206 && $feed->status_code < 300)) && $this->is_feed($feed))
 				{
 					return $feed;
@@ -8885,7 +8887,7 @@ class SimplePie_Locator
 				$headers = array(
 					'Accept' => 'application/atom+xml, application/rss+xml, application/rdf+xml;q=0.9, application/xml;q=0.8, text/xml;q=0.8, text/html;q=0.7, unknown/unknown;q=0.1, application/unknown;q=0.1, */*;q=0.1',
 				);
-				$feed = $this->registry->create('File', array($value, $this->timeout, 5, null, $this->useragent));
+				$feed = $this->registry->create(File::class, array($value, $this->timeout, 5, null, $this->useragent));
 				if ($feed->success && ($feed->method & SIMPLEPIE_FILE_SOURCE_REMOTE === 0 || ($feed->status_code === 200 || $feed->status_code > 206 && $feed->status_code < 300)) && $this->is_feed($feed))
 				{
 					return $feed;
@@ -12411,7 +12413,7 @@ class SimplePie_Sanitize
 							}
 							else
 							{
-								$file = $this->registry->create('File', array($img['attribs']['src']['data'], $this->timeout, 5, array('X-FORWARDED-FOR' => $_SERVER['REMOTE_ADDR']), $this->useragent, $this->force_fsockopen));
+								$file = $this->registry->create(File::class, array($img['attribs']['src']['data'], $this->timeout, 5, array('X-FORWARDED-FOR' => $_SERVER['REMOTE_ADDR']), $this->useragent, $this->force_fsockopen));
 								$headers = $file->headers;
 								if ($file->success && ($file->method & SIMPLEPIE_FILE_SOURCE_REMOTE === 0 || ($file->status_code === 200 || $file->status_code > 206 && $file->status_code < 300)))
 								{
