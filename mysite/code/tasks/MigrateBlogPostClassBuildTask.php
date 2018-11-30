@@ -1,5 +1,8 @@
 <?php
 
+use SilverStripe\Security\Member;
+use SilverStripe\Dev\BuildTask;
+
 class MigrateBlogPostClassBuildTask extends BuildTask {
 
 	protected $title = 'Migrate "NewsHolder" and NewsEntry" classes to BlogPost';
@@ -14,7 +17,7 @@ class MigrateBlogPostClassBuildTask extends BuildTask {
 		foreach ($articles as $article) {
 
 			if (($article->MemberID) && ($article->MemberID != 0)) {
-				$articleMember = Member::get_by_id("Member", $article->MemberID);
+				$articleMember = Member::get_by_id(Member::class, $article->MemberID);
 				echo "<li>adding " . $article->Member()->ID . " to " . $article->Title . " as an author</li>";
 
 				//$articleNew = NewsEntry::get_by_id("NewsEntry", $article->ID);

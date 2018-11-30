@@ -12,15 +12,15 @@ $Header
 		</div>
 	</div>
 
-	$BlockArea(BeforeContent)
+	$BeforeContent
 
 	<div class="row">
 		<article role="main" class="main-content main-content--with-padding <% if $Children || $Menu(2) || $SidebarBlocks ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
-			$BlockArea(BeforeContentConstrained)
+			$BeforeContentConstrained
 			<div class="main-content__text">
 				<% if $FeaturedImage %>
 					<% if FeaturedImage.Width >= 700 %>
-						<p class="post-image"><img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.SetWidth(1040).URL" alt="$FeaturedImage.Title" role="presentation" width="840" height="$FeaturedImage.SetWidth(1040).Height" /></p>
+						<p class="post-image"><img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.URL" alt="$FeaturedImage.Title" role="presentation"/></p>
 					<% end_if %>
 				<% end_if %>
 				<div class="content">
@@ -47,7 +47,7 @@ $Header
 					<% end_if %>
 				</div>
 
-				$BlockArea(AfterContentConstrained)
+				$AfterContentConstrained
 				<!-- Year In Review -->
 				<% if $HasTag("2018 Year In Review") %>
 					<div class="backtoreview">
@@ -66,12 +66,13 @@ $Header
 			<% if $SideBarView %>
 				$SideBarView
 			<% end_if %>
-			$BlockArea(Sidebar)
+
+			$Sidebar
+
 		</aside>
 	</div>
-	$BlockArea(AfterContent)
+	$AfterContent
 </main>
-
 
 
 

@@ -3,7 +3,7 @@ $Header
 
 <main class="main-content__container" id="main-content__container">
 
-	$BlockArea(BeforeContent)
+	$BeforeContent
 
 	<% if $FeaturedNews %>
 	<div class="row">
@@ -13,7 +13,7 @@ $Header
 					<div class="news-card news-card--large news-card--border">
 						<% if $FeaturedImage %>
 							<div class="news-card__thumb">
-								<a href="$Link"><img src="$FeaturedImage.CroppedFocusedImage(600,400).URL" alt="$Title"></a>
+								<a href="$Link"><img src="$FeaturedImage.FocusFill(600,400).URL" alt="$Title"></a>
 								<% if $Departments %>
 									<span class="news-card__dept news-card__dept--wthumb">
 										<% loop $Departments %><% if not $First && $Last %>, <% end_if %>$Title<% end_loop %>
@@ -51,7 +51,7 @@ $Header
 				<div class="news-card">
 					<% if $FeaturedImage %>
 						<div class="news-card__thumb">
-							<a href="$Link"><img src="$FeaturedImage.CroppedFocusedImage(450,300).URL" alt="$Title"></a>
+							<a href="$Link"><img src="$FeaturedImage.FocusFill(450,300).URL" alt="$Title"></a>
 							<% if $Departments %>
 								<span class="news-card__dept news-card__dept--wthumb">
 									<% loop $Departments %><% if not $First && $Last %>, <% end_if %>$Title<% end_loop %>
@@ -110,7 +110,7 @@ $Header
 						<div class="iowa-now__body">
 							<div class="">
 								<h2 class="iowa-now__title"><a href="$Link">$Title</a></h2>
-								<span class="iowa-now__date"><em>Iowa Now</em> $Date.Format("M j, Y")</span>
+								<span class="iowa-now__date"><em>Iowa Now</em> $Date.Format("MMM d, Y")</span>
 							</div>
 						</div>
 					</li>
@@ -125,9 +125,9 @@ $Header
 			<h2>Latest News</h2>
 		</div>
 
-		<div role="main" class="main-content main-content--with-padding <% if $Children || $Menu(2) || $SidebarBlocks ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
+		<div role="main" class="main-content main-content--with-padding <% if $Children || $Menu(2) || $Sidebar ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
 
-			$BlockArea(BeforeContentConstrained)
+			$BeforeContentConstrained
 
 			<div class="main-content__text">
 
@@ -137,7 +137,7 @@ $Header
 
 				<br /><br />
 
-				$BlockArea(AfterContentConstrained)
+				$AfterContentConstrained
 				$Form
 				$CommentsForm
 			</div>
@@ -161,11 +161,11 @@ $Header
 				$SideBarView
 			<% end_if %>
 
-			$BlockArea(Sidebar)
+			$Sidebar
 
 		</aside>
 	</div>
 
-	$BlockArea(AfterContent)
+	$AfterContent
 
 </main>

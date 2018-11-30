@@ -1,5 +1,8 @@
 <?php
 
+use SilverStripe\Security\Member;
+use SilverStripe\Dev\BuildTask;
+
 class MigrateBlogEntryMembersToAuthorsBuildTask extends BuildTask {
 
 	protected $title = 'Migrate the old blog entry member relationship to the new Blog 2.0 Authors';
@@ -13,7 +16,7 @@ class MigrateBlogEntryMembersToAuthorsBuildTask extends BuildTask {
 		foreach ($articles as $article) {
 
 			if (($article->MemberID) && ($article->MemberID != 0)) {
-				$articleMember = Member::get_by_id("Member", $article->MemberID);
+				$articleMember = Member::get_by_id(Member::class, $article->MemberID);
 				echo "<li>adding " . $article->Member()->ID . " to " . $article->Title . " as an author</li>";
 
 				//$articleNew = NewsEntry::get_by_id("NewsEntry", $article->ID);

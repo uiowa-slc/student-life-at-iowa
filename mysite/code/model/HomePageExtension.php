@@ -1,4 +1,11 @@
 <?php
+
+use SilverStripe\Assets\Image;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\HeaderField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\ORM\DataExtension;
 class HomePageExtension extends DataExtension {
 
 	private static $db = array(
@@ -12,9 +19,9 @@ class HomePageExtension extends DataExtension {
 	);
 
 	private static $has_one = array(
-		"Video" => "Image",
-		"VideoPoster" => "Image",
-		"SpotlightImage" => "Image",
+		"Video" => Image::class,
+		"VideoPoster" => Image::class,
+		"SpotlightImage" => Image::class,
 	);
 
 	private static $belongs_many_many = array(

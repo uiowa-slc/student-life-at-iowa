@@ -1,4 +1,4 @@
-<div class="bg-media bg-media--image" data-interchange="[$BackgroundImage.CroppedFocusedImage(600,400).URL, small], [$BackgroundImage.CroppedFocusedImage(1600,700).URL, medium]">
+<div class="bg-media bg-media--image" data-interchange="[$BackgroundImage.FocusFill(600,400).URL, small], [$BackgroundImage.FocusFill(1600,700).URL, medium]">
 	<div class="header__screen header__screen--fill-container header__screen--thin"></div>
 	$Header("dark-header","overlay")
 	<div class="column row">
@@ -19,21 +19,21 @@
 		</div>
 	<% end_if %>
 
-	$BlockArea(BeforeContent)
+	$BeforeContent
 
 
 
 	<div class="row">
 
 		<article role="main" class="main-content main-content--with-padding <% if $Children || $Menu(2) || $SidebarBlocks ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
-			$BlockArea(BeforeContentConstrained)
+			$BeforeContentConstrained
 			<% if $MainImage %>
 				<img class="main-content__main-img" src="$MainImage.ScaleMaxWidth(500).URL" alt="" role="presentation"/>
 			<% end_if %>
 			<div class="main-content__text">
 				$Content
 			</div>
-			$BlockArea(AfterContentConstrained)
+			$AfterContentConstrained
 			$Form
 			<% if $ShowChildPages %>
 				<% include ChildPages %>
@@ -44,7 +44,7 @@
 			<% if $SideBarView %>
 				$SideBarView
 			<% end_if %>
-			$BlockArea(Sidebar)
+			$Sidebar
 		</aside>
 	</div>
 
@@ -97,7 +97,7 @@
 
 
 
-	$BlockArea(AfterContent)
+	$AfterContent
 
 
 </div>
