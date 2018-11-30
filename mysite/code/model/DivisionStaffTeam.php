@@ -7,6 +7,7 @@ class DivisionStaffTeam extends DataObject {
 	);
 
 	private static $many_many = array(
+		'DepartmentPages' => 'DepartmentPage',
 		'StaffPages' => 'DivisionStaffPage',
 		'StaffHolderPages' => 'DivisionStaffHolderPage'
 	);

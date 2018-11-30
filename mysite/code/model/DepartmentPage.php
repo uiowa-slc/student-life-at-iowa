@@ -17,6 +17,7 @@ class DepartmentPage extends Page {
 	);
 	
 	private static $belongs_many_many = array(
+		'DivisionStaffTeams' => 'DivisionStaffTeams',
 		'NewsEntries' => 'NewsEntry',
 		"StaffPages" => "DivisionStaffPage"
 	);
@@ -25,6 +26,13 @@ class DepartmentPage extends Page {
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
+
+		$staffGridField = new GridField('DivisionStaffPage', 'Staff Members', $this->StaffPages());
+		$staffGridFieldConfig = GridFieldConfig_RelationEditor::create();
+
+		$staffGridField->setConfig($staffGridFieldConfig);
+
+		$fields->addFieldToTab("Root.Staff", $staffGridField);
 
 		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Photo"), "Content");
 
