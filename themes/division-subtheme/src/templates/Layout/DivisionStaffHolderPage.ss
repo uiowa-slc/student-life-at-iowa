@@ -13,12 +13,12 @@ $Header
 		</div>
 	<% end_if %>
 
-	$BlockArea(BeforeContent)
+	$BeforeContent
 
 	<div class="row">
 		<article role="main" class="main-content main-content--with-padding <% if not $HideLinksToStaffPages %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
 
-			$BlockArea(BeforeContentConstrained)
+			$BeforeContentConstrained
 
 			<div class="main-content__text">
 				$Content
@@ -47,18 +47,18 @@ $Header
 				<% end_if %>
 				</div><%-- end stafflist --%>
 			</div>
-			$BlockArea(AfterContentConstrained)
+			$AfterContentConstrained
 			$Form
 		</article>
 		<aside class="sidebar dp-sticky">
 			<% if not $HideLinksToStaffPages %>
 				<% include SideNav %>
 			<% end_if %>
-			$BlockArea(Sidebar)
+			$Sidebar
 
 		</aside>
 	</div>
 
-	$BlockArea(AfterContent)
+	$AfterContent
 
 </main>
