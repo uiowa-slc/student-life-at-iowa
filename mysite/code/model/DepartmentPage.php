@@ -23,15 +23,24 @@ class DepartmentPage extends Page {
 	private static $has_one = array(
 		"Photo" => Image::class,
 	);
-
+	
 	private static $belongs_many_many = array(
-		'NewsEntries' => 'NewsEntry'
+		'DivisionStaffTeams' => 'DivisionStaffTeams',
+		'NewsEntries' => 'NewsEntry',
+		"StaffPages" => "DivisionStaffPage"
 	);
 
 	private static $icon = 'mysite/cms_icons/department.png';
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
+
+		$staffGridField = new GridField('DivisionStaffPage', 'Staff Members', $this->StaffPages());
+		$staffGridFieldConfig = GridFieldConfig_RelationEditor::create();
+
+		$staffGridField->setConfig($staffGridFieldConfig);
+
+		$fields->addFieldToTab("Root.Staff", $staffGridField);
 
 		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Photo"), "Content");
 
