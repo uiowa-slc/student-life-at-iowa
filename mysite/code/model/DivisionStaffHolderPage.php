@@ -7,6 +7,8 @@ use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\DropdownField;
+use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
+
 class DivisionStaffHolderPage extends Page {
 
 	private static $db = array(
