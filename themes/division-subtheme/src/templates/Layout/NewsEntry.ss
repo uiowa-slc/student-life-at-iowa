@@ -20,7 +20,7 @@ $Header
 			<div class="main-content__text">
 				<% if $FeaturedImage %>
 					<% if FeaturedImage.Width >= 700 %>
-						<p class="post-image"><img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.URL" alt="$FeaturedImage.Title" role="presentation"/></p>
+						<p class="post-image"><img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.FocusFill(1040,693).URL" alt="$FeaturedImage.Title" role="presentation"/></p>
 					<% end_if %>
 				<% end_if %>
 				<div class="content">
