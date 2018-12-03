@@ -1,6 +1,5 @@
 <?php
 
-use SilverStripe\Assets\File;
 /**
  * SimplePie
  *
