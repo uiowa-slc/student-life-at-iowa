@@ -168,12 +168,19 @@ class NewsHolder_Controller extends Blog_Controller {
 		$deptID = $this->getRequest()->param('ID');
 		$dept = DepartmentPage::get()->byID($deptID);
 
-		if(!$dept) return;
+		if(!$dept){
+			$dataRecord = $this->dataRecord;
+			$allPosts = $dataRecord->getBlogPosts();
+			$postCount = $allPosts->Count();
+			$posts = new PaginatedList($allPosts, $this->getRequest());
+		}else{
 
-		$postCount = $dept->NewsEntries()->Count();
-		
+			$postCount = $dept->NewsEntries()->Count();
+			$posts = new PaginatedList($dept->NewsEntries(), $this->getRequest());
 
-		$posts = new PaginatedList($dept->NewsEntries(), $this->getRequest());
+		}
+
+
 		$posts->setPageLength(10);
 
 		foreach($posts as $post){
