@@ -17,16 +17,16 @@ UNCSS_OPTIONS:
 # Gulp will reference these paths when it copies files
 PATHS:
   projectName: "student-life-at-iowa"
-  theme: "../themes/division-subtheme"
+  theme: "../../../themes/division-subtheme"
   # Path to theme folder
-  dist: "dist"
+  dist: "dist"  
   # Paths to static assets that aren't images, CSS, or JavaScript
   assets:
     - "src/**/*"
     - "!src/{images,scripts,scss,templates}/**/*"
     - "!src/{images,scripts,scss,templates}"
-    - "!../themes/division-subtheme/src/{images,scripts,scss,templates}/**/*"
-    - "!../themes/division-subtheme/src/{images,scripts,scss,templates}"
+    - "!../../../themes/division-subtheme/src/{images,scripts,scss,templates}/**/*"
+    - "!../../../themes/division-subtheme/src/{images,scripts,scss,templates}"
   # Paths to Sass libraries, which can then be loaded with @import
   sass:
     - "src/scss/"
@@ -56,9 +56,9 @@ PATHS:
     - "src/scripts/lib/foundation/foundation.tabs.js"
     # - "src/scripts/lib/foundation/foundation.toggler.js"
     # - "src/scripts/lib/foundation/foundation.tooltip.js"
+
     # Division Project Scripts:
     - "src/scripts/lib/*.js"
+    - "../../../themes/division-subtheme/src/scripts/lib/*.js"
     # - "src/scripts/!(app).js"
-    - "../themes/division-subtheme/src/scripts/libs/stickyfill.min.js"
-    - "../themes/division-subtheme/src/scripts/libs/isotope.pkgd.js"
     - "src/scripts/app.js"

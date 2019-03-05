@@ -1,4 +1,12 @@
 <?php
+
+use SilverStripe\Assets\Image;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\TagField\TagField;
+use SilverStripe\Forms\TextareaField;
+use SilverStripe\Security\Member;
+use SilverStripe\Blog\Model\BlogPost;
 class NewsEntry extends BlogPost {
 
 	private static $db = array(
@@ -9,8 +17,8 @@ class NewsEntry extends BlogPost {
 	);
 
 	private static $has_one = array(
-		"Photo" => "Image",
-		'ListingPhoto' => 'Image',
+		"Photo" => Image::class,
+		'ListingPhoto' => Image::class,
 	);
 	private static $many_many = array(
 		'Departments' => 'DepartmentPage'
@@ -38,16 +46,16 @@ class NewsEntry extends BlogPost {
 
 		
 		$urlSegment = $f->dataFieldByName('URLSegment');
-		$tagField = $f->fieldByName('blog-admin-sidebar.Tags');
-		$catField = $f->fieldByName('blog-admin-sidebar.Categories');
+		// $tagField = $f->fieldByName('blog-admin-sidebar.Tags');
+		// $catField = $f->fieldByName('blog-admin-sidebar.Categories');
 
-		$f->remove($tagField);
-		$f->remove($catField);
+		// $f->remove($tagField);
+		// $f->remove($catField);
 		$f->remove($urlSegment);
 
 		$f->addFieldToTab('Root.Main', $urlSegment, 'Content');
-		$f->addFieldToTab('Root.Main', $catField, 'Content');
-		$f->addFieldToTab('Root.Main', $tagField, 'Content');
+		// $f->addFieldToTab('Root.Main', $catField, 'Content');
+		// $f->addFieldToTab('Root.Main', $tagField, 'Content');
 
 		$f->renameField('Tags', 'Tags (add "Featured" to feature posts)');
 		$f->addFieldToTab('Root.Main', new TextField('ExternalURL', 'External URL for an external post (http:// required)'), "Content");
@@ -87,7 +95,7 @@ class NewsEntry extends BlogPost {
 		return $this->setField('ExternalURL', $this->validateURL($URL));
 	}
 
-	public function Link() {
+	public function Link($action = NULL) {
 		if ($Link = $this->ExternalURL) {
 			return $Link;
 		} else {
@@ -226,53 +234,4 @@ class NewsEntry extends BlogPost {
 	  $unpacked = unpack('Va/v2b/n2c/Nd', $binary_guid);
 	  return sprintf('%08X-%04X-%04X-%04X-%04X%08X', $unpacked['a'], $unpacked['b1'], $unpacked['b2'], $unpacked['c1'], $unpacked['c2'], $unpacked['d']);
 	}
-}
-class NewsEntry_Controller extends BlogEntry_Controller {
-
-	/**
-	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
-	 * permissions or conditions required to allow the user to access it.
-	 *
-	 * <code>
-	 * array (
-	 *     'action', // anyone can access this action
-	 *     'action' => true, // same as above
-	 *     'action' => 'ADMIN', // you must have ADMIN permissions to access this action
-	 *     'action' => '->checkAction' // you can only access this action if $this->checkAction() returns true
-	 * );
-	 * </code>
-	 *
-	 * @var array
-	 */
-	private static $allowed_actions = array(
-	);
-
-	public function RelatedNewsEntries() {
-		$holder = NewsHolder::get()->First();
-		$tags = $this->TagsCollection()->sort("RAND()")->limit(6);
-		$entries = new ArrayList();
-
-		foreach ($tags as $tag) {
-			$taggedEntries = $holder->Entries(5, $tag->Tag)->exclude(array("ID" => $this->ID))->sort("RAND()")->First();
-			if ($taggedEntries) {
-				foreach ($taggedEntries as $taggedEntry) {
-					if ($taggedEntry->ID) {
-						$entries->push($taggedEntry);
-					}
-				}
-			}
-
-		}
-
-		if ($entries->count() > 1) {
-			$entries->removeDuplicates();
-		}
-		return $entries;
-	}
-
-	public function init() {
-		parent::init();
-
-	}
-
 }

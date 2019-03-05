@@ -7,7 +7,7 @@
 	<div class="home-feature__media sticky">
 		<% if $Video %>
 			<div class="fullwidth-video">
-				<video playsinline autoplay muted loop autoplay src="$Video.URL" id="vid-bg" class="ani-vid-fadein" style="opacity: 1;" <% if $VideoPoster %>poster="$VideoPoster.CroppedFocusedImage(1400,900).URL"<% end_if %>></video>
+				<video playsinline autoplay muted loop autoplay src="$Video.URL" id="vid-bg" class="ani-vid-fadein" style="opacity: 1;" <% if $VideoPoster %>poster="$VideoPoster.FocusFill(1400,900).URL"<% end_if %>></video>
 			</div>
 		<% end_if %>
 		<div class="home-feature__herotext">
@@ -26,7 +26,7 @@
 								<% loop $FeaturedNews.limit(1) %>
 									<a href="$Link" class="news-main__link">
 										<% if $FeaturedImage %>
-											<img src="$FeaturedImage.CroppedFocusedImage(450,600).URL" alt="$Title" class="news-main__img">
+											<img src="$FeaturedImage.FocusFill(450,600).URL" alt="$Title" class="news-main__img">
 										<% else %>
 											<img src="{$ThemeDir}/dist/images/news-placeholder.jpg" alt="$Title" class="news-main__img">
 										<% end_if %>
@@ -51,7 +51,7 @@
 									<li class="news-secondary__item clearfix">
 										<a href="$Link" class="clearfix news-secondary__link">
 											<% if $FeaturedImage %>
-												<img src="$FeaturedImage.CroppedFocusedImage(320,200).URL" alt="$Title" class="news-secondary__img">
+												<img src="$FeaturedImage.FocusFill(320,200).URL" alt="$Title" class="news-secondary__img">
 											<% end_if %>
 											<div class="news-secondary__content <% if $FeaturedImage %>news-secondary__content--img<% end_if %>">
 												<% if $Departments %>
@@ -118,11 +118,11 @@
 		<li class="infosection__item">
 			<a href="$Link" class="infosection__link">
 				<% if $BackgroundImage %>
-					<img src="$BackgroundImage.CroppedFocusedImage(360,450).URL" width="180" height="150" class="infosection__img" alt="$Title">
+					<img src="$BackgroundImage.FocusFill(360,450).URL" width="180" height="150" class="infosection__img" alt="$Title">
 				<% else_if $YoutubeBackgroundEmbed %>
 					<img src="http://img.youtube.com/vi/$YoutubeBackgroundEmbed/sddefault.jpg" class="infosection__img" alt="$Title">
 				<% else_if $MainImage %>
-					<img src="$MainImage.PaddedImage(360,450).URL" width="180" height="150" class="infosection__img" alt="$Title">
+					<img src="$MainImage.Pad(360,450).URL" width="180" height="150" class="infosection__img" alt="$Title">
 				<% end_if %>
 				<div class="infosection__body">
 					<h3 class="infosection__title">$Title</h3>
@@ -170,7 +170,7 @@
 
 <!-- Spotlight Feature -->
 <% if $SpotlightTitle || $SpotlightContent %>
-<section class="spotlight" <% if $SpotlightImage %>data-interchange="[$SpotlightImage.CroppedFocusedImage(800,600).URL, small], [$SpotlightImage.CroppedFocusedImage(1300,500).URL, large]"<% end_if %> aria-labelledby="spotlight__id">
+<section class="spotlight" <% if $SpotlightImage %>data-interchange="[$SpotlightImage.FocusFill(800,600).URL, small], [$SpotlightImage.FocusFill(1300,500).URL, large]"<% end_if %> aria-labelledby="spotlight__id">
 	<div class="column row">
 		<div class="spotlight__container">
 			<% if $SpotlightTitle %>
@@ -200,7 +200,7 @@
 			<% if $AllDepartments %>
 				<% loop $AllDepartments %>
 					<div class="dept-slider__gallery-slide">
-						<img src="{$ThemeDir}/dist/images/dosl.png" data-flickity-lazyload="$BackgroundImage.CroppedFocusedImage(800,600).URL" class="dept-slider__gallery-img" alt="$Title">
+						<img src="{$ThemeDir}/dist/images/dosl.png" data-flickity-lazyload="$BackgroundImage.FocusFill(800,600).URL" class="dept-slider__gallery-img" alt="$Title">
 						<div class="dept-slider__gallery-box">
 							<div class="dept-slider__gallery-box-content">
 								<h3 class="dept-slider__gallery-title">$Title</h3>

@@ -1,0 +1,8 @@
+---
+Name: my-extensions
+After:
+    - '*'
+---
+HomePage:
+  - extensions: 
+    - SlHomePageExtension

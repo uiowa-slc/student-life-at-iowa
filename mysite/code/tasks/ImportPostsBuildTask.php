@@ -1,5 +1,10 @@
 <?php
 
+use SilverStripe\Control\Director;
+use SilverStripe\Assets\Image;
+use SilverStripe\Blog\Model\BlogTag;
+use SilverStripe\Dev\BuildTask;
+
 class ImportPostsBuildTask extends BuildTask {
 
 	protected $title = 'Import posts to their respective department (use ?deptId=[DEPTID]&base=[DEPTURL])';

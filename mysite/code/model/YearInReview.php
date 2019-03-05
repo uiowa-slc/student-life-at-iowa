@@ -1,4 +1,16 @@
 <?php
+
+use SilverStripe\Blog\Model\Blog;
+use SilverStripe\Assets\Image;
+use SilverStripe\Blog\Model\BlogTag;
+use SilverStripe\Blog\Model\BlogCategory;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
+use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\Forms\DropdownField;
+use SilverStripe\Forms\ListboxField;
 class YearInReview extends Page {
 
 	private static $db = array(
@@ -9,8 +21,8 @@ class YearInReview extends Page {
 	);
 
 	private static $has_one = array(
-		'Blog' => 'Blog',
-		'StoryPhoto' => 'Image'
+		'Blog' => Blog::class,
+		'StoryPhoto' => Image::class
 	);
 
 	private static $has_many = array(
@@ -19,8 +31,8 @@ class YearInReview extends Page {
 	);
 
 	private static $many_many = array(
-		'Tags' => 'BlogTag',
-		'Categories' => 'BlogCategory'
+		'Tags' => BlogTag::class,
+		'Categories' => BlogCategory::class
 	);
 
 	private static $defaults = array(
@@ -68,13 +80,13 @@ class YearInReview extends Page {
 					'Tags',
 					'Show entries tagged with ANY of the following tags:',
 					$tags->map()->toArray()
-				)->setMultiple(true),
+				),
 
 				$catField = ListboxField::create(
 					'Categories',
 					'Show entries tagged with ANY of the following categories:',
 					$cats->map()->toArray()
-				)->setMultiple(true),
+				),
 
 				$blogField = DropdownField::create('BlogID', 'Choose a blog to retrieve posts from', Blog::get()->map())->setEmptyString('(Any blog on this site)'),
 
@@ -91,71 +103,4 @@ class YearInReview extends Page {
 	}
 
 
-}
-class YearInReview_Controller extends Page_Controller {
-
-	/**
-	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
-	 * permissions or conditions required to allow the user to access it.
-	 *
-	 * <code>
-	 * array (
-	 *     'action', // anyone can access this action
-	 *     'action' => true, // same as above
-	 *     'action' => 'ADMIN', // you must have ADMIN permissions to access this action
-	 *     'action' => '->checkAction' // you can only access this action if $this->checkAction() returns true
-	 * );
-	 * </code>
-	 *
-	 * @var array
-	 */
-	private static $allowed_actions = array(
-	);
-
-	public function init() {
-		parent::init();
-
-	}
-
-	public function Entries(){
-
-		$entries = new ArrayList();
-
-		switch ($this->FilterBy){
-
-			case 'Tag':
-				$tags = $this->Tags();
-				foreach($tags as $tag){
-					$tagEntries = $tag->BlogPosts();
-					$entries->merge($tagEntries);
-				}
-				break;
-
-			case 'Category':
-				$cats = $this->Categories();
-				foreach($cats as $cat){
-					$catEntries = $cat->BlogPosts();
-					$entries->merge($catEntries);
-				}
-				break;
-		}
-
-		switch($this->SortBy){
-			case 'Random':
-				foreach($entries as $entry) {
-				    $entry->__Sort = mt_rand();
-				}
-				$entries = $entries->sort('__Sort');
-				break;
-
-			case 'Featured':
-				$entries = $entries->sort('IsFeatured, PublishDate DESC');
-				break;
-			default:
-				$entries = $entries->sort('PublishDate DESC');
-				break;
-		}
-
-		return $entries;
-	}
 }

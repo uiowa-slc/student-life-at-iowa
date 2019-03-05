@@ -1,11 +1,11 @@
 <article class="yir-article <% if $First %>grid-sizer<% end_if %> clearfix <% if $Tags.exists %><% loop $Tags %>$URLSegment <% end_loop %><% end_if %>">
 	<% if $FeaturedImage %>
 		<a href="$Link" class="yir-article__img">
-			<img src="$FeaturedImage.CroppedFocusedImage(550,325).URL" alt="$Title">
+			<img src="$FeaturedImage.FocusFill(550,325).URL" alt="$Title">
 		</a>
 	<% else_if $BackgroundImage %>
 		<a href="$Link" class="yir-article__img">
-			<img src="$BackgroundImage.CroppedFocusedImage(550,325).URL" alt="$Title">
+			<img src="$BackgroundImage.FocusFill(550,325).URL" alt="$Title">
 		</a>
 	<% else_if $YoutubeBackgroundEmbed %>
 		<a href="$Link" class="yir-article__img">
