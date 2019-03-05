@@ -1,5 +1,8 @@
 <?php
 
+use SilverStripe\Blog\Model\BlogTag;
+use SilverStripe\Dev\BuildTask;
+
 class ConsolidateTagsBuildTask extends BuildTask {
 
 	protected $title = 'Consolidate and remove duplicate tags';

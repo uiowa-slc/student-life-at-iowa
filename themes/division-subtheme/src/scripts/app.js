@@ -83,8 +83,8 @@ window.addEventListener('scroll', function() {
 	document.body.style.setProperty("--scroll-amount", (document.body.scrollTop || document.documentElement.scrollTop) );
 });
 
-const title = document.querySelector('h1.title');
-const speed = 0.02;
+var title = document.querySelector('h1.title');
+var speed = 0.02;
 title.style.transform = 'translateY( calc( var(--scrollparallax) * 1px ) )';
 
 function setScrollParallax() {

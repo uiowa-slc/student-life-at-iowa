@@ -10,7 +10,7 @@
 				<div class="carousel-cell">
 					<% if $Image %>
 						<% with $Image %>
-						<div class="cell-bg" data-flickity-bg-lazyload="$CroppedFocusedImage(1500,900).URL" <% if $FocusX || $FocusY %>style="background-position: $PercentageX% $PercentageY%;"<% end_if %>>
+						<div class="cell-bg" data-flickity-bg-lazyload="$FocusFill(1500,900).URL" <% if $FocusX || $FocusY %>style="background-position: $PercentageX% $PercentageY%;"<% end_if %>>
 						<% end_with %>
 							<div class="inner">
 								<div class="cell-text">
@@ -29,7 +29,7 @@
 					<% else_if $Video %>
 						<div class="cell-bg">
 							<div class="fullwidth-video">
-								<video playsinline autoplay muted loop autoplay src="$Video.URL" id="vid-bg" class="ani-vid-fadein" style="opacity: 1;" <% if $VideoPoster %>poster="$VideoPoster.CroppedFocusedImage(1500,900).URL"<% end_if %>></video>
+								<video playsinline autoplay muted loop autoplay src="$Video.URL" id="vid-bg" class="ani-vid-fadein" style="opacity: 1;" <% if $VideoPoster %>poster="$VideoPoster.FocusFill(1500,900).URL"<% end_if %>></video>
 							</div>
 						</div>
 					<% else %>
@@ -60,7 +60,7 @@
 
 </div>
 
-$BlockArea(BeforeContent)
+$BeforeContent
 
 <section class="yir-section yir-director" id="yir-start">
 	<a class="yir-arrow-wrap" href="#yir-start">
@@ -84,7 +84,7 @@ $BlockArea(BeforeContent)
 					<p>Together for UI,<br />
 						Melissa
 					</p>
-					<img src="https://vp.studentlife.uiowa.edu/assets/Uploads/_resampled/ResizedImageWzM0OSwxMTFd/sig.png" alt="Melissa">
+					<img src="assets/Uploads/imported/sig2.png" alt="Melissa">
 				</div>
 				<%-- <hr style="clear:none;" class="large" /> --%>
 
@@ -270,7 +270,7 @@ $BlockArea(BeforeContent)
 </section>
 
 <section class="yir-section yir-stories">
-	<header class="featuredpageblock-bg dp-lazy" data-original="<% if $StoryPhoto %>$StoryPhoto.CroppedFocusedImage(1400,500).URL<% end_if %>">
+	<header class="featuredpageblock-bg yir-story-intro dp-lazy" data-original="<% if $StoryPhoto %>$StoryPhoto.FocusFill(1400,500).URL<% end_if %>">
 		<div class="column row">
 			<% if $StoryContent %>$StoryContent<% end_if %>
 		</div>
@@ -301,7 +301,7 @@ $BlockArea(BeforeContent)
 
 </section>
 
-$BlockArea(AfterContent)
+$AfterContent
 
 <section class="yir-section yir-video">
 	<div class="row">
