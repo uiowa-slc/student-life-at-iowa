@@ -1,12 +1,14 @@
 <?php
 
 use SilverStripe\Assets\Image;
+use SilverStripe\Assets\File;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Forms\HeaderField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataExtension;
-class HomePageExtension extends DataExtension {
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+class SlHomePageExtension extends DataExtension {
 
 	private static $db = array(
 		"WhatWeDoTitle" => "Text",
@@ -19,7 +21,7 @@ class HomePageExtension extends DataExtension {
 	);
 
 	private static $has_one = array(
-		"Video" => Image::class,
+		"Video" => File::class,
 		"VideoPoster" => Image::class,
 		"SpotlightImage" => Image::class,
 	);

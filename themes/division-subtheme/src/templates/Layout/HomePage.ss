@@ -122,7 +122,7 @@
 				<% else_if $YoutubeBackgroundEmbed %>
 					<img src="http://img.youtube.com/vi/$YoutubeBackgroundEmbed/sddefault.jpg" class="infosection__img" alt="$Title">
 				<% else_if $MainImage %>
-					<img src="$MainImage.PaddedImage(360,450).URL" width="180" height="150" class="infosection__img" alt="$Title">
+					<img src="$MainImage.Pad(360,450).URL" width="180" height="150" class="infosection__img" alt="$Title">
 				<% end_if %>
 				<div class="infosection__body">
 					<h3 class="infosection__title">$Title</h3>

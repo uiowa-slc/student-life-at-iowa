@@ -131,7 +131,7 @@ $Header
 
 			<div class="main-content__text">
 
-				<% loop $PaginatedList.limit(10) %>
+				<% loop $PaginatedList %>
 					<% include BlogCard %>
 				<% end_loop %>
 
@@ -140,6 +140,11 @@ $Header
 				$AfterContentConstrained
 				$Form
 				$CommentsForm
+
+				<% with $PaginatedList %>
+					<% include Pagination %>
+				<% end_with %>
+
 			</div>
 		</div>
 

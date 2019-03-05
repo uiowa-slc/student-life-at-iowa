@@ -7,6 +7,7 @@ use SilverStripe\Forms\TextField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Forms\TreeDropdownField;
 use SilverStripe\ORM\DataObject;
+use SilverStripe\Assets\File;
 
 class YearInReviewHeroFeature extends DataObject {
 
@@ -21,7 +22,7 @@ class YearInReviewHeroFeature extends DataObject {
 	private static $has_one = array(
 		"AssociatedPage" => SiteTree::class,
 		"Image" => Image::class,
-		"Video" => Image::class,
+		"Video" => File::class,
 		"VideoPoster" => Image::class,
 		"YearInReview" => "YearInReview",
 	);

@@ -84,7 +84,7 @@ $BeforeContent
 					<p>Together for UI,<br />
 						Melissa
 					</p>
-					<img src="https://vp.studentlife.uiowa.edu/assets/Uploads/_resampled/ResizedImageWzM0OSwxMTFd/sig.png" alt="Melissa">
+					<img src="assets/Uploads/imported/sig2.png" alt="Melissa">
 				</div>
 				<%-- <hr style="clear:none;" class="large" /> --%>
 
@@ -270,7 +270,7 @@ $BeforeContent
 </section>
 
 <section class="yir-section yir-stories">
-	<header class="featuredpageblock-bg dp-lazy" data-original="<% if $StoryPhoto %>$StoryPhoto.FocusFill(1400,500).URL<% end_if %>">
+	<header class="featuredpageblock-bg yir-story-intro dp-lazy" data-original="<% if $StoryPhoto %>$StoryPhoto.FocusFill(1400,500).URL<% end_if %>">
 		<div class="column row">
 			<% if $StoryContent %>$StoryContent<% end_if %>
 		</div>

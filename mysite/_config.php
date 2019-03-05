@@ -14,3 +14,5 @@ Member::set_password_validator($validator);
 if(Director::isLive()) {
 	Director::forceSSL();
 }
+
+HomePage::add_extension('SlHomePageExtension');
