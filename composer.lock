@@ -1151,12 +1151,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-analytics.git",
-                "reference": "3989ca988150e3509059688a21516b78f03ac82d"
+                "reference": "a237e96c2de3a50b81414a732bc54b721ae083e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-analytics/zipball/3989ca988150e3509059688a21516b78f03ac82d",
-                "reference": "3989ca988150e3509059688a21516b78f03ac82d",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-analytics/zipball/a237e96c2de3a50b81414a732bc54b721ae083e0",
+                "reference": "a237e96c2de3a50b81414a732bc54b721ae083e0",
                 "shasum": ""
             },
             "require": {
@@ -1170,7 +1170,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-analytics/tree/1.2.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-analytics/issues"
             },
-            "time": "2018-08-17T20:20:52+00:00"
+            "time": "2019-03-08T21:17:46+00:00"
         },
         {
             "name": "md/division-project",
@@ -1178,12 +1178,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "d7cc3e06be07dd086c759194cbe32b1ec19501b2"
+                "reference": "5997ada90f80e636d1e417a49dc0845b7c7d7544"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/d7cc3e06be07dd086c759194cbe32b1ec19501b2",
-                "reference": "d7cc3e06be07dd086c759194cbe32b1ec19501b2",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/5997ada90f80e636d1e417a49dc0845b7c7d7544",
+                "reference": "5997ada90f80e636d1e417a49dc0845b7c7d7544",
                 "shasum": ""
             },
             "require": {
@@ -1222,6 +1222,7 @@
             "extra": {
                 "expose": [
                     "src/favicons",
+                    "src/images",
                     "cms-icons"
                 ]
             },
@@ -1230,7 +1231,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/ss4.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2019-03-05T17:37:31+00:00"
+            "time": "2019-03-11T15:26:32+00:00"
         },
         {
             "name": "md/saml",
@@ -2064,16 +2065,16 @@
         },
         {
             "name": "silverstripe/blog",
-            "version": "3.2.3",
+            "version": "3.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-blog.git",
-                "reference": "9c10a86de8fe602bd19faa209d35a7924aef95b2"
+                "reference": "23f05ac21eb0a85816ac4b12096413f5f6ae313f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/9c10a86de8fe602bd19faa209d35a7924aef95b2",
-                "reference": "9c10a86de8fe602bd19faa209d35a7924aef95b2",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/23f05ac21eb0a85816ac4b12096413f5f6ae313f",
+                "reference": "23f05ac21eb0a85816ac4b12096413f5f6ae313f",
                 "shasum": ""
             },
             "require": {
@@ -2123,7 +2124,7 @@
                 "news",
                 "silverstripe"
             ],
-            "time": "2018-12-12T14:52:37+00:00"
+            "time": "2019-02-10T20:21:40+00:00"
         },
         {
             "name": "silverstripe/campaign-admin",
@@ -3046,16 +3047,16 @@
         },
         {
             "name": "silverstripe/userforms",
-            "version": "5.3.0",
+            "version": "5.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-userforms.git",
-                "reference": "20ff59c0f8d5ca655913501d7148024982221fe8"
+                "reference": "5c8f086f3ec82138733b234bd56b6903cf73d067"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/20ff59c0f8d5ca655913501d7148024982221fe8",
-                "reference": "20ff59c0f8d5ca655913501d7148024982221fe8",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/5c8f086f3ec82138733b234bd56b6903cf73d067",
+                "reference": "5c8f086f3ec82138733b234bd56b6903cf73d067",
                 "shasum": ""
             },
             "require": {
@@ -3118,7 +3119,7 @@
                 "silverstripe",
                 "userforms"
             ],
-            "time": "2018-11-07T14:45:40+00:00"
+            "time": "2019-01-18T15:42:53+00:00"
         },
         {
             "name": "silverstripe/vendor-plugin",
