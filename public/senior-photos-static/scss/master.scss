@@ -1,0 +1,20 @@
+@import "materialize";
+
+.main-logo {
+	display: block;
+	padding: 3% 0;
+}
+
+/** FIXES for error messages https://github.com/Dogfalo/materialize/issues/1562*/
+label {
+	width: 100%;
+}
+
+.input-field label {
+	font-size: 0.8rem;
+	-webkit-transform: translateY(-140%);
+	-moz-transform: translateY(-140%);
+	-ms-transform: translateY(-140%);
+	-o-transform: translateY(-140%);
+	transform: translateY(-140%);
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Old Gold Scholarship: Submit Your Senior Photo | The University of Iowa</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- build:css https://studentlife.uiowa.edu/senior-photos-static/css/master.css -->
+    <link rel="stylesheet" href="css/master.css"/>
+    <!-- /build -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          
+        
+          <div class="col m8 offset-m2">
+              <a href="http://president.uiowa.edu" target="_blank" class="main-logo">
+                <!-- build:[src] https://studentlife.uiowa.edu/senior-photos-static/images/logo-icons.png -->
+                <img src="images/logo-icons.png" class="responsive-img" />
+                <!-- /build -->
+              </a>
+            <div class="body-text center" id="body-text">
+              <h1>Congrats!</h1>
+              <p>Congratulations on your Old Gold Scholarship! This year, the University of Iowa will be featuring a photo display of our entering first-year scholarship recipients from Iowa at the Iowa State Fair in Des Moines, August 11-21, 2016.</p>
+              <h2>Submit Your Senior Photo</h2>
+              <p>Fill out the form below and upload your headshot photo to be included in the display.</p>
+              <h3>Photo Requirements</h3>
+              <ul>
+                <li>Choose a headshot photo (above the shoulders) if possible. Avoid full body photos.</li>
+                <li>Upload as high-resolution of a photo as you can. Small or fuzzy pictures will not be included in the display.</li>
+              </ul>
+ 
+
+              <p><strong>Deadline to submit: July 8, 2016</strong></p>
+
+            </div>
+              <div id="thanks" style="display: none;" class="center">
+                <p>Thank you for submitting your photo!</p>
+              </div>
+            <form id="myForm" class="">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="first_name" name="first_name" type="text" class="validate" required>
+                  <label for="first_name" class="active">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="last_name" name="last_name" type="text" class="validate" required>
+                  <label for="last_name" class="active">Last Name</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="email" name="email" type="email" class="validate" required>
+                  <label for="email" class="active">Email</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="hometown" name="hometown" type="text" class="validate" required>
+                  <label for="hometown" class="active">Hometown</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="highschool" name="highschool" type="text" class="validate" required>
+                  <label for="highschool" class="active">High School</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12">
+                  <div class="file-field input-field">
+                    <div class="btn">
+                      <i class="material-icons right">perm_media</i>
+                      <span>Upload Your Photo</span>
+                      <input type="file" name="myFile" required>
+                    </div>
+                    <div class="file-path-wrapper">
+                      <input class="file-path validate" type="text">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="center">
+                  <p class="center">Before submitting your photo, please double-check the information you've entered above for typos.</p>
+                  <button class="btn btn-large green waves-effect waves-light" type="submit">
+                    <i class="material-icons right">send</i>Submit Your Photo
+                  </button>
+                <div class="progress" id="send-progress" style="display: none;">
+                    <div class="indeterminate"></div>
+                </div>
+              </div>
+            </form>
+            <p class="center">If you have any questions, please contact Quinn McIlvanie at <a href="mailto:quinn-mcilvanie@uiowa.edu">quinn-mcilvanie@uiowa.edu</a>.</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <script>
+    function fileUploaded(status) {
+      scroll(0,0);
+    document.getElementById('myForm').style.display = 'none';
+    document.getElementById('body-text').style.display = 'none';
+    document.getElementById('thanks').style.display = 'block';
+    }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>
+    <script>
+      $.validator.setDefaults({
+          errorClass: 'invalid',
+          validClass: "valid",
+          errorPlacement: function (error, element) {
+              $(element)
+                  .closest("form")
+                  .find("label[for='" + element.attr("id") + "']")
+                  .attr('data-error', error.text());
+          }
+      });
+      $('#myForm').validate({
+        submitHandler: function(form) {
+            $('#send-progress').show();
+           google.script.run.withSuccessHandler(fileUploaded).uploadFiles(form);
+        }
+      });
+    </script>
+
+    
+  </body>
+</html>
