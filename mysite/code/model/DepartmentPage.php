@@ -18,7 +18,6 @@ class DepartmentPage extends Page {
 		"KeyStat2Body" => "HTMLText",
 		"KeyStat3Num" => "Text",
 		"KeyStat3Body" => "HTMLText"
-
 	);
 
 	private static $has_one = array(
@@ -34,7 +33,7 @@ class DepartmentPage extends Page {
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
-		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Photo"), "Content");
+		//$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Photo"), "Content");
 
 		$fields->addFieldToTab("Root.Main", new TextField("KeyStatTitle", "Key Title"));
 		$fields->addFieldToTab("Root.Main", new TextField("KeyStat1Num", "Key Stat 1 - Number"));

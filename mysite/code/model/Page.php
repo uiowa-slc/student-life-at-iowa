@@ -38,14 +38,14 @@ class Page extends SiteTree {
 
 
 	public function DepartmentsWithPosts(){
-		$depts = DepartmentPage::get()->filterByCallback(function($item, $list) {
+		$depts = DepartmentPage::get()->filter(array('ShowInMenus' => 1))->filterByCallback(function($item, $list) {
 		    return ($item->NewsEntries()->Count() > 0);
 		});
 		return $depts;
 	}
 
 	public function AllDepartments(){
-		return DepartmentPage::get();
+		return DepartmentPage::get()->filter(array('ShowInMenus' => 1));
 	}
 	function validateURL($URL) {
 		if (!$URL || !trim($URL)) {
