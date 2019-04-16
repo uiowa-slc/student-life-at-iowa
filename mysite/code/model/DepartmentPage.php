@@ -17,7 +17,8 @@ class DepartmentPage extends Page {
 		"KeyStat2Num" => "Text",
 		"KeyStat2Body" => "HTMLText",
 		"KeyStat3Num" => "Text",
-		"KeyStat3Body" => "HTMLText"
+		"KeyStat3Body" => "HTMLText",
+		"WebsiteURL"=>"Text"
 	);
 
 	private static $has_one = array(
@@ -44,6 +45,7 @@ class DepartmentPage extends Page {
 
 		$fields->addFieldToTab("Root.Main", new TextField("KeyStat3Num", "Key Stat 3 - Number"));
 		$fields->addFieldToTab("Root.Main", HtmlEditorField::create("KeyStat3Body", "Key Stat 3 - Content")->setRows(4));
+		$fields->addFieldToTab("Root.Main", new TextField("WebsiteURL","Visit Website URL (include https://)"));
 
 		return $fields;
 

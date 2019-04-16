@@ -33,6 +33,12 @@
 			<div class="main-content__text">
 				$Content
 			</div>
+			<% if $WebsiteURL %>
+			<div class="row featuredpageblock__button">
+				<a class="WebsiteURL border-effect" href="$WebsiteURL">Visit Website</a>
+			</div>
+			<% end_if %>
+
 			$AfterContentConstrained
 			$Form
 			<% if $ShowChildPages %>
