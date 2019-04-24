@@ -6,6 +6,7 @@ use SilverStripe\Forms\TextField;
 use SilverStripe\Blog\Model\BlogTag;
 use SilverStripe\Blog\Model\BlogCategory;
 use SilverStripe\ORM\ArrayList;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Security\Member;
 class DepartmentPage extends Page {
 
