@@ -19,7 +19,7 @@ class LeadershipLegacyBlogEntry extends BlogPost {
 	private static $allowed_children = array(
 
 	);
-	private static $show_in_sitetree = true;
+	private static $show_in_sitetree = false;
 
 	private static $singular_name = 'Leadership Legacy Blog Entry';
 
