@@ -1234,12 +1234,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-saml.git",
-                "reference": "80d710186f619176debec3191e442611755e0cc4"
+                "reference": "a3c7aa2e53c16a87a16c8e688f6cc88a78aa6a90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/silverstripe-saml/zipball/80d710186f619176debec3191e442611755e0cc4",
-                "reference": "80d710186f619176debec3191e442611755e0cc4",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/silverstripe-saml/zipball/a3c7aa2e53c16a87a16c8e688f6cc88a78aa6a90",
+                "reference": "a3c7aa2e53c16a87a16c8e688f6cc88a78aa6a90",
                 "shasum": ""
             },
             "require": {
@@ -1294,7 +1294,7 @@
             "support": {
                 "source": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-saml/tree/md-merges-with-original"
             },
-            "time": "2019-05-22T16:34:28+00:00"
+            "time": "2019-05-22T18:54:44+00:00"
         },
         {
             "name": "md/silverstripe-maintenance-mode",
