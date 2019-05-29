@@ -41,6 +41,13 @@ class NewsEntry extends BlogPost {
 	);
 	private static $plural_name = 'News Entries';
 
+	private static $show_in_sitetree = false;
+
+	private static $hide_from_cms_tree = true;
+
+	private static $hide_from_hierarchy = true;
+
+	private static $icon_class = 'font-icon-p-post';
 	public function getCMSFields() {
 		$f = parent::getCMSFields();
 
@@ -66,9 +73,11 @@ class NewsEntry extends BlogPost {
 		$f->removeByName('AuthorNames');
 		$f->removeByName('Authors');
 		$f->removeByName('LayoutType');
+		$f->removeByName('LayoutType');
 
 		$biggerContentField = new HTMLEditorField('Content', 'Content');
 		$biggerContentField->setRows(60);
+		$biggerContentField->addExtraClass('stacked');
 
 		$f->addFieldToTab('Root.Main', $biggerContentField);
 

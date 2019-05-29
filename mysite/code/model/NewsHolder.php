@@ -5,6 +5,9 @@ use SilverStripe\Forms\TextField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Blog\Model\BlogTag;
 use SilverStripe\Blog\Model\Blog;
+use SilverStripe\Lumberjack\Model\Lumberjack;
+use SilverStripe\Core\Config\Config;
+use SilverStripe\ORM\ArrayList;
 class NewsHolder extends Blog {
 
 	private static $db = array(
@@ -30,7 +33,7 @@ class NewsHolder extends Blog {
 	);
 
 	private static $allowed_children = array(
-		'NewsEntry',
+		'NewsEntry'
 	);
 
 	private static $singular_name = 'News Holder';
@@ -39,6 +42,7 @@ class NewsHolder extends Blog {
 	private static $icon = 'themes/studentlife/images/blogholder-file.png';
 
 	public function getCMSFields() {
+		
 		$fields = parent::getCMSFields();
 		$fields->removeByName("Content");
 		//$fields->removeByName("Metadata");

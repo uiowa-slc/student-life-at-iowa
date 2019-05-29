@@ -3,3 +3,6 @@ Name: myproject
 ---
 SilverStripe\Core\Manifest\ModuleManifest:
   project: mysite
+SilverStripe\CMS\Model\SiteTree:
+  hide_from_cms_tree:
+    - NewsEntry
