@@ -17,7 +17,7 @@ $Header
 								<a href="$Link"><img src="$FeaturedImage.FocusFill(600,400).URL" alt="$Title"></a>
 								<% if $Departments %>
 									<span class="news-card__dept news-card__dept--wthumb">
-										<% loop $Departments %><% if not $First && $Last %>, <% end_if %>$Title<% end_loop %>
+										<% loop $Departments.First %><% if not $First && $Last %>, <% end_if %>$Title<% end_loop %>
 									</span>
 								<% end_if %>
 							</div>
@@ -26,7 +26,7 @@ $Header
 								<a href="$Link"><img src="{$ThemeDir}/dist/images/news-placeholder-s.jpg" alt="$Title" class="news-main__img"></a>
 								<% if $Departments %>
 									<span class="news-card__dept news-card__dept--wthumb">
-										<% loop $Departments %><% if not $First && $Last %>, <% end_if %>$Title<% end_loop %>
+										<% loop $Departments.First %><% if not $First && $Last %>, <% end_if %>$Title<% end_loop %>
 									</span>
 								<% end_if %>
 							</div>
@@ -55,7 +55,7 @@ $Header
 							<a href="$Link"><img src="$FeaturedImage.FocusFill(450,300).URL" alt="$Title"></a>
 							<% if $Departments %>
 								<span class="news-card__dept news-card__dept--wthumb">
-									<% loop $Departments %><% if not $First && $Last %>, <% end_if %>$Title<% end_loop %>
+									<% loop $Departments.First %><% if not $First && $Last %>, <% end_if %>$Title<% end_loop %>
 								</span>
 							<% end_if %>
 						</div>
@@ -63,7 +63,7 @@ $Header
 					<div class="news-card__body">
 						<% if $Departments && not $FeaturedImage %>
 							<span class="news-card__dept">
-								<% loop $Departments %><% if not $First && $Last %>, <% end_if %>$Title<% end_loop %>
+								<% loop $Departments.First %><% if not $First && $Last %>, <% end_if %>$Title<% end_loop %>
 							</span>
 						<% end_if %>
 						<h2 class="news-card__title news-card__title--small">
@@ -78,14 +78,9 @@ $Header
 				<div class="trending">
 					<h3 class="trending__heading">Trending</h3>
 					<ol class="trending__list">
-						<% loop $TrendingPosts.limit(4) %>
+						<% loop $TrendingPosts.limit(5) %>
 						<li class="trending__card">
 							<div class="trending__body">
-								<% if $Departments %>
-									<span class="trending__dept">
-										<% loop $Departments %><% if not $First && $Last %>, <% end_if %>$Title<% end_loop %>
-									</span>
-								<% end_if %>
 								<h2 class="trending__title">
 									<a href="$Link">$Title</a>
 								</h2>

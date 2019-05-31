@@ -119,13 +119,6 @@
 			}
 		}
 	}
-	&__dept {
-		display: block;
-		margin-bottom: 5px;
-		font-size: 11px;
-		text-transform: uppercase;
-		letter-spacing: .1em;
-	}
 }
 
 
@@ -166,7 +159,10 @@
 		display: block;
 		font-size: 11px;
 		text-transform: uppercase;
-		letter-spacing: .1em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 95%;
 		&--wthumb {
 			position: absolute;
 			bottom: 0;
