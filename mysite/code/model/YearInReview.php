@@ -40,6 +40,8 @@ class YearInReview extends Page {
 		// 'SortBy' => 'Recent'
 	);
 
+	private static $icon_class ='font-icon-back-in-time';
+
 	private static $belongs_many_many = array(
 
 	);

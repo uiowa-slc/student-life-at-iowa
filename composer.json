@@ -4,7 +4,7 @@
     "description": "The SilverStripe Framework Installer",
     "require": {
         "php": ">=5.6.0",
-        "md/division-project": "dev-ss4.x",
+        "md/division-project": "dev-ss4.4.x",
         "silverstripe/mathspamprotection": "dev-master"
     },
     "require-dev": {
@@ -15,6 +15,7 @@
             "4.x-dev": "4.2.x-dev",
             "dev-master": "5.x-dev"
         },
+        "resources-dir": "_resources",
         "project-files-installed": [
             "app/.htaccess",
             "app/_config.php",
@@ -36,7 +37,8 @@
         ],
         "expose": [
             "themes/division-subtheme/dist",
-            "themes/division-subtheme/css"
+            "themes/division-subtheme/css",
+            "mysite/cms_icons"
         ]
     },
     "repositories": [

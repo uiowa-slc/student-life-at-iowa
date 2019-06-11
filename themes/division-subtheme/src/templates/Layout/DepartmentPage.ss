@@ -34,9 +34,9 @@
 				$Content
 
 			<% if $WebsiteURL %>
-				<div class="featuredpageblock__button">
-					<a class="WebsiteURL border-effect" href="$WebsiteURL">Visit Website</a>
-				</div>
+				<p>
+					<a class="button" href="$WebsiteURL">Visit Website</a>
+				</p>
 			<% end_if %>
 
 			</div>
@@ -83,24 +83,24 @@
 
 	<!-- begin recent news -->
 	<% if $NewsEntries %>
-	<div class="block_area_aftercontent">
-		<section class="content-block__container" aria-labelledby="DeptNewsTitle">
-			<div class="content-block row">
+		<div class="elemental-area elemental-area--AfterContent">
+			<section class="content-block__container recentnews">
 				<div class="newsblock">
-					<div class="column">
-						<h3 id="DeptNewsTitle" class="newsblock-title text-center">Recent News for $Title</h3>
-					</div>
-					<ul class="medium-up-3 ">
-						<% loop $NewsEntries.limit(3) %>
-							<li class="column column-block">
-								<% include BlogCard %>
-							</li>
-						<% end_loop %>
-					</ul>
+			        <div class="grid-container">
+			            <div class="grid-x grid-margin-x">
+			                <div class="cell">
+			                    <h3 id="DeptNewsTitle" class="newsblock-title text-center">Recent News for $Title</h3>
+			                </div>
+			                <% loop $NewsEntries.limit(3) %>
+			                    <div class="cell medium-4">
+			                        <% include BlogCard %>
+			                    </div>
+			                <% end_loop %>
+			            </div>
+			        </div>
 				</div>
-			</div>
-		</section>
-	</div>
+			</section>
+		</div>
 	<% end_if %>
 	<!-- end recent news -->
 

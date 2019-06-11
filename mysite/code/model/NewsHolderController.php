@@ -28,6 +28,8 @@ class NewsHolderController extends BlogController {
 		'department//$ID' => 'department',
 		'departmentListFeed' => 'departmentListFeed',
 		'departmentNewsFeed//$ID' => 'departmentNewsFeed',
+		'departmentNewsFeedByTagSearch//$ID/$TagTerm' => 'departmentNewsFeedByTag',
+		'departmentNewsFeedByCatSearch//$ID/$CatTerm' => 'departmentNewsFeedByCat',
 		'departmentNewsFeedByTag//$ID/$TagID' => 'departmentNewsFeedByTag',
 		'departmentNewsFeedByCat//$ID/$CatID' => 'departmentNewsFeedByCat',
 		'departmentNewsFeedByAuthor//$ID/$AuthorID' => 'departmentNewsFeedByAuthor',
@@ -36,7 +38,7 @@ class NewsHolderController extends BlogController {
 	);
 
     /**
-     * Renders the blog posts for a given tag.
+     * Renders the blog posts for a given dept.
      *
      * @return null|SS_HTTPResponse
      */

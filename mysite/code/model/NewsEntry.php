@@ -47,6 +47,8 @@ class NewsEntry extends BlogPost {
 
 	private static $hide_from_hierarchy = true;
 
+	private static $can_be_root = false;
+
 	private static $icon_class = 'font-icon-p-post';
 	public function getCMSFields() {
 		$f = parent::getCMSFields();

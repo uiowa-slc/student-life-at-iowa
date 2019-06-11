@@ -22,7 +22,6 @@ class LeadershipLegacyIssueHolder extends Blog {
 	private static $singular_name = 'Leadership Legacy Issue Holder';
 
 	private static $plural_name = 'Leadership Legacy Issue Holders';
-	private static $icon = 'themes/studentlife/images/blogholder-file.png';
 	public function getCMSFields() {
 		$f = parent::getCMSFields();
 

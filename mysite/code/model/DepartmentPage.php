@@ -29,7 +29,7 @@ class DepartmentPage extends Page {
 		'NewsEntries' => 'NewsEntry'
 	);
 
-	private static $icon = 'resources/themes/division-subtheme/dist/images/cms_icons/department.png';
+	private static $icon = 'mysite/cms_icons/department.svg';
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
