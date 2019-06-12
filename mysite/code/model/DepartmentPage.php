@@ -51,6 +51,12 @@ class DepartmentPage extends Page {
 
 	}
 
+	public function NewsLink(){
+		$newsHolder = NewsHolder::get()->First();
+		$link = $newsHolder->Link('department/'.$this->URLSegment);
+		return $link;
+	}
+
 	public function NewsEntriesByTag($tagTitle){
 
 		// print_r($tagTitle);
@@ -77,13 +83,6 @@ class DepartmentPage extends Page {
 
 
 	}
-
-	public function NewsLink(){
-		$newsHolder = NewsHolder::get()->First();
-		$link = $newsHolder->Link('department/'.$this->URLSegment);
-		return $link;
-	}
-
 	public function NewsEntriesByCat($catTitle){
 		$tag = BlogCategory::get()->filter(array('Title' => $catTitle))->First();
 

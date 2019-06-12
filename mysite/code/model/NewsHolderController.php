@@ -28,10 +28,8 @@ class NewsHolderController extends BlogController {
 		'department//$ID' => 'department',
 		'departmentListFeed' => 'departmentListFeed',
 		'departmentNewsFeed//$ID' => 'departmentNewsFeed',
-		'departmentNewsFeedByTagSearch//$ID/$TagTerm' => 'departmentNewsFeedByTag',
-		'departmentNewsFeedByCatSearch//$ID/$CatTerm' => 'departmentNewsFeedByCat',
-		'departmentNewsFeedByTag//$ID/$TagID' => 'departmentNewsFeedByTag',
-		'departmentNewsFeedByCat//$ID/$CatID' => 'departmentNewsFeedByCat',
+		'departmentNewsFeedByTag//$ID/$Tag' => 'departmentNewsFeedByTag',
+		'departmentNewsFeedByCat//$ID/$Cat' => 'departmentNewsFeedByCat',
 		'departmentNewsFeedByAuthor//$ID/$AuthorID' => 'departmentNewsFeedByAuthor',
 		'departmentNewsPost//$ID' => 'departmentNewsPost',
 		'authorInfo//$ID' => 'authorInfo'
@@ -139,7 +137,7 @@ class NewsHolderController extends BlogController {
 		$postArray = array();
 		$deptID = $this->getRequest()->param('ID');
 		$dept = DepartmentPage::get()->byID($deptID);
-		$cat = $this->getRequest()->param('CatID');
+		$cat = $this->getRequest()->param('Cat');
 
 		if(!$dept) return;
 
@@ -167,16 +165,26 @@ class NewsHolderController extends BlogController {
 	public function departmentNewsFeedByTag(){
 		$postArray = array();
 		$deptID = $this->getRequest()->param('ID');
-		$dept = DepartmentPage::get()->byID($deptID);
-		$tag = $this->getRequest()->param('TagID');
 
-		if(!$dept) $this->httpError(404);
+		$tagQuery = $this->getRequest()->param('Tag');
 
-		$postCount = $dept->NewsEntriesByTag($tag)->Count();
 		
 
-		$posts = new PaginatedList($dept->NewsEntriesByTag($tag), $this->getRequest());
-		$posts->setPageLength(10);
+		if($deptID != 0){
+			$dept = DepartmentPage::get()->byID($deptID);
+			if(!$dept) $this->httpError(404);
+			$postCount = $dept->NewsEntriesByTag($tagQuery)->Count();
+			$posts = new PaginatedList($dept->NewsEntriesByTag($tagQuery), $this->getRequest());
+		//If the department passed along via the URL is 0, we get all posts from a tag in this blog.
+		}else{
+			$tag = $this->Tags()->filter(array('Title' => $tagQuery))->First();
+			if(!$tag) $this->httpError(404);
+
+			$postCount = $tag->BlogPosts()->Count();
+			$posts = new PaginatedList($tag->BlogPosts(), $this->getRequest());
+		}
+
+
 
 		foreach($posts as $post){
 			array_push($postArray, $post->toFeedArray());
