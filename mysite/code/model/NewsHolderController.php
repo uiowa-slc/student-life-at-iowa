@@ -133,6 +133,8 @@ class NewsHolderController extends BlogController {
 		return json_encode($feedArray);
 
 	}
+
+	//Only works with category ID right now, TODO: match NewsFeedByTag with tag string
 	public function departmentNewsFeedByCat(){
 		$postArray = array();
 		$deptID = $this->getRequest()->param('ID');
@@ -167,8 +169,7 @@ class NewsHolderController extends BlogController {
 		$deptID = $this->getRequest()->param('ID');
 
 		$tagQuery = $this->getRequest()->param('Tag');
-
-		
+		$tagQuery = urldecode($tagQuery);
 
 		if($deptID != 0){
 			$dept = DepartmentPage::get()->byID($deptID);
