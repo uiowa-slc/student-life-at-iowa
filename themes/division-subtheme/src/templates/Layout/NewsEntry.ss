@@ -54,6 +54,7 @@ $Header
 				<% end_if %>
 				$AfterContentConstrained
 			</div>
+
 				<!-- Year In Review -->
 				<% if $HasTag("2018 Year In Review") %>
 					<div class="backtoreview">
@@ -61,6 +62,13 @@ $Header
 						<p>This article is part of the <strong>2018 Year in Review</strong>, which highlights some of the Division of Student Life's accomplishments from the previous academic year.</p>
 						<p><a href="/1718-year-in-review/" class="button">Go to Year in Review</a></p>
 					</div>
+				<% else_if $HasTag("2019 Year In Review") %>
+					<div class="backtoreview">
+						<p class="backtoreview__title"><strong>2019 Year In Review</strong></p>
+						<p>This article is part of the <strong>2019 Year in Review</strong>, which highlights some of the Division of Student Life's accomplishments from the previous academic year.</p>
+						<p><a href="/2019-year-in-review/" class="button">Go to Year in Review</a></p>
+					</div>
+
 				<% end_if %>
 
             <% include TagsCategories %>
