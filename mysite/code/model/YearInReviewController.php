@@ -1,7 +1,7 @@
 <?php
 
 use SilverStripe\ORM\ArrayList;
-
+use SilverStripe\View\SSViewer;
 class YearInReviewController extends PageController {
 
 	/**
@@ -24,6 +24,18 @@ class YearInReviewController extends PageController {
 
 	public function init() {
 		parent::init();
+
+	}
+
+	public function YirContent(){
+		$year = $this->Year;
+
+		if($year){
+
+			$template = new SSViewer('YirContent/'.$year);
+			return $template->process($this);
+		}
+		
 
 	}
 

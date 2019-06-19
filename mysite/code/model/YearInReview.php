@@ -10,14 +10,17 @@ use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\DropdownField;
+use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\ListboxField;
+
 class YearInReview extends Page {
 
 	private static $db = array(
 		"StoryTitle" => "Text",
 		"StoryContent" => "HTMLText",
 		'FilterBy' => 'Enum(array("Tag","Category")',
-		'SortBy' => "Enum('Recent,Random,Featured')"
+		'SortBy' => "Enum('Recent,Random,Featured')",
+		"Year" => 'Int'
 	);
 
 	private static $has_one = array(
@@ -99,6 +102,7 @@ class YearInReview extends Page {
 		$tagField->displayIf('FilterBy')->isEqualTo('Tag');
 		$catField->displayIf('FilterBy')->isEqualTo('Category');
 
+		$fields->addFieldToTab('Root.Main', new TextField('Year','Last year this review covers (used internally on the backend)'));
 
 		return $fields;
 
