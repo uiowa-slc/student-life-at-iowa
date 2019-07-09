@@ -7,6 +7,8 @@ use SilverStripe\TagField\TagField;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\Security\Member;
 use SilverStripe\Blog\Model\BlogPost;
+use SilverStripe\Core\Environment;
+
 class NewsEntry extends BlogPost {
 
 	private static $db = array(
@@ -209,8 +211,8 @@ class NewsEntry extends BlogPost {
 		private function lookupUser($email){
 			set_time_limit(30);
 			$ldapserver = 'iowa.uiowa.edu';
-			$ldapuser      =  AD_SERVICEID_USER;  
-			$ldappass     = AD_SERVICEID_PASS;
+			$ldapuser      =  Environment::getEnv('AD_SERVICEID_USER'); 
+			$ldappass     = Environment::getEnv('AD_SERVICEID_PASS');
 			$ldaptree    = "DC=iowa, DC=uiowa, DC=edu";
 
 			$ldapconn = ldap_connect($ldapserver) or die("Could not connect to LDAP server.");
@@ -226,6 +228,7 @@ class NewsEntry extends BlogPost {
 						$result = ldap_search($ldapconn,$ldaptree, "uiowaADNotificationAddress=".$email, array("uiowaADNotificationAddress=","sn", "givenName", "objectGUID", "memberOf")) or die ("Error in search query: ".ldap_error($ldapconn));
 						
 			        	$data = ldap_get_entries($ldapconn, $result);
+
 			        	if($data["count"] == 1){
 			        		$memberGuid = $this->GUIDtoStr($data[0]["objectguid"][0]);
 			        		$resultArray['guid'] = $memberGuid;

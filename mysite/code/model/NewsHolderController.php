@@ -103,8 +103,8 @@ class NewsHolderController extends BlogController {
 		$postArray = array();
 		$deptID = $this->getRequest()->param('ID');
 		$dept = DepartmentPage::get()->byID($deptID);
-
-		if(!$dept){
+		//if no dept found, just return all posts
+		if((!$dept) || ($deptID == 0)){
  			$dataRecord = $this->dataRecord;
  			$allPosts = $dataRecord->getBlogPosts();
  			$postCount = $allPosts->Count();
