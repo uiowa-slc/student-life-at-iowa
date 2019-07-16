@@ -97,17 +97,22 @@ $YirContent
 </section>
 
 $AfterContent
-
+<% if $SecondaryContent || $SecondaryContentVideo %>
 <section class="yir-section yir-video">
+	<% if $SecondaryContentVideo %>
 	<div class="row">
 		<div class="columns small-12">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/8No2G7mtMpU?rel=0" title="year in review video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/{$SecondaryContentVideo}?rel=0" title="year in review video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 		</div>
 	</div>
+	<% end_if %>
+
+	<% if $SecondaryContent %>
 	<div class="row">
 		<div class="columns small-12">
-			<h2>About the Year in Review</h2>
-			<p>The Division of Student Life Year in Review is produced as a collaboration between the Office of the Vice President for Student Life, Student Life Marketing + Design, and communications, marketing, and outreach staff from departments within the Division. We hope you enjoy learning about how the Division of Student Life contributes to student success through these stories. For more information, contact <a href="mailto:vp-student-life@uiowa.edu">vp-student-life@uiowa.edu</a>.</p>
+			$SecondaryContent
 		</div>
 	</div>
+	<% end_if %>
 </section>
+<% end_if %>

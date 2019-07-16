@@ -12,6 +12,7 @@ use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\ListboxField;
+use EdgarIndustries\YouTubeField\YouTubeField;
 
 class YearInReview extends Page {
 
@@ -20,7 +21,9 @@ class YearInReview extends Page {
 		"StoryContent" => "HTMLText",
 		'FilterBy' => 'Enum(array("Tag","Category")',
 		'SortBy' => "Enum('Recent,Random,Featured')",
-		"Year" => 'Int'
+		"Year" => 'Int',
+		'SecondaryContentVideo' => 'Varchar(11)',
+		'SecondaryContent' => 'HTMLText'
 	);
 
 	private static $has_one = array(
@@ -103,6 +106,9 @@ class YearInReview extends Page {
 		$catField->displayIf('FilterBy')->isEqualTo('Category');
 
 		$fields->addFieldToTab('Root.Main', new TextField('Year','Last year this review covers (used internally on the backend)'));
+
+		$fields->addFieldToTab('Root.Main', new YouTubeField('SecondaryContentVideo', 'Video below the big list of stories'));
+		$fields->addFieldToTab('Root.Main', HTMLEditorField::create('SecondaryContent', 'Content below the big list of stories')->addExtraClass('stacked'));
 
 		return $fields;
 
