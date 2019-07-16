@@ -15,98 +15,104 @@ use SilverStripe\Forms\ListboxField;
 
 class YearInReview extends Page {
 
-	private static $db = array(
-		"StoryTitle" => "Text",
-		"StoryContent" => "HTMLText",
-		'FilterBy' => 'Enum(array("Tag","Category")',
-		'SortBy' => "Enum('Recent,Random,Featured')",
-		"Year" => 'Int'
-	);
+    private static $db = array(
+        "StoryTitle" => "Text",
+        "StoryContent" => "HTMLText",
+        'FilterBy' => 'Enum(array("Tag","Category")',
+        'SortBy' => "Enum('Recent,Random,Featured')",
+        "Year" => 'Int',
+        'VideoEmbed' => 'Varchar(11)',
+        "VideoContent" => "HTMLText"
+    );
 
-	private static $has_one = array(
-		'Blog' => Blog::class,
-		'StoryPhoto' => Image::class
-	);
+    private static $has_one = array(
+        'Blog' => Blog::class,
+        'StoryPhoto' => Image::class
+    );
 
-	private static $has_many = array(
-		'YearInReviewHeroFeatures' => 'YearInReviewHeroFeature',
+    private static $has_many = array(
+        'YearInReviewHeroFeatures' => 'YearInReviewHeroFeature',
 
-	);
+    );
 
-	private static $many_many = array(
-		'Tags' => BlogTag::class,
-		'Categories' => BlogCategory::class
-	);
+    private static $many_many = array(
+        'Tags' => BlogTag::class,
+        'Categories' => BlogCategory::class
+    );
 
-	private static $defaults = array(
-		// 'Limit' => 3,
-		// 'SortBy' => 'Recent'
-	);
+    private static $defaults = array(
+        // 'Limit' => 3,
+        // 'SortBy' => 'Recent'
+    );
 
-	private static $icon_class ='font-icon-back-in-time';
+    private static $icon_class ='font-icon-back-in-time';
 
-	private static $belongs_many_many = array(
+    private static $belongs_many_many = array(
 
-	);
+    );
 
-	public function getCMSFields() {
+    public function getCMSFields() {
 
-		$fields = parent::getCMSFields();
+        $fields = parent::getCMSFields();
 
-		$fields->removeByName('SortBy');
-		$fields->removeByName('FilterTagMethod');
-		$fields->removeByName('Tags');
-		$fields->removeByName('Categories');
-
-
-		// Hero Features
-		$gridFieldConfig = GridFieldConfig_RelationEditor::create()->addComponents();
-		$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
-		$gridField = new GridField("YearInReviewHeroFeatures", "Hero Feature:", $this->YearInReviewHeroFeatures(), $gridFieldConfig);
-		$fields->addFieldToTab("Root.Main", $gridField);
+        $fields->removeByName('SortBy');
+        $fields->removeByName('FilterTagMethod');
+        $fields->removeByName('Tags');
+        $fields->removeByName('Categories');
 
 
-		// Stories
-		$fields->addFieldToTab("Root.Main", new UploadField("StoryPhoto", "Photo for Stories Header"));
-		$fields->addFieldToTab("Root.Main", new HTMLEditorField("StoryContent", "Content for Stories Header"));
+        // Hero Features
+        $gridFieldConfig = GridFieldConfig_RelationEditor::create()->addComponents();
+        $gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
+        $gridField = new GridField("YearInReviewHeroFeatures", "Hero Feature:", $this->YearInReviewHeroFeatures(), $gridFieldConfig);
+        $fields->addFieldToTab("Root.Main", $gridField);
 
-		$tags = BlogTag::get();
-		$cats = BlogCategory::get();
 
-		$fields->addFieldsToTab('Root.Main',
-			array(
-				$filterBy = DropdownField::create(
-				  'FilterBy',
-				  'Filter Posts By:',
-				  singleton('YearInReview')->dbObject('FilterBy')->enumValues()
-				),
+        // Stories
+        $fields->addFieldToTab("Root.Main", new UploadField("StoryPhoto", "Photo for Stories Header"));
+        $fields->addFieldToTab("Root.Main", new HTMLEditorField("StoryContent", "Content for Stories Header"));
 
-				$tagField = ListboxField::create(
-					'Tags',
-					'Show entries tagged with ANY of the following tags:',
-					$tags->map()->toArray()
-				),
+        $tags = BlogTag::get();
+        $cats = BlogCategory::get();
 
-				$catField = ListboxField::create(
-					'Categories',
-					'Show entries tagged with ANY of the following categories:',
-					$cats->map()->toArray()
-				),
+        $fields->addFieldsToTab('Root.Main',
+            array(
+                $filterBy = DropdownField::create(
+                  'FilterBy',
+                  'Filter Posts By:',
+                  singleton('YearInReview')->dbObject('FilterBy')->enumValues()
+                ),
 
-				$blogField = DropdownField::create('BlogID', 'Choose a blog to retrieve posts from', Blog::get()->map())->setEmptyString('(Any blog on this site)'),
+                $tagField = ListboxField::create(
+                    'Tags',
+                    'Show entries tagged with ANY of the following tags:',
+                    $tags->map()->toArray()
+                ),
 
-				// $deptField = NewsDeptDropdownField::create('StudentLifeNewsDeptID', 'Department')
-			)
-		);
+                $catField = ListboxField::create(
+                    'Categories',
+                    'Show entries tagged with ANY of the following categories:',
+                    $cats->map()->toArray()
+                ),
 
-		$tagField->displayIf('FilterBy')->isEqualTo('Tag');
-		$catField->displayIf('FilterBy')->isEqualTo('Category');
+                $blogField = DropdownField::create('BlogID', 'Choose a blog to retrieve posts from', Blog::get()->map())->setEmptyString('(Any blog on this site)'),
 
-		$fields->addFieldToTab('Root.Main', new TextField('Year','Last year this review covers (used internally on the backend)'));
+                // $deptField = NewsDeptDropdownField::create('StudentLifeNewsDeptID', 'Department')
+            )
+        );
 
-		return $fields;
+        $tagField->displayIf('FilterBy')->isEqualTo('Tag');
+        $catField->displayIf('FilterBy')->isEqualTo('Category');
 
-	}
+        $fields->addFieldToTab('Root.Main', new TextField('Year','Last year this review covers (used internally on the backend)'));
+
+        // Video
+        $fields->addFieldToTab('Root.Main', new TextField('VideoEmbed', 'YouTube Video ID'));
+        $fields->addFieldToTab("Root.Main", new HTMLEditorField("VideoContent", "Content for Video"));
+
+        return $fields;
+
+    }
 
 
 }
