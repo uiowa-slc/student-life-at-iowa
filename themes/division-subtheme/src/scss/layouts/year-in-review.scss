@@ -21,6 +21,16 @@ hr.large {
 .YearInReview .carousel-cell .cell-bg:after {
 	display: none;
 }
+.video-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    font-family: proxima-nova-condensed,Arial Narrow,sans-serif;
+    font-weight: 800;
+    font-size: 24vw;
+}
 
 
 /* Message from the Director
@@ -315,7 +325,7 @@ hr.large {
 }
 .yir-stories header {
 	background-color: #111;
-	padding: 2em 0 3em 0;
+	padding: 4em 0;
 	& h2 {
 		@include breakpoint(large) {
 			font-size: rem-calc(50);

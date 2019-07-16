@@ -4,33 +4,8 @@
     </a>
     <div class="row">
         <div class="columns small-12">
-
-            <div class="yir-director__img">
-                <img src="{$ThemeDir}/dist/images/melissa.jpg" alt="Melissa Shivers">
-                <small style="display:block;">Melissa Shivers, VP for Student Life</small>
-            </div>
-            <h2 class="header--caps" style="margin-top:0;">2017-2018 Year in review</h2>
-            <div>
-                <p>TestEach fall, the Division of Student Life has an opportunity to showcase some of the accomplishments from the previous academic year. It is something I look forward to enthusiastically. I see the work of this dedicated and loyal team every single day, so it gives me great pleasure to be able to share it with you.</p>
-                <p>Giving students a well-rounded, positive experience during their time at the University of Iowa is our number one goal, and we embrace the important role that Student Life plays in shaping that experience. The staff is committed to presenting students with opportunities for co-curricular learning, leadership, and personal growth.</p>
-                <div class="slidetext" style="display:none;">
-                    <p>As you look through the annual report, you will see how the division is supporting the work of the university’s strategic plan, learn more about initiatives taking place in various departments, and be inspired by the stories of our students and staff. I hope you will take time to reflect on how our work shapes UI as a forward-thinking institution that provides students with a safe, encouraging environment in which to live and flourish.</p>
-                    <p>At Iowa, we are as committed to our students as ever and remain fiercely loyal to our mission to foster student success by creating and promoting inclusive, educationally purposeful services and activities within and beyond the classroom. You will see examples of this in the following pages, and I hope it makes you as proud as it makes me.</p>
-                    <p>Thank you for supporting the Division of Student Life. By working together, we have the power to elevate the student experience and change lives.</p>
-                    <p>Together for UI,<br />
-                        Melissa
-                    </p>
-                    <img src="assets/Uploads/imported/sig2.png" alt="Melissa">
-                </div>
-                <%-- <hr style="clear:none;" class="large" /> --%>
-
-                <p><button class="toggletext" data-content="toggle-text">Read More</button></p>
-            </div>
+            $Content
         </div>
-        <%-- <div class="columns small-12 large-5 large-offset-1">
-            <img src="{$ThemeDir}/dist/images/melissa.jpg" alt="Melissa Shivers">
-            <small style="display:block;">Melissa Shivers, VP for Student Life</small>
-        </div> --%>
     </div>
 </section>
 

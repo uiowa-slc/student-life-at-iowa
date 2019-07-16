@@ -29,9 +29,9 @@
                     <% else_if $Video %>
                         <div class="cell-bg">
                             <div class="fullwidth-video">
-                                <div class="video-title">
+                               <%--  <div class="video-title">
                                     $Title
-                                </div>
+                                </div> --%>
                                 <video playsinline autoplay muted loop autoplay src="$Video.URL" id="vid-bg" class="ani-vid-fadein" style="opacity: 1;" <% if $VideoPoster %>poster="$VideoPoster.FocusFill(1500,900).URL"<% end_if %>></video>
                             </div>
                         </div>
