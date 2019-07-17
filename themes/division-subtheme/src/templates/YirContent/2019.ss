@@ -18,8 +18,8 @@
                     <div class="cardflip__face cardflip__front">
                         <button class="cardflip-btn">Flip</button>
                         <div class="stats__inner">
-                            <span class="stats__num">28,047</span>
-                            <span class="stats__label">Student Health Clinic Visits For FY19</span>
+                            <span class="stats__num">9,137 </span>
+                            <span class="stats__copy">Students completed a prevention workshop or course</span>
                         </div>
                     </div>
                     <div class="cardflip__face cardflip__back">
@@ -57,17 +57,17 @@
         </div>
         <div class="stats__box">
             <div class="stats__inner">
-                <a href="https://studentlife.uiowa.edu/news/enriching-the-ucs-group-counseling-program/" class="stats__linkout"></a>
+                <a href="#" class="stats__linkout"></a>
                 <span class="stats__num stats__num--thin stats__num--xlg stats__num--stroke">1,195</span>
                 <span class="stats__label header--caps">Hours</span>
                 <span class="stats__copy">Students Served By SDS In 2019</span>
             </div>
         </div>
-        <div class="stats__box stats__box--dm">
+        <div class="stats__box">
             <div class="stats__inner">
-                <a href="https://studentlife.uiowa.edu/news/dance-marathon-provides-philanthropic-opportunities-for-students/" class="stats__linkout"></a>
-                <span class="stats__num stats__num--shadow stats__num--xlg">0</span>
-                <span class="stats__copy">Raised by UIDM for Children's Hospital</span>
+                <a href="#" class="stats__linkout"></a>
+                <span class="stats__num stats__num--shadow stats__num--lg">2,560</span>
+                <span class="stats__copy">Visits to the Cultural Centers in spring 2019</span>
             </div>
         </div>
         <div class="stats__box">
@@ -87,51 +87,40 @@
                 </div>
             </div>
         </div>
-        <div class="stats__box">
-            <div class="cardflip-container">
-                <div class="cardflip">
-                    <div class="cardflip__face cardflip__front">
-                        <button class="cardflip-btn">Flip</button>
-                        <div class="stats__inner">
-                            <span class="stats__num">4,151</span>
-                            <span class="stats__label">Visitors</span>
-                            <span class="stats__copy">Attended Late Night Programming Events</span>
-                        </div>
-                    </div>
-                    <div class="cardflip__face cardflip__back">
-                        <button class="cardflip-btn cardflip-btn--reverse">Flip</button>
-                        <p>Cum sociis natoque penatibus et magnis dis parturient montes ridiculus mus.</p>
-                    </div>
-                </div>
+        <div class="stats__box stats__box--reverse">
+            <div class="stats__inner">
+                 <a href="#" class="stats__linkout"></a>
+                <span class="stats__num stats__num--yellow">4,151</span>
+                <span class="stats__label">Visitors</span>
+                <span class="stats__copy">Attended Late Night Programming Events</span>
             </div>
         </div>
 
         <div class="stats__box stats__box--spanAll">
             <div class="stats__inner">
-                <span class="stats__num stats__num--xlg stats__num--thin header--caps">2019 Key Statistics</span>
+                <span class="stats__num stats__num--xlg stats__num--thin header--caps">$Year Key Statistics</span>
                 <span class="stats__copy">The Division of Student Life fosters student success by creating and promoting inclusive educationally <br />purposeful services and activities within and beyond the classroom.</span>
             </div>
         </div>
         <div class="stats__box">
             <div class="stats__inner">
-                <a href="https://studentlife.uiowa.edu/news/flip-the-script/" class="stats__linkout"></a>
+                <a href="#" class="stats__linkout"></a>
                 <span class="stats__num stats__num--xlg">383</span></span>
                 <span class="stats__copy">Same Day Quick Access Appointments</span>
             </div>
         </div>
         <div class="stats__box stats__box--reverse">
             <div class="stats__inner">
-                <a href="https://studentlife.uiowa.edu/news/hawkeye-meal-share/" class="stats__linkout"></a>
-                <span class="stats__num stats__num--yellow">0</span>
-                <span class="stats__label">Meals</span>
-                <span class="stats__copy">Distributed through Hawkeye Meal Share</span>
+                <a href="#" class="stats__linkout"></a>
+                <span class="stats__num stats__num--yellow">2,872 </span>
+                <span class="stats__copy">Individual wellness consultations</span>
             </div>
         </div>
         <div class="stats__box stats__box--span2">
             <div class="stats__inner">
-                <a href="https://studentlife.uiowa.edu/news/womxn-of-color-network-creates-space-for-dialogue-support-and-empowerment/" class="stats__linkout"></a>
-                <span class="stats__num stats__num--lg stats__num--floatleft">0</span>
-                <span class="stats__copy stats__copy--alignleft">asdf fasdffd  asdfdfsa  fdsa</span>
+                <a href="#" class="stats__linkout"></a>
+                <span class="stats__num stats__num--lg stats__num--floatleft">92%</span>
+                <span class="stats__copy stats__copy--alignleft">Overall satisfaction reported by students for their visit to Student Health.</span>
             </div>
         </div>
         <div class="stats__box stats__box--span2 pie">
@@ -140,8 +129,8 @@
                     <div class="cardflip__face cardflip__front">
                         <button class="cardflip-btn">Flip</button>
                         <div class="stats__inner">
-                            <span class="stats__num stats__num--lg stats__num--floatleft ">0</span>
-                            <span class="stats__copy stats__copy--alignleft">Overall satisfaction reported by patients for their visit to the IMU Nurse Care</span>
+                            <span class="stats__num stats__num--lg">2,298 </span>
+                            <span class="stats__copy">Number of students who attended a violence prevention team workshop.</span>
                         </div>
                     </div>
                     <div class="cardflip__face cardflip__back">
@@ -171,7 +160,7 @@
         </div>
         <div class="stats__box">
             <div class="stats__inner">
-                <a href="https://studentlife.uiowa.edu/news/rvap-celebrates-45-years-of-advocacy-support-and-prevention/" class="stats__linkout"></a>
+                <a href="#" class="stats__linkout"></a>
                 <span class="stats__num stats__num--shadow stats__num--lg">1,700</span>
                 <span class="stats__copy">Client Projects Per Year Are Developed And Creatively Executed By Marketing and Design</span>
             </div>
