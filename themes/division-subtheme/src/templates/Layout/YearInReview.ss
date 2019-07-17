@@ -100,16 +100,23 @@ $YirContent
 </section>
 
 $AfterContent
-
+<% if $SecondaryContent || $SecondaryContentVideo %>
 <section class="yir-section yir-video">
-    <div class="row">
-        <div class="columns small-12">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/$VideoEmbed" title="year in review video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-    </div>
-    <div class="row">
-        <div class="columns small-12">
-            $VideoContent
-        </div>
-    </div>
+
+	<% if $SecondaryContentVideo %>
+	<div class="row">
+		<div class="columns small-12">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/{$SecondaryContentVideo}?rel=0" title="year in review video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+	</div>
+	<% end_if %>
+
+	<% if $SecondaryContent %>
+	<div class="row">
+		<div class="columns small-12">
+			$SecondaryContent
+		</div>
+	</div>
+	<% end_if %>
 </section>
+<% end_if %>

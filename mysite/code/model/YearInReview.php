@@ -12,18 +12,20 @@ use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\ListboxField;
+use EdgarIndustries\YouTubeField\YouTubeField;
 
 class YearInReview extends Page {
 
-    private static $db = array(
-        "StoryTitle" => "Text",
-        "StoryContent" => "HTMLText",
-        'FilterBy' => 'Enum(array("Tag","Category")',
-        'SortBy' => "Enum('Recent,Random,Featured')",
-        "Year" => 'Int',
-        'VideoEmbed' => 'Varchar(11)',
-        "VideoContent" => "HTMLText"
-    );
+
+	private static $db = array(
+		"StoryTitle" => "Text",
+		"StoryContent" => "HTMLText",
+		'FilterBy' => 'Enum(array("Tag","Category")',
+		'SortBy' => "Enum('Recent,Random,Featured')",
+		"Year" => 'Int',
+		'SecondaryContentVideo' => 'Varchar(11)',
+		'SecondaryContent' => 'HTMLText'
+	);
 
     private static $has_one = array(
         'Blog' => Blog::class,
@@ -106,9 +108,8 @@ class YearInReview extends Page {
 
         $fields->addFieldToTab('Root.Main', new TextField('Year','Last year this review covers (used internally on the backend)'));
 
-        // Video
-        $fields->addFieldToTab('Root.Main', new TextField('VideoEmbed', 'YouTube Video ID'));
-        $fields->addFieldToTab("Root.Main", new HTMLEditorField("VideoContent", "Content for Video"));
+		$fields->addFieldToTab('Root.Main', new YouTubeField('SecondaryContentVideo', 'Video below the big list of stories'));
+		$fields->addFieldToTab('Root.Main', HTMLEditorField::create('SecondaryContent', 'Content below the big list of stories')->addExtraClass('stacked'));
 
         return $fields;
 
