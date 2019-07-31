@@ -4,6 +4,6 @@ Name: mytheme
 SilverStripe\View\SSViewer:
   themes:
     - '$public'
-    - 'division-subtheme'
+    - 'engage'
     - 'md/division-project'
     - '$default'
