@@ -26,6 +26,6 @@
 			<a href="$Link">$Title</a>
 		</h3>
 		<br />
-		<% if $Credits %><div class="news-card__author">By <% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %><span class="byline__and"> and </span><% end_if %><span class="byline__author">$FirstName $Surname</span><% end_loop %></div><% end_if %>
+		<% if $Credits %><div class="news-card__author">By <% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %><span class="byline__and">&nbsp;and </span><% end_if %><span class="byline__author">$FirstName $Surname</span><% end_loop %></div><% end_if %>
 	</div>
 </article>
