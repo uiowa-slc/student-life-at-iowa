@@ -205,16 +205,16 @@
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.2.3",
+            "version": "1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "f26a67e397be0e5c00d7c52ec7b5010098e15ce5"
+                "reference": "10bb96592168a0f8e8f6dcde3532d9fa50b0b527"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/f26a67e397be0e5c00d7c52ec7b5010098e15ce5",
-                "reference": "f26a67e397be0e5c00d7c52ec7b5010098e15ce5",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/10bb96592168a0f8e8f6dcde3532d9fa50b0b527",
+                "reference": "10bb96592168a0f8e8f6dcde3532d9fa50b0b527",
                 "shasum": ""
             },
             "require": {
@@ -257,7 +257,7 @@
                 "ssl",
                 "tls"
             ],
-            "time": "2019-08-02T09:05:43+00:00"
+            "time": "2019-08-30T08:44:50+00:00"
         },
         {
             "name": "composer/installers",
@@ -1206,12 +1206,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events.git",
-                "reference": "e7359850a9b76c980296725748f817aa2c66a676"
+                "reference": "5c624fa16e6fa30e809c458b1d4e941827419183"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/e7359850a9b76c980296725748f817aa2c66a676",
-                "reference": "e7359850a9b76c980296725748f817aa2c66a676",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/5c624fa16e6fa30e809c458b1d4e941827419183",
+                "reference": "5c624fa16e6fa30e809c458b1d4e941827419183",
                 "shasum": ""
             },
             "require": {
@@ -1230,7 +1230,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/tree/ss4.x-ui",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/issues"
             },
-            "time": "2019-06-11T18:38:10+00:00"
+            "time": "2019-08-29T20:43:53+00:00"
         },
         {
             "name": "md/deploy-helper",
@@ -1292,12 +1292,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "8b503af6710646ceab4c5912dddadfa859df483d"
+                "reference": "47e3dbf881088430d364e46f403e4f106bdf4251"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/8b503af6710646ceab4c5912dddadfa859df483d",
-                "reference": "8b503af6710646ceab4c5912dddadfa859df483d",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/47e3dbf881088430d364e46f403e4f106bdf4251",
+                "reference": "47e3dbf881088430d364e46f403e4f106bdf4251",
                 "shasum": ""
             },
             "require": {
@@ -1348,7 +1348,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/ss4.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2019-08-29T14:47:09+00:00"
+            "time": "2019-08-30T15:53:55+00:00"
         },
         {
             "name": "md/saml",
