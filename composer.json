@@ -36,9 +36,8 @@
             "web.config"
         ],
         "expose": [
-            "themes/engage/dist",
-            "themes/engage/css",
-            "mysite/cms_icons"
+            "themes/division-subtheme/dist",
+            "themes/division-subtheme/css"
         ]
     },
     "repositories": {
