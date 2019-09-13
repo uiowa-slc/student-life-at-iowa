@@ -13,32 +13,47 @@ class ConsolidateTagsBuildTask extends BuildTask {
 
 		$blogs = NewsHolder::get();
 		$articles = NewsEntry::get();
-		$tags = BlogTag::get();
+		$tags = BlogTag::get()->toArray();
+
+		$dupTagIds = array();
+
 		echo '<ul>';
 		foreach ($tags as $tag) {
-			echo '<li>Working on tag: <strong>'.$tag->Title.'</strong>. Finding duplicates:';
+
+			if(!in_array($tag->ID, $dupTagIds)){
+
+
+			echo '<li>Working on tag: <strong>'.$tag->Title.' ('.$tag->ID.').'.'</strong>. Finding duplicates:';
 			//find all tags with the same name as the tag we're working on:
 
 			$duplicateTags = BlogTag::get()->filter(array(
 				'ID:not' => $tag->ID,
-				'Title' => trim($tag->Title)
+				'Title' => $tag->Title
 			));
 
-			if($duplicateTags->Count() > 1){
-				$primaryTag = $tag;
-				// $duplicateTags->removeByID($primaryTag->ID);
+			if($duplicateTags->Count() > 0){
+			
+				
 
-				echo '<br />'.$duplicateTags->Count().' duplicates found. Consolidating the following tags to '.$primaryTag->Title.' ('.$primaryTag->ID.'): <ul>';
+				echo '<br />'.$duplicateTags->Count().' duplicates found. Consolidating the following tags to '.$tag->Title.' ('.$tag->ID.'): <ul>';
 
 				foreach($duplicateTags as $duplicateTag){
+					$dupTagIds[] = $duplicateTag->ID;
 					echo '<li>'.$duplicateTag->Title.' ('.$duplicateTag->ID.')</li>';
 					$duplicateTagPosts = $duplicateTag->BlogPosts();
-
+					$duplicateTag->delete();
 					foreach($duplicateTagPosts as $duplicateTagPost){
-						$primaryTag->BlogPosts()->add($duplicateTagPost);
-						'<br /> Moving '.$duplicateTagPost->Title.'('.$duplicateTagPost->ID.') to tag '.$primaryTag->Title.'('.$primaryTag->ID.')';
+						$tag->BlogPosts()->add($duplicateTagPost);
+						'<br /> Moving '.$duplicateTagPost->Title.'('.$duplicateTagPost->ID.') to tag '.$tag->Title.'('.$tag->ID.')';
 						$duplicateTagPost->Tags()->remove($duplicateTag);
-						$duplicateTag->delete();
+						
+						// $duplicateTagPost->write();
+
+						// if($duplicateTagPost->isPublished){
+						// 	$duplicateTagPost->publish('Stage','Live');
+						// }
+						//
+						//print_r($duplicateTag);
 						echo '<strong>removed</strong>';						
 					}
 				}
@@ -49,6 +64,7 @@ class ConsolidateTagsBuildTask extends BuildTask {
 			}
 
 		}
+	}
 
 	}
 
