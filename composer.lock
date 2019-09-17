@@ -1292,12 +1292,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "4c28fb329d1b0084a1c2173b427030a6fa207a26"
+                "reference": "d4fa70055e45fbf3b7f6a8a28de9d39a16a132f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/4c28fb329d1b0084a1c2173b427030a6fa207a26",
-                "reference": "4c28fb329d1b0084a1c2173b427030a6fa207a26",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/d4fa70055e45fbf3b7f6a8a28de9d39a16a132f6",
+                "reference": "d4fa70055e45fbf3b7f6a8a28de9d39a16a132f6",
                 "shasum": ""
             },
             "require": {
@@ -1348,7 +1348,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/ss4.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2019-09-12T15:04:08+00:00"
+            "time": "2019-09-17T20:50:03+00:00"
         },
         {
             "name": "md/saml",
@@ -4283,16 +4283,16 @@
         },
         {
             "name": "undefinedoffset/silverstripe-nocaptcha",
-            "version": "2.0.4",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UndefinedOffset/silverstripe-nocaptcha.git",
-                "reference": "a7767503563618e6aeb3afdf16699093808cbbfc"
+                "reference": "fc0e6129a3bfca5cf4ccf79dbb40cce8ced8c3bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UndefinedOffset/silverstripe-nocaptcha/zipball/a7767503563618e6aeb3afdf16699093808cbbfc",
-                "reference": "a7767503563618e6aeb3afdf16699093808cbbfc",
+                "url": "https://api.github.com/repos/UndefinedOffset/silverstripe-nocaptcha/zipball/fc0e6129a3bfca5cf4ccf79dbb40cce8ced8c3bb",
+                "reference": "fc0e6129a3bfca5cf4ccf79dbb40cce8ced8c3bb",
                 "shasum": ""
             },
             "require": {
@@ -4321,8 +4321,8 @@
             "authors": [
                 {
                     "name": "Ed Chipman",
-                    "role": "Developer",
-                    "homepage": "http://www.edchipman.ca"
+                    "homepage": "http://www.edchipman.ca",
+                    "role": "Developer"
                 }
             ],
             "description": "A spam protector and form field using the new Google's reCAPTCHA 2 aka No Captcha",
@@ -4333,7 +4333,7 @@
                 "silverstripe",
                 "spamprotection"
             ],
-            "time": "2019-07-29T13:29:58+00:00"
+            "time": "2019-09-16T20:00:32+00:00"
         },
         {
             "name": "undefinedoffset/sortablegridfield",
