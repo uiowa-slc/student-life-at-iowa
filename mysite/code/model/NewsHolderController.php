@@ -15,6 +15,7 @@ class NewsHolderController extends BlogController {
 		'json',
 		'department',
 		//Feeds:
+		'feed',
 		'departmentListFeed',
 		'departmentNewsFeed',
 		'departmentNewsPost',
@@ -25,6 +26,7 @@ class NewsHolderController extends BlogController {
 	);
 	private static $url_handlers = array(
 		'profile/$URLSegment!/rss' => 'profilerss',
+		'feed//',
 		'department//$ID' => 'department',
 		'departmentListFeed' => 'departmentListFeed',
 		'departmentNewsFeed//$ID' => 'departmentNewsFeed',
@@ -97,6 +99,31 @@ class NewsHolderController extends BlogController {
 		}
 		$this->getResponse()->addHeader("Content-Type", "application/json");
 		return json_encode($deptArray);
+	}
+
+	public function feed(){
+			$postArray = array();
+		 	$dataRecord = $this->dataRecord;
+ 			$allPosts = $dataRecord->getBlogPosts();
+ 			$postCount = $allPosts->Count();
+ 			$posts = new PaginatedList($allPosts, $this->getRequest());
+
+	 		$posts->setPageLength(10);
+
+			foreach($posts as $post){
+				array_push($postArray, $post->toFeedArray());
+			}
+			$this->getResponse()->addHeader("Content-Type", "application/json");
+
+
+			$feedArray = array(
+				'meta' => array(
+					'postCount' => $postCount
+				),
+				'posts' => $postArray
+			);
+
+			return json_encode($feedArray);
 	}
 
 	public function departmentNewsFeed(){
