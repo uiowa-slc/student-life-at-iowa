@@ -15,7 +15,7 @@
         <div class="stats__box">
             <div class="stats__inner">
                 <span class="stats__num">9,137</span>
-                <span class="stats__copy">Students completed a prevention workshop or course</span>
+                <span class="stats__copy">Individual students completed a prevention workshop or course</span>
             </div>
         </div>
         <div class="stats__box stats__box--span2">
@@ -35,7 +35,7 @@
         <div class="stats__box">
             <div class="stats__inner">
                 <span class="stats__num stats__num--thin stats__num--xlg stats__num--stroke">1,195</span>
-                <span class="stats__label header--caps">Hours</span>
+                <span class="stats__label">Hours</span>
                 <span class="stats__copy">Students served By Student Disability Services In 2019</span>
             </div>
         </div>
@@ -56,7 +56,7 @@
             <div class="stats__inner">
                 <span class="stats__num stats__num--yellow">4,151</span>
                 <span class="stats__label">Visitors</span>
-                <span class="stats__copy">Unique visitors attended Late Night Programming Events</span>
+                <span class="stats__copy">Unique visitors attended late night programming events</span>
             </div>
         </div>
 
