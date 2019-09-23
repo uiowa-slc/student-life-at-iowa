@@ -36,7 +36,7 @@
             <div class="stats__inner">
                 <span class="stats__num stats__num--thin stats__num--xlg stats__num--stroke">1,195</span>
                 <span class="stats__label">Hours</span>
-                <span class="stats__copy">Students served By Student Disability Services In 2019</span>
+                <span class="stats__copy">Students served by Student Disability Services In 2019</span>
             </div>
         </div>
         <div class="stats__box">
@@ -63,7 +63,7 @@
         <div class="stats__box stats__box--spanAll">
             <div class="stats__inner">
                 <span class="stats__num stats__num--xlg stats__num--thin header--caps">$Year Key Statistics</span>
-                <span class="stats__copy">The Division of Student Life fosters student success by creating and promoting inclusive educationally <br />purposeful services and activities within and beyond the classroom.</span>
+                <span class="stats__copy">The Division of Student Life fosters student success by creating and promoting inclusive educationally <br />purposeful services and activities within and beyond the classroom</span>
             </div>
         </div>
         <div class="stats__box">
@@ -81,13 +81,13 @@
         <div class="stats__box stats__box--span2">
             <div class="stats__inner">
                 <span class="stats__num stats__num--lg stats__num--floatleft">92%</span>
-                <span class="stats__copy stats__copy--alignleft">Overall satisfaction reported by students for their visit to Student Health.</span>
+                <span class="stats__copy stats__copy--alignleft">Overall satisfaction reported by students for their visit to Student Health</span>
             </div>
         </div>
         <div class="stats__box">
             <div class="stats__inner">
                 <span class="stats__num stats__num--lg">892</span>
-                <span class="stats__copy">892 presentations by Rape Victim Advocacy Program staff reaching 16,364 people.</span>
+                <span class="stats__copy">892 presentations by Rape Victim Advocacy Program staff reaching 16,364 people</span>
             </div>
         </div>
         <div class="stats__box">
