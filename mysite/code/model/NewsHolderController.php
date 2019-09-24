@@ -16,6 +16,7 @@ class NewsHolderController extends BlogController {
 		'department',
 		//Feeds:
 		'feed',
+		'index',
 		'departmentListFeed',
 		'departmentNewsFeed',
 		'departmentNewsPost',
@@ -26,7 +27,7 @@ class NewsHolderController extends BlogController {
 	);
 	private static $url_handlers = array(
 		'profile/$URLSegment!/rss' => 'profilerss',
-		'feed//',
+		'feed//' => 'feed',
 		'department//$ID' => 'department',
 		'departmentListFeed' => 'departmentListFeed',
 		'departmentNewsFeed//$ID' => 'departmentNewsFeed',
