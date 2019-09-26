@@ -59,42 +59,55 @@ class DepartmentPage extends Page {
 
 	public function NewsEntriesByTag($tagTitle){
 
-		// print_r($tagTitle);
-		$tag = BlogTag::get()->filter(array('URLSegment' => $tagTitle))->First();
-
-		if(!$tag){
-			return false;
+		if(is_numeric($tagTitle)){
+			$tag = BlogTag::get()->filter(array('ID' => $tagTitle))->First();
+		}else{
+			$tag = BlogTag::get()->filter(array('URLSegment' => $tagTitle))->First();
 		}
-		$tagEntries = $tag->BlogPosts()->map()->keys();
-		$deptEntries = $this->NewsEntries()->map()->keys();
+		
+
+		if($tag){
+
+			$tagEntries = $tag->BlogPosts()->toArray();
+			$deptEntries = $this->NewsEntries()->toArray();
+
+			$intersectEntries = array_intersect($tagEntries,$deptEntries);
+
+			$list = new ArrayList($intersectEntries);
+
+			return $list;
+
+		}
 
 
-		//print_r($tagEntries);
-		//print_r($deptEntries);
 
-		$intersectEntries = array_intersect($tagEntries,$deptEntries);
-
-		//print_r($intersectEntries);
-		$list = NewsEntry::get()->byIds($intersectEntries);
-
-		//print_r($intersectEntries);
-		return $list;
-
-
+		
 
 	}
 	public function NewsEntriesByCat($catTitle){
-		$tag = BlogCategory::get()->filter(array('Title' => $catTitle))->First();
+
+		// print_r($catTitle);
+		if(is_numeric($catTitle)){
+			$cat = BlogCategory::get()->filter(array('ID' => $catTitle))->First();
+		}else{
+			$cat = BlogCategory::get()->filter(array('URLSegment' => $catTitle))->First();
+		}
 
 
-		$catEntries = $cat->BlogPosts()->toArray();
-		$deptEntries = $this->NewsEntries()->toArray();
 
-		$intersectEntries = array_intersect($tagEntries,$deptEntries);
+		if($cat){
 
-		$list = new ArrayList($intersectEntries);
+			$catEntries = $cat->BlogPosts()->toArray();
+			$deptEntries = $this->NewsEntries()->toArray();
 
-		return $list;
+			$intersectEntries = array_intersect($catEntries,$deptEntries);
+
+			$list = new ArrayList($intersectEntries);
+
+			return $list;
+
+		}
+
 
 
 

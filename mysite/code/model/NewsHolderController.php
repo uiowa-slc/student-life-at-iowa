@@ -6,7 +6,7 @@ use SilverStripe\Security\Member;
 use SilverStripe\Control\RSS\RSSFeed;
 use SilverStripe\Control\Email\Email;
 use SilverStripe\Blog\Model\BlogController;
-
+use SilverStripe\ORM\ArrayList;
 class NewsHolderController extends BlogController {
 
 	private static $allowed_actions = array(
@@ -166,15 +166,32 @@ class NewsHolderController extends BlogController {
 	public function departmentNewsFeedByCat(){
 		$postArray = array();
 		$deptID = $this->getRequest()->param('ID');
-		$dept = DepartmentPage::get()->byID($deptID);
-		$cat = $this->getRequest()->param('Cat');
 
-		if(!$dept) return;
+		$catQuery = $this->getRequest()->param('Cat');
+		$catQuery = urldecode($catQuery);
+	
+		if($deptID != 0){
+			$dept = DepartmentPage::get()->byID($deptID);
+			if(!$dept) $this->httpError(404);
+			if($dept->NewsEntriesByCat($catQuery)){
 
-		$postCount = $dept->NewsEntriesByCat($cat)->Count();
-		
-		$posts = new PaginatedList($dept->NewsEntriesByCat($cat), $this->getRequest());
-		$posts->setPageLength(10);
+				$postCount = $dept->NewsEntriesByCat($catQuery)->Count();
+				$posts = new PaginatedList($dept->NewsEntriesByCat($catQuery), $this->getRequest());
+			}else{
+				$posts = new ArrayList();
+				$postCount = 0;
+			}
+
+		//If the department passed along via the URL is 0, we get all posts from a cat in this blog.
+		}else{
+			$cat = $this->cats()->filter(array('Title' => $catQuery))->First();
+			if(!$cat) $this->httpError(404);
+
+			$postCount = $cat->BlogPosts()->Count();
+			$posts = new PaginatedList($cat->BlogPosts(), $this->getRequest());
+		}
+
+
 
 		foreach($posts as $post){
 			array_push($postArray, $post->toFeedArray());
@@ -202,8 +219,14 @@ class NewsHolderController extends BlogController {
 		if($deptID != 0){
 			$dept = DepartmentPage::get()->byID($deptID);
 			if(!$dept) $this->httpError(404);
-			$postCount = $dept->NewsEntriesByTag($tagQuery)->Count();
-			$posts = new PaginatedList($dept->NewsEntriesByTag($tagQuery), $this->getRequest());
+			if($dept->NewsEntriesByTag($tagQuery)){
+				$postCount = $dept->NewsEntriesByTag($tagQuery)->Count();
+				$posts = new PaginatedList($dept->NewsEntriesByTag($tagQuery), $this->getRequest());
+			}else{
+				$posts = new ArrayList();
+				$postCount = 0;
+			}
+
 		//If the department passed along via the URL is 0, we get all posts from a tag in this blog.
 		}else{
 			$tag = $this->Tags()->filter(array('Title' => $tagQuery))->First();
