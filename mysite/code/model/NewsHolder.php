@@ -8,6 +8,7 @@ use SilverStripe\Blog\Model\Blog;
 use SilverStripe\Lumberjack\Model\Lumberjack;
 use SilverStripe\Core\Config\Config;
 use SilverStripe\ORM\ArrayList;
+use SilverStripe\Forms\GridField\GridFieldDataColumns;
 class NewsHolder extends Blog {
 
 	private static $db = array(
@@ -45,7 +46,22 @@ class NewsHolder extends Blog {
 		$fields = parent::getCMSFields();
 		$fields->removeByName("Content");
 		//$fields->removeByName("Metadata");
+		$grid = $fields->dataFieldByName('ChildPages');
+		$config = $grid->getConfig();
 
+		$list = $grid->getList();
+
+		$sortedList = $list->sort('Created DESC');
+
+		$grid->setList($sortedList);
+        $dataColumns = $config->getComponentByType(GridFieldDataColumns::class);
+        $dataColumns->setDisplayFields([
+            'Title' => 'Title',
+            'Created' => 'Created'
+        ]);
+
+
+		// $fields->addFieldToTab('Root.Main', $grid);
 		$fields->addFieldToTab("Root.PhotoGallery", new TextField("PhotoGalleryTitleOne", "Title"));
 		$fields->addFieldToTab("Root.PhotoGallery", new TextField("PhotoGalleryURLOne", "URL"));
 		$fields->addFieldToTab("Root.PhotoGallery", new UploadField("PhotoGalleryImageOne", "Photo"));
