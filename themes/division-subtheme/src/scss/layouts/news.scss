@@ -55,6 +55,13 @@
 	}
 }
 
+.featured-image{
+	display: block;
+}
+.featured-image-caption{
+	font-size: rem-calc(14);
+}
+
 /* Trending --------------------- */
 .trending {
 	border: 1px solid #ddd;
