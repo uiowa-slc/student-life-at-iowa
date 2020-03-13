@@ -6,3 +6,6 @@ After:
 HomePage:
   - extensions: 
     - SlHomePageExtension
+Silverstripe\SiteConfig\SiteConfig:
+  extensions:
+    - AlertSiteConfigExtension
