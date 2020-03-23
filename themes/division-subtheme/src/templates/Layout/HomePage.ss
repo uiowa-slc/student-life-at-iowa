@@ -17,6 +17,13 @@
 
 	<div class="home-feature__content-wrap">
 		<div class="home-feature__content">
+			<div class="home-feature__events">
+				<h2 class="home-feature__event-title">Up-to-date COVID-19 Coronavirus Information:</h2>
+				<ul>
+					<li>Official UI Coronavirus updates: <a href="https://coronavirus.uiowa.edu/" target="_blank">https://coronavirus.uiowa.edu/</a></li>
+					<li>Up-to-date information regarding COVID-19 for the Division of Student Life <a href="https://studentlife.uiowa.edu/news/covid-19-update-from-the-division-of-student-life/">https://studentlife.uiowa.edu/news/</a></li>
+				</ul>
+			</div>
 			<div class="home-feature__news">
 				<h2 class="home-feature__event-title">Latest News / <a href="{$BaseHref}news/">View All</a></h2>
 				<div class="clearfix news-container">
