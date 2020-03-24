@@ -87,7 +87,8 @@
 		background: #ffffff;
 		background: linear-gradient(145deg, #ffffff 50%,#f8f8f8 50%);
 	}
-	&__events {
+	&__events,
+	&__announcement {
 		background-color: $yellow;
 		padding: rem-calc(45);
 	}
@@ -152,6 +153,22 @@
 	background-size: cover;
 }
 
+
+/* Announcment 
+=============================================== */
+.home-feature__announcement {
+	& h1, & h2, & h3 {
+		font-weight: normal;
+		line-height: 1;
+		margin-top: 0; 
+	}
+	& a {
+		text-decoration: underline;
+	}
+	& ul {
+		margin-bottom: 0;
+	}
+}
 
 /* Featured News
 =============================================== */

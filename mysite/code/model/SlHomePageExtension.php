@@ -11,6 +11,7 @@ use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 class SlHomePageExtension extends DataExtension {
 
 	private static $db = array(
+		"Announcement" => "HTMLText",
 		"WhatWeDoTitle" => "Text",
 		"WhatWeDoContent" => "HTMLText",
 		"SpotlightTitle" => "Text",
@@ -36,6 +37,8 @@ class SlHomePageExtension extends DataExtension {
 		$fields->removeByName("ShowChildrenInDropdown");
 		$fields->removeByName("LayoutType");
 		$fields->removeByName("NewHomePageHeroFeature");
+
+		$fields->addFieldToTab("Root.Announcement", new HtmlEditorField("Announcement", "Content"));
 
 		$fields->addFieldToTab("Root.Main", new UploadField("Video", "Video"));
 		$fields->addFieldToTab("Root.Main", new UploadField("VideoPoster", "Poster image for video"));
