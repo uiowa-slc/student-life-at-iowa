@@ -93,28 +93,7 @@ $Header
 		</div>
 	</div><!-- end .row -->
 	<% end_if %>
-	<!-- Begin Iowa Now News Feed -->
-	<div class="news-fullwidth">
-		<div class="row">
-			<div class="iowa-now">
-				<div class="line-header">
-					<h2>Student Life In The News</h2>
-				</div>
-				<ol class="iowa-now__list">
-					<% loop RSSDisplay %>
-					<li class="iowa-now__item">
-						<div class="iowa-now__body">
-							<div class="">
-								<h2 class="iowa-now__title"><a href="$Link">$Title</a></h2>
-								<span class="iowa-now__date"><em>Iowa Now</em> $Date.Format("MMM d, Y")</span>
-							</div>
-						</div>
-					</li>
-					<% end_loop %>
-				</ol>
-			</div>
-		</div>
-	</div><!-- End Iowa Now News -->
+
 <% end_if %>
 	<div class="row">
 		<div class="title-fullwidth">
@@ -185,3 +164,25 @@ $Header
 	$AfterContent
 
 </main>
+    <!-- Begin Iowa Now News Feed -->
+    <div class="news-fullwidth">
+        <div class="row">
+            <div class="iowa-now">
+                <div class="line-header">
+                    <h2>Student Life In The News</h2>
+                </div>
+                <ol class="iowa-now__list">
+                    <% loop RSSDisplay %>
+                    <li class="iowa-now__item">
+                        <div class="iowa-now__body">
+                            <div class="">
+                                <h2 class="iowa-now__title"><a href="$Link">$Title</a></h2>
+                                <span class="iowa-now__date"><em>Iowa Now</em> $Date.Format("MMM d, Y")</span>
+                            </div>
+                        </div>
+                    </li>
+                    <% end_loop %>
+                </ol>
+            </div>
+        </div>
+    </div><!-- End Iowa Now News -->
