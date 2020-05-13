@@ -164,8 +164,8 @@ $Header
 	$AfterContent
 
 </main>
-    <!-- Begin Iowa Now News Feed -->
-    <div class="news-fullwidth">
+
+<%--     <div class="news-fullwidth">
         <div class="row">
             <div class="iowa-now">
                 <div class="line-header">
@@ -185,4 +185,4 @@ $Header
                 </ol>
             </div>
         </div>
-    </div><!-- End Iowa Now News -->
+    </div> --%>
