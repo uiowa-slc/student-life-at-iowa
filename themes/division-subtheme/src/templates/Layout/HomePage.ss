@@ -11,7 +11,9 @@
 			</div>
 		<% end_if %>
 		<div class="home-feature__herotext">
-			<h1 class="title"><span>One Division. </span>One Mission.<br /><span class="home-feature__texthighlight">Student Success.</span></h1>
+			<h1 class="title">
+                The Division of Student Life fosters student success by creating and promoting inclusive educationally purposeful services and activities within and beyond the classroom.
+            </h1>
 		</div>
 	</div>
 
