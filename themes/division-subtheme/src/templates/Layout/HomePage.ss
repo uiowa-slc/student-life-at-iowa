@@ -112,7 +112,7 @@
 
 
 <!-- What We Do -->
-<section class="whatwedo" aria-labelledby="whatwedo__id">
+<%-- <section class="whatwedo" aria-labelledby="whatwedo__id">
 	<div class="row">
 		<div class="columns large-10 large-offset-1">
 			<% if $WhatWeDoTitle %><h2 class="whatwedo__title" id="whatwedo__id">$WhatWeDoTitle</h2><% end_if %>
@@ -140,7 +140,7 @@
 		<% end_loop %>
 	</ul>
 	<% end_with %>
-</section>
+</section> --%>
 
 <!-- End What We Do -->
 
