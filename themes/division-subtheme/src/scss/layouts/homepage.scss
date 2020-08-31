@@ -43,12 +43,15 @@
 	&__herotext {
 		text-align: center;
 		position: relative;
-		z-index: 30;
+        z-index: 30;
+        @include grid-row;
+        padding-left: 1em;
+        padding-right: 1em;
+        top: 3em;
 		& h1 {
 			margin: 0;
 			color: #fff;
-			font-size: calc(48px + 29 * ((100vw - 320px) / (1024 - 320)));
-			line-height: 1;
+			font-size: calc(23px + 20 * ((100vw - 320px) / (1024 - 320)));
 			text-shadow: 2px 2px rgba(0,0,0,.2);
 			& span {
 				display: block;
@@ -57,7 +60,7 @@
 				}
 			}
 			@include breakpoint(large) {
-				font-size: rem-calc(79);
+				font-size: rem-calc(40);
 			}
 		}
 	}
@@ -83,14 +86,35 @@
 		@include grid-row;
 	}
 	&__news {
-		padding: rem-calc(45);
+		padding: rem-calc(20);
 		background: #ffffff;
-		background: linear-gradient(145deg, #ffffff 50%,#f8f8f8 50%);
+        background: linear-gradient(145deg, #ffffff 50%,#f8f8f8 50%);
+        @include breakpoint(large) {
+            padding: rem-calc(40);
+        }
 	}
 	&__events,
 	&__announcement {
 		background-color: $yellow;
-		padding: rem-calc(45);
+        padding: rem-calc(20);
+        /* adds overflow for long urls */
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+
+        -ms-word-break: break-all;
+        /* This is the dangerous one in WebKit, as it breaks things wherever */
+        word-break: break-all;
+        /* Instead use this non-standard one: */
+        word-break: break-word;
+
+        /* Adds a hyphen where the word breaks, if supported (No Blink) */
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+        @include breakpoint(large) {
+            padding: rem-calc(40);
+        }
 	}
 	&__event-title {
 		font-weight: normal;
