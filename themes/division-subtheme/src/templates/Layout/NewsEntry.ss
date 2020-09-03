@@ -15,7 +15,7 @@ $Header
 
 	$Breadcrumbs
 
-	
+
 		<div class="column row">
 			<div class="main-content__header">
 				<% if not $BackgroundImage %><h1>$Title</h1><% end_if %>
@@ -32,7 +32,7 @@ $Header
                 </div>
             </div>
 		</div>
-	
+
 
 	$BeforeContent
 
@@ -57,17 +57,17 @@ $Header
 			</div>
 
 				<!-- Year In Review -->
-				<% if $HasTag("2018 Year In Review") %>
+				<% if $HasTag("2018 Year In Review") && $Page("2018") %>
 					<div class="backtoreview">
 						<p class="backtoreview__title"><strong>2018 Year In Review</strong></p>
 						<p>This article is part of the <strong>2018 Year in Review</strong>, which highlights some of the Division of Student Life's accomplishments from the previous academic year.</p>
-						<p><a href="/1718-year-in-review/" class="button">Go to Year in Review</a></p>
+						<p><a href="/2018" class="button">Go to Year in Review</a></p>
 					</div>
-				<% else_if $HasTag("2019 Year In Review") %>
+				<% else_if $HasTag("2019 Year In Review") && $Page("2019") %>
 					<div class="backtoreview">
 						<p class="backtoreview__title"><strong>2019 Year In Review</strong></p>
 						<p>This article is part of the <strong>2019 Year in Review</strong>, which highlights some of the Division of Student Life's accomplishments from the previous academic year.</p>
-						<p><a href="/2019-year-in-review/" class="button">Go to Year in Review</a></p>
+						<p><a href="/2019" class="button">Go to Year in Review</a></p>
 					</div>
 
 				<% end_if %>

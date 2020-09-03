@@ -1314,12 +1314,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "7040af16af1c8fd9df1cb77cd667248a303edc53"
+                "reference": "65d5768a08064a11d661af515a318ae3ef49d5f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/7040af16af1c8fd9df1cb77cd667248a303edc53",
-                "reference": "7040af16af1c8fd9df1cb77cd667248a303edc53",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/65d5768a08064a11d661af515a318ae3ef49d5f4",
+                "reference": "65d5768a08064a11d661af515a318ae3ef49d5f4",
                 "shasum": ""
             },
             "require": {
@@ -1367,7 +1367,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/2",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2020-08-31T19:42:23+00:00"
+            "time": "2020-09-02T19:04:14+00:00"
         },
         {
             "name": "md/saml",
@@ -3502,16 +3502,16 @@
         },
         {
             "name": "silverstripe/userforms",
-            "version": "5.6.1",
+            "version": "5.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-userforms.git",
-                "reference": "caeef2fc481aa3aed84f62b73d61a1dcbe4e0ed1"
+                "reference": "162319512b218c2cfb8dc7b8ce92a2dbe5c54aad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/caeef2fc481aa3aed84f62b73d61a1dcbe4e0ed1",
-                "reference": "caeef2fc481aa3aed84f62b73d61a1dcbe4e0ed1",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/162319512b218c2cfb8dc7b8ce92a2dbe5c54aad",
+                "reference": "162319512b218c2cfb8dc7b8ce92a2dbe5c54aad",
                 "shasum": ""
             },
             "require": {
@@ -3576,7 +3576,7 @@
                 "silverstripe",
                 "userforms"
             ],
-            "time": "2020-08-17T23:04:37+00:00"
+            "time": "2020-09-02T01:47:09+00:00"
         },
         {
             "name": "silverstripe/vendor-plugin",
@@ -4088,7 +4088,7 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v4.4.12",
+            "version": "v4.4.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
