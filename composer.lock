@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b54b3f7ad97d56874f05424814f886d1",
+    "content-hash": "8329b2a7c0d0140514035265ddfecac3",
     "packages": [
         {
             "name": "bramus/ansi-php",
@@ -1310,16 +1310,16 @@
         },
         {
             "name": "md/division-project",
-            "version": "2.x-dev",
+            "version": "dev-2-branding",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "58a5cfb3414516aa9e4f8963334d761445b8a693"
+                "reference": "edb619b37a2b3e6e7044790a2f064ba23aa49202"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/58a5cfb3414516aa9e4f8963334d761445b8a693",
-                "reference": "58a5cfb3414516aa9e4f8963334d761445b8a693",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/edb619b37a2b3e6e7044790a2f064ba23aa49202",
+                "reference": "edb619b37a2b3e6e7044790a2f064ba23aa49202",
                 "shasum": ""
             },
             "require": {
@@ -1348,6 +1348,7 @@
                 "silverstripe/tagfield": "*",
                 "silverstripe/userforms": "*",
                 "silverstripe/widgets": "*",
+                "tractorcow/silverstripe-robots": "^4",
                 "unclecheese/display-logic": "dev-master",
                 "undefinedoffset/silverstripe-nocaptcha": "*",
                 "undefinedoffset/sortablegridfield": "*"
@@ -1364,10 +1365,10 @@
             },
             "description": "The University of Iowa Division of Student Life Project Code and Theme",
             "support": {
-                "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/2",
+                "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/2-branding",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2020-10-06T14:10:46+00:00"
+            "time": "2020-10-14T15:44:00+00:00"
         },
         {
             "name": "md/saml",
@@ -4894,6 +4895,54 @@
             "time": "2020-09-18T15:58:55+00:00"
         },
         {
+            "name": "tractorcow/silverstripe-robots",
+            "version": "4.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tractorcow/silverstripe-robots.git",
+                "reference": "72a423e44c1b500a432c494af7e8424132701b14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tractorcow/silverstripe-robots/zipball/72a423e44c1b500a432c494af7e8424132701b14",
+                "reference": "72a423e44c1b500a432c494af7e8424132701b14",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "^4"
+            },
+            "suggest": {
+                "silverstripe/googlesitemaps": "Ensures that a valid sitemap.xml is generated and referenced within robots.txt"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TractorCow\\Robots\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Damian Mooyman",
+                    "email": "damian.mooyman@gmail.com"
+                }
+            ],
+            "description": "Simple robots generation module for Silverstripe",
+            "keywords": [
+                "robots",
+                "silverstripe"
+            ],
+            "time": "2020-08-18T04:25:41+00:00"
+        },
+        {
             "name": "unclecheese/display-logic",
             "version": "dev-master",
             "source": {
@@ -6632,6 +6681,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "md/division-project": 20,
         "silverstripe/mathspamprotection": 20
     },
     "prefer-stable": true,
