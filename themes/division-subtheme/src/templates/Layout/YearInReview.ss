@@ -1,7 +1,7 @@
 
 <div class="homepage__header">
 
-    $Header
+    $Header("light-header","overlay")
 
 
     <% if $YearInReviewHeroFeatures %>
