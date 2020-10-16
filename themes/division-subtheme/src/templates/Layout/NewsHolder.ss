@@ -122,7 +122,7 @@ $Header
 			<div class="main-content__text">
 
 				<% loop $PaginatedList %>
-					<% include BlogCard %>
+					<% include BlogCardHorizontal %>
 				<% end_loop %>
 
 				<br /><br />
