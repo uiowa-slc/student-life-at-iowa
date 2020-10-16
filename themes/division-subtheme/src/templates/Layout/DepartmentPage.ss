@@ -76,30 +76,6 @@ $AfterContent
     </div>
     <!-- end stats section -->
 
-    <!-- begin recent news -->
-    <% if $NewsEntries %>
-        <div class="elemental-area elemental-area--AfterContent">
-            <section class="content-block__container recentnews">
-                <div class="newsblock">
-                    <div class="grid-container">
-                        <div class="grid-x grid-margin-x">
-                            <div class="cell">
-                                <h3 id="DeptNewsTitle" class="newsblock-title text-center">Recent News for $Title</h3>
-                            </div>
-                            <% loop $NewsEntries.limit(3) %>
-                                <div class="cell medium-4">
-                                    <% include BlogCard %>
-                                </div>
-                            <% end_loop %>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    <% end_if %>
-    <!-- end recent news -->
-
-
 
     $AfterContent
 
