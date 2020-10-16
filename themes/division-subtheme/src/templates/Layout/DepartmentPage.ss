@@ -6,50 +6,48 @@ $Header
         <% include FeaturedImage %>
     <% end_if %>
 
-<% if not $BackgroundImage %>
-    <div class="column row">
-        <div class="main-content__header">
-            $Breadcrumbs
-            <h1>$Title</h1>
+    <% if not $BackgroundImage %>
+        <div class="column row">
+            <div class="main-content__header">
+                $Breadcrumbs
+                <h1>$Title</h1>
+            </div>
         </div>
-    </div>
-<% end_if %>
+    <% end_if %>
 
-$BeforeContent
+    $BeforeContent
 
-<div class="<% if $Children || $Menu(2) || $SidebarArea.Elements ||  $SidebarView.Widgets %><% else %>column<% end_if %> row">
+    <div class="<% if $Children || $Menu(2) || $SidebarArea.Elements ||  $SidebarView.Widgets %><% else %>column<% end_if %> row">
 
-    <div class="main-content main-content--with-padding <% if $SiteConfig.ShowExitButton %>main-content--with-exit-button-padding<% end_if %> <% if $Children || $Menu(2) || $SidebarArea.Elements ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
-        $BeforeContentConstrained
-        <% if $MainImage %>
-            <img class="main-content__main-img" src="$MainImage.ScaleMaxWidth(500).URL" alt="" role="presentation"/>
-        <% end_if %>
-        <div class="main-content__text">
-            $Content
-            <% if $WebsiteURL %>
-                <p>
-                    <a class="button" href="$WebsiteURL">Visit Website</a>
-                </p>
+        <div class="main-content main-content--with-padding <% if $SiteConfig.ShowExitButton %>main-content--with-exit-button-padding<% end_if %> <% if $Children || $Menu(2) || $SidebarArea.Elements ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
+            $BeforeContentConstrained
+            <% if $MainImage %>
+                <img class="main-content__main-img" src="$MainImage.ScaleMaxWidth(500).URL" alt="" role="presentation"/>
             <% end_if %>
-            $AfterContentConstrained
-            $Form
+            <div class="main-content__text">
+                $Content
+                <% if $WebsiteURL %>
+                    <p>
+                        <a class="button" href="$WebsiteURL">Visit Website</a>
+                    </p>
+                <% end_if %>
+                $AfterContentConstrained
+                $Form
+            </div>
+
+            <% if $ShowChildPages %>
+                <% include ChildPages %>
+            <% end_if %>
+
         </div>
-
-        <% if $ShowChildPages %>
-            <% include ChildPages %>
-        <% end_if %>
-
+        <aside class="sidebar dp-sticky">
+            <% include SideNav %>
+            <% if $SideBarView %>
+                $SideBarView
+            <% end_if %>
+            $SidebarArea
+        </aside>
     </div>
-    <aside class="sidebar dp-sticky">
-        <% include SideNav %>
-        <% if $SideBarView %>
-            $SideBarView
-        <% end_if %>
-        $SidebarArea
-    </aside>
-</div>
-
-$AfterContent
 
 
     <!-- begin stats section -->
