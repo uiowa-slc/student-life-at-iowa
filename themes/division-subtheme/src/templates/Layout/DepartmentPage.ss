@@ -1,112 +1,109 @@
-<div class="bg-media bg-media--image" data-interchange="[$BackgroundImage.FocusFill(600,400).URL, small], [$BackgroundImage.FocusFill(1600,700).URL, medium]">
-	<div class="header__screen header__screen--fill-container header__screen--thin"></div>
-	$Header("dark-header","overlay")
-	<div class="column row">
-		<div class="background-image__header">
-			<h1 class="background-image__title">$Title</h1>
-		</div>
-	</div>
+$Header
+<main class="main-content__container" id="main-content__container">
+
+    <!-- Background Image Feature -->
+    <% if $BackgroundImage %>
+        <% include FeaturedImage %>
+    <% end_if %>
+
+<% if not $BackgroundImage %>
+    <div class="column row">
+        <div class="main-content__header">
+            $Breadcrumbs
+            <h1>$Title</h1>
+        </div>
+    </div>
+<% end_if %>
+
+$BeforeContent
+
+<div class="<% if $Children || $Menu(2) || $SidebarArea.Elements ||  $SidebarView.Widgets %><% else %>column<% end_if %> row">
+
+    <div class="main-content main-content--with-padding <% if $SiteConfig.ShowExitButton %>main-content--with-exit-button-padding<% end_if %> <% if $Children || $Menu(2) || $SidebarArea.Elements ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
+        $BeforeContentConstrained
+        <% if $MainImage %>
+            <img class="main-content__main-img" src="$MainImage.ScaleMaxWidth(500).URL" alt="" role="presentation"/>
+        <% end_if %>
+        <div class="main-content__text">
+            $Content
+            <% if $WebsiteURL %>
+                <p>
+                    <a class="button" href="$WebsiteURL">Visit Website</a>
+                </p>
+            <% end_if %>
+            $AfterContentConstrained
+            $Form
+        </div>
+
+        <% if $ShowChildPages %>
+            <% include ChildPages %>
+        <% end_if %>
+
+    </div>
+    <aside class="sidebar dp-sticky">
+        <% include SideNav %>
+        <% if $SideBarView %>
+            $SideBarView
+        <% end_if %>
+        $SidebarArea
+    </aside>
 </div>
 
-<div class="main-content__container main-content--has-video-bg">
-	$Breadcrumbs
-
-	<% if not $BackgroundImage %>
-		<div class="column row">
-			<div class="main-content__header">
-				<h1>$Title</h1>
-			</div>
-		</div>
-	<% end_if %>
-
-	$BeforeContent
+$AfterContent
 
 
+    <!-- begin stats section -->
+    <div class="dept-stats">
+        <div class="row">
+            <div class="column">
+                <h2><% if $KeyStatTitle %>$KeyStatTitle<% else %>Key Statistics<% end_if %></h2>
+            </div>
+        </div>
+        <div class="stat-cards">
+            <div class="stat-card">
+                <div class="stat-card__digit">$KeyStat1Num</div>
+                <div class="stat-card__text">$KeyStat1Body</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-card__digit">$KeyStat2Num</div>
+                <div class="stat-card__text">$KeyStat2Body</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-card__digit">$KeyStat3Num</div>
+                <div class="stat-card__text">$KeyStat3Body</div>
+            </div>
+        </div>
+    </div>
+    <!-- end stats section -->
 
-	<div class="row">
-
-		<article role="main" class="main-content main-content--with-padding <% if $Children || $Menu(2) || $SidebarBlocks ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
-			$BeforeContentConstrained
-			<% if $MainImage %>
-				<img class="main-content__main-img" src="$MainImage.ScaleMaxWidth(500).URL" alt="" role="presentation"/>
-			<% end_if %>
-			<div class="main-content__text">
-				$Content
-
-			<% if $WebsiteURL %>
-				<p>
-					<a class="button" href="$WebsiteURL">Visit Website</a>
-				</p>
-			<% end_if %>
-
-			</div>
-			
-
-			$AfterContentConstrained
-			$Form
-			<% if $ShowChildPages %>
-				<% include ChildPages %>
-			<% end_if %>
-		</article>
-		<aside class="sidebar dp-sticky">
-			<% include SideNav %>
-			<% if $SideBarView %>
-				$SideBarView
-			<% end_if %>
-			$Sidebar
-		</aside>
-	</div>
-
-	<!-- begin stats section -->
-	<div class="dept-stats">
-		<div class="row">
-			<div class="column">
-				<h2><% if $KeyStatTitle %>$KeyStatTitle<% else %>Key Statistics<% end_if %></h2>
-			</div>
-		</div>
-		<div class="stat-cards">
-			<div class="stat-card">
-				<div class="stat-card__digit">$KeyStat1Num</div>
-				<div class="stat-card__text">$KeyStat1Body</div>
-			</div>
-			<div class="stat-card">
-				<div class="stat-card__digit">$KeyStat2Num</div>
-				<div class="stat-card__text">$KeyStat2Body</div>
-			</div>
-			<div class="stat-card">
-				<div class="stat-card__digit">$KeyStat3Num</div>
-				<div class="stat-card__text">$KeyStat3Body</div>
-			</div>
-		</div>
-	</div>
-	<!-- end stats section -->
-
-	<!-- begin recent news -->
-	<% if $NewsEntries %>
-		<div class="elemental-area elemental-area--AfterContent">
-			<section class="content-block__container recentnews">
-				<div class="newsblock">
-			        <div class="grid-container">
-			            <div class="grid-x grid-margin-x">
-			                <div class="cell">
-			                    <h3 id="DeptNewsTitle" class="newsblock-title text-center">Recent News for $Title</h3>
-			                </div>
-			                <% loop $NewsEntries.limit(3) %>
-			                    <div class="cell medium-4">
-			                        <% include BlogCard %>
-			                    </div>
-			                <% end_loop %>
-			            </div>
-			        </div>
-				</div>
-			</section>
-		</div>
-	<% end_if %>
-	<!-- end recent news -->
+    <!-- begin recent news -->
+    <% if $NewsEntries %>
+        <div class="elemental-area elemental-area--AfterContent">
+            <section class="content-block__container recentnews">
+                <div class="newsblock">
+                    <div class="grid-container">
+                        <div class="grid-x grid-margin-x">
+                            <div class="cell">
+                                <h3 id="DeptNewsTitle" class="newsblock-title text-center">Recent News for $Title</h3>
+                            </div>
+                            <% loop $NewsEntries.limit(3) %>
+                                <div class="cell medium-4">
+                                    <% include BlogCard %>
+                                </div>
+                            <% end_loop %>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    <% end_if %>
+    <!-- end recent news -->
 
 
 
-	$AfterContent
+    $AfterContent
 
 
-</div>
+
+</main>
+
