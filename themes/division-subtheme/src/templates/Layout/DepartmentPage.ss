@@ -77,6 +77,68 @@ $Header
 
     $AfterContent
 
+    <!-- begin recent news -->
+    <% if $NewsEntries %>
+        <section class="content-block__container" aria-labelledby="Block$ID">
+            <div class="grid-container">
+                <div class="card__head">
+                    <h2 class="text-center serif text-semibold h1" id="Block$ID">
+                        <% if $Title && $ShowTitle %>$Title<% else %>Recent News<% end_if %>
+                    </h2>
+                    <!-- Link to all news button -->
+                    <% if $NewsLink %>
+                        <a href="$NewsLink" class="button clear">View All News <i class="fas fa-arrow-right"></i></a>
+                    <% end_if %>
+                </div>
+
+                <div class="card__wrapper <% if $ShowStacked %>flex-dir-column<% end_if %>">
+                    <% loop $NewsEntries.Limit(3) %>
+                        <div class="card
+                            <% if $Up.ShowStacked %> card--horizontal<% else %> card--row<% end_if %>
+                            <% if $Up.Enclosed %> card--enclosed<% end_if %> ">
+                            <% if not $Up.HideImages %>
+                                <div class="card__media">
+                                    <% if $FeaturedImage %>
+                                        <a href="$Link" class="">
+                                            <img src="$FeaturedImage.FocusFill(500,280).URL" class="card__img" loading="lazy" <% if $FeaturedImageAltText %> alt="$FeaturedImageAltText" <% else %> alt="$Title" role="presentation" <% end_if %>>
+                                        </a>
+                                    <% else_if $BackgroundImage %>
+                                        <a href="$Link" class="">
+                                            <img src="$FeaturedImage.FocusFill(500,280).URL" loading="lazy" alt="$Title" class="card__img">
+                                        </a>
+                                    <% end_if %>
+                                </div>
+                            <% end_if %>
+
+                        <div class="card__body <% if $Up.HideImages %>card__body--noimage<% end_if %>">
+                                <h3 class="card__title">
+                                    <a href="$Link">$Title</a>
+                                </h3>
+
+                                <% if not $Parent.HideDatesAndAuthors %>
+                                    <% include Author %>
+                                <% end_if %>
+
+                                <% if not $Parent.HideSummaries %>
+                                    <% if $Summary %>
+                                        <div>$Summary</div>
+                                    <% else %>
+                                        <p>$Content.FirstParagraph.LimitCharacters(140)</p>
+                                        <a href="$Link" class="button hollow" aria-label="Continue reading about $Title">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                                    <% end_if %>
+                                <% end_if %>
+
+                            </div><!-- end .card__body -->
+                        </div><!-- end .card -->
+
+                    <% end_loop %>
+                </div><!-- end .card__wrapper -->
+
+            </div>
+        </section>
+
+    <% end_if %>
+    <!-- end recent news -->
 
 
 </main>
