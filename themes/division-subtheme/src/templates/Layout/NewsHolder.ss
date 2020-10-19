@@ -4,7 +4,7 @@ $Header
 <div class="main-content__container" id="main-content__container">
 
 	$BeforeContent
-
+<% if not $PaginatedList.CurrentBool %>
 <% if $Action == "index" %>
 	<% if $FeaturedNews %>
 	<div class="row">
@@ -93,7 +93,7 @@ $Header
 		</div>
 	</div><!-- end .row -->
 	<% end_if %>
-
+    <% end_if %>
 <% end_if %>
 </div>
 
