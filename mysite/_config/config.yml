@@ -6,3 +6,15 @@ SilverStripe\Core\Manifest\ModuleManifest:
 SilverStripe\CMS\Model\SiteTree:
   hide_from_cms_tree:
     - NewsEntry
+SilverStripe\View\Parsers\URLSegmentFilter:
+ - replacements:
+    - '/&amp;/u' : '-and-'
+    - '/[,]+/u' : ''
+    - '/&/u' : '-and-'
+    - '/\s|\+/u' : '-'
+    -  '/[_.]+/u' : '-'
+    - '/[^A-Za-z0-9\-]+/u' : ''
+    - '/[\/\?=#:]+/u' : '-'
+    - '/[\-]{2,}/u' : '-'
+    -  '/^[\-]+/u' : ''
+    - '/[\-]+$/u' : ''

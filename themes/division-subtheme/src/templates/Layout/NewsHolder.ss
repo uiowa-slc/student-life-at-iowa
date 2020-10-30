@@ -1,10 +1,10 @@
 
 $Header
 
-<main class="main-content__container" id="main-content__container">
+<div class="main-content__container" id="main-content__container">
 
 	$BeforeContent
-
+<% if not $PaginatedList.CurrentBool %>
 <% if $Action == "index" %>
 	<% if $FeaturedNews %>
 	<div class="row">
@@ -93,77 +93,93 @@ $Header
 		</div>
 	</div><!-- end .row -->
 	<% end_if %>
-
+    <% end_if %>
 <% end_if %>
-	<div class="row">
-		<div class="title-fullwidth">
-			<h2>					<% if $ArchiveYear %>
-						<%t Blog.Archive 'Archive' %>:
-						<% if $ArchiveDay %>
-							$ArchiveDate.Nice
-						<% else_if $ArchiveMonth %>
-							$ArchiveDate.format('F, Y')
-						<% else %>
-							$ArchiveDate.format('Y')
-						<% end_if %>
-					<% else_if $CurrentTag %>
-						<%t Blog.Tag 'Tag' %>: $CurrentTag.Title
-					<% else_if $CurrentCategory %>
-						<%t Blog.Category 'Category' %>: $CurrentCategory.Title
-					<% else %>
-						Latest News
-					<% end_if %></h2>
-		</div>
-
-		<div role="main" class="main-content main-content--with-padding <% if $Children || $Menu(2) || $Sidebar ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
-
-			$BeforeContentConstrained
-
-			<div class="main-content__text">
-
-				<% loop $PaginatedList %>
-					<% include BlogCard %>
-				<% end_loop %>
-
-				<br /><br />
-
-				$AfterContentConstrained
-				$Form
-				$CommentsForm
-
-				<% with $PaginatedList %>
-					<% include Pagination %>
-				<% end_with %>
-
-			</div>
-		</div>
-
-		<aside class="sidebar dp-sticky">
-			<% include SideNav %>
+</div>
 
 
-				<%-- Begin Listing Departments --%>
-				<div class="WidgetHolder BlogCategoriesWidget first last">
-					<h3>Departments</h3>
-					<ul>
-						<% loop DepartmentsWithPosts %>
-						<li><a href="$Link" title=""><span class="text">$Title</span></a></li>
-						<% end_loop %>
-					</ul>
-				</div>
-				<%-- End Listing Departments --%>
-			<% if $SideBarView %>
-				$SideBarView
-			<% end_if %>
+<main class="main-content__container" id="main-content__container">
 
-			$Sidebar
+    $BeforeContent
 
-		</aside>
-	</div>
+    <div class="row">
+        <div role="main" class="main-content main-content--with-padding <% if $Children || $Menu(2) || $SidebarArea.Elements ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
+            $BeforeContentConstrained
+            <div class="main-content__text">
 
-	$AfterContent
+                $Content
+
+                <% if $ArchiveYear || $CurrentTag || $CurrentCategory %>
+                    <h2>
+                        <% if $ArchiveYear %>
+                            <%t Blog.Archive 'Archive' %>:
+                            <% if $ArchiveDay %>
+                                $ArchiveDate.Nice
+                            <% else_if $ArchiveMonth %>
+                                $ArchiveDate.format('F, Y')
+                            <% else %>
+                                $ArchiveDate.format('Y')
+                            <% end_if %>
+                        <% else_if $CurrentTag %>
+                            <%t Blog.Tag 'Tag' %>: $CurrentTag.Title
+                        <% else_if $CurrentCategory %>
+                            <%t Blog.Category 'Category' %>: $CurrentCategory.Title
+                        <% else %>
+                            $Title
+                        <% end_if %>
+                    </h2>
+                <% end_if %>
+
+                <% if $Action == "index" %>
+                    <% if $SortAlphabetically %>
+                        <% loop $BlogPostsAlpha %>
+                            <% include BlogCardHorizontal %>
+                        <% end_loop %>
+                    <% else_if $PaginatedList.Exists %>
+                        <% loop $PaginatedList %>
+                            <% include BlogCardHorizontal %>
+                        <% end_loop %>
+                    <% end_if %>
+                <% else %>
+                    <% loop $PaginatedList %>
+                        <% include BlogCardHorizontal %>
+                    <% end_loop %>
+                <% end_if %>
+                $AfterContentConstrained
+
+                $Form
+                $CommentsForm
+
+            </div>
+            <% with $PaginatedList %>
+                <% include Pagination %>
+            <% end_with %>
+        </div>
+
+
+        <aside class="sidebar dp-sticky">
+            <% include SideNav %>
+                <%-- Begin Listing Departments --%>
+                <div class="WidgetHolder BlogCategoriesWidget first last">
+                    <h3>Departments</h3>
+                    <ul>
+                        <% loop DepartmentsWithPosts %>
+                        <li><a href="$NewsLink" title=""><span class="text">$Title</span></a></li>
+                        <% end_loop %>
+                    </ul>
+                </div>
+                <%-- End Listing Departments --%>
+            <% if $SideBarView %>
+                $SideBarView
+            <% end_if %>
+            $SidebarArea
+        </aside>
+    </div>
+
+    $AfterContent
 
 </main>
+
 
 <%--     <div class="news-fullwidth">
         <div class="row">

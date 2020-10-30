@@ -1,13 +1,13 @@
 
 <div class="homepage__header">
 
-    $Header("dark-header","overlay")
+    $Header
 
 
     <% if $YearInReviewHeroFeatures %>
-        <div class="carousel" id="main-content__container">
+        <div class="yir-carousel" id="main-content__container">
             <% loop YearInReviewHeroFeatures %>
-                <div class="carousel-cell">
+                <div class="yir-carousel-cell">
                     <% if $Image %>
                         <% with $Image %>
                         <div class="cell-bg" data-flickity-bg-lazyload="$FocusFill(1500,900).URL" <% if $FocusX || $FocusY %>style="background-position: $PercentageX% $PercentageY%;"<% end_if %>>
