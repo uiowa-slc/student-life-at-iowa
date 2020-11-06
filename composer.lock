@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8329b2a7c0d0140514035265ddfecac3",
+    "content-hash": "3ce9160ff7e9b5bad705930ae4920b41",
     "packages": [
         {
             "name": "bramus/ansi-php",
@@ -1310,16 +1310,16 @@
         },
         {
             "name": "md/division-project",
-            "version": "dev-2-branding",
+            "version": "3.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "8662b7f214e592e368238ec0a6f434b2370cd450"
+                "reference": "403b9ef46fab218fd34a5dc0334bbeab7c20b001"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/8662b7f214e592e368238ec0a6f434b2370cd450",
-                "reference": "8662b7f214e592e368238ec0a6f434b2370cd450",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/403b9ef46fab218fd34a5dc0334bbeab7c20b001",
+                "reference": "403b9ef46fab218fd34a5dc0334bbeab7c20b001",
                 "shasum": ""
             },
             "require": {
@@ -1365,10 +1365,10 @@
             },
             "description": "The University of Iowa Division of Student Life Project Code and Theme",
             "support": {
-                "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/2-branding",
+                "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/3",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2020-10-29T20:44:44+00:00"
+            "time": "2020-11-02T19:02:13+00:00"
         },
         {
             "name": "md/saml",
@@ -6535,7 +6535,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "md/division-project": 20,
         "silverstripe/mathspamprotection": 20
     },
     "prefer-stable": true,
