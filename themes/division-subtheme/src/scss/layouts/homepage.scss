@@ -1,153 +1,142 @@
-/* HOMEPAGE
+/* Announcments
 =============================================== */
-.home-feature {
+.home-announcement {
+    background-color: $highlight;
+    padding: rem-calc(20 0);
+    /* adds overflow for long urls */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 
-	&__header {
-		width: 100%;
-		position: absolute;
-		top: 0;
-		z-index: 100;
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+	& h1, & h2, & h3 {
+		margin-top: 0; 
 	}
-	&__media {
-		// background: url(../images/feature-image.jpg) no-repeat center top;
-		background-color: #000;
-		background-size: cover;
+	& a {
+		text-decoration: underline;
+	}
+	& ul {
+		margin-bottom: 0;
+    }
+    @include breakpoint(large) {
+        padding: rem-calc(40 0);
+    }
+}
+
+
+/* News
+=============================================== */
+.home-news {
+    padding: rem-calc(60 0);
+}
+
+/* main article */
+.news-main {
+    margin-bottom: rem-calc(20);
+    @include breakpoint(medium) {
+        margin-bottom: 0;
+    }
+	&__link {
+		background-color: #666;
+		display: block;
 		position: relative;
-		position: sticky;
-		top: 0;
-		width: 100%;
-		height: 100vh;
-
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		filter: blur( calc( var(--scroll-amount) * .01px ) );
-		will-change: transform;
-
-		@media (prefers-reduced-motion) {
-			transform: none;
-		}
-		/* black overlay */
 		&:after {
-			content:'';
+			height: 100%;
+			width: 100%;
 			position: absolute;
 			top: 0;
 			right: 0;
-			bottom:0;
+			bottom: 0;
 			left: 0;
-			background-color: rgba(0,0,0,.4);
-			z-index: 2;
+			background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.15) 55%, rgba(0, 0, 0, 0.15) 75%, rgba(0, 0, 0, 0.5));
+			content: "";
+			transition: all .4s ease-in-out;
 		}
-	}
-	&__herotext {
-		text-align: center;
-		position: relative;
-        z-index: 30;
-        @include grid-row;
-        padding-left: 1em;
-        padding-right: 1em;
-        top: 3em;
-		& h1 {
-			margin: 0;
-			color: #fff;
-			font-size: calc(23px + 20 * ((100vw - 320px) / (1024 - 320)));
-			text-shadow: 2px 2px rgba(0,0,0,.2);
-			& span {
-				display: block;
-				@include breakpoint(medium) {
-					display: inline;
-				}
+		&:hover, &:focus {
+			.news-main__content {
+				border-bottom: 4px solid $yellow;
 			}
-			@include breakpoint(large) {
-				font-size: rem-calc(40);
+			&:after {
+				background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.15) 55%, rgba(0, 0, 0, 0.15) 75%, rgba(0, 0, 0, 0.6));
 			}
 		}
-	}
-	&__texthighlight {
-		color: $yellow;
-		@include breakpoint(large) {
-			font-size: rem-calc(115);
-			letter-spacing: 4px;
-		}
-	}
-	&__content-wrap {
-		width: 100%;
-		margin-top: -90px;
-		position: relative;
-		background: linear-gradient(to bottom,transparent,rgba(0,0,0,.8));
-		padding-bottom: 50px;
-		padding-left: 1em;
-		padding-right: 1em;
 	}
 	&__content {
-		background-color: white;
-		box-shadow: 0 3px 18px rgba(0,0,0,.25);
-		@include grid-row;
+		border-bottom: none;
+		transition: border .2s ease-in-out;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding: 5%;
+        z-index: 2;
+        width: 100%;
 	}
-	&__news {
-		padding: rem-calc(20);
-		background: #ffffff;
-        background: linear-gradient(145deg, #ffffff 50%,#f8f8f8 50%);
-        @include breakpoint(large) {
-            padding: rem-calc(40);
-        }
+	&__title {
+		color: #fff;
 	}
-	&__events,
-	&__announcement {
-		background-color: $yellow;
-        padding: rem-calc(20);
-        /* adds overflow for long urls */
-        overflow-wrap: break-word;
-        word-wrap: break-word;
+	& .card__author {
+		color: #eee;
+	}
+}
 
-        -ms-word-break: break-all;
-        /* This is the dangerous one in WebKit, as it breaks things wherever */
-        word-break: break-all;
-        /* Instead use this non-standard one: */
-        word-break: break-word;
-
-        /* Adds a hyphen where the word breaks, if supported (No Blink) */
-        -ms-hyphens: auto;
-        -moz-hyphens: auto;
-        -webkit-hyphens: auto;
-        hyphens: auto;
-        @include breakpoint(large) {
-            padding: rem-calc(40);
-        }
-	}
-	&__event-title {
-		font-weight: normal;
-		line-height: 1;
-		margin-top: 0;
-		& a {
-			color: #333;
-			text-decoration: underline;
-			&:hover, &:focus {
-				color: $anchor-color;
-			}
+/* secondary articles */
+.news-secondary {
+	&__list {
+		@include breakpoint(medium) {
+            padding-left: 40px;
+            border-left: 1px solid $light-gray;
 		}
-	}
-}
-
-// Fade technique https://codepen.io/davatron5000/pen/oENPYq
-.home-feature__herotext  h1{
-	opacity: calc( 1 - calc(var(--scroll-amount) * 0.002));
-	transform: translateY(calc(var(--scroll-amount) * var(--multiplier) * 1px ));
-	will-change: transform;
-
-	@media (prefers-reduced-motion) {
-		transform: none;
-	}
+	}    
 }
 
 
+/* Events 
+=============================================== */
+.home-events {
+    background-color: $yellow;
+    padding: rem-calc(60 0);
+    & .card {
+        background-color: transparent;
+        border-color: rgba(0,0,0,.2);
+    }
+    & .button.clear {
+        & svg {
+            color: $black;
+        }
+    }
+}
+
+
+
+/* Instagram Feed
+=============================================== */
+.instafeed {
+	padding: rem-calc(40 0);
+	& a:hover, & a:focus {
+		text-decoration: underline;
+	}
+	@include breakpoint(large) {
+		padding: rem-calc(60 0);
+	}
+}
+
+/* Used in YIR */
 .fullwidth-video {
 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 1;
-	overflow: hidden;
+    overflow: hidden;
+    position: sticky;
 	backface-visibility: hidden;
 	right: 0;
 	bottom: 0;
@@ -175,678 +164,4 @@
 	-webkit-transform: translateX(-50%) translateY(-50%);
 	transform: translateX(-50%) translateY(-50%);
 	background-size: cover;
-}
-
-
-/* Announcment 
-=============================================== */
-.home-feature__announcement {
-	& h1, & h2, & h3 {
-		font-weight: normal;
-		line-height: 1;
-		margin-top: 0; 
-	}
-	& a {
-		text-decoration: underline;
-	}
-	& ul {
-		margin-bottom: 0;
-	}
-}
-
-/* Featured News
-=============================================== */
-.news-container {
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-}
-/* main article */
-.news-main {
-	&__article {
-		position: relative;
-	}
-	&__link {
-		background-color: #666;
-		display: block;
-		position: relative;
-		&:after {
-			height: 100%;
-			width: 100%;
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.15) 55%, rgba(0, 0, 0, 0.15) 75%, rgba(0, 0, 0, 0.5));
-			content: "";
-			transition: all .4s ease-in-out;
-		}
-		&:hover, &:focus {
-			.news-main__content {
-				border-bottom: 4px solid $yellow;
-			}
-			&:after {
-				background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.15) 55%, rgba(0, 0, 0, 0.15) 75%, rgba(0, 0, 0, 0.6));
-			}
-		}
-	}
-	&__img {
-		width: 100%;
-	}
-	&__content {
-		border-bottom: none;
-		transition: border .2s ease-in-out;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		padding: 2em;
-		z-index: 2;
-	}
-	&__dept {
-		font-size: rem-calc(11);
-		text-transform: uppercase;
-		letter-spacing: 1px;
-		background-color: $yellow;
-		color: #333;
-		padding: 0 2px;
-		position: relative;
-		top: -9px;
-	}
-	&__title {
-		color: #fff;
-		margin: 0;
-		font-size: rem-calc(22);
-		line-height: 1.1;
-		@include breakpoint(large) {
-			font-size: rem-calc(28);
-		}
-	}
-	&__author {
-		font-size: rem-calc(14);
-		font-style: italic;
-		color: #fff;
-		margin: 0;
-	}
-
-	@include breakpoint(medium) {
-		float: left;
-		width: 50%;
-	}
-	@include breakpoint(large) {
-		width: 40%;
-	}
-}
-
-
-/* secondary articles */
-.news-secondary {
-
-	&__list {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		@include breakpoint(medium) {
-			padding-left: 2em;
-		}
-		@include breakpoint(large) {
-			padding-left: 3em;
-		}
-	}
-	&__item {
-		clear: both;
-		margin-top: rem-calc(40);
-		width: 100%;
-		&:last-child {
-			margin-bottom: 0;
-		}
-		@include breakpoint(medium) {
-			margin-bottom: rem-calc(60);
-			margin-top: 0;
-		}
-	}
-	&__link {
-		color: #333;
-		display: block;
-		&:hover, &:focus {
-			& .news-secondary__title {
-				color: #000;
-			}
-			& .news-secondary__title:before {
-				width: 100%;
-				left: 0;
-			}
-		}
-	}
-	&__img {
-		display: inline-block;
-		margin-bottom: 1em;
-		width: 100%;
-		@include breakpoint(medium) {
-			display: none;
-		}
-		@include breakpoint(large) {
-			display: inline-block;
-			float: left;
-			width: 35%;
-			padding-right: 1em;
-			margin-bottom: 0;
-		}
-	}
-	&__content {
-		&--img {
-			@include breakpoint(large) {
-				float: left;
-				width: 65%;
-			}
-		}
-	}
-	&__dept {
-		font-size: rem-calc(11);
-		text-transform: uppercase;
-		letter-spacing: 1px;
-		background-color: $yellow;
-		color: #333;
-		padding: 0 2px;
-		position: relative;
-		top: -9px;
-	}
-	&__title {
-		margin: 0;
-		font-size: rem-calc(24);
-		font-weight: normal;
-		position: relative;
-		& span {
-			position: relative;
-		}
-		&:before {
-			content: '';
-			display: block;
-			position: absolute;
-			top: 0;
-			right: 0;
-			height: 100%;
-			width: 0;
-			background: $yellow;
-			-webkit-transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
-			transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
-			z-index: 0;
-		}
-		@include breakpoint(medium only) {
-			font-size: rem-calc(18);
-		}
-	}
-	&__author {
-		font-size: rem-calc(14);
-		font-style: italic;
-		color: #666;
-		margin: 0;
-	}
-
-	@include breakpoint(medium) {
-		float: left;
-		width: 49%;
-	}
-	@include breakpoint(large) {
-		width: 59%;
-	}
-}
-
-
-
-
-/* Events
-=============================================== */
-.home-event-list {
-	list-style: none;
-	margin: 0;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	&__item {
-		border-radius: 2px;
-		width: 100%;
-		background-color: $yellow;
-		transition: background-color .3s linear;
-		&:hover, &:focus {
-			background-color: darken($yellow, 3%);
-		}
-		@include breakpoint(medium) {
-			width: 49%;
-		}
-		@include breakpoint(large) {
-			width: 32%;
-		}
-	}
-	&__link {
-		color: #333;
-		display: block;
-		padding: 1.2em;
-		&:hover, &:focus {
-			.home-event-list__title {
-				text-decoration: underline;
-			}
-		}
-	}
-	&__date {
-		color: #555;
-		font-size: rem-calc(12);
-		margin: 0;
-		text-transform: uppercase;
-		letter-spacing: 1px;
-	}
-	&__title {
-		color: #333;
-		font-size: rem-calc(22);
-		margin: rem-calc(10 0);
-	}
-	&__venue {
-		color: #fff;
-		background-color: #000;
-		display: inline-block;
-		font-size: rem-calc(12);
-		margin: 0;
-		padding: 0 2px;
-	}
-	&__summary {
-		color: #333;
-		font-size: rem-calc(15);
-		margin-bottom: 8px;
-	}
-}
-
-
-
-
-/* What We Do
-=============================================== */
-.whatwedo {
-	padding: rem-calc(120 0);
-	background-color: #fff;
-	position: relative;
-	z-index: 11;
-	&__title {
-		font-size: rem-calc(50);
-		text-align: center;
-		margin: 0;
-	}
-	&__text {
-		text-align: center;
-	}
-}
-
-.infosection {
-	list-style: none;
-	margin: 2em 0 0;
-	padding: 0;
-	&__item {
-		border-radius: 2px;
-		overflow: hidden;
-		position: relative;
-		width: 80%;
-		margin-left: 1%;
-		margin-right: 1%;
-		@include breakpoint(mobile) {
-			width: 45%;
-		}
-		@include breakpoint(medium) {
-			width: 31%;
-		}
-		@include breakpoint(large) {
-			width: 24%;
-		}
-	}
-	&__link {
-		display: block;
-		&:hover, &:focus {
-			.infosection__body {
-				bottom: 0;
-			}
-		}
-	}
-	&__img {
-		width: 100%;
-	}
-	&__body {
-		background: rgba(0,0,0,.9);
-		position: absolute;
-		left: 0;
-		width: 100%;
-		padding: rem-calc(20);
-		bottom: -55px;
-		transition: bottom 0.5s;
-		text-align: center;
-	}
-	&__title {
-		font-size: rem-calc(20);
-		margin: 1em 0 2em;
-		color: #eee;
-		@include breakpoint(medium) {
-			font-size: rem-calc(18);
-		}
-		@include breakpoint(large) {
-			font-size: rem-calc(20);
-		}
-	}
-	&__content {
-		color: #eee;
-		font-size: rem-calc(16);
-		margin: rem-calc(18 0);
-		line-height: 1.2;
-	}
-	&__reveal {
-		margin-bottom: 0;
-		& span {
-			border-bottom: 4px solid $yellow;
-			font-size: rem-calc(13);
-			text-transform: uppercase;
-			letter-spacing: 1px;
-			display: inline-block;
-			padding: 5px 0;
-			color: #eee;
-		}
-	}
-}
-.infosection:not(.flickity-enabled) {
-	white-space: nowrap;
-	overflow: scroll;
-	.infosection__item {
-		display: inline-block;
-	}
-}
-
-/* Newsletter Signup
-=============================================== */
-.homepage-signup {
-	margin: rem-calc(120 0);
-	&__text {
-		font-size: rem-calc(22);
-		text-align: center;
-	}
-}
-
-/* MailChimp Signup */
-.homepage-signup #mc_embed_signup form {
-	text-align:center;
-	padding: 10px 0 10px 0;
-	float: none;
-	width: auto;
-}
-#mc_embed_signup input.email,
-#mc_embed_signup .clear {
-	float: none;
-}
-
-
-/* Spotlight
-=============================================== */
-.spotlight {
-	background-position: top center;
-	background-size: cover;
-	padding: rem-calc(40 0);
-	position: relative;
-	&__container {
-		background-color: #fff;
-		border-top: 5px solid $yellow;
-		padding: rem-calc(20);
-		box-shadow: 0 0 5px rgba(0,0,0,.3);
-		min-height: 350px;
-		width: 100%;
-		position: relative;
-		z-index: 11;
-		@include breakpoint(medium) {
-			width: 60%;
-		}
-		@include breakpoint(large) {
-			width: 50%;
-			padding: rem-calc(40);
-		}
-		@include breakpoint(xlarge) {
-			width: 40%;
-		}
-		@include breakpoint(xxlarge) {
-			width: 500px;
-		}
-	}
-	&__title {
-		margin: 0;
-	}
-	&__content p {
-		font-size: rem-calc(16);
-		margin: rem-calc(10 0);
-	}
-	&__content ul {
-		list-style: none;
-		margin: 1em 0 0;
-	}
-	&__content ul li {
-		background-color: #fff;
-		border-bottom: 1px solid #ddd;
-		font-size: rem-calc(15);
-		padding: rem-calc(8 2);
-		transition: background-color .2s linear;
-		& a {
-			color: #333;
-			display: block;
-			display: flex;
-			justify-content: space-between;
-			&:after {
-				content:"\279E";
-				color: #666;
-				padding-left: 6px;
-			}
-		}
-		&:hover, &:focus {
-			background-color: #f4f4f4;
-		}
-		&:first-child {
-			border-top: 1px solid #ddd;
-		}
-	}
-
-	&:after {
-		content:'';
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom:0;
-		left: 0;
-		background-color: rgba(0,0,0,.4);
-	}
-	@include breakpoint(large) {
-		padding: rem-calc(70 0);
-	}
-}
-.spotlight .row {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-}
-
-/* Department Showcase
-=============================================== */
-.dept-container {
-	background: #eee url(../images/dept-bg.jpg) no-repeat top center;
-	background-size: cover;
-	padding: rem-calc(60 0);
-	@include breakpoint(large) {
-		padding: rem-calc(120 0);
-	}
-}
-.dept-slider {
-	@include grid-row;
-
-
-	/* Mast Head ----------------- */
-	&__mast {
-		@include grid-column(12);
-		@include breakpoint(900) {
-			@include grid-column(4);
-			@include grid-col-pos(8);
-		}
-	}
-	&__mast-title {
-		font-size: rem-calc(52);
-		line-height: 1.1;
-		margin: 0;
-		padding-bottom: rem-calc(60);
-		position: relative;
-		&:after {
-			content:'';
-			width: 80px;
-			height: 5px;
-			background-color: $yellow;
-			position: absolute;
-			bottom: 30px;
-			left: 0;
-		}
-	}
-	&__mast-desc {
-		& p {
-			font-size: rem-calc(19);
-			line-height: 1.8;
-		}
-	}
-	&__mast-btn {
-		display: inline-block;
-		color: #000;
-		background-color: $yellow;
-		padding: 8px 12px;
-		margin-bottom: 1em;
-		font-size: rem-calc(16);
-		&:hover, &:focus {
-			color: #000;
-			background-color: darken($yellow, 2%);
-		}
-	}
-
-	/* Gallery ----------------- */
-	&__gallery {
-		@include grid-column(12);
-		@include breakpoint(900) {
-			@include grid-column(8);
-			@include grid-col-pos(-4);
-		}
-	}
-	&__gallery-slide {
-		position: relative;
-		width: 100%;
-		@include breakpoint(900) {
-			padding-bottom: rem-calc(120);
-		}
-	}
-	&__gallery-img {
-		display: block;
-		width: 100%;
-	}
-	&__gallery-box {
-		background-color: #fff;
-		border-top: 4px solid $yellow;
-		padding:rem-calc(40);
-		position: relative;
-		@include breakpoint(900) {
-			width: 60%;
-			position: absolute;
-			left: 30px;
-			bottom: 0;
-			padding:rem-calc(20);
-			height: 370px;
-		}
-		@include breakpoint(xlarge) {
-			width: 45%;
-			padding:rem-calc(40);
-		}
-	}
-	&__gallery-box-content {
-		@include breakpoint(900) {
-			position: absolute;
-			opacity: 0;
-			top: 100%;
-			left: 10%;
-			transition: opacity 1s ease-in-out, top .7s ease;
-			width: 80%;
-			left: 10%;
-		}
-	}
-	&__gallery-title {
-		font-size: rem-calc(28);
-		line-height: 1.1;
-		margin-top: 0;
-	}
-	&__gallery-desc {
-		& p {
-			font-size: rem-calc(17);
-			margin: 0 0 20px;
-			line-height: 1.6;
-		}
-	}
-	&__gallery-btn {
-		color: #000;
-		display: inline-block;
-		border: 1px solid #000;
-		padding: 8px 12px;
-		text-transform: uppercase;
-		font-size: rem-calc(12);
-		&:hover, &:focus {
-			color: #fff;
-			background-color: #000;
-		}
-	}
-	& .flickity-prev-next-button {
-		border-radius: 0;
-		top: calc(50% - 60px);
-	}
-	& .flickity-prev-next-button.next {
-		right: 0;
-	}
-	& .flickity-prev-next-button.previous {
-		left: 0;
-	}
-}
-.dept-slider__gallery-slide.is-selected .dept-slider__gallery-box-content {
-	@include breakpoint(900) {
-		opacity: 1;
-		top: 10%;
-	}
-}
-.dept-slider__gallery-img {
-  transition: opacity 0.4s;
-  opacity: 0;
-}
-
-.dept-slider__gallery-img.flickity-lazyloaded,
-.dept-slider__gallery-img.flickity-lazyerror {
-  opacity: 1;
-}
-.dept-slider__gallery:not(.flickity-enabled) {
-	white-space: nowrap;
-	overflow: scroll;
-	.dept-slider__gallery-slide {
-		display: inline-block;
-	}
-	.dept-slider__gallery-img {
-		opacity: 1;
-	}
-	.dept-slider__gallery-box-content {
-		opacity: 1;
-		top: 10%;
-	}
-	.dept-slider__gallery-desc p {
-		white-space: normal;
-	}
-}
-
-
-
-
-/* Instagram Feed
-=============================================== */
-.instafeed {
-	padding: rem-calc(40 0);
-	& a:hover, & a:focus {
-		text-decoration: underline;
-	}
-	@include breakpoint(large) {
-		padding: rem-calc(120 0);
-	}
 }
