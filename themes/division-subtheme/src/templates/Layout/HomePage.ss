@@ -156,6 +156,13 @@ $Header
                                             <% else %>
                                                     No upcoming dates.
                                             <% end_if %>
+                                                <%-- Online event stuff --%>
+
+                                                <% if isOnline %>
+
+                                                <p><i aria-hidden="true" class="fas fa-laptop-house"></i>Online Event</p>
+                                                <% end_if %>
+
 
                                             <%-- Venue --%>
                                             <% if $Venue %>
