@@ -103,9 +103,9 @@ $Header
                                             <h3 class="card__title">
                                                 <a href="$Link">$Title</a>
                                             </h3>
-
-                                            <% include Author %>
-
+                                            <div class="card__author">
+                                                <% include Author %>
+                                            </div>
                                             <% if not $Parent.HideSummaries %>
                                                 <% if $Summary %>
                                                     <div class="show-for-large">$Summary</div>
