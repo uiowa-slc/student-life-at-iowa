@@ -77,8 +77,7 @@ $Header
                                     <div class="news-main__content">
                                         <h3 class="news-main__title margin-0">$Title</h3>
                                         <div class="card__author">
-                                        <% if $Credits %>By <% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %>&nbsp;and <% end_if %> $Name.XML<% end_loop %>
-                                        <% end_if %>
+                                            <% include Author %>
                                         </div>
                                     </div>
                                 </a>
