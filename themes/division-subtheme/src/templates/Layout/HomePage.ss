@@ -224,7 +224,7 @@ $Header
 
     $AfterContent
 
-    <!-- Instagram Feed -->
+<%--     <!-- Instagram Feed -->
     <section class="instafeed" aria-labelledby="instagramid">
         <div class="row">
             <div class="columns">
@@ -234,7 +234,7 @@ $Header
                 <iframe src="https://snapwidget.com/embed/881820" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; "></iframe>
             </div>
         </div>
-    </section>
+    </section> --%>
 
 </main>
 
