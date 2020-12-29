@@ -240,7 +240,7 @@ class PageController extends ContentController {
 
 		$out = fopen('php://output', 'w');
 
-		$line = 'id,title,type,published,content,external_link';
+		$line = array('id', 'title', 'type', 'published', 'content', 'external_link');
 		fputcsv($out, $line);
 		foreach ($feedArray as $feedItem) {
 
