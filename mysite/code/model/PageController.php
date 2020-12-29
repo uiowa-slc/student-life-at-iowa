@@ -1,11 +1,12 @@
 <?php
-use SilverStripe\Core\Config\Config;
 use SilverStripe\CMS\Controllers\ContentController;
+use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\ORM\ArrayList;
-use SilverStripe\View\ArrayData;
 use SilverStripe\ORM\FieldType\DBDate;
-use SilverStripe\ORM\FieldType\DBText;
 use SilverStripe\ORM\FieldType\DBHTMLText;
+use SilverStripe\ORM\FieldType\DBText;
+use SilverStripe\View\ArrayData;
+use SilverStripe\View\Parsers\ShortcodeParser;
 
 class PageController extends ContentController {
 
@@ -24,13 +25,20 @@ class PageController extends ContentController {
 	 *
 	 * @var array
 	 */
+	private static $allowed_actions = array(
+		'contentExport',
+	);
 
-	public function TrendingPosts(){
+	private static $url_handlers = array(
+		'contentExport' => 'contentExport',
+	);
+
+	public function TrendingPosts() {
 
 		$timeLimit = date('Y-m-d', strtotime("-6 months"));
 
 		$posts = NewsEntry::get()->filter(array(
-			'PublishDate:GreaterThan' => $timeLimit
+			'PublishDate:GreaterThan' => $timeLimit,
 		))->sort('RAND()');
 
 		return $posts;
@@ -95,5 +103,69 @@ class PageController extends ContentController {
 		}
 	}
 
+	public function contentExport() {
+		$pages = SiteTree::get();
 
+		$feedArray = array();
+
+		foreach ($pages as $page) {
+			$pageTagsArray = array();
+			$pageTags = array();
+			if ($page->ClassName == "NewsEntry") {
+				//$pageTags = $page->TagNames();
+			} else {
+
+			}
+
+			foreach ($pageTags as $pageTag) {
+				array_push($pageTagsArray, $pageTag);
+			}
+
+			$pageImagesArray = array();
+			//Photo, PagePhoto, SummaryPhoto, Image
+
+			$imageFields = array(
+				'Photo',
+				'PagePhoto',
+				'SummaryPhoto',
+				'Image',
+			);
+
+			foreach ($imageFields as $imageField) {
+				if ($page->{$imageField . 'ID'}) {
+					$imageURL = $page->obj($imageField)->getAbsoluteURL();
+
+					$imageURLFiltered = str_replace('assets/', '/sites/sustainability.uiowa.edu/files/', $imageURL);
+
+					array_push($pageImagesArray, $imageURL);
+				}
+			}
+
+			$content = $page->Content;
+			$contentFiltered = ShortcodeParser::get_active()->parse($content);
+
+			$contentFiltered = str_replace('assets/', '/sites/sustainability.uiowa.edu/files/', $contentFiltered);
+
+			$externalLink = null;
+
+			if ($page->ExternalLink) {
+				$externalLink = $page->ExternalLink;
+			}
+
+			$pageArray = array(
+				'id' => $page->ID,
+				'title' => $page->Title,
+				'type' => $page->ClassName,
+				'published' => $page->Created,
+				'content' => $contentFiltered,
+				'tags' => $pageTagsArray,
+				'images' => $pageImagesArray,
+				'external_link' => $externalLink,
+			);
+
+			array_push($feedArray, $pageArray);
+		}
+		$this->getResponse()->addHeader('Content-type', 'application/json');
+		return json_encode($feedArray);
+	}
 }
