@@ -172,7 +172,7 @@ class PageController extends ContentController {
 	}
 
 	public function contentExportCsv() {
-		$pages = NewsEntry::get();
+		$pages = SiteTree::get()->filter(array('ClassName:not' => 'NewsEntry'))->filter(array('ClassName:not' => 'LeadershipLegacyBlogEntry'));
 
 		$feedArray = array();
 
