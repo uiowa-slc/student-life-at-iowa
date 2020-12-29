@@ -26,11 +26,13 @@ class PageController extends ContentController {
 	 * @var array
 	 */
 	private static $allowed_actions = array(
-		'contentExport',
+		'contentExportJson',
+		'contentExportCsv',
 	);
 
 	private static $url_handlers = array(
-		'contentExport' => 'contentExport',
+		'contentExportJson' => 'contentExportJson',
+		'contentExportCsv' => 'contentExportCsv',
 	);
 
 	public function TrendingPosts() {
@@ -103,7 +105,7 @@ class PageController extends ContentController {
 		}
 	}
 
-	public function contentExport() {
+	public function contentExportJson() {
 		$pages = SiteTree::get();
 
 		$feedArray = array();
@@ -167,5 +169,86 @@ class PageController extends ContentController {
 		}
 		$this->getResponse()->addHeader('Content-type', 'application/json');
 		return json_encode($feedArray);
+	}
+
+	public function contentExportCsv() {
+		$pages = NewsEntry::get();
+
+		$feedArray = array();
+
+		foreach ($pages as $page) {
+			$pageTagsArray = array();
+			$pageTags = array();
+			if ($page->ClassName == "NewsEntry") {
+				//$pageTags = $page->TagNames();
+			} else {
+
+			}
+
+			foreach ($pageTags as $pageTag) {
+				array_push($pageTagsArray, $pageTag);
+			}
+
+			$pageImagesArray = array();
+			//Photo, PagePhoto, SummaryPhoto, Image
+
+			$imageFields = array(
+				'Photo',
+				'PagePhoto',
+				'SummaryPhoto',
+				'Image',
+			);
+
+			foreach ($imageFields as $imageField) {
+				if ($page->{$imageField . 'ID'}) {
+					$imageURL = $page->obj($imageField)->getAbsoluteURL();
+
+					$imageURLFiltered = str_replace('assets/', '/sites/sustainability.uiowa.edu/files/', $imageURL);
+
+					array_push($pageImagesArray, $imageURL);
+				}
+			}
+
+			$content = $page->Content;
+			$contentFiltered = ShortcodeParser::get_active()->parse($content);
+
+			$contentFiltered = str_replace('assets/', '/sites/sustainability.uiowa.edu/files/', $contentFiltered);
+
+			$externalLink = null;
+
+			if ($page->ExternalLink) {
+				$externalLink = $page->ExternalLink;
+			}
+
+			$pageArray = array(
+				'id' => $page->ID,
+				'title' => $page->Title,
+				'type' => $page->ClassName,
+				'published' => $page->Created,
+				'content' => $contentFiltered,
+				'tags' => $pageTagsArray,
+				'images' => $pageImagesArray,
+				'external_link' => $externalLink,
+			);
+
+			array_push($feedArray, $pageArray);
+		}
+		// $this->getResponse()->addHeader('Content-type', 'application/json');
+		// return json_encode($feedArray);
+
+		//print_r($feedArray);
+
+		$out = fopen('php://output', 'w');
+
+		$line = 'id,title,type,published,content,external_link';
+		fputcsv($out, $line);
+		foreach ($feedArray as $feedItem) {
+
+			$line = [$feedItem['id'], $feedItem['title'], $feedItem['type'], $feedItem['published'], $feedItem['content'], $feedItem['external_link']];
+			fputcsv($out, $line);
+
+		}
+
+		fclose($out);
 	}
 }
