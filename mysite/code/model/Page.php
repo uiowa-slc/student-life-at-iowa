@@ -63,7 +63,7 @@ class Page extends SiteTree implements StaticallyPublishable {
 
 	public function urlsToCache() {
 
-		$urls['initiatives/reimagining-campus-safety/'] = 0;
+		$urls[Director::absoluteURL('initiatives/reimagining-campus-safety/')] = 0;
 
 		return $urls;
 	}
