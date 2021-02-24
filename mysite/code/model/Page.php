@@ -61,6 +61,22 @@ class Page extends SiteTree implements StaticallyPublishable {
 	/**
 	 * The only URL belonging to this object is it's own URL.
 	 */
+
+
+
+    public function urlsToCache(){
+
+        $urls = array(
+           $urls['initiatives/reimagining-campus-safety/'] = 0;
+        )
+
+        return $urls;
+    }
+    /*
+
+
+
+
 	public function urlsToCache() {
 		$disallowedClasses = array(
 			'SilverStripe\CMS\Model\RedirectorPage',
@@ -92,4 +108,6 @@ class Page extends SiteTree implements StaticallyPublishable {
 		return $urls;
 
 	}
+
+    */
 }
