@@ -2,6 +2,7 @@
 
 use SilverStripe\Blog\Model\Blog;
 use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Control\Director;
 use SilverStripe\StaticPublishQueue\Contract\StaticallyPublishable;
 
 class Page extends SiteTree implements StaticallyPublishable {
