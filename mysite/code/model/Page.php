@@ -2,7 +2,6 @@
 
 use SilverStripe\Blog\Model\Blog;
 use SilverStripe\CMS\Model\SiteTree;
-use SilverStripe\Control\Director;
 use SilverStripe\StaticPublishQueue\Contract\StaticallyPublishable;
 
 class Page extends SiteTree implements StaticallyPublishable {
@@ -62,52 +61,45 @@ class Page extends SiteTree implements StaticallyPublishable {
 	 * The only URL belonging to this object is it's own URL.
 	 */
 
-
-
-    public function urlsToCache(){
-
-        $urls = array(
-           $urls['initiatives/reimagining-campus-safety/'] = 0;
-        )
-
-        return $urls;
-    }
-    /*
-
-
-
-
 	public function urlsToCache() {
-		$disallowedClasses = array(
-			'SilverStripe\CMS\Model\RedirectorPage',
-			'SilverStripe\UserForms\Model\UserDefinedForm',
-			'YearInReview',
-			'LeadershipLegacy',
-			'LeadershipLegacyBlogEntry',
-			'LeadershipLegacyIssueHolder',
-			'NewsEntry',
-			'BlogPost',
-		);
 
-		$urls = array();
-
-		//Only cache this year's previous blogs so the caching process doesn't go through the entire archive
-		if ($this->ClassName == 'NewsEntry') {
-			$currentYear = date("Y");
-			$blogYear = $this->obj('Created')->Format('y');
-
-			if ($blogYear == $currentYear) {
-				$urls[Director::absoluteURL($this->getOwner()->Link())] = 0;
-			}
-		}
-
-		if (!array_search($this->ClassName, $disallowedClasses)) {
-			$urls[Director::absoluteURL($this->getOwner()->Link())] = 0;
-		}
+		$urls['initiatives/reimagining-campus-safety/'] = 0;
 
 		return $urls;
-
 	}
+	/*
 
-    */
+		public function urlsToCache() {
+			$disallowedClasses = array(
+				'SilverStripe\CMS\Model\RedirectorPage',
+				'SilverStripe\UserForms\Model\UserDefinedForm',
+				'YearInReview',
+				'LeadershipLegacy',
+				'LeadershipLegacyBlogEntry',
+				'LeadershipLegacyIssueHolder',
+				'NewsEntry',
+				'BlogPost',
+			);
+
+			$urls = array();
+
+			//Only cache this year's previous blogs so the caching process doesn't go through the entire archive
+			if ($this->ClassName == 'NewsEntry') {
+				$currentYear = date("Y");
+				$blogYear = $this->obj('Created')->Format('y');
+
+				if ($blogYear == $currentYear) {
+					$urls[Director::absoluteURL($this->getOwner()->Link())] = 0;
+				}
+			}
+
+			if (!array_search($this->ClassName, $disallowedClasses)) {
+				$urls[Director::absoluteURL($this->getOwner()->Link())] = 0;
+			}
+
+			return $urls;
+
+		}
+
+	*/
 }
