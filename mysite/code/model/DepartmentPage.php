@@ -1,13 +1,13 @@
 <?php
 
 use SilverStripe\Assets\Image;
-use SilverStripe\AssetAdmin\Forms\UploadField;
-use SilverStripe\Forms\TextField;
-use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
-use SilverStripe\Blog\Model\BlogTag;
 use SilverStripe\Blog\Model\BlogCategory;
+use SilverStripe\Blog\Model\BlogTag;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\Security\Member;
+
 class DepartmentPage extends Page {
 
 	private static $db = array(
@@ -18,7 +18,8 @@ class DepartmentPage extends Page {
 		"KeyStat2Body" => "HTMLText",
 		"KeyStat3Num" => "Text",
 		"KeyStat3Body" => "HTMLText",
-		"WebsiteURL"=>"Text"
+		"WebsiteURL" => "Text",
+		"StaffPageURL" => "Text",
 	);
 
 	private static $has_one = array(
@@ -26,7 +27,7 @@ class DepartmentPage extends Page {
 	);
 
 	private static $belongs_many_many = array(
-		'NewsEntries' => 'NewsEntry'
+		'NewsEntries' => 'NewsEntry',
 	);
 
 	private static $icon = 'mysite/cms_icons/department.svg';
@@ -34,7 +35,8 @@ class DepartmentPage extends Page {
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
-		//$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Photo"), "Content");
+		$fields->addFieldToTab("Root.Main", TextField::create("WebsiteURL", "Visit Website URL")->setDescription('Please include https://'));
+		$fields->addFieldToTab("Root.Main", TextField::create("StaffPageURL", "Website staff page URL")->setDescription('Please include https://'));
 
 		$fields->addFieldToTab("Root.Main", new TextField("KeyStatTitle", "Key Title"));
 		$fields->addFieldToTab("Root.Main", new TextField("KeyStat1Num", "Key Stat 1 - Number"));
@@ -45,33 +47,31 @@ class DepartmentPage extends Page {
 
 		$fields->addFieldToTab("Root.Main", new TextField("KeyStat3Num", "Key Stat 3 - Number"));
 		$fields->addFieldToTab("Root.Main", HtmlEditorField::create("KeyStat3Body", "Key Stat 3 - Content")->setRows(4));
-		$fields->addFieldToTab("Root.Main", new TextField("WebsiteURL","Visit Website URL (include https://)"));
 
 		return $fields;
 
 	}
 
-	public function NewsLink(){
+	public function NewsLink() {
 		$newsHolder = NewsHolder::get()->First();
-		$link = $newsHolder->Link('department/'.$this->URLSegment);
+		$link = $newsHolder->Link('department/' . $this->URLSegment);
 		return $link;
 	}
 
-	public function NewsEntriesByTag($tagTitle){
+	public function NewsEntriesByTag($tagTitle) {
 
-		if(is_numeric($tagTitle)){
+		if (is_numeric($tagTitle)) {
 			$tag = BlogTag::get()->filter(array('ID' => $tagTitle))->First();
-		}else{
+		} else {
 			$tag = BlogTag::get()->filter(array('URLSegment' => $tagTitle))->First();
 		}
-		
 
-		if($tag){
+		if ($tag) {
 
 			$tagEntries = $tag->BlogPosts()->toArray();
 			$deptEntries = $this->NewsEntries()->toArray();
 
-			$intersectEntries = array_intersect($tagEntries,$deptEntries);
+			$intersectEntries = array_intersect($tagEntries, $deptEntries);
 
 			$list = new ArrayList($intersectEntries);
 
@@ -79,28 +79,22 @@ class DepartmentPage extends Page {
 
 		}
 
-
-
-		
-
 	}
-	public function NewsEntriesByCat($catTitle){
+	public function NewsEntriesByCat($catTitle) {
 
 		// print_r($catTitle);
-		if(is_numeric($catTitle)){
+		if (is_numeric($catTitle)) {
 			$cat = BlogCategory::get()->filter(array('ID' => $catTitle))->First();
-		}else{
+		} else {
 			$cat = BlogCategory::get()->filter(array('URLSegment' => $catTitle))->First();
 		}
 
-
-
-		if($cat){
+		if ($cat) {
 
 			$catEntries = $cat->BlogPosts()->toArray();
 			$deptEntries = $this->NewsEntries()->toArray();
 
-			$intersectEntries = array_intersect($catEntries,$deptEntries);
+			$intersectEntries = array_intersect($catEntries, $deptEntries);
 
 			$list = new ArrayList($intersectEntries);
 
@@ -108,15 +102,12 @@ class DepartmentPage extends Page {
 
 		}
 
-
-
-
 	}
 
-	public function NewsEntriesByAuthor($authorID){
+	public function NewsEntriesByAuthor($authorID) {
 		$author = Member::get()->filter(array('ID' => $authorID))->First();
 
-		if($author){
+		if ($author) {
 			$authorEntries = $author->BlogPosts();
 			return $authorEntries;
 		}

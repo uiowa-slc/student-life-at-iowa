@@ -4,8 +4,11 @@ After:
     - '*'
 ---
 HomePage:
-  - extensions: 
+  - extensions:
     - SlHomePageExtension
 Silverstripe\SiteConfig\SiteConfig:
   extensions:
     - AlertSiteConfigExtension
+SiteTree:
+  extensions:
+    - SilverStripe\StaticPublishQueue\Extension\Publishable\PublishableSiteTree

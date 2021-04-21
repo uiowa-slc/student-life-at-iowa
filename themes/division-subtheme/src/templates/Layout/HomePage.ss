@@ -3,7 +3,7 @@ $Header
 
 <main id="main-content__container">
     <div class="hero <% if $SubHeading || $ButtonTextOne %>hero--content<% end_if %> hero--$Position">
-        <div class="hero__imgwrap hero__imgwrap--$Size hero__imgwrap--$Background" 
+        <div class="hero__imgwrap hero__imgwrap--$Size hero__imgwrap--$Background"
             <% if $Background = "image" %>
                 <% if $HeroImage %>
                     data-interchange="[$HeroImage.FocusFill(768,400).URL, small], [$HeroImage.FocusFill(1024,400).URL, medium], [$HeroImage.FocusFill(1700,638).URL, large]" style="background-position: {$HeroImage.PercentageX}% {$HeroImage.PercentageY}%"
@@ -20,7 +20,7 @@ $Header
                     <source src="$HeroVideo.URL" type="video/mp4">
                 </video>
             <% end_if %>
-            
+
         </div>
 
         <% if $SubHeading || $ButtonUrlOne || $ButtonUrlTwo || $ButtonUrlThree %>
@@ -76,7 +76,9 @@ $Header
                                     <% end_if %>
                                     <div class="news-main__content">
                                         <h3 class="news-main__title margin-0">$Title</h3>
-                                        <% include Author %>
+                                        <div class="card__author">
+                                            <% include Author %>
+                                        </div>
                                     </div>
                                 </a>
                             <% end_loop %>
@@ -96,14 +98,14 @@ $Header
                                                 </a>
                                             </div>
                                         <% end_if %>
-                                    
+
                                         <div class="card__body">
                                             <h3 class="card__title">
                                                 <a href="$Link">$Title</a>
                                             </h3>
-                                    
-                                            <% include Author %>
-                                    
+                                            <div class="card__author">
+                                                <% include Author %>
+                                            </div>
                                             <% if not $Parent.HideSummaries %>
                                                 <% if $Summary %>
                                                     <div class="show-for-large">$Summary</div>
@@ -111,7 +113,7 @@ $Header
                                                     <p class="show-for-large">$Content.FirstSentence</p>
                                                 <% end_if %>
                                             <% end_if %>
-                                    
+
                                         </div>
                                     </article>
                                 <% end_loop %>
@@ -119,7 +121,7 @@ $Header
                         <% end_with %>
                     </div>
                 </div>
-            </div>     
+            </div>
         </div>
     </div>
 
@@ -131,18 +133,18 @@ $Header
                         <h2 class="text-center serif text-semibold h1">Upcoming Events</h2>
                         <a href="{$BaseHref}events/" class="button clear margin-bottom-0">View All Events <i class="fas fa-arrow-right"></i></a>
                     </div>
-                
+
                     <% with $Page(events) %>
                         <% if $EventList %>
                             <div class="card__wrapper margin-0">
-                                
+
                                 <% loop $EventList.Limit(3) %>
                                     <div class="card card--row">
                                         <div class="card__body <% if $Up.HideImages %>card__body--noimage<% end_if %>">
                                             <h3 class="card__title">
                                                 <a href="$Link">$Title</a>
                                             </h3>
-                                    
+
                                             <%-- Dates --%>
                                             <% if $Dates %>
                                                 <p class="">
@@ -154,7 +156,14 @@ $Header
                                             <% else %>
                                                     No upcoming dates.
                                             <% end_if %>
-                                    
+                                                <%-- Online event stuff --%>
+
+                                                <% if isOnline %>
+
+                                                <p><i aria-hidden="true" class="fas fa-laptop-house"></i>Online Event</p>
+                                                <% end_if %>
+
+
                                             <%-- Venue --%>
                                             <% if $Venue %>
                                                 <p class="">
@@ -162,10 +171,10 @@ $Header
                                                     $Venue.Title
                                                 </p>
                                             <% end_if %>
-                
+
                                             <%-- Summary --%>
                                             <p>$Content.FirstParagraph.LimitCharacters(130)</p>
-                                    
+
                                         </div><!-- end .card__body -->
                                     </div>
                                 <% end_loop %>
@@ -208,7 +217,7 @@ $Header
                             </div>
                         </div>
                     </div>
-                </div>        
+                </div>
         <% end_loop %>
         </div>
     <% end_if %>

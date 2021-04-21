@@ -40,7 +40,9 @@ $Header
 								<p class="news-card__desc">$Content.LimitCharacters(110)</p>
 							<% end_if %>
 
-							<% if $Credits %><div class="news-card__author">By <% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %><span class="byline__and"> and </span><% end_if %><span class="byline__author">$FirstName $Surname</span><% end_loop %></div><% end_if %>
+
+                                <% include AuthorBylineFull %>
+
 
 						</div>
 					</div>
@@ -69,7 +71,11 @@ $Header
 						<h2 class="news-card__title news-card__title--small">
 							<a href="$Link">$Title</a>
 						</h2>
-						<% if $Credits %><div class="news-card__author">By <% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %><span class="byline__and"> and </span><% end_if %><span class="byline__author">$FirstName $Surname</span><% end_loop %></div><% end_if %>
+						<% if $Credits %>
+
+                            <% include AuthorBylineFull %>
+
+                        <% end_if %>
 					</div>
 				</div>
 				<% end_loop %>

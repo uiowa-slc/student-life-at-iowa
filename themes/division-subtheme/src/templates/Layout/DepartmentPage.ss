@@ -28,7 +28,7 @@ $Header
                 $Content
                 <% if $WebsiteURL %>
                     <p>
-                        <a class="button" href="$WebsiteURL">Visit Website</a>
+                        <a class="button large hollow black" href="$WebsiteURL" target="_blank" rel="noopener">Visit Website <i class="fa fa-external-link-alt" aria-hidden="true"></i></a>
                     </p>
                 <% end_if %>
                 $AfterContentConstrained
