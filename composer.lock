@@ -1402,12 +1402,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events.git",
-                "reference": "35520eed9cf91bb0ec8c8c9278806bcb5f08b05e"
+                "reference": "022cc8fa234b8b0894bc7064f8a2cfc1aaff89aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/35520eed9cf91bb0ec8c8c9278806bcb5f08b05e",
-                "reference": "35520eed9cf91bb0ec8c8c9278806bcb5f08b05e",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/022cc8fa234b8b0894bc7064f8a2cfc1aaff89aa",
+                "reference": "022cc8fa234b8b0894bc7064f8a2cfc1aaff89aa",
                 "shasum": ""
             },
             "require": {
@@ -1427,7 +1427,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/tree/3",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/issues"
             },
-            "time": "2021-07-26T19:12:25+00:00"
+            "time": "2021-07-27T12:40:16+00:00"
         },
         {
             "name": "md/division-analytics",
@@ -1658,12 +1658,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-migration-tools.git",
-                "reference": "0770fa54b07b6488a7d0c74dd7de35f029c5cce6"
+                "reference": "400e6cf54505e079a6100f85e27d6058892a2fa2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/silverstripe-migration-tools/zipball/0770fa54b07b6488a7d0c74dd7de35f029c5cce6",
-                "reference": "0770fa54b07b6488a7d0c74dd7de35f029c5cce6",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/silverstripe-migration-tools/zipball/400e6cf54505e079a6100f85e27d6058892a2fa2",
+                "reference": "400e6cf54505e079a6100f85e27d6058892a2fa2",
                 "shasum": ""
             },
             "require": {
@@ -1679,7 +1679,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-migration-tools/tree/main",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-migration-tools/issues"
             },
-            "time": "2021-07-19T14:26:57+00:00"
+            "time": "2021-07-27T12:38:22+00:00"
         },
         {
             "name": "md/uiowa-bar",
@@ -3802,16 +3802,16 @@
         },
         {
             "name": "silverstripe/tagfield",
-            "version": "2.6.0",
+            "version": "2.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-tagfield.git",
-                "reference": "a677c63694867c625888408690fb400e7fe43c7c"
+                "reference": "88c069c3ae3a915c45c8cb3ec8363bb7f3c04178"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-tagfield/zipball/a677c63694867c625888408690fb400e7fe43c7c",
-                "reference": "a677c63694867c625888408690fb400e7fe43c7c",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-tagfield/zipball/88c069c3ae3a915c45c8cb3ec8363bb7f3c04178",
+                "reference": "88c069c3ae3a915c45c8cb3ec8363bb7f3c04178",
                 "shasum": ""
             },
             "require": {
@@ -3853,9 +3853,9 @@
             ],
             "support": {
                 "issues": "http://github.com/silverstripe/silverstripe-tagfield/issues",
-                "source": "https://github.com/silverstripe/silverstripe-tagfield/tree/2.6.0"
+                "source": "https://github.com/silverstripe/silverstripe-tagfield/tree/2.6.1"
             },
-            "time": "2021-05-04T23:17:40+00:00"
+            "time": "2021-07-26T22:49:02+00:00"
         },
         {
             "name": "silverstripe/userforms",
