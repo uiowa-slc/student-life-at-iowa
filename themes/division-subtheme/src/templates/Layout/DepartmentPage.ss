@@ -35,11 +35,42 @@ $Header
                 $Form
             </div>
 
+            <!-- begin stats section -->
+            <div class="dept-stats">
+                <div class="row">
+                    <div class="column">
+                        <h2><% if $KeyStatTitle %>$KeyStatTitle<% else %>Key Statistics<% end_if %></h2>
+                    </div>
+                </div>
+                <div class="stat-cards">
+                    <% if $KeyStat1Num %>
+                    <div class="stat-card">
+                        <div class="stat-card__digit">$KeyStat1Num</div>
+                        <div class="stat-card__text">$KeyStat1Body</div>
+                    </div>
+                     <% end_if %>
+                     <% if $KeyStat2Num %>
+                    <div class="stat-card">
+                        <div class="stat-card__digit">$KeyStat2Num</div>
+                        <div class="stat-card__text">$KeyStat2Body</div>
+                    </div>
+                     <% end_if %>
+                     <% if $KeyStat3Num %>
+                    <div class="stat-card">
+                        <div class="stat-card__digit">$KeyStat3Num</div>
+                        <div class="stat-card__text">$KeyStat3Body</div>
+                    </div>
+                    <% end_if %>
+                </div>
+            </div>
+            <!-- end stats section -->
+
             <% if $ShowChildPages %>
                 <% include ChildPages %>
             <% end_if %>
-
+            
         </div>
+
         <aside class="sidebar dp-sticky">
             <% include SideNav %>
             <% if $SideBarView %>
@@ -48,32 +79,6 @@ $Header
             $SidebarArea
         </aside>
     </div>
-
-
-    <!-- begin stats section -->
-    <div class="dept-stats">
-        <div class="row">
-            <div class="column">
-                <h2><% if $KeyStatTitle %>$KeyStatTitle<% else %>Key Statistics<% end_if %></h2>
-            </div>
-        </div>
-        <div class="stat-cards">
-            <div class="stat-card">
-                <div class="stat-card__digit">$KeyStat1Num</div>
-                <div class="stat-card__text">$KeyStat1Body</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-card__digit">$KeyStat2Num</div>
-                <div class="stat-card__text">$KeyStat2Body</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-card__digit">$KeyStat3Num</div>
-                <div class="stat-card__text">$KeyStat3Body</div>
-            </div>
-        </div>
-    </div>
-    <!-- end stats section -->
-
 
     $AfterContent
 
