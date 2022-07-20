@@ -324,6 +324,20 @@ class NewsHolderController extends BlogController {
 					return $rss->outputToBrowser();
 				}
 			}
+        }else if(isset($getVars['department'])){
+            $deptID = $getVars['department'];
+            $dept = DepartmentPage::get()->byID($deptID);
+            //if no dept found, just return all posts
+            if (($dept) && ($deptID != 0)) {
+                $posts = new PaginatedList($dept->NewsEntries(), $this->getRequest());
+                if($posts->First()){
+                    $rss = new RSSFeed($posts, $this->Link(), ($blogName ? $blogName : $altBlogName), "", "Title", "RSSContent");
+                    return $rss->outputToBrowser();
+                }
+            }else{
+                $this->httpError(404);
+            }
+
 		} else {
 			return parent::rss();
 		}
