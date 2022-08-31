@@ -30,7 +30,6 @@ class DepartmentPage extends Page {
 		'NewsEntries' => 'NewsEntry',
 	);
 
-	private static $icon = 'mysite/cms_icons/department.svg';
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
