@@ -4,11 +4,11 @@ use SilverStripe\Blog\Model\Blog;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Control\Director;
 use SilverStripe\StaticPublishQueue\Contract\StaticallyPublishable;
-
+use SilverStripe\Forms\TextField;
 class Page extends SiteTree implements StaticallyPublishable {
 
 	private static $db = array(
-
+      'OrganizationalUnit' => "Text"
 	);
 
 	private static $has_one = array(
@@ -26,7 +26,7 @@ class Page extends SiteTree implements StaticallyPublishable {
 
 	public function getCMSFields() {
 		$f = parent::getCMSFields();
-
+        $f->addFieldToTab("Root.Main", TextField::create("OrganizationalUnit", "Organizational Unit")->setDescription('e.g. "Unit of the Office of Dean of Students"'), "Content");
 		return $f;
 	}
 

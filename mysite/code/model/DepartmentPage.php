@@ -19,7 +19,7 @@ class DepartmentPage extends Page {
 		"KeyStat3Num" => "Text",
 		"KeyStat3Body" => "HTMLText",
 		"WebsiteURL" => "Text",
-		"StaffPageURL" => "Text",
+		"StaffPageURL" => "Text"
 	);
 
 	private static $has_one = array(

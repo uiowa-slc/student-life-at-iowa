@@ -25,6 +25,7 @@ $Header
                 <img class="main-content__main-img" src="$MainImage.ScaleMaxWidth(500).URL" alt="" role="presentation"/>
             <% end_if %>
             <div class="main-content__text">
+                <% if $OrganizationalUnit %><p class="header--small">$OrganizationalUnit</p><% end_if %>
                 $Content
                 <% if $WebsiteURL %>
                     <p>
