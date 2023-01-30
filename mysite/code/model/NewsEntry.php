@@ -115,14 +115,6 @@ class NewsEntry extends BlogPost {
 		return $this->setField('ExternalURL', $this->validateURL($URL));
 	}
 
-	public function Link($action = NULL) {
-		if ($Link = $this->ExternalURL) {
-			return $Link;
-		} else {
-			return parent::Link();
-		}
-	}
-
 	public function HasTag($tagName){
 		return $this->Tags()->filter(array('Title' => $tagName))->First();
 	}

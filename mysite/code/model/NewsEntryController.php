@@ -46,9 +46,18 @@ class NewsEntryController extends BlogPostController {
 		return $entries;
 	}
 
+		public function Link($action = NULL) {
+
+	}
+
+
 	public function init() {
 		parent::init();
-
+		if ($Link = $this->ExternalURL) {
+			$this->redirect($this->ExternalURL, 301);
+		} else {
+			
+		}
 	}
 
 }
