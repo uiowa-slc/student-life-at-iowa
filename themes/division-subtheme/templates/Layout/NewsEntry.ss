@@ -42,7 +42,7 @@ $Header
             $BeforeContentConstrained
             <div class="main-content__text">
                 <% if $FeaturedImage %>
-                    <img class="dp-lazy featured-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.ScaleWidth(860).URL"<% if $FeaturedImageAltText %> alt="$FeaturedImageAltText" <% else %> alt="" role="presentation" <% end_if %> width="840" height="$FeaturedImage.ScaleWidth(860).Height" />
+                    <img class="featured-image" src="$FeaturedImage.ScaleWidth(860).URL" loading="lazy"<% if $FeaturedImageAltText %> alt="$FeaturedImageAltText" <% else %> alt="" role="presentation" <% end_if %> width="840" height="$FeaturedImage.ScaleWidth(860).Height" />
 
                     <% if $FeaturedImageCaption %>
                         <p class="featured-image-caption">$FeaturedImageCaption</p>
