@@ -3,7 +3,7 @@
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\TextField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
-use SilverStripe\Blog\Model\BlogTag;
+use SilverStripe\Blog\Model\BlogCategory;
 use SilverStripe\Blog\Model\Blog;
 use SilverStripe\Lumberjack\Model\Lumberjack;
 use SilverStripe\Core\Config\Config;
@@ -79,7 +79,7 @@ class NewsHolder extends Blog {
 
 	public function FeaturedNews(){
 
-		$tag = BlogTag::get()->filter(array('Title' => 'Featured'))->First();
+		$tag = BlogCategory::get()->filter(array('Title' => 'Featured'))->First();
 		//If Featured tag doesn't exist, just return standard chronological posts
 		if(!$tag){
 			return NewsEntry::get()->filter(array("ParentID" => $this->ID))->Limit(10);
